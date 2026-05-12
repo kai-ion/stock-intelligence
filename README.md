@@ -5,7 +5,7 @@ Automated daily stock screening, technical analysis, portfolio monitoring, and A
 ## Architecture
 
 ```
-EC2 (t2.micro, us-east-1) — i-04d4ac7178fda12c8
+EC2 (t2.micro, us-east-1)
 ├── 9:50 AM ET  →  Portfolio Analysis Bot
 │   ├── fetch_portfolio.py     Pulls Robinhood holdings
 │   └── analyze_portfolio.py   Claude Opus 4.6 analyzes: exit targets, stops, trim/hold/add
@@ -82,7 +82,7 @@ yfinance pandas requests lxml boto3 robin_stocks python-dotenv pyotp
 
 ### AWS Resources
 - EC2: t2.micro with IAM role (`stock-screener-ec2`) for SES + S3 + Bedrock
-- S3: `cailinn-stock-screener` bucket
+- S3: Private bucket for results storage
 - SES: Verified sender email
 - IAM user: `stock-sync-readonly` for local sync (permanent keys)
 
