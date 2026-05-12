@@ -119,96 +119,83 @@ RH_TOTP_SECRET=optional_for_auto_2fa
 
 ## Getting Started (for others)
 
-### 1. Clone and install dependencies
+### Quick Deploy
 
 ```bash
 git clone https://github.com/kai-ion/stock-intelligence.git
 cd stock-intelligence
-pip install yfinance pandas requests lxml boto3 robin_stocks python-dotenv pyotp
+
+# One command deploys everything to your EC2:
+./deploy.sh --ip <EC2_IP> --key <path/to/key.pem> --email <your@email.com> --bucket <s3-bucket>
 ```
 
-### 2. Set up AWS infrastructure
+This installs dependencies, uploads scripts, configures environment variables, and sets up cron jobs.
+
+### Prerequisites
+
+Before running `deploy.sh`, you need:
+
+1. **AWS Account** with an EC2 instance (t2.micro free tier works)
+2. **IAM Role** attached to EC2 with permissions for:
+   - `ses:SendEmail`, `ses:SendRawEmail`
+   - `s3:PutObject`, `s3:GetObject`, `s3:ListBucket`
+   - `bedrock:InvokeModel`
+3. **S3 Bucket** — `aws s3 mb s3://your-bucket-name`
+4. **SES Verified Email** — `aws ses verify-email-identity --email-address your@email.com`
+5. **SSH Key** for EC2 access
+
+### Deploy Options
 
 ```bash
-# Create an S3 bucket
-aws s3 mb s3://your-bucket-name
-
-# Launch a t2.micro EC2 instance (free tier eligible)
-aws ec2 run-instances --image-id ami-0xxx --instance-type t2.micro --key-name your-key
-
-# Create an IAM role for the EC2 with these policies:
-#   - SES: SendEmail, SendRawEmail
-#   - S3: PutObject, GetObject, ListBucket (your bucket)
-#   - Bedrock: InvokeModel
-
-# Attach the role to your EC2 instance
-aws ec2 associate-iam-instance-profile --instance-id i-xxx --iam-instance-profile Name=your-role
-
-# Verify an email address in SES (sender + recipient if in sandbox)
-aws ses verify-email-identity --email-address your_email@gmail.com
+./deploy.sh \
+  --ip 1.2.3.4 \
+  --key ~/.ssh/my-key.pem \
+  --email you@gmail.com \
+  --bucket my-stock-bucket \
+  --region us-east-1 \
+  --model us.anthropic.claude-opus-4-6-v1
 ```
 
-### 3. Configure environment variables
+| Flag | Required | Description |
+|------|----------|-------------|
+| `--ip` | Yes | EC2 public IP |
+| `--key` | Yes | Path to SSH .pem key |
+| `--email` | Yes | Email for reports (must be SES-verified) |
+| `--bucket` | Yes | S3 bucket name |
+| `--region` | No | AWS region (default: us-east-1) |
+| `--model` | No | Bedrock model ID (default: Claude Opus 4.6) |
 
-Create a `.env` file on your EC2 instance:
-
-```bash
-EMAIL_RECIPIENT=your_email@gmail.com
-EMAIL_SENDER=your_email@gmail.com
-S3_BUCKET=your-bucket-name
-AWS_REGION=us-east-1
-MODEL_ID=us.anthropic.claude-opus-4-6-v1
-```
-
-### 4. Deploy scripts to EC2
+### Local Sync (optional)
 
 ```bash
-scp screener.py news_agent.py wsb_sentiment.py send_email.py ec2-user@YOUR_IP:/home/ec2-user/
-scp portfolio_analysis/fetch_portfolio.py portfolio_analysis/analyze_portfolio.py ec2-user@YOUR_IP:/home/ec2-user/portfolio/
-```
-
-### 5. Set up cron jobs on EC2
-
-```bash
-# /etc/cron.d/stock-screener
-SHELL=/bin/bash
-0 14 * * 1-5 ec2-user . /home/ec2-user/.env && cd /home/ec2-user && python3.11 screener.py > output.log 2>&1 && python3.11 news_agent.py >> news_run.log 2>&1 && python3.11 send_email.py >> email.log 2>&1
-
-# /etc/cron.d/portfolio-analysis
-SHELL=/bin/bash
-50 13 * * 1-5 ec2-user . /home/ec2-user/.env && cd /home/ec2-user/portfolio && python3.11 fetch_portfolio.py > fetch.log 2>&1 && python3.11 analyze_portfolio.py >> analyze.log 2>&1
-```
-
-### 6. Set up local sync (macOS)
-
-```bash
-# Copy sync_results.sh.example to sync_results.sh and fill in your bucket/paths
+# Copy and configure the sync script
 cp sync_results.sh.example sync_results.sh
 chmod +x sync_results.sh
+# Edit with your bucket name and paths
 
-# Create an IAM user with read-only S3 access for local sync
-# Add permanent access keys to ~/.aws/credentials under a [stock-sync] profile
-
-# Set up launchd to run sync at 10:30 AM weekdays (see sync_results.sh.example)
+# Create an IAM user with read-only S3 access
+# Add keys to ~/.aws/credentials under [stock-sync] profile
+# Set up macOS launchd or crontab to run sync_results.sh at 10:30 AM
 ```
 
-### 7. Portfolio bot (optional)
+### Portfolio Bot (optional)
 
 ```bash
-# Create portfolio_analysis/.env with your Robinhood credentials
+# Create credentials file on EC2
+ssh -i key.pem ec2-user@YOUR_IP
+cat > /home/ec2-user/portfolio/.env << EOF
 RH_EMAIL=your_robinhood_email
 RH_PASSWORD=your_password
-RH_TOTP_SECRET=your_totp_secret  # optional, enables fully automated login
+RH_TOTP_SECRET=your_totp_secret
+EOF
 
-# Run once manually to establish a session (approve device in Robinhood app)
-cd portfolio_analysis && python fetch_portfolio.py
-
-# After initial login, the session persists and renews daily via cron
+# Run once to establish session (approve device in Robinhood app)
+cd /home/ec2-user/portfolio && python3.11 fetch_portfolio.py
 ```
 
 ### Notes
 
-- The screener uses Yahoo Finance which rate-limits aggressively. The script processes tickers in batches of 50 with pauses, and retries failures. Top daily movers are prioritized first.
-- SES sandbox mode sends emails to spam — create a Gmail filter to fix this, or request SES production access.
+- The screener processes ~2700 tickers in batches of 50 with pauses to avoid Yahoo Finance rate-limiting. Top daily movers are prioritized first.
+- SES sandbox mode routes emails to spam — create a Gmail filter ("Never send to Spam" from your sender address) or request SES production access.
 - The Robinhood session pickle expires after 24 hours of inactivity. The daily cron keeps it alive on weekdays. After a weekend, you may need to re-approve on Monday.
-- Adjust `MODEL_ID` in `.env` to use a different Claude model (e.g., `us.anthropic.claude-sonnet-4-6` for faster/cheaper runs).
+- Adjust `MODEL_ID` to use a different Claude model (e.g., `us.anthropic.claude-sonnet-4-6` for faster/cheaper runs).
