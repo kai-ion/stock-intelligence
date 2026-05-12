@@ -1,0 +1,8 @@
+#!/bin/bash
+export HOME=$HOME
+export PATH="/usr/local/bin:/opt/homebrew/bin:$PATH"
+export AWS_SHARED_CREDENTIALS_FILE="$HOME/.aws/credentials"
+export AWS_CONFIG_FILE="$HOME/.aws/config"
+
+/usr/local/bin/aws s3 sync s3://YOUR_BUCKET/results/ /path/to/stock/results/ --profile stock-sync --region us-east-1
+/usr/local/bin/aws s3 sync s3://YOUR_BUCKET/portfolio/ /path/to/stock/portfolio_analysis/data/ --profile stock-sync --region us-east-1
