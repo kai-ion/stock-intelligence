@@ -3,7 +3,6 @@
 *.pickle
 userdata.sh
 sync_results.sh
-results/
 portfolio_analysis/data/
 sync.log
 output.csv
