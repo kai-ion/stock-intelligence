@@ -250,7 +250,7 @@ Use the technical data to set exit targets (fib extensions, prior highs, SMAs) a
 
 From the 20 stocks above, pick the 3-5 you would buy TODAY for a short-term swing trade (1-2 week hold). For each pick use this exact format:
 
-**TICKER** (+X.X% today)
+**TICKER** (+X.X% today, +Y.Y% week) — $CURRENT → $EXIT_TARGET (+Z.Z% upside)
 Upside: One sentence on why this has room to run.
 Risk: One sentence on what could go wrong.
 
