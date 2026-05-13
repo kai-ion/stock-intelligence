@@ -12,28 +12,61 @@ Automated daily stock screening, technical analysis, portfolio monitoring, and A
 
 ```
 EC2 (t2.micro, us-east-1)
-├── 9:50 AM ET  →  Portfolio Analysis Bot
-│   ├── fetch_portfolio.py     Pulls Robinhood holdings
-│   └── analyze_portfolio.py   Claude Opus 4.6 analyzes: exit targets, stops, trim/hold/add
 │
-├── 10:00 AM ET →  Stock Screener Pipeline
-│   ├── screener.py            Screens ~2700 US stocks (EMA, momentum, volume)
-│   ├── wsb_sentiment.py       Scrapes WSB for top 5 trending tickers + sentiment
-│   ├── news_agent.py          Fetches technicals + news, Claude generates morning brief
-│   └── send_email.py          Sends HTML email + uploads to S3
+├── Monday 8:00 AM ET →  Weekly Events Preview
+│   └── events/weekly_report.py    Next week's earnings, fed events, IPOs + BUY/SHORT/AVOID
+│
+├── Daily 9:50 AM ET  →  Portfolio Analysis Bot
+│   ├── fetch_portfolio.py         Pulls Robinhood holdings via robin_stocks
+│   └── analyze_portfolio.py       Exit targets, stops, trim/hold/add/buy suggestions
+│
+├── Daily 10:00 AM ET →  Stock Screener Pipeline
+│   ├── screener.py                Screens ~2700 US stocks (EMA, momentum, volume)
+│   ├── wsb_sentiment.py           Top 5 WSB trending tickers + sentiment
+│   ├── news_agent.py              Technicals + news + Claude morning brief
+│   └── send_email.py              HTML email + S3 upload
+│
+├── Daily 10:22 AM ET →  Paper Trading Simulator
+│   └── paper_trading/simulator.py Buys Claude's picks, auto-exits at targets/stops
+│
+├── Daily 10:25 AM ET →  GitHub Push
+│   └── push_results.sh            Commits results + equity chart to repo
+│
+├── Daily 3:55 PM ET  →  Paper Trading Exit Check
+│
+├── Every 10 min (market hours) →  Trump Alert Monitor
+│   └── trump_alert/monitor.py    Truth Social + White House, IMMEDIATE/DIGEST/IGNORE
 │
 Local Mac (launchd at 10:30 AM)
-└── sync_results.sh            Syncs S3 → local for CSV viewing
+└── sync_results.sh                Syncs S3 → local (results, portfolio, events, paper trading)
 ```
 
-## Morning Email Contains
+## Emails You Receive
 
-1. **Screener table** — all stocks passing filters, sortable CSV
-2. **Top 20 movers** — entry price → exit target with fib levels, thesis, support
-3. **Claude's Top Picks** — 3-5 swing trade picks with upside/risk
-4. **Avoid list** — overextended names to stay away from
-5. **WSB Sentiment Check** — top 5 WSB tickers, Claude agrees/disagrees with reasoning
-6. **Portfolio Analysis** (separate email) — per-position exit targets, trim/hold/add/exit calls, new buy suggestions
+### Monday — Weekly Events Preview
+- Calendar at-a-glance (Mon-Fri grid with company names)
+- Detailed BUY/SHORT/AVOID for top 25 earnings by market cap
+- Economic calendar with times (CPI, PPI, FOMC, retail sales)
+- Notable IPOs with Claude's take
+- Week ahead summary and positioning
+
+### Daily — Morning Screener Brief (10:20 AM)
+- Screener table — all stocks passing filters, sortable CSV
+- Top 20 movers — entry → exit target with fib levels, thesis, support
+- Claude's Top Picks — 3-5 swing trades with weekly gain, upside %, risk
+- Avoid list — overextended names with technical reasoning
+- WSB Sentiment Check — top 5 trending tickers, Claude agrees/disagrees
+
+### Daily — Portfolio Analysis (9:50 AM)
+- Sell/Trim section first (most urgent actions)
+- Add More — existing positions worth increasing
+- Hold — one-liner per position with exit/stop levels
+- Stocks to Buy — new names to complement portfolio
+- Portfolio Actions summary
+
+### As-Needed — Trump Alerts
+- IMMEDIATE: direct company mention, tariff, trade deal → instant email
+- DIGEST: general economic commentary → batched into morning brief
 
 ## Screener Filters
 
@@ -56,22 +89,40 @@ Each stock gets:
 
 ```
 stock/
-├── results/
-│   └── 2026-05/
-│       ├── 2026-05-11.csv          Sortable screener data
-│       ├── 2026-05-11.txt          Full screener log
-│       └── 2026-05-11_brief.md     News + picks + WSB sentiment
-├── portfolio_analysis/
+├── results/                        Daily screener output
+│   └── YYYY-MM/
+│       ├── YYYY-MM-DD.csv            Sortable screener data (open in Excel/Numbers)
+│       ├── YYYY-MM-DD.txt            Full screener log
+│       └── YYYY-MM-DD_brief.md       News + picks + WSB sentiment
+├── portfolio_analysis/             Robinhood portfolio monitoring
+│   ├── fetch_portfolio.py
+│   ├── analyze_portfolio.py
+│   └── data/YYYY-MM/
+│       ├── YYYY-MM-DD.json           Raw holdings
+│       └── YYYY-MM-DD_analysis.md    Exit targets + actions
+├── paper_trading/                  Claude's $10K simulated portfolio
+│   ├── simulator.py
+│   ├── stats.py                      Terminal stats viewer
+│   ├── generate_chart.py             SVG equity curve for GitHub
+│   ├── chart.svg
 │   └── data/
-│       └── 2026-05/
-│           ├── 2026-05-11.json         Raw holdings
-│           └── 2026-05-11_analysis.md  Portfolio exit analysis
+│       ├── portfolio.json            Current state
+│       ├── history/YYYY/MM/DD.json   Daily trade log with reasoning
+│       └── snapshots/YYYY-MM/        Daily equity snapshots
+├── events/                         Weekly earnings + fed + IPO calendar
+│   ├── weekly_report.py
+│   └── data/YYYY-MM/
+│       └── week_YYYY-MM-DD.md        Monday preview for the week
+├── trump_alert/                    Real-time market-moving statement alerts
+│   ├── monitor.py
+│   └── data/                         Seen posts + daily digest
 ├── screener.py
 ├── news_agent.py
 ├── wsb_sentiment.py
 ├── send_email.py
-├── sync_results.sh
-└── view.py                    Local CLI viewer with --sort flag
+├── deploy.sh                       One-command EC2 deployment
+├── sync_results.sh                 Local S3 sync (launchd)
+└── view.py                         CLI viewer with --sort flag
 ```
 
 ## Setup
