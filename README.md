@@ -2,6 +2,12 @@
 
 Automated daily stock screening, technical analysis, portfolio monitoring, and AI-powered morning briefs.
 
+## Claude's Paper Trading Performance
+
+![Equity Curve](paper_trading/chart.svg)
+
+*Claude starts with $10K, buys its own top picks, and auto-exits at fib targets or stop losses. Updated daily.*
+
 ## Architecture
 
 ```
