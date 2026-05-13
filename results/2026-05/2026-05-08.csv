@@ -1,0 +1,21 @@
+Ticker,Price,Day%,Week%,MCap($B),Sector,Industry,Above EMA%,RSI,MACD,MACD Hist,ROC20%,Vol Ratio,Momentum,Rating
+RKLB,105.47,34.22,33.83,61.0,Industrials,Aerospace & Defense,37.57,68.8,Bull,1.08,54.99,3.09,100.0,4.24
+DELL,260.46,13.11,23.93,169.3,Technology,Computer Hardware,40.12,78.0,Bull,2.78,46.94,1.85,90.4,4.11
+FLEX,142.17,6.89,55.04,52.3,Technology,Electronic Components,70.56,89.9,Bull,5.22,85.26,1.85,90.4,4.67
+BIDU,141.05,0.84,12.05,48.0,Communication Services,Internet Content & Information,12.61,68.8,Bull,1.89,30.11,2.28,90.3,4.52
+DDOG,200.16,6.06,42.43,71.2,Technology,Software - Application,50.6,85.8,Bull,6.66,89.96,1.84,90.3,4.58
+FTNT,114.07,5.65,32.19,83.5,Technology,Software - Infrastructure,33.55,84.4,Bull,2.77,48.72,1.57,88.1,3.28
+QCOM,219.09,8.17,23.77,230.9,Technology,Semiconductors,44.87,85.9,Bull,6.93,71.08,1.56,88.0,3.38
+INTC,124.92,13.96,25.4,627.8,Technology,Semiconductors,78.32,85.1,Bull,3.49,100.26,1.5,87.5,3.33
+MU,746.81,15.49,37.73,842.2,Technology,Semiconductors,57.91,83.8,Bull,21.97,77.56,1.48,87.4,4.55
+HUM,274.96,11.27,17.69,33.0,Healthcare,Healthcare Plans,30.22,84.7,Bull,3.41,43.1,1.43,87.0,3.38
+AMD,455.19,11.44,26.25,742.2,Technology,Semiconductors,61.39,80.8,Bull,10.4,85.76,1.22,85.1,4.5
+SNDK,1562.34,16.6,31.62,231.4,Technology,Computer Hardware,72.71,80.0,Bull,42.7,83.42,1.19,84.9,4.45
+MNST,86.29,13.58,11.89,84.4,Consumer Defensive,Beverages - Non-Alcoholic,12.39,73.1,Bull,0.6,13.96,2.98,80.0,4.0
+TSLA,428.35,4.02,9.6,1608.8,Consumer Cyclical,Auto Manufacturers,9.94,69.9,Bull,5.07,22.75,1.0,71.0,3.64
+CSCO,96.57,4.79,5.14,381.4,Technology,Communication Equipment,13.82,72.6,Bull,0.39,17.45,1.31,63.2,4.15
+AAPL,293.32,2.05,4.7,4308.1,Technology,Consumer Electronics,9.54,72.9,Bull,1.99,12.61,0.94,60.2,4.08
+MRVL,170.13,6.32,3.14,148.8,Technology,Semiconductors,32.35,69.0,Bear,-0.84,32.41,0.78,46.5,4.51
+NVDA,215.2,1.75,8.44,5230.4,Technology,Semiconductors,11.08,65.9,Bull,0.2,14.09,0.89,33.6,4.72
+KLAC,1869.19,6.01,8.28,244.2,Technology,Semiconductor Equipment & Materials,12.84,61.3,Bear,-9.89,7.59,1.25,24.4,4.07
+MSFT,415.12,-1.34,0.16,3083.7,Technology,Software - Infrastructure,1.66,53.9,Bear,-1.09,11.93,0.92,20.4,4.69
