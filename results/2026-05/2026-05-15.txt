@@ -1,0 +1,183 @@
+=== Stock Screener — 2026-05-15 14:00 ===
+Criteria: Above 50d EMA | Positive weekly gain | Market cap > $1B
+Fetching universe...
+
+  NASDAQ screener: 2752 stocks with market cap > $1B
+  Top 5 by daily gain: BRUN(+12.8%), MICC(+12.2%), GLOB(+11.8%), FIG(+7.2%), ONDS(+6.7%)
+Screening 2752 stocks (this may take 15-20 min)...
+
+  Progress: 200/2752 (51 passed, 0 errors)
+  Progress: 400/2752 (95 passed, 0 errors)
+  Progress: 600/2752 (139 passed, 0 errors)
+  Progress: 800/2752 (148 passed, 141 errors)
+  Progress: 1000/2752 (148 passed, 341 errors)
+  Progress: 1200/2752 (148 passed, 541 errors)
+  Progress: 1400/2752 (148 passed, 741 errors)
+  Progress: 1600/2752 (148 passed, 941 errors)
+  Progress: 1800/2752 (148 passed, 1141 errors)
+  Progress: 2000/2752 (148 passed, 1341 errors)
+  Progress: 2200/2752 (148 passed, 1541 errors)
+  Progress: 2400/2752 (148 passed, 1741 errors)
+  Progress: 2600/2752 (148 passed, 1941 errors)
+  Progress: 2752/2752 (148 passed, 2093 errors)
+
+  Retrying 2093 tickers that errored...
+  After retry: 148 total passed
+
+================================================================================
+  148 stocks passed all filters
+  Sorted by composite momentum (MACD 35 | ROC 30 | Volume 25 | EMA 10)
+  Rating: 5=Strong Buy → 1=Strong Sell | Vol Ratio: >1 = above avg volume
+================================================================================
+
+    Ticker    Price   Day%  Week%  MCap($B)                  Sector                                  Industry  Above EMA%   RSI  MACD  MACD Hist  ROC20%  Vol Ratio  Momentum  Rating
+1     BRUN    27.33   4.97  45.17       1.3              Technology                 Software - Infrastructure       74.27  77.9  Bull       0.72   92.50       1.17      84.8     NaN
+2     SATL     9.10   5.27  20.15       1.4             Industrials                       Aerospace & Defense       44.59  66.1  Bull       0.15   31.24       0.48      79.0    4.60
+3     CSCO   116.83   1.13  20.98     461.6              Technology                   Communication Equipment       31.46  88.0  Bull       2.27   35.46       0.33      77.7    4.19
+4      PBT    28.41   3.97  22.97       1.3                  Energy                       Oil & Gas Midstream       25.64  73.1  Bull       0.59   32.90       0.28      77.3     NaN
+5     BAND    53.40   2.50   7.04       1.7              Technology                 Software - Infrastructure       78.38  91.4  Bull       1.02  132.07       0.19      76.6    4.20
+6     NEXT     9.16   2.69  21.16       2.4                  Energy            Oil & Gas Equipment & Services       23.81  67.5  Bull       0.12   33.92       0.15      76.3    4.00
+7     COCO    76.41  -0.04   6.72       4.4      Consumer Defensive                 Beverages - Non-Alcoholic       28.73  83.4  Bull       1.30   58.13       0.10      75.8     NaN
+8     LUNR    35.33  -3.26  21.95       5.6             Industrials                       Aerospace & Defense       41.59  69.0  Bull       0.91   28.10       0.31      75.7    4.44
+9      HUM   297.19  -1.38   8.08      35.7              Healthcare                          Healthcare Plans       31.31  81.5  Bull       5.47   44.87       0.07      75.6    3.35
+10    STAA    31.54  -1.47  18.17       1.6              Healthcare            Medical Instruments & Supplies       28.46  75.1  Bull       0.29   25.76       0.11      71.7    3.55
+11     FIG    22.52  11.29   9.03      11.9              Technology                    Software - Application        5.18  61.7  Bull       0.49   19.05       1.28      67.3    3.42
+12    MICC    16.68  11.09  12.81      10.2      Consumer Defensive                            Packaged Foods       12.45  70.8  Bull       0.22   14.44       1.31      66.6    3.00
+13     TDC    33.14  -0.96   4.91       3.1              Technology                 Software - Infrastructure       15.86  71.5  Bull       0.54   22.29       0.04      65.5    3.00
+14      VG    14.01   7.69  22.36      34.8                  Energy                       Oil & Gas Midstream       11.15  57.6  Bull       0.16   22.25       0.24      64.8    3.79
+15    CBOE   361.98   0.92   3.85      37.9      Financial Services          Financial Data & Stock Exchanges       15.89  72.1  Bull       3.26   20.69       0.11      64.5    2.88
+16     WES    46.89   2.22   7.82      18.4                  Energy                       Oil & Gas Midstream       12.65  78.5  Bull       0.50   18.19       0.37      62.6    3.29
+17    SUNC    70.76   0.65   7.13       3.6                  Energy                       Oil & Gas Midstream       13.17  74.3  Bull       0.54   19.39       0.08      61.6    4.67
+18    TRGP   270.71   1.21   9.11      58.1                  Energy                       Oil & Gas Midstream       11.46  69.0  Bull       1.74   15.53       0.24      58.2    4.50
+19    AVAH     7.74   4.03  14.84       1.7              Healthcare                   Medical Care Facilities       12.09  69.4  Bull       0.11   14.33       0.31      58.0    4.00
+20     CON    26.30   0.38   8.86       3.4              Healthcare                   Medical Care Facilities       14.10  81.9  Bull       0.37   15.05       0.09      57.8    4.71
+21    ONDS    11.05  -1.42  21.97       5.5              Technology                   Communication Equipment       11.19  59.3  Bull       0.11   10.51       0.67      56.7    4.75
+22    TTWO   241.69  -0.30   9.63      44.8  Communication Services            Electronic Gaming & Multimedia       11.87  74.8  Bull       2.04   13.98       0.20      56.6    4.81
+23     MDB   304.63   0.51   1.72      24.5              Technology                 Software - Infrastructure        8.70  65.7  Bull       4.74   15.66       0.09      55.8    4.36
+24    MNST    87.19   1.60   1.04      85.3      Consumer Defensive                 Beverages - Non-Alcoholic       11.06  73.2  Bull       1.04   13.65       0.19      55.8    4.00
+25      ZS   155.88   1.42   2.46      25.1              Technology                 Software - Infrastructure        4.83  62.2  Bull       2.19   15.74       0.19      54.7    4.48
+26      SM    31.77   1.28   7.91       7.6                  Energy                             Oil & Gas E&P       11.61  60.4  Bull       0.12   22.33       0.10      54.4    3.77
+27     MNR    14.39   0.47   4.63       2.4                  Energy                             Oil & Gas E&P        7.71  64.9  Bull       0.09   12.84       0.01      51.8    4.50
+28    VIRT    54.94  -0.10   7.06      11.8      Financial Services                           Capital Markets       15.76  71.1  Bull       0.35    8.46       0.03      51.6    3.43
+29     SUN    70.67   0.83   5.53      13.3                  Energy            Oil & Gas Refining & Marketing        8.76  66.5  Bull       0.33   13.74       0.07      51.0    4.62
+30    NTAP   118.44  -1.24   0.37      23.5              Technology                 Software - Infrastructure        9.78  66.0  Bull       0.53   13.31       0.14      50.5    3.60
+31     CVE    30.47   1.06   7.29      56.8                  Energy                      Oil & Gas Integrated       15.02  67.2  Bull       0.07   24.32       0.09      48.9    4.53
+32     WKC    28.29   0.89   4.51       1.5                  Energy            Oil & Gas Refining & Marketing       11.22  75.9  Bull       0.08   20.74       0.04      47.2    2.33
+33    EBAY   113.60   0.32   5.49      50.4       Consumer Cyclical                           Internet Retail       13.02  69.0  Bull       0.50    8.55       0.08      46.7    3.35
+34     HMC    26.38   2.77   7.63      34.2       Consumer Cyclical                        Auto Manufacturers        4.01  65.2  Bull       0.26    5.52       0.43      46.1    3.67
+35    VRSN   296.17   1.10   2.76      27.0              Technology                 Software - Infrastructure       11.07  71.2  Bull       1.35    8.07       0.06      46.0    4.00
+36     SPH    20.10  -0.35   2.24       1.3               Utilities                 Utilities - Regulated Gas        3.05  59.1  Bull       0.11    8.28       0.11      45.7     NaN
+37    HESM    39.40   0.43   3.22       8.1                  Energy                       Oil & Gas Midstream        4.52  59.2  Bull       0.20    6.20       0.24      45.5    2.71
+38     KMI    33.78   1.12   7.53      75.1                  Energy                       Oil & Gas Midstream        5.49  66.1  Bull       0.24    6.46       0.16      45.5    3.87
+39     MPC   254.71   2.37   4.02      74.4                  Energy            Oil & Gas Refining & Marketing        9.60  61.9  Bull       0.74   19.20       0.10      45.2    3.68
+40    SOLV    74.42   0.00   1.42      12.9              Healthcare            Medical Instruments & Supplies        5.91  67.1  Bull       0.60    5.59       0.12      44.6    3.38
+41     OKE    92.07   1.15   8.12      58.0                  Energy                       Oil & Gas Midstream        6.71  62.7  Bull       0.37   11.58       0.11      44.0    3.87
+42     CNQ    47.93   0.76   7.64     100.0                  Energy                             Oil & Gas E&P        5.38  57.7  Bull       0.20   11.47       0.06      43.8    3.77
+43     CME   303.82   2.05   8.02     110.1      Financial Services          Financial Data & Stock Exchanges        3.73  64.1  Bull       2.25    5.62       0.16      43.8    3.31
+44    SONY    22.58   2.06  12.03     132.8              Technology                      Consumer Electronics        6.14  63.0  Bull       0.31    4.03       0.16      43.4    4.50
+45    PAYC   138.23   3.46   0.99       6.4              Technology                    Software - Application        6.41  60.4  Bull       0.59    8.90       0.11      43.0    3.60
+46    SATS   134.18  -0.69   5.53      38.9  Communication Services                          Telecom Services        9.97  61.1  Bull       1.08    0.73       0.13      41.8    4.00
+47    MUFG    18.82   1.84   4.85     212.4      Financial Services                       Banks - Diversified        5.61  63.1  Bull       0.10    1.67       0.15      40.7     NaN
+48      BJ    97.06   1.15   4.40      12.4      Consumer Defensive                           Discount Stores        2.45  57.6  Bull       0.46    5.42       0.09      40.6    3.87
+49    COST  1056.78   1.49   4.76     468.8      Consumer Defensive                           Discount Stores        5.58  67.7  Bull       4.50    5.84       0.25      40.5    4.03
+50      CL    88.98   0.16   1.63      71.2      Consumer Defensive             Household & Personal Products        3.01  60.5  Bull       0.43    4.34       0.12      40.4    4.00
+51    VEON    53.46  -0.86   7.99       3.7  Communication Services                          Telecom Services        4.12  56.0  Bull       0.44   -2.17       0.13      38.1    5.00
+52      KO    81.26   1.01   3.63     349.7      Consumer Defensive                 Beverages - Non-Alcoholic        5.08  69.2  Bull       0.31    7.29       0.21      38.0    4.25
+53    PTEN    12.26   1.16   7.36       4.7                  Energy                        Oil & Gas Drilling       13.95  61.8  Bear      -0.01   30.15       0.04      37.3    3.80
+54    ITGR    89.74  -0.09   1.84       3.0              Healthcare                           Medical Devices        4.23  57.9  Bull       0.43   -0.51       0.05      36.2    4.00
+55     EPD    39.57   0.87   6.40      85.6                  Energy                       Oil & Gas Midstream        6.35  65.9  Bull       0.13    9.46       0.10      35.6    3.90
+56     XOM   155.10   1.52   7.29     642.9                  Energy                      Oil & Gas Integrated        2.48  55.6  Bull       0.58    5.92       0.24      35.5    3.64
+57      CI   292.69  -0.76   1.61      77.4              Healthcare                          Healthcare Plans        4.37  58.1  Bull       1.04    5.04       0.21      33.9    4.58
+58      MO    72.54   0.18   6.49     121.2      Consumer Defensive                                   Tobacco        7.43  62.8  Bull       0.15   13.04       0.12      32.2    3.38
+59     DTM   147.30  -0.53   3.15      15.0                  Energy                       Oil & Gas Midstream        6.61  65.8  Bull       0.39    9.73       0.05      31.8    3.60
+60     OHI    47.78  -0.31   1.25      14.9             Real Estate              REIT - Healthcare Facilities        4.06  65.4  Bull       0.17    3.53       0.14      31.7    3.67
+61     NVS   149.44  -0.22   2.34     285.1              Healthcare              Drug Manufacturers - General        0.32  52.5  Bull       0.65   -1.66       0.07      31.1    3.25
+62     KOS     3.06   4.44  11.28       1.8                  Energy                             Oil & Gas E&P       13.66  56.1  Bear      -0.01   23.39       0.09      30.9    3.67
+63     MOH   186.12  -0.36   0.10       9.7              Healthcare                          Healthcare Plans       10.68  59.4  Bear      -1.40   24.94       0.02      30.5    3.33
+64     BTE     5.01   1.11   3.83       3.6                  Energy                             Oil & Gas E&P       12.08  61.5  Bear      -0.02   23.52       0.06      30.1    3.73
+65    PAGP    24.44   1.35   5.41       5.7                  Energy                       Oil & Gas Midstream        6.14  64.8  Bull       0.05    9.61       0.19      29.7    3.67
+66     IMO   132.74   0.26   4.54      66.0                  Energy                      Oil & Gas Integrated        5.68  57.2  Bull       0.30    8.86       0.06      28.1    2.18
+67    SMFG    21.81   0.41   1.77     138.8      Financial Services                       Banks - Diversified        3.74  56.8  Bull       0.07    0.69       0.18      26.4     NaN
+68     CNO    46.93  -0.55   1.98       4.4      Financial Services                          Insurance - Life        7.43  72.8  Bull       0.10    7.56       0.05      25.9    3.00
+69     PAA    22.77   1.31   4.86      16.1                  Energy                       Oil & Gas Midstream        6.41  64.5  Bull       0.03   10.35       0.09      24.7    3.61
+70    ARLP    25.54   1.07   2.78       3.3                  Energy                              Thermal Coal        0.34  51.9  Bull       0.06    4.70       0.21      24.4    5.00
+71    FIZZ    35.37   1.00   0.65       3.3      Consumer Defensive                 Beverages - Non-Alcoholic        2.47  59.7  Bull       0.09    3.09       0.17      24.3     NaN
+72     UDR    37.12  -0.59   0.57      13.8             Real Estate                        REIT - Residential        3.50  62.4  Bull       0.09    5.22       0.09      24.2    3.55
+73    MUSA   579.30   0.54   0.25      10.7       Consumer Cyclical                          Specialty Retail       11.84  61.6  Bear      -1.69   17.95       0.04      24.2    3.50
+74    HTLD    13.38   1.83   1.21       1.0             Industrials                                  Trucking       13.49  62.4  Bear      -0.07   15.05       0.17      23.2    3.00
+75    CHRD   145.60   2.15   6.71       8.2                  Energy                             Oil & Gas E&P        9.39  59.4  Bear      -0.22   17.82       0.07      23.1    4.50
+76    SIGI    86.58   0.73   2.12       5.2      Financial Services           Insurance - Property & Casualty        5.53  62.1  Bull       0.19    4.60       0.04      22.8    3.38
+77     PSX   174.25   1.60   1.57      69.9                  Energy            Oil & Gas Refining & Marketing        3.89  54.7  Bull       0.19   11.43       0.09      21.6    3.75
+78     DKL    52.00   0.74   1.86       2.8                  Energy            Oil & Gas Refining & Marketing        3.12  56.9  Bull       0.09    7.12       0.12      21.4    3.00
+79    TALO    15.72   1.88   4.87       2.7                  Energy                             Oil & Gas E&P        6.54  56.1  Bear      -0.02   16.44       0.10      20.5    4.00
+80     EHC   107.14  -0.15   0.98      10.6              Healthcare                   Medical Care Facilities        2.69  56.3  Bull       0.27    0.70       0.03      19.7    4.92
+81    SCHW    92.64   3.58   4.55     161.1      Financial Services                           Capital Markets        0.04  53.4  Bull       0.22    0.75       0.20      19.3    4.32
+82    MEOH    62.56   0.00   3.94       4.8         Basic Materials                                 Chemicals        6.46  53.4  Bear      -0.21   15.57       0.04      19.1    4.00
+83     CVI    33.71   1.80   0.76       3.4                  Energy            Oil & Gas Refining & Marketing        7.10  54.5  Bear      -0.06   14.83       0.07      19.0    2.14
+84     VLO   250.68   2.41   3.99      74.4                  Energy            Oil & Gas Refining & Marketing        6.62  57.5  Bull       0.07   12.09       0.09      18.2    3.60
+85    FANG   203.67   1.70   8.53      57.3                  Energy                             Oil & Gas E&P        7.21  59.1  Bear      -0.10   13.60       0.09      17.9    4.47
+86     PDS    94.05   0.03   7.13       1.2                  Energy                        Oil & Gas Drilling        2.68  52.4  Bull       0.04   12.51       0.07      17.7    4.20
+87     KDP    29.22   0.41   1.35      39.8      Consumer Defensive                 Beverages - Non-Alcoholic        4.74  62.0  Bull       0.02   10.14       0.07      17.4    3.94
+88    VIST    72.64   1.11  11.40       7.6                  Energy                             Oil & Gas E&P        7.84  57.5  Bear      -0.02   11.80       0.10      16.5    4.64
+89     PBF    42.40   4.29   4.84       5.0                  Energy            Oil & Gas Refining & Marketing        2.56  51.6  Bear      -0.02   14.86       0.05      16.5    2.62
+90     OVV    59.60   2.23   3.06      16.7                  Energy                             Oil & Gas E&P        5.83  54.9  Bear      -0.22   12.86       0.08      16.4    4.32
+91     YOU    58.05   1.47   2.18       7.8              Technology                    Software - Application       12.17  58.5  Bear      -0.20    9.47       0.08      16.3    3.57
+92      CF   124.14   0.96   7.93      19.1         Basic Materials                       Agricultural Inputs        3.86  51.2  Bull       0.06   10.17       0.09      16.2    3.00
+93      SU    67.84   1.57   5.98      80.1                  Energy                      Oil & Gas Integrated        7.34  59.1  Bear      -0.01   10.92       0.15      15.9    3.90
+94     HAL    41.44   0.35   4.03      34.6                  Energy            Oil & Gas Equipment & Services        7.35  58.5  Bear      -0.06   11.53       0.07      15.8    4.15
+95    FCFS   228.20   0.29   0.23      10.0      Financial Services                           Credit Services        9.86  64.8  Bear      -0.15   10.36       0.05      15.7     NaN
+96     SSL    13.39   1.98   3.32       8.6         Basic Materials                       Specialty Chemicals        9.66  54.9  Bear      -0.09   10.12       0.07      15.5     NaN
+97     EOG   138.90   2.14   6.82      74.0                  Energy                             Oil & Gas E&P        4.31  56.6  Bull       0.08    8.15       0.13      15.2    3.81
+98     CVX   189.84   1.71   4.53     378.1                  Energy                      Oil & Gas Integrated        0.92  52.2  Bull       0.28    3.18       0.14      15.0    4.16
+99     AFL   117.51   0.96   3.90      59.8      Financial Services                          Insurance - Life        3.92  64.0  Bull       0.16    2.61       0.09      14.8    2.93
+100    OXY    58.61   3.11  10.52      58.3                  Energy                             Oil & Gas E&P        3.93  54.1  Bull       0.02    8.96       0.20      14.8    3.32
+101    LYB    74.10   1.13   3.26      23.9         Basic Materials                       Specialty Chemicals        4.67  52.5  Bear      -0.05   11.82       0.05      14.5    3.11
+102   CINF   166.91   0.97   3.35      25.8      Financial Services           Insurance - Property & Casualty        2.54  60.8  Bull       0.29    0.05       0.11      14.5    3.88
+103    VET    12.80   1.75   8.57       2.0                  Energy                             Oil & Gas E&P        4.23  52.8  Bear      -0.02   11.50       0.06      14.1    3.60
+104   RDWR    27.50   0.53   0.05       1.2              Technology                 Software - Infrastructure        4.96  55.9  Bull       0.01    6.74       0.12      14.0    3.67
+105    DVN    48.68   3.05   6.73      56.1                  Energy                             Oil & Gas E&P        3.68  54.1  Bear      -0.15   10.06       0.15      13.2    4.57
+106    CXW    21.15  -0.47   4.03       2.1             Industrials            Security & Protection Services        5.96  56.4  Bull       0.02    3.42       0.05      13.2    5.00
+107      V   328.47   1.84   3.25     624.7      Financial Services                           Credit Services        3.76  60.2  Bull       0.25    3.83       0.19      12.6    4.66
+108   MAAS     9.99  -1.48   4.50       3.5      Financial Services                          Asset Management       24.67  60.4  Bear      -0.08    1.52       0.01      11.6     NaN
+109    SOC    13.76   0.07   7.08       2.1                  Energy                        Oil & Gas Drilling        2.17  49.9  Bull       0.01    4.96       0.05      11.6    4.50
+110   MRTN    15.69   0.90   0.71       1.3             Industrials                                  Trucking       10.65  64.8  Bear      -0.01    5.51       0.06      11.4    4.00
+111     VZ    47.38   0.67   0.33     197.8  Communication Services                          Telecom Services        0.45  50.4  Bull       0.06    1.77       0.12      11.3     NaN
+112   CRGY    12.84   1.78   3.51       4.2                  Energy                             Oil & Gas E&P        3.48  51.0  Bear      -0.08    8.68       0.10      11.2    4.43
+113    BKR    64.75   0.22   1.35      64.2                  Energy            Oil & Gas Equipment & Services        2.97  50.9  Bear      -0.44    8.68       0.11      11.1    4.23
+114   VNOM    48.40   1.50   4.92      17.4                  Energy                       Oil & Gas Midstream        5.16  58.0  Bear      -0.07    8.13       0.04      11.1    4.76
+115    UAN   128.53   1.52   5.15       1.4         Basic Materials                       Agricultural Inputs        4.82  53.2  Bear      -0.04    7.92       0.06      10.9     NaN
+116    RDY    13.68   1.37   3.36      11.4              Healthcare  Drug Manufacturers - Specialty & Generic        1.21  54.4  Bull       0.01    2.82       0.08      10.8    3.40
+117   PRAX   336.81  -2.52   2.06       9.4              Healthcare                             Biotechnology        3.97  53.1  Bull       0.36   -1.66       0.07      10.0    4.53
+118    UNF   259.34   0.46   2.74       4.7             Industrials               Specialty Business Services        2.96  56.1  Bull       0.26   -1.44       0.15       9.6     NaN
+119    DEC    16.22   0.50   3.64       1.2                  Energy                      Oil & Gas Integrated        3.60  53.8  Bear      -0.00    6.64       0.14       9.6    4.90
+120     FG    28.55  -0.14   0.88       3.8      Financial Services                          Insurance - Life        6.02  57.9  Bear      -0.12    5.31       0.13       9.4    3.00
+121    APA    37.92   2.18   6.64      13.4                  Energy                             Oil & Gas E&P        3.01  49.8  Bear      -0.27    6.81       0.12       9.3    3.26
+122   DUOL   108.56  -0.55   0.53       5.1              Technology                    Software - Application        1.19  54.5  Bear      -0.01    8.01       0.08       9.3    3.17
+123   MTDR    59.01   1.86   6.80       7.3                  Energy                             Oil & Gas E&P        2.77  51.1  Bear      -0.31    6.86       0.05       8.7    4.42
+124    MGY    29.31   1.74   6.05       5.6                  Energy                             Oil & Gas E&P        1.79  51.7  Bear      -0.03    6.74       0.05       8.1    4.00
+125    MUR    39.20   0.64   6.00       5.6                  Energy                             Oil & Gas E&P        2.73  50.8  Bear      -0.21    6.32       0.05       8.1    3.06
+126    COP   121.85   2.42   7.80     148.4                  Energy                             Oil & Gas E&P        2.46  53.0  Bear      -0.05    5.79       0.12       8.0    4.15
+127    MCY    99.72   1.11   0.05       5.5      Financial Services           Insurance - Property & Casualty        5.53  58.9  Bull       0.01    3.58       0.06       7.6    5.00
+128   DMLP    27.65   1.54   6.26       1.3                  Energy                             Oil & Gas E&P        3.35  57.5  Bull       0.01    1.65       0.11       7.5     NaN
+129    LXU    14.36  -0.55   3.24       1.0         Basic Materials                                 Chemicals        2.67  49.1  Bear      -0.03    5.51       0.08       7.5    3.80
+130     PR    20.51   1.56   4.03      17.7                  Energy                             Oil & Gas E&P        2.55  49.5  Bear      -0.15    5.64       0.04       7.2    4.52
+131    UNM    81.36   0.57   0.60      13.0      Financial Services                          Insurance - Life        4.87  63.5  Bear      -0.07    2.79       0.04       5.6    4.23
+132   NDAQ    91.33   0.45   2.73      51.7      Financial Services          Financial Data & Stock Exchanges        3.25  60.8  Bear      -0.01    3.08       0.08       5.3    4.29
+133     EC    13.35   0.98   5.62      27.4                  Energy                      Oil & Gas Integrated        1.77  50.5  Bear      -0.05    3.42       0.06       4.8    2.55
+134    APD   299.19  -0.23   1.28      66.6         Basic Materials                       Specialty Chemicals        2.12  51.2  Bear      -0.55    2.53       0.13       4.7    4.09
+135   ZLAB    21.06   3.59  13.23       2.4              Healthcare                             Biotechnology        2.59  51.5  Bear      -0.16  -12.94       0.35       4.2    4.67
+136    AFG   132.75   0.11   1.09      11.0      Financial Services           Insurance - Property & Casualty        1.75  56.0  Bull       0.04    0.98       0.04       4.1    3.57
+137    ALL   219.49   1.40   2.97      56.5      Financial Services           Insurance - Property & Casualty        3.23  59.2  Bear      -0.09    1.54       0.12       4.1    3.84
+138     GL   153.95  -0.34   1.90      12.0      Financial Services                          Insurance - Life        3.79  58.6  Bear      -0.30    1.38       0.10       4.1    4.09
+139    PGR   201.20   2.19   3.71     117.6      Financial Services           Insurance - Property & Casualty        0.09  53.2  Bull       0.07   -0.68       0.14       3.7    3.38
+140   MSFT   415.47   1.48   0.08    3085.9              Technology                 Software - Infrastructure        1.66  54.3  Bear      -1.73   -1.73       0.24       2.8    4.69
+141   POST   103.27   0.48   1.20       4.7      Consumer Defensive                            Packaged Foods        0.99  52.2  Bear      -0.13    1.65       0.03       2.4    4.25
+142     HG    31.11   0.88   0.81       3.1      Financial Services                   Insurance - Reinsurance        2.38  51.4  Bear      -0.15   -2.87       0.07       1.8    3.71
+143    TRV   301.41   1.05   1.13      64.1      Financial Services           Insurance - Property & Casualty        0.82  52.3  Bear      -0.55    0.20       0.10       1.5    3.39
+144     CB   325.02   1.54   1.68     126.1      Financial Services           Insurance - Property & Casualty        0.19  51.0  Bear      -0.28   -1.76       0.12       1.1    3.64
+145   PRVA    23.41   0.73   1.52       2.9              Healthcare               Health Information Services        1.16  50.3  Bear      -0.20   -2.54       0.06       1.1    4.55
+146    HMN    44.97   0.18   1.03       1.8      Financial Services           Insurance - Property & Casualty        1.24  51.6  Bear      -0.19   -0.97       0.06       1.1    4.33
+147    CHH   107.36   1.55   0.73       4.9       Consumer Cyclical                                   Lodging        0.00  48.8  Bear      -0.46   -9.93       0.06       0.5    2.81
+148    BHF    61.72   0.50   0.56       3.5      Financial Services                          Insurance - Life        0.12  51.7  Bear      -0.13   -0.80       0.02       0.3    2.88
+
+CSV saved to /home/ec2-user/output.csv
