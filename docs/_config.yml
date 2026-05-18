@@ -4,13 +4,19 @@ baseurl: "/stock-intelligence"
 url: "https://kai-ion.github.io"
 theme: minima
 
+header_pages:
+  - performance.md
+  - about.md
+
 collections:
   daily:
     output: true
     permalink: /daily/:name/
+    sort_by: date
   weekly:
     output: true
     permalink: /weekly/:name/
+    sort_by: date
 
 defaults:
   - scope:

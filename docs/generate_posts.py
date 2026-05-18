@@ -4,6 +4,7 @@ Converts daily briefs and weekly reports into Jekyll blog posts.
 Run after syncing results to generate/update the blog.
 """
 
+import json
 import os
 import shutil
 from pathlib import Path
@@ -106,11 +107,49 @@ def copy_assets():
         print("Copied chart.svg")
 
 
+def generate_portfolio_include():
+    """Generate portfolio HTML include from portfolio.json."""
+    includes_dir = DOCS_DIR / "_includes"
+    includes_dir.mkdir(exist_ok=True)
+
+    portfolio_file = PAPER_TRADING_DIR / "portfolio.json"
+    if not portfolio_file.exists():
+        return
+
+    with open(portfolio_file) as f:
+        portfolio = json.load(f)
+
+    positions = portfolio.get("positions", {})
+    cash = portfolio.get("cash", 0)
+    starting = portfolio.get("starting_capital", 10000)
+
+    if not positions:
+        html = "<p><em>No open positions.</em></p>"
+    else:
+        html = '<table style="width:100%;border-collapse:collapse;font-size:14px;">\n'
+        html += '<tr style="border-bottom:2px solid #ddd;"><th>Ticker</th><th>Shares</th><th>Entry</th><th>Target</th><th>Stop</th><th>Date</th></tr>\n'
+        for ticker, pos in positions.items():
+            html += f'<tr style="border-bottom:1px solid #eee;">'
+            html += f'<td><strong>{ticker}</strong></td>'
+            html += f'<td>{pos["shares"]:.2f}</td>'
+            html += f'<td>${pos["entry_price"]:.2f}</td>'
+            html += f'<td>${pos["exit_target"]:.2f}</td>'
+            html += f'<td>${pos["stop_loss"]:.2f}</td>'
+            html += f'<td>{pos["entry_date"]}</td>'
+            html += f'</tr>\n'
+        html += '</table>\n'
+        html += f'<p style="margin-top:8px;color:#666;">Cash: ${cash:,.2f} | Positions: {len(positions)}</p>'
+
+    (includes_dir / "portfolio.html").write_text(html)
+    print("Generated portfolio include")
+
+
 def main():
     print("Generating blog posts...")
     generate_daily_posts()
     generate_weekly_posts()
     copy_assets()
+    generate_portfolio_include()
     print("Done!")
 
 

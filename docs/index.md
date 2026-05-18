@@ -24,20 +24,23 @@ Every weekday at 9:45 AM ET:
 
 ## Latest Picks
 
-{% for post in site.daily limit:1 %}
+{% assign sorted_daily = site.daily | sort: "date" | reverse %}
+{% for post in sorted_daily limit:1 %}
 ### [{{ post.title }}]({{ post.url | relative_url }})
 {{ post.excerpt }}
 {% endfor %}
 
 ## Recent Daily Reports
 
-{% for post in site.daily limit:7 %}
+{% assign sorted_daily = site.daily | sort: "date" | reverse %}
+{% for post in sorted_daily limit:7 %}
 - [{{ post.title }}]({{ post.url | relative_url }})
 {% endfor %}
 
 ## Weekly Events
 
-{% for post in site.weekly limit:4 %}
+{% assign sorted_weekly = site.weekly | sort: "date" | reverse %}
+{% for post in sorted_weekly limit:4 %}
 - [{{ post.title }}]({{ post.url | relative_url }})
 {% endfor %}
 

@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Methodology
+title: How It Works
 permalink: /about/
 ---
 
-# How Stock Intelligence Works
+# How It Works
 
 ## Screening
 

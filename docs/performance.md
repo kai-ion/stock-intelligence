@@ -12,10 +12,15 @@ permalink: /performance/
 
 {% include portfolio.html %}
 
-## Stats
+## Rules
 
-Updated daily at market close. Tracks every trade Claude makes with full reasoning.
+- Starting capital: $10,000
+- 20% allocation per pick (max 5 positions)
+- Auto-sells at fibonacci extension targets or stop losses
+- Sells weakest position to fund new picks when capital is low
+- Checked twice daily: morning (buy + exit check) and 3:55 PM (exit check)
+- No manual intervention — fully automated
 
 ---
 
-*Started May 13, 2026 with $10,000. Fully automated — no manual intervention.*
+*Started May 13, 2026. Updated daily.*
