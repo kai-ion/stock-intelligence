@@ -4,8 +4,6 @@ title: How It Works
 permalink: /about/
 ---
 
-# How It Works
-
 ## Screening
 
 Every weekday, we screen ~2,700 US-traded stocks with market cap above $1B. Stocks must pass:
