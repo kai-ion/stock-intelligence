@@ -108,12 +108,13 @@ def copy_assets():
 
 
 def generate_portfolio_include():
-    """Generate portfolio HTML include from portfolio.json."""
+    """Generate portfolio HTML include from portfolio.json and latest snapshot."""
     includes_dir = DOCS_DIR / "_includes"
     includes_dir.mkdir(exist_ok=True)
 
     portfolio_file = PAPER_TRADING_DIR / "portfolio.json"
     if not portfolio_file.exists():
+        (includes_dir / "portfolio.html").write_text("<p><em>No portfolio data available.</em></p>")
         return
 
     with open(portfolio_file) as f:
@@ -123,22 +124,49 @@ def generate_portfolio_include():
     cash = portfolio.get("cash", 0)
     starting = portfolio.get("starting_capital", 10000)
 
+    # Get current values from latest snapshot
+    snapshot_dir = PAPER_TRADING_DIR / "snapshots"
+    current_values = {}
+    if snapshot_dir.exists():
+        all_snapshots = []
+        for month_dir in sorted(snapshot_dir.iterdir()):
+            if month_dir.is_dir():
+                all_snapshots.extend(sorted(month_dir.glob("*.json")))
+        if all_snapshots:
+            with open(all_snapshots[-1]) as f:
+                latest = json.load(f)
+                current_values = latest.get("positions", {})
+
     if not positions:
         html = "<p><em>No open positions.</em></p>"
     else:
+        total_value = cash
         html = '<table style="width:100%;border-collapse:collapse;font-size:14px;">\n'
-        html += '<tr style="border-bottom:2px solid #ddd;"><th>Ticker</th><th>Shares</th><th>Entry</th><th>Target</th><th>Stop</th><th>Date</th></tr>\n'
+        html += '<tr style="border-bottom:2px solid #ddd;"><th>Ticker</th><th>Shares</th><th>Entry</th><th>Current</th><th>P&L</th><th>Target</th><th>Stop</th></tr>\n'
         for ticker, pos in positions.items():
+            entry_cost = pos["shares"] * pos["entry_price"]
+            current_val = current_values.get(ticker, entry_cost)
+            total_value += current_val
+            pnl = current_val - entry_cost
+            pnl_pct = (pnl / entry_cost) * 100 if entry_cost > 0 else 0
+            current_price = current_val / pos["shares"] if pos["shares"] > 0 else 0
+
+            color = "#16a34a" if pnl >= 0 else "#dc2626"
             html += f'<tr style="border-bottom:1px solid #eee;">'
             html += f'<td><strong>{ticker}</strong></td>'
             html += f'<td>{pos["shares"]:.2f}</td>'
             html += f'<td>${pos["entry_price"]:.2f}</td>'
+            html += f'<td>${current_price:.2f}</td>'
+            html += f'<td style="color:{color};font-weight:500;">${pnl:+,.2f} ({pnl_pct:+.1f}%)</td>'
             html += f'<td>${pos["exit_target"]:.2f}</td>'
             html += f'<td>${pos["stop_loss"]:.2f}</td>'
-            html += f'<td>{pos["entry_date"]}</td>'
             html += f'</tr>\n'
         html += '</table>\n'
-        html += f'<p style="margin-top:8px;color:#666;">Cash: ${cash:,.2f} | Positions: {len(positions)}</p>'
+
+        total_return = (total_value - starting) / starting * 100
+        color = "#16a34a" if total_return >= 0 else "#dc2626"
+        html += f'<p style="margin-top:12px;font-size:16px;"><strong>Total Value: ${total_value:,.2f}</strong> <span style="color:{color};">({total_return:+.2f}%)</span></p>'
+        html += f'<p style="color:#666;">Cash: ${cash:,.2f} | Positions: {len(positions)} | Started: ${starting:,.2f}</p>'
 
     (includes_dir / "portfolio.html").write_text(html)
     print("Generated portfolio include")
