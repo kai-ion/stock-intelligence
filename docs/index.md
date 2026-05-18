@@ -1,6 +1,5 @@
 ---
-layout: home
-title: Home
+layout: default
 ---
 
 # Stock Intelligence
@@ -46,4 +45,4 @@ Every weekday at 9:45 AM ET:
 
 ---
 
-[View on GitHub](https://github.com/kai-ion/stock-intelligence) | [Methodology]({{ site.baseurl }}/about/)
+[View on GitHub](https://github.com/kai-ion/stock-intelligence) | [How It Works]({{ site.baseurl }}/about/)
