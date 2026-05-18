@@ -1,0 +1,25 @@
+title: Stock Intelligence
+description: AI-powered daily stock screening, technical analysis, and paper trading. Claude picks stocks every morning — track the performance live.
+baseurl: "/stock-intelligence"
+url: "https://kai-ion.github.io"
+theme: minima
+
+collections:
+  daily:
+    output: true
+    permalink: /daily/:name/
+  weekly:
+    output: true
+    permalink: /weekly/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "daily"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "weekly"
+    values:
+      layout: "post"
