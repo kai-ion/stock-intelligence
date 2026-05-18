@@ -9,9 +9,10 @@ import shutil
 from pathlib import Path
 from datetime import datetime
 
-RESULTS_DIR = Path(__file__).parent.parent / "results"
-EVENTS_DIR = Path(__file__).parent.parent / "events" / "data"
-PAPER_TRADING_DIR = Path(__file__).parent.parent / "paper_trading"
+REPO_ROOT = Path(__file__).parent.parent
+RESULTS_DIR = REPO_ROOT / "results"
+EVENTS_DIRS = [REPO_ROOT / "events" / "data", REPO_ROOT / "events"]
+PAPER_TRADING_DIR = REPO_ROOT / "paper_trading"
 DOCS_DIR = Path(__file__).parent
 DAILY_DIR = DOCS_DIR / "_daily"
 WEEKLY_DIR = DOCS_DIR / "_weekly"
@@ -21,6 +22,10 @@ ASSETS_DIR = DOCS_DIR / "assets"
 def generate_daily_posts():
     """Convert _brief.md files into Jekyll posts."""
     DAILY_DIR.mkdir(exist_ok=True)
+
+    if not RESULTS_DIR.exists():
+        print("No results directory found")
+        return
 
     for month_dir in sorted(RESULTS_DIR.iterdir()):
         if not month_dir.is_dir():
@@ -55,21 +60,30 @@ def generate_weekly_posts():
     """Convert weekly reports into Jekyll posts."""
     WEEKLY_DIR.mkdir(exist_ok=True)
 
-    for month_dir in sorted(EVENTS_DIR.iterdir()):
-        if not month_dir.is_dir():
+    # Find events directory (could be events/data/YYYY-MM/ or events/YYYY-MM/)
+    all_reports = []
+    for events_dir in EVENTS_DIRS:
+        if not events_dir.exists():
             continue
-        for report in sorted(month_dir.glob("week_*.md")):
-            date_str = report.name.replace("week_", "").replace(".md", "")
-            try:
-                date = datetime.strptime(date_str, "%Y-%m-%d")
-            except ValueError:
+        for month_dir in sorted(events_dir.iterdir()):
+            if not month_dir.is_dir():
                 continue
+            all_reports.extend(month_dir.glob("week_*.md"))
+        # Also check top-level .md files
+        all_reports.extend(events_dir.glob("week_*.md"))
 
-            post_path = WEEKLY_DIR / f"{date_str}.md"
+    for report in sorted(all_reports):
+        date_str = report.name.replace("week_", "").replace(".md", "")
+        try:
+            date = datetime.strptime(date_str, "%Y-%m-%d")
+        except ValueError:
+            continue
 
-            content = report.read_text()
+        post_path = WEEKLY_DIR / f"{date_str}.md"
 
-            front_matter = f"""---
+        content = report.read_text()
+
+        front_matter = f"""---
 layout: post
 title: "Weekly Preview — Week of {date.strftime('%B %d, %Y')}"
 date: {date_str}
@@ -77,7 +91,7 @@ categories: weekly
 ---
 
 """
-            post_path.write_text(front_matter + content)
+        post_path.write_text(front_matter + content)
 
     print(f"Generated {len(list(WEEKLY_DIR.glob('*.md')))} weekly posts")
 
