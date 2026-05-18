@@ -32,14 +32,16 @@ Every weekday at 9:45 AM ET:
 ## Recent Daily Reports
 
 {% assign sorted_daily = site.daily | sort: "date" | reverse %}
-{% for post in sorted_daily limit:7 %}
+{% for post in sorted_daily limit:5 %}
 - [{{ post.title }}]({{ post.url | relative_url }})
 {% endfor %}
+
+[See all daily reports →]({{ site.baseurl }}/archive/)
 
 ## Weekly Events
 
 {% assign sorted_weekly = site.weekly | sort: "date" | reverse %}
-{% for post in sorted_weekly limit:4 %}
+{% for post in sorted_weekly limit:3 %}
 - [{{ post.title }}]({{ post.url | relative_url }})
 {% endfor %}
 
