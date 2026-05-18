@@ -1,0 +1,170 @@
+Ticker,Price,Day%,Week%,MCap($B),Sector,Industry,Above EMA%,RSI,MACD,MACD Hist,ROC20%,Vol Ratio,Momentum,Rating
+RAMP,37.76,27.29,28.64,2.4,Technology,Software - Infrastructure,31.53,79.6,Bull,0.39,28.16,6.24,98.2,
+TE,6.57,15.87,8.77,1.8,Industrials,Electrical Equipment & Parts,15.28,64.3,Bull,0.14,31.93,1.74,87.1,4.8
+RDW,13.63,-3.06,12.09,2.7,Industrials,Aerospace & Defense,33.54,66.2,Bull,0.47,33.5,1.15,84.6,4.5
+RKLB,127.17,1.92,8.37,74.3,Industrials,Aerospace & Defense,46.6,71.7,Bull,4.3,42.15,0.41,78.4,4.35
+VPG,104.77,7.66,57.31,1.4,Technology,Scientific & Technical Instruments,71.75,86.5,Bull,4.2,97.08,0.39,78.2,5.0
+OSCR,24.96,7.04,13.47,7.5,Healthcare,Healthcare Plans,42.86,85.1,Bull,0.41,51.84,0.37,78.1,2.91
+POET,15.06,-5.67,8.38,2.3,Technology,Semiconductors,60.0,59.7,Bull,0.69,75.38,0.32,77.7,
+ATEX,57.2,0.25,2.66,1.1,Communication Services,Telecom Services,27.79,75.0,Bull,0.4,34.27,0.32,77.7,
+WOLF,61.75,-0.61,22.74,3.0,Technology,Semiconductors,85.27,74.4,Bull,2.48,134.52,0.31,77.6,2.5
+SLS,7.33,3.53,39.62,1.4,Healthcare,Biotechnology,43.38,73.6,Bull,0.27,46.89,0.31,77.6,4.5
+CRWD,607.89,2.32,12.1,154.6,Technology,Software - Infrastructure,30.12,83.9,Bull,12.25,40.34,0.26,77.1,4.35
+UMC,17.39,1.08,11.51,43.6,Technology,Semiconductors,40.3,84.4,Bull,0.27,37.54,0.23,76.9,
+PENG,45.08,-3.73,3.53,2.4,Technology,Information Technology Services,48.59,72.8,Bull,0.83,60.41,0.23,76.9,4.43
+TBLA,5.14,3.01,0.19,1.6,Communication Services,Internet Content & Information,28.21,77.2,Bull,0.06,36.34,0.2,76.7,4.12
+LQDA,57.17,0.43,7.61,5.1,Healthcare,Drug Manufacturers - Specialty & Generic,35.88,78.5,Bull,1.84,51.81,0.14,76.2,4.86
+AMBQ,70.04,-0.74,53.37,1.5,Technology,Semiconductors,74.82,82.8,Bull,3.31,99.44,0.12,76.0,4.0
+VSH,37.72,1.33,8.31,5.1,Technology,Semiconductors,41.13,76.4,Bull,0.39,43.28,0.12,76.0,3.33
+NVCR,18.28,3.98,0.99,2.1,Healthcare,Medical Devices,28.99,71.3,Bull,0.17,44.28,0.1,75.8,4.29
+XMTR,90.86,5.5,12.53,4.8,Industrials,Industrial Distribution,56.53,82.3,Bull,3.08,82.55,0.09,75.7,4.11
+PGNY,24.21,4.13,7.36,1.9,Healthcare,Healthcare Plans,21.85,74.4,Bull,0.47,29.88,0.09,75.7,4.6
+GTX,30.75,-0.76,5.51,5.8,Consumer Cyclical,Auto Parts,33.62,79.0,Bull,0.49,54.19,0.06,75.5,3.83
+IART,14.61,3.62,4.58,1.1,Healthcare,Medical Devices,25.5,68.9,Bull,0.21,30.91,0.05,75.4,2.9
+FPS,43.76,-2.79,1.73,13.3,Industrials,Electrical Equipment & Parts,18.43,59.7,Bull,0.45,28.38,0.2,74.2,4.6
+LUNR,34.22,0.97,5.55,5.5,Industrials,Aerospace & Defense,35.45,65.2,Bull,0.71,24.35,0.48,73.4,4.44
+WTTR,19.17,1.11,8.8,2.7,Energy,Oil & Gas Equipment & Services,20.44,76.6,Bull,0.17,27.99,0.05,73.4,4.8
+ZS,171.21,6.31,15.01,27.5,Technology,Software - Infrastructure,14.32,71.0,Bull,3.23,27.01,0.29,71.6,4.46
+MDB,331.45,6.18,12.49,26.6,Technology,Software - Infrastructure,17.31,73.5,Bull,6.07,25.5,0.21,70.9,4.36
+PTRN,17.04,3.21,6.23,3.4,Technology,Software - Application,22.8,69.9,Bull,0.19,23.66,0.21,70.4,4.8
+HNGE,55.0,0.92,0.47,4.3,Healthcare,Health Information Services,18.82,72.1,Bull,0.34,25.2,0.09,70.3,4.44
+UFCS,49.5,3.0,1.94,1.3,Financial Services,Insurance - Property & Casualty,19.38,76.0,Bull,0.61,24.81,0.07,70.1,4.5
+AEVA,19.4,-5.25,24.92,1.2,Technology,Software - Infrastructure,23.41,60.6,Bull,0.49,22.86,0.22,69.7,4.6
+FFIV,381.82,5.31,6.56,21.5,Technology,Software - Infrastructure,20.49,79.1,Bull,3.5,21.6,0.15,67.8,
+BTSG,58.04,0.24,5.39,11.3,Healthcare,Health Information Services,20.25,75.9,Bull,0.48,21.4,0.04,66.7,4.88
+HRB,38.45,3.23,6.63,4.9,Consumer Cyclical,Personal Services,15.77,69.2,Bull,0.61,21.26,0.08,64.8,2.75
+VCYT,40.6,5.51,2.27,3.2,Healthcare,Diagnostics & Research,13.81,65.6,Bull,0.36,21.38,0.12,64.3,4.36
+GRAL,63.29,6.1,3.31,2.7,Healthcare,Diagnostics & Research,8.29,61.4,Bull,0.58,23.61,0.14,63.9,4.0
+D,68.57,11.08,9.61,60.3,Utilities,Utilities - Regulated Electric,9.58,71.1,Bull,0.34,10.21,1.69,63.6,3.19
+CMPS,10.85,4.63,12.44,1.5,Healthcare,Medical Care Facilities,33.15,66.4,Bull,0.06,14.69,0.47,63.6,4.64
+ACVA,6.18,4.31,1.4,1.1,Consumer Cyclical,Auto & Truck Dealerships,13.1,63.1,Bull,0.04,21.08,0.06,63.1,3.77
+VOYG,36.04,4.65,16.94,2.1,Industrials,Aerospace & Defense,24.41,65.6,Bull,0.95,14.12,0.37,62.2,4.3
+ARW,209.45,0.52,3.4,10.7,Technology,Electronics & Computer Distribution,20.17,73.8,Bull,0.98,19.03,0.05,62.0,3.25
+AXSM,228.95,0.54,5.77,11.8,Healthcare,Biotechnology,17.9,70.2,Bull,1.01,21.34,0.04,61.6,4.76
+AVAH,8.02,3.89,21.7,1.7,Healthcare,Medical Care Facilities,15.45,72.6,Bull,0.15,16.74,0.19,61.0,4.18
+PL,41.98,0.86,0.33,15.0,Industrials,Aerospace & Defense,20.62,59.7,Bull,0.23,11.95,0.37,60.1,4.3
+GEN,23.83,1.62,6.38,14.4,Technology,Software - Infrastructure,13.47,73.6,Bull,0.45,16.7,0.06,58.9,4.0
+BLBD,72.56,0.96,3.13,2.3,Industrials,Farm & Heavy Construction Machinery,15.32,69.1,Bull,0.52,15.23,0.09,58.7,4.43
+BTI,66.31,1.87,9.7,143.6,Consumer Defensive,Tobacco,11.43,69.6,Bull,0.89,16.2,0.15,58.2,4.33
+PLGO,23.74,2.5,14.63,2.0,Financial Services,Insurance - Diversified,15.84,73.9,Bull,0.24,13.92,0.08,57.5,3.11
+STM,61.93,0.85,3.01,55.1,Technology,Semiconductors,32.3,70.9,Bull,0.13,39.29,0.22,56.4,3.8
+HRI,137.49,-0.51,1.01,4.6,Industrials,Rental & Leasing Services,9.86,61.0,Bull,0.53,23.63,0.03,55.9,4.11
+OKTA,86.25,4.2,5.58,15.1,Technology,Software - Infrastructure,10.32,64.6,Bull,0.78,13.85,0.18,55.5,4.29
+JAZZ,230.53,0.77,3.09,14.5,Healthcare,Biotechnology,13.51,70.5,Bull,1.12,13.81,0.04,54.8,4.35
+SAIL,13.94,3.27,18.45,7.9,Technology,Software - Infrastructure,8.36,65.5,Bull,0.27,14.55,0.1,54.6,4.39
+NVDA,224.82,-0.22,2.45,5447.2,Technology,Semiconductors,12.19,64.1,Bull,1.42,11.26,0.22,54.2,4.7
+VIRT,55.78,2.37,8.23,12.0,Financial Services,Capital Markets,16.77,71.7,Bull,0.39,10.32,0.05,54.1,3.43
+HLIO,77.31,0.36,13.66,2.6,Industrials,Specialty Industrial Machinery,11.69,64.0,Bull,1.06,11.95,0.09,53.5,4.67
+DHC,8.54,2.18,1.45,2.1,Real Estate,REIT - Healthcare Facilities,14.28,64.1,Bull,0.04,16.07,0.04,53.3,4.0
+FLY,44.18,9.28,15.53,7.1,Industrials,Aerospace & Defense,30.55,64.5,Bull,0.56,3.25,0.59,53.2,4.22
+NTSK,11.43,1.87,1.69,4.6,Technology,Software - Infrastructure,7.5,61.3,Bull,0.07,13.39,0.12,53.1,4.72
+PLSE,25.23,2.77,32.23,1.7,Healthcare,Medical Instruments & Supplies,18.83,60.6,Bull,0.57,6.32,0.17,52.2,5.0
+VRSN,303.45,1.98,5.93,27.6,Technology,Software - Infrastructure,13.17,75.0,Bull,1.82,10.02,0.07,52.2,4.0
+WT,19.71,1.56,1.77,3.0,Financial Services,Asset Management,15.92,64.6,Bull,0.13,7.89,0.05,51.3,4.29
+ALKS,37.57,0.24,5.92,6.3,Healthcare,Drug Manufacturers - Specialty & Generic,10.85,63.0,Bull,0.23,9.76,0.05,50.6,4.47
+MRCY,92.61,0.63,0.72,5.6,Industrials,Aerospace & Defense,10.14,63.5,Bull,1.02,10.09,0.04,50.5,4.0
+LIVN,72.21,3.16,3.02,4.0,Healthcare,Medical Devices,10.21,62.4,Bull,0.86,9.72,0.02,50.0,4.27
+ARX,15.65,1.36,17.14,3.4,Financial Services,Insurance Brokers,17.07,64.8,Bull,0.2,5.32,0.09,49.6,4.4
+SATS,138.42,0.87,7.19,40.1,Communication Services,Telecom Services,12.73,65.4,Bull,1.42,2.45,0.69,49.5,4.0
+SVC,1.7,2.42,6.26,1.1,Real Estate,REIT - Hotel & Motel,3.32,59.3,Bull,0.03,11.85,0.1,49.4,4.0
+ERIC,12.67,1.36,1.44,42.2,Technology,Communication Equipment,8.8,63.7,Bull,0.09,7.65,0.23,48.9,
+SJM,103.06,2.51,5.02,11.0,Consumer Defensive,Packaged Foods,5.18,70.6,Bull,0.76,8.39,0.2,47.6,3.86
+FICO,1158.0,5.41,6.04,26.9,Technology,Software - Application,2.85,61.6,Bull,12.45,8.89,0.11,46.2,4.14
+ESTC,53.16,5.06,5.52,5.4,Technology,Software - Application,3.23,59.8,Bull,0.45,8.58,0.09,46.0,4.1
+CWST,87.28,2.47,4.97,5.6,Industrials,Waste Management,2.09,57.1,Bull,0.53,9.73,0.03,46.0,4.27
+SONY,22.84,2.38,7.28,134.9,Technology,Consumer Electronics,7.15,64.7,Bull,0.31,6.53,0.1,46.0,4.5
+ASTS,84.71,1.24,2.62,33.0,Technology,Communication Equipment,3.58,54.7,Bull,2.01,4.58,0.39,44.7,3.4
+F,13.19,-1.57,10.84,52.7,Consumer Cyclical,Auto Manufacturers,6.4,57.7,Bull,0.18,3.78,0.29,44.4,3.29
+MUFG,19.12,1.49,5.11,216.4,Financial Services,Banks - Diversified,6.99,66.3,Bull,0.12,4.88,0.1,44.2,3.5
+NN,21.36,-0.6,5.64,2.9,Technology,Software - Infrastructure,15.66,60.8,Bull,0.23,-7.93,0.1,43.7,5.0
+KLAR,15.61,2.9,8.48,5.9,Technology,Software - Infrastructure,2.68,57.0,Bull,0.16,4.77,0.21,42.9,4.16
+BIP,38.42,1.24,2.62,17.7,Utilities,Utilities - Diversified,4.49,63.1,Bull,0.25,4.63,0.02,42.1,4.33
+NOMD,10.01,2.14,7.52,1.4,Consumer Defensive,Packaged Foods,1.86,58.5,Bull,0.07,5.41,0.08,42.0,4.33
+NOW,101.71,6.98,11.17,105.0,Technology,Software - Application,2.59,59.4,Bull,1.38,2.0,0.42,41.8,4.55
+ASTH,39.35,2.85,3.63,2.0,Healthcare,Medical Care Facilities,24.65,71.8,Bull,0.03,25.12,0.04,41.5,4.55
+TXN,300.39,-0.77,0.88,273.4,Technology,Semiconductors,21.05,72.4,Bull,0.06,29.19,0.07,41.2,3.7
+ATRO,78.87,0.36,4.06,2.8,Industrials,Aerospace & Defense,6.88,57.0,Bull,0.54,1.52,0.09,40.7,4.4
+ADP,219.67,2.42,3.78,87.8,Technology,Software - Application,4.45,62.6,Bull,0.89,8.54,0.09,40.0,3.17
+MSGS,357.77,1.77,3.97,8.6,Communication Services,Entertainment,9.07,67.1,Bull,1.43,6.88,0.07,39.9,3.88
+PCTY,111.68,4.26,1.64,6.0,Technology,Software - Application,2.9,57.7,Bull,0.44,8.28,0.1,37.8,4.48
+HALO,68.13,1.5,2.59,8.1,Healthcare,Biotechnology,1.82,54.4,Bull,0.36,-2.07,0.13,37.0,3.89
+LPG,41.69,2.01,3.17,1.8,Energy,Oil & Gas Midstream,13.61,73.2,Bull,0.07,13.04,0.22,34.0,4.0
+UBS,46.6,2.33,3.93,152.7,Financial Services,Banks - Diversified,10.01,68.1,Bull,0.11,9.09,0.15,32.4,
+SBRA,21.07,1.94,3.35,5.3,Real Estate,REIT - Healthcare Facilities,5.11,65.1,Bull,0.07,4.26,0.06,31.6,3.85
+MMM,149.45,2.21,4.26,77.9,Industrials,Conglomerates,0.52,56.3,Bull,0.64,-1.29,0.11,31.3,3.89
+ACDC,7.45,2.27,9.81,1.3,Energy,Oil & Gas Equipment & Services,13.65,60.5,Bear,-0.01,23.26,0.11,31.0,2.4
+ASND,238.99,-0.63,0.13,14.8,Healthcare,Biotechnology,2.74,53.1,Bull,0.94,-2.6,0.05,29.2,4.8
+MRX,57.24,1.81,2.65,4.1,Financial Services,Capital Markets,16.12,64.5,Bull,0.05,12.41,0.04,27.2,4.38
+ASH,56.06,2.86,3.66,2.6,Basic Materials,Specialty Chemicals,0.97,52.8,Bull,0.2,-3.29,0.04,26.0,4.42
+REYN,21.59,2.1,1.05,4.6,Consumer Cyclical,Packaging & Containers,0.6,55.5,Bull,0.07,0.91,0.03,24.0,3.33
+OMCL,44.39,2.94,2.52,2.0,Healthcare,Health Information Services,10.56,63.5,Bear,-0.02,17.43,0.07,23.3,
+SNDR,32.02,0.25,7.31,5.6,Industrials,Trucking,10.18,60.5,Bull,0.05,6.7,0.07,22.6,3.69
+IQV,173.84,2.79,0.16,29.0,Healthcare,Diagnostics & Research,0.11,53.8,Bull,0.54,-1.65,0.04,22.2,4.65
+SUNB,77.25,1.29,7.39,31.9,Industrials,Rental & Leasing Services,6.31,57.3,Bull,0.13,6.78,0.08,22.0,3.62
+PRKS,37.19,2.93,1.81,1.8,Consumer Cyclical,Leisure,5.98,56.4,Bull,0.07,4.88,0.08,22.0,4.0
+HTLD,13.45,1.13,6.16,1.0,Industrials,Trucking,13.5,63.1,Bear,-0.04,14.18,0.11,21.8,3.0
+LFST,7.83,2.35,2.09,3.0,Healthcare,Medical Care Facilities,8.88,56.2,Bear,-0.0,13.15,0.04,17.9,4.6
+MCY,102.0,3.98,2.98,5.6,Financial Services,Insurance - Property & Casualty,7.67,63.1,Bull,0.06,7.48,0.19,17.3,5.0
+WRB,67.91,2.2,2.26,25.1,Financial Services,Insurance - Property & Casualty,1.29,57.6,Bull,0.11,2.58,0.04,15.2,2.78
+TFSL,15.52,1.37,4.37,4.4,Financial Services,Banks - Regional,6.04,66.7,Bull,0.02,3.12,0.17,14.9,
+YOU,60.29,2.39,5.99,8.1,Technology,Software - Application,15.69,62.9,Bear,-0.0,6.1,0.11,14.8,3.57
+TILE,28.74,2.46,0.14,1.7,Consumer Cyclical,"Furnishings, Fixtures & Appliances",3.0,55.8,Bull,0.05,1.2,0.06,14.4,4.5
+GHRS,21.89,2.34,2.96,1.5,Healthcare,Biotechnology,17.97,61.3,Bear,-0.1,1.81,0.43,14.4,4.67
+VIK,85.93,2.66,6.2,38.3,Consumer Cyclical,Travel Services,8.72,58.4,Bull,0.11,-0.19,0.09,14.2,4.22
+FG,29.35,4.69,5.82,3.9,Financial Services,Insurance - Life,8.72,61.2,Bear,-0.08,8.44,0.14,14.0,3.0
+BAX,17.9,3.47,2.11,9.2,Healthcare,Medical Instruments & Supplies,0.45,52.6,Bull,0.03,-4.99,0.05,13.3,3.33
+ULS,98.93,-0.07,1.23,19.9,Industrials,Specialty Business Services,9.42,59.5,Bull,0.02,6.4,0.07,12.9,3.92
+UNM,82.87,1.51,1.67,13.2,Financial Services,Insurance - Life,6.5,68.9,Bull,0.03,5.22,0.07,11.2,4.23
+AEG,8.51,1.43,1.07,12.9,Financial Services,Insurance - Diversified,7.55,67.2,Bear,-0.0,5.58,0.2,11.1,
+ZETA,18.77,9.19,13.69,4.7,Technology,Software - Infrastructure,8.59,61.7,Bear,-0.0,3.42,0.39,10.9,4.57
+AOSL,39.82,2.44,3.11,1.2,Technology,Semiconductors,19.03,54.3,Bear,-0.91,-0.2,0.14,10.7,3.33
+MDLZ,61.76,2.18,0.57,79.3,Consumer Defensive,Confectioners,4.51,62.3,Bear,-0.02,7.76,0.08,10.7,4.12
+U,27.87,2.61,3.72,12.2,Technology,Software - Application,9.02,62.2,Bear,-0.12,5.05,0.14,10.7,4.11
+BMY,58.39,2.44,4.89,119.2,Healthcare,Drug Manufacturers - General,1.01,54.0,Bull,0.07,-1.25,0.19,10.3,3.48
+DEO,83.25,1.92,1.52,46.3,Consumer Defensive,Beverages - Wineries & Distilleries,2.98,58.2,Bull,0.08,1.33,0.09,10.2,3.62
+CUZ,26.34,2.07,0.21,4.3,Real Estate,REIT - Office,6.97,61.4,Bear,-0.07,6.1,0.02,9.7,4.5
+CRVL,58.73,2.84,3.05,3.0,Financial Services,Insurance Brokers,3.81,58.5,Bear,-0.04,7.33,0.03,9.5,
+VNO,31.28,2.29,0.77,6.4,Real Estate,REIT - Office,6.45,59.9,Bear,-0.07,5.75,0.04,9.3,3.38
+PENN,16.69,3.06,4.74,2.2,Consumer Cyclical,Resorts & Casinos,6.12,55.4,Bear,-0.16,5.4,0.06,9.0,3.85
+DRVN,13.88,6.77,4.75,2.3,Consumer Cyclical,Auto & Truck Dealerships,6.34,58.9,Bear,-0.03,3.97,0.16,8.5,4.0
+ATAI,4.37,8.84,8.17,1.6,Healthcare,Biotechnology,8.16,57.3,Bear,-0.02,-10.82,0.5,8.2,4.86
+PSO,15.16,4.02,3.1,9.1,Communication Services,Publishing,7.59,65.1,Bear,-0.06,3.38,0.11,8.1,2.5
+BLFS,22.72,9.44,4.56,1.1,Healthcare,Medical Instruments & Supplies,7.08,59.7,Bear,-0.02,2.39,0.22,7.8,4.9
+ESS,270.22,1.18,0.54,18.6,Real Estate,REIT - Residential,4.83,62.8,Bull,0.01,4.52,0.03,7.5,3.27
+WABC,54.82,1.93,1.16,1.3,Financial Services,Banks - Regional,3.56,60.1,Bear,-0.14,4.52,0.13,7.4,
+NEXA,15.01,1.04,12.73,2.0,Basic Materials,Other Industrial Metals & Mining,11.9,54.6,Bear,-0.13,-6.22,0.14,7.1,2.88
+TFX,134.52,3.71,3.7,6.0,Healthcare,Medical Instruments & Supplies,8.78,60.6,Bear,-0.05,1.95,0.08,7.0,3.27
+DAL,72.24,2.86,1.73,47.5,Industrials,Airlines,5.24,58.3,Bull,0.01,1.72,0.13,6.8,4.69
+FTI,72.39,1.56,1.74,28.9,Energy,Oil & Gas Equipment & Services,3.24,50.2,Bear,-0.44,3.09,0.05,5.1,4.05
+RGC,28.68,0.35,4.94,14.2,Healthcare,Drug Manufacturers - Specialty & Generic,3.05,51.6,Bear,-0.1,2.06,0.18,5.1,
+OTTR,89.02,1.39,1.48,3.7,Industrials,Conglomerates,1.63,53.5,Bear,-0.0,2.6,0.13,4.5,3.0
+BXP,59.78,2.2,1.43,10.7,Real Estate,REIT - Office,4.04,60.9,Bear,-0.12,1.49,0.08,4.1,3.82
+HQY,84.35,2.65,3.31,7.1,Healthcare,Health Information Services,2.24,55.4,Bull,0.03,-2.29,0.08,3.9,
+HG,32.41,1.79,4.89,3.2,Financial Services,Insurance - Reinsurance,6.27,60.7,Bear,-0.0,-0.58,0.07,3.7,3.71
+BIO,273.13,10.34,12.03,7.3,Healthcare,Medical Devices,0.33,54.7,Bear,-0.3,-9.96,0.39,3.4,3.2
+OBK,46.16,1.52,0.46,1.4,Financial Services,Banks - Regional,3.96,55.0,Bear,-0.25,1.27,0.01,3.3,
+WPP,18.19,4.12,1.62,3.9,Communication Services,Advertising Agencies,2.72,55.7,Bear,-0.1,0.66,0.14,3.2,2.67
+HSBC,90.28,2.15,0.25,308.2,Financial Services,Banks - Diversified,3.52,54.4,Bear,-0.25,-0.88,0.15,3.0,3.67
+BP,44.51,0.36,1.81,114.6,Energy,Oil & Gas Integrated,1.67,49.4,Bear,-0.18,-0.22,0.24,2.8,3.5
+CLH,305.41,0.54,4.08,16.1,Industrials,Waste Management,3.47,54.4,Bear,-0.13,0.6,0.05,2.8,4.29
+NRIX,16.32,2.93,0.25,1.7,Healthcare,Biotechnology,0.3,50.0,Bear,-0.1,-4.23,0.31,2.8,4.71
+MAR,361.89,2.47,2.43,95.5,Consumer Cyclical,Lodging,3.88,57.2,Bear,-0.84,-4.44,0.1,2.7,3.77
+LXP,51.84,1.99,0.06,3.1,Real Estate,REIT - Industrial,3.9,56.9,Bear,-0.14,-0.35,0.04,2.3,3.86
+NWE,72.18,2.76,1.99,4.4,Utilities,Utilities - Regulated Electric,2.88,54.8,Bear,-0.19,-0.21,0.08,2.1,3.43
+CENTA,34.42,2.36,0.6,2.2,Consumer Defensive,Packaged Foods,3.16,55.8,Bear,-0.01,-1.36,0.03,1.9,4.2
+BKH,74.77,2.65,2.78,5.7,Utilities,Utilities - Regulated Gas,2.68,55.9,Bear,-0.11,-0.16,0.05,1.8,4.4
+HGV,46.12,2.81,0.17,3.7,Consumer Cyclical,Resorts & Casinos,2.03,51.6,Bear,-0.3,-6.37,0.06,1.5,3.5
+LAZ,46.8,3.47,1.78,4.6,Financial Services,Capital Markets,1.83,53.2,Bear,-0.11,-2.09,0.07,1.5,3.3
+IDT,52.29,0.56,0.25,1.3,Communication Services,Telecom Services,2.46,53.8,Bear,-0.09,0.02,0.02,1.4,
+TBBB,36.99,1.19,1.36,4.4,Consumer Defensive,Discount Stores,2.09,52.1,Bear,-0.14,-5.14,0.04,1.4,3.92
+PRVA,23.59,2.79,3.65,3.0,Healthcare,Health Information Services,1.94,52.4,Bear,-0.17,-2.03,0.05,1.4,4.55
+IVT,31.93,1.85,1.98,2.5,Real Estate,REIT - Retail,1.83,54.0,Bear,-0.09,-2.24,0.05,1.3,4.25
+VCEL,34.97,5.87,6.23,1.8,Healthcare,Biotechnology,1.51,53.1,Bear,-0.2,-2.35,0.07,1.3,4.75
+NBTB,44.85,1.72,0.07,2.3,Financial Services,Banks - Regional,1.78,53.3,Bear,-0.07,-1.99,0.03,1.1,3.71
+FDS,223.06,4.93,1.77,8.1,Financial Services,Financial Data & Stock Exchanges,0.43,52.2,Bear,-1.39,-5.43,0.1,1.1,2.83
+LZ,6.47,7.83,6.07,1.1,Industrials,Specialty Business Services,0.33,55.2,Bear,-0.03,-1.52,0.11,1.1,3.4
+INDB,77.44,1.84,0.95,3.7,Financial Services,Banks - Regional,0.02,49.9,Bear,-0.16,-2.26,0.11,0.9,4.14
+PNW,100.25,1.88,0.54,12.1,Utilities,Utilities - Regulated Electric,0.46,49.2,Bear,-0.24,-1.76,0.08,0.9,3.41
+CRI,35.64,6.52,8.89,1.3,Consumer Cyclical,Apparel Retail,0.43,51.5,Bear,-0.11,-8.97,0.06,0.7,3.14
+PK,11.03,2.56,0.05,2.2,Real Estate,REIT - Hotel & Motel,0.67,49.8,Bear,-0.06,-4.71,0.03,0.6,3.33
+ANDE,71.63,0.24,0.07,2.4,Consumer Defensive,Food Distribution,0.03,45.6,Bear,-0.61,-1.97,0.05,0.4,5.0
