@@ -4,33 +4,33 @@
   <!-- Title -->
   <text x="70" y="30" fill="#c9d1d9" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold">Claude's Paper Trading — Equity Curve</text>
   <text x="70" y="48" fill="#58a6ff" font-family="system-ui, sans-serif" font-size="12">
-    $9,377.47 (-6.23%) | Win Rate: 0/0 | Realized: $+0.00
+    $8,966.30 (-10.34%) | Win Rate: 0/0 | Realized: $+0.00
   </text>
 
   <!-- Grid lines -->
   <line x1="70" y1="320.0" x2="770" y2="320.0" stroke="#21262d" stroke-width="0.5"/><line x1="70" y1="268.0" x2="770" y2="268.0" stroke="#21262d" stroke-width="0.5"/><line x1="70" y1="216.0" x2="770" y2="216.0" stroke="#21262d" stroke-width="0.5"/><line x1="70" y1="164.0" x2="770" y2="164.0" stroke="#21262d" stroke-width="0.5"/><line x1="70" y1="112.0" x2="770" y2="112.0" stroke="#21262d" stroke-width="0.5"/><line x1="70" y1="60.0" x2="770" y2="60.0" stroke="#21262d" stroke-width="0.5"/>
 
   <!-- Baseline (starting capital) -->
-  <line x1="70" y1="151.4" x2="770" y2="151.4" stroke="#c9d1d9" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.5"/>
-  <text x="775" y="151.4" fill="#c9d1d9" font-size="9" opacity="0.6" dominant-baseline="middle">$10K</text>
+  <line x1="70" y1="134.1" x2="770" y2="134.1" stroke="#c9d1d9" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.5"/>
+  <text x="775" y="134.1" fill="#c9d1d9" font-size="9" opacity="0.6" dominant-baseline="middle">$10K</text>
 
   <!-- Fill under curve -->
-  <path d="M 70.0 171.1 L 303.3 137.9 L 536.7 160.5 L 770.0 247.5 L 770.0 320.0 L 70.0 320.0 Z" fill="#dc2626" opacity="0.1"/>
+  <path d="M 70.0 150.2 L 245.0 123.2 L 420.0 141.5 L 595.0 235.2 L 770.0 263.8 L 770.0 320.0 L 70.0 320.0 Z" fill="#dc2626" opacity="0.1"/>
 
   <!-- Equity line -->
-  <path d="M 70.0 171.1 L 303.3 137.9 L 536.7 160.5 L 770.0 247.5" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 70.0 150.2 L 245.0 123.2 L 420.0 141.5 L 595.0 235.2 L 770.0 263.8" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 
   <!-- Data points -->
-  <circle cx="70.0" cy="171.1" r="3" fill="#dc2626"/><circle cx="303.3" cy="137.9" r="3" fill="#dc2626"/><circle cx="536.7" cy="160.5" r="3" fill="#dc2626"/><circle cx="770.0" cy="247.5" r="3" fill="#dc2626"/>
+  <circle cx="70.0" cy="150.2" r="3" fill="#dc2626"/><circle cx="245.0" cy="123.2" r="3" fill="#dc2626"/><circle cx="420.0" cy="141.5" r="3" fill="#dc2626"/><circle cx="595.0" cy="235.2" r="3" fill="#dc2626"/><circle cx="770.0" cy="263.8" r="3" fill="#dc2626"/>
 
   <!-- Trade markers -->
   
 
   <!-- Y-axis labels -->
-  <text x="62" y="320.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$8,909</text><text x="62" y="268.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$9,245</text><text x="62" y="216.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$9,582</text><text x="62" y="164.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$9,918</text><text x="62" y="112.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$10,255</text><text x="62" y="60.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$10,591</text>
+  <text x="62" y="320.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$8,518</text><text x="62" y="268.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$8,933</text><text x="62" y="216.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$9,347</text><text x="62" y="164.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$9,762</text><text x="62" y="112.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$10,177</text><text x="62" y="60.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$10,591</text>
 
   <!-- X-axis labels -->
-  <text x="70.0" y="340" fill="#c9d1d9" font-size="10" text-anchor="middle">2026-05-13</text><text x="536.7" y="340" fill="#c9d1d9" font-size="10" text-anchor="middle">2026-05-15</text><text x="770.0" y="340" fill="#c9d1d9" font-size="10" text-anchor="middle">2026-05-18</text>
+  <text x="70.0" y="340" fill="#c9d1d9" font-size="10" text-anchor="middle">2026-05-13</text><text x="420.0" y="340" fill="#c9d1d9" font-size="10" text-anchor="middle">2026-05-15</text><text x="770.0" y="340" fill="#c9d1d9" font-size="10" text-anchor="middle">2026-05-19</text>
 
   <!-- Legend -->
   <circle cx="650" cy="380" r="4" fill="#16a34a"/>
