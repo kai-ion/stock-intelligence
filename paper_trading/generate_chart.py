@@ -16,15 +16,12 @@ def load_snapshots():
     snapshots = []
     snap_dir = DATA_DIR / "snapshots"
     if snap_dir.exists():
-        for year_dir in sorted(snap_dir.iterdir()):
-            if not year_dir.is_dir():
+        for month_dir in sorted(snap_dir.iterdir()):
+            if not month_dir.is_dir():
                 continue
-            for month_dir in sorted(year_dir.iterdir()):
-                if not month_dir.is_dir():
-                    continue
-                for f in sorted(month_dir.glob("*.json")):
-                    with open(f) as fh:
-                        snapshots.append(json.load(fh))
+            for f in sorted(month_dir.glob("*.json")):
+                with open(f) as fh:
+                    snapshots.append(json.load(fh))
     return snapshots
 
 

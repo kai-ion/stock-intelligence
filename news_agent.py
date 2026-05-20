@@ -193,7 +193,123 @@ def fetch_market_headlines():
         return []
 
 
-def summarize_with_claude(top_movers, ticker_news, market_headlines, technicals, wsb_trending=None):
+def fetch_earnings_reactions():
+    """Check recent earnings from weekly report tickers — what beat/missed and price reaction."""
+    from datetime import timedelta
+    from pathlib import Path
+    import re as re_mod
+
+    # Find the current week's events report
+    today = datetime.now()
+    monday = today - timedelta(days=today.weekday())
+    week_file = Path(OUTPUT_FILE).parent / f"events/data/week_{monday.strftime('%Y-%m-%d')}.md"
+
+    # Also check S3 synced location on EC2
+    alt_paths = [
+        Path(f"/home/ec2-user/events/data/week_{monday.strftime('%Y-%m-%d')}.md"),
+        Path(f"/home/ec2-user/repo/events/{monday.strftime('%Y-%m')}/week_{monday.strftime('%Y-%m-%d')}.md"),
+    ]
+
+    report_content = ""
+    for path in [week_file] + alt_paths:
+        if path.exists():
+            report_content = path.read_text()
+            break
+
+    if not report_content:
+        return []
+
+    # Extract tickers from the weekly report
+    ticker_pattern = re_mod.compile(r'\*\*([A-Z]{1,5})\*\*\s*—.*?Reports:', re_mod.DOTALL)
+    weekly_tickers = list(set(ticker_pattern.findall(report_content)))
+
+    if not weekly_tickers:
+        # Fallback: grab all tickers mentioned in the calendar section
+        cal_pattern = re_mod.compile(r'\(([A-Z]{1,5})\)')
+        weekly_tickers = list(set(cal_pattern.findall(report_content)))
+
+    # Filter to tickers that reported yesterday or today (by checking which day in the weekly report)
+    today = datetime.now()
+    yesterday = today - timedelta(days=1)
+    two_days_ago = today - timedelta(days=2)
+    target_days = [yesterday.strftime("%A"), two_days_ago.strftime("%A")]
+
+    # Find tickers that were scheduled for yesterday/day-before, with their day + timing
+    scheduled_tickers = []
+    ticker_report_day = {}  # ticker -> "Tuesday Before Open" etc.
+    for day_name in target_days:
+        day_pattern = re_mod.compile(
+            rf'###\s*{day_name}.*?(?=###|\Z)',
+            re_mod.DOTALL | re_mod.IGNORECASE
+        )
+        day_match = day_pattern.search(report_content)
+        if day_match:
+            section = day_match.group(0)
+            tickers_in_section = re_mod.findall(r'\*\*([A-Z]{1,5})\*\*', section)
+            for t in tickers_in_section:
+                scheduled_tickers.append(t)
+                # Try to find timing (Before Open / After Close)
+                timing_match = re_mod.search(rf'\*\*{t}\*\*.*?\((Before Open|After Close|TBD)\)', section)
+                timing = timing_match.group(1) if timing_match else ""
+                ticker_report_day[t] = f"{day_name} {timing}".strip()
+
+    # Also include any tickers from the full weekly list as fallback
+    if not scheduled_tickers:
+        scheduled_tickers = weekly_tickers
+
+    # Deduplicate
+    scheduled_tickers = list(dict.fromkeys(scheduled_tickers))
+
+    # Get price reactions for all scheduled tickers
+    reactions = []
+    for ticker in scheduled_tickers[:20]:
+        try:
+            stock = yf.Ticker(ticker)
+            info = stock.info
+            hist = stock.history(period="5d")
+
+            if hist.empty or len(hist) < 2:
+                continue
+
+            mcap = info.get("marketCap", 0)
+            if not mcap or mcap < 5_000_000_000:
+                continue
+
+            # Get price reaction (today vs yesterday)
+            prev_close = float(hist["Close"].iloc[-2])
+            current = float(hist["Close"].iloc[-1])
+            reaction_pct = (current - prev_close) / prev_close * 100
+
+            # Get EPS data
+            trailing_eps = info.get("trailingEps", None)
+            cal = stock.calendar
+            eps_estimate = cal.get("Earnings Average", None) if cal else None
+
+            beat_miss = "REPORTED"
+            surprise_pct = ""
+            if eps_estimate and trailing_eps:
+                diff = trailing_eps - eps_estimate
+                surprise_pct = f"{(diff / abs(eps_estimate)) * 100:.1f}%" if eps_estimate != 0 else ""
+                beat_miss = "BEAT" if diff > 0 else "MISS"
+
+            reactions.append({
+                "ticker": ticker,
+                "name": info.get("shortName", ticker),
+                "reported": ticker_report_day.get(ticker, ""),
+                "eps_estimate": f"${eps_estimate:.2f}" if eps_estimate else "N/A",
+                "eps_actual": f"${trailing_eps:.2f}" if trailing_eps else "N/A",
+                "surprise": surprise_pct,
+                "reaction_pct": round(reaction_pct, 2),
+                "beat_miss": beat_miss,
+            })
+        except Exception:
+            continue
+
+    reactions.sort(key=lambda x: abs(x.get("reaction_pct", 0)), reverse=True)
+    return reactions[:12]
+
+
+def summarize_with_claude(top_movers, ticker_news, market_headlines, technicals, wsb_trending=None, earnings_reactions=None, comps_data=None):
     """Use Claude via Bedrock to create a morning brief."""
     from botocore.config import Config
     config = Config(read_timeout=300)
@@ -205,6 +321,22 @@ def summarize_with_claude(top_movers, ticker_news, market_headlines, technicals,
 
 WALLSTREETBETS TRENDING TICKERS (top 5 by mentions/engagement):
 {json.dumps(wsb_trending, indent=2)}
+"""
+
+    earnings_section = ""
+    if earnings_reactions:
+        earnings_section = f"""
+
+YESTERDAY'S EARNINGS REACTIONS (stocks that reported in the last 1-2 days):
+{json.dumps(earnings_reactions, indent=2)}
+"""
+
+    comps_section = ""
+    if comps_data:
+        comps_section = f"""
+
+VALUATION COMPS (forward P/E and EV/EBITDA vs peer medians — use for picks):
+{json.dumps(comps_data, indent=2)}
 """
 
     prompt = f"""You are a technical stock market analyst preparing a morning brief. Today is {datetime.now().strftime('%Y-%m-%d')}.
@@ -220,7 +352,7 @@ NEWS PER TICKER:
 
 GENERAL MARKET HEADLINES:
 {json.dumps(market_headlines, indent=2)}
-{wsb_section}
+{wsb_section}{earnings_section}{comps_section}
 
 Create a concise morning brief in this exact format:
 
@@ -251,6 +383,7 @@ Use the technical data to set exit targets (fib extensions, prior highs, SMAs) a
 From the 20 stocks above, pick the 3-5 you would buy TODAY for a short-term swing trade (1-2 week hold). For each pick use this exact format:
 
 **TICKER** (+X.X% today, +Y.Y% week) — $CURRENT → $EXIT_TARGET (+Z.Z% upside)
+Valuation: One sentence on whether it's cheap or expensive vs peers (use the comps data if available).
 Upside: One sentence on why this has room to run.
 Risk: One sentence on what could go wrong.
 
@@ -266,6 +399,15 @@ For each of the 5 WSB trending tickers, give your honest take:
 
 **TICKER** — WSB says: BULLISH/BEARISH/MIXED (X% bullish)
 Claude says: AGREE/DISAGREE/PARTIALLY — One sentence. Do the technicals support WSB's thesis or are they delusional? Reference the actual chart setup. If it's a short squeeze play, say whether the setup is real or hopium. Be blunt — WSB is often wrong at extremes.
+
+## Earnings Scorecard
+
+If yesterday's earnings reactions data is provided, create a brief scorecard. For each stock that reported:
+
+**TICKER** — BEAT/MISS by X% | Stock: +/-Y.Y% | Reported: [Day] [Before Open/After Close]
+One sentence: Was the reaction justified? Did the market over/under-react? Is this now a buy-the-dip or sell-the-rip?
+
+If no earnings data is provided, skip this section entirely.
 
 Selection criteria you must weigh:
 - Catalyst strength (real news > sector sympathy)
@@ -283,7 +425,7 @@ Rules:
 
     body = json.dumps({
         "anthropic_version": "bedrock-2023-05-31",
-        "max_tokens": 6000,
+        "max_tokens": 7000,
         "messages": [{"role": "user", "content": prompt}]
     })
 
@@ -312,7 +454,19 @@ def main():
     print("Fetching WSB sentiment...")
     from wsb_sentiment import get_wsb_trending
     wsb_trending = get_wsb_trending(5)
-    print(f"WSB trending: {', '.join(t['ticker'] for t in wsb_trending)}")
+
+    # If direct scrape failed (Reddit blocks EC2), try S3 cache from local sync
+    if not wsb_trending:
+        try:
+            import boto3 as _boto3
+            _s3 = _boto3.client("s3", region_name=os.environ.get("AWS_REGION", "us-east-1"))
+            _resp = _s3.get_object(Bucket=os.environ.get("S3_BUCKET", ""), Key="wsb/latest.json")
+            wsb_trending = json.loads(_resp["Body"].read())
+            print("  Loaded WSB data from S3 cache")
+        except Exception:
+            pass
+
+    print(f"WSB trending: {', '.join(t['ticker'] for t in wsb_trending) if wsb_trending else 'NONE'}")
 
     # Fetch technicals for WSB tickers not already covered
     wsb_tickers = [t["ticker"] for t in wsb_trending]
@@ -322,8 +476,35 @@ def main():
             if t in tech:
                 technicals[t] = tech[t]
 
+    print("Fetching earnings reactions...")
+    earnings_reactions = fetch_earnings_reactions()
+    print(f"  {len(earnings_reactions)} earnings to review")
+
+    print("Fetching comps data for top movers...")
+    from financial_skills import get_comps_data, get_earnings_transcript_summary
+    comps_data = {}
+    for t in tickers[:10]:
+        comps = get_comps_data(t)
+        if comps:
+            comps_data[t] = {
+                "valuation_vs_peers": comps["valuation_vs_peers"],
+                "pe_forward": comps["target"]["pe_forward"] if comps["target"] else None,
+                "peer_median_pe": comps["peer_medians"]["pe_forward"],
+                "ev_ebitda": comps["target"]["ev_ebitda"] if comps["target"] else None,
+                "peer_median_ev_ebitda": comps["peer_medians"]["ev_ebitda"],
+                "revenue_growth": comps["target"]["revenue_growth"] if comps["target"] else None,
+            }
+    print(f"  Comps for {len(comps_data)} tickers")
+
+    # Enrich earnings reactions with transcript summaries
+    for reaction in earnings_reactions:
+        transcript = get_earnings_transcript_summary(reaction["ticker"])
+        if transcript and transcript.get("earnings_news"):
+            reaction["key_headlines"] = [n["title"] for n in transcript["earnings_news"][:3]]
+            reaction["analyst_target"] = transcript["financials"].get("analyst_target")
+
     print("Summarizing with Claude...")
-    brief = summarize_with_claude(top_movers, ticker_news, market_headlines, technicals, wsb_trending)
+    brief = summarize_with_claude(top_movers, ticker_news, market_headlines, technicals, wsb_trending, earnings_reactions, comps_data)
 
     with open(NEWS_FILE, "w") as f:
         f.write(brief)

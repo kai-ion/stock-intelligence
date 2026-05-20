@@ -22,14 +22,31 @@ DATA_DIR = Path(__file__).parent / "data"
 
 
 def load_holdings():
-    """Load today's portfolio data."""
+    """Load today's portfolio data, falling back to most recent if today's fetch failed."""
     date_str = datetime.now().strftime("%Y-%m-%d")
     path = DATA_DIR / f"{date_str}.json"
-    if not path.exists():
-        print(f"ERROR: No portfolio data for {date_str}. Run fetch_portfolio.py first.")
-        sys.exit(1)
-    with open(path) as f:
-        return json.load(f)
+
+    if path.exists():
+        with open(path) as f:
+            data = json.load(f)
+            data["_stale"] = False
+            return data
+
+    # Fallback: find the most recent portfolio file
+    all_files = sorted(DATA_DIR.glob("*.json"), reverse=True)
+    # Filter to actual portfolio files (not analysis)
+    portfolio_files = [f for f in all_files if "_analysis" not in f.name]
+    if portfolio_files:
+        latest = portfolio_files[0]
+        print(f"WARNING: No portfolio data for today. Using {latest.name} (stale data).")
+        with open(latest) as f:
+            data = json.load(f)
+            data["_stale"] = True
+            data["_stale_date"] = latest.stem
+            return data
+
+    print("ERROR: No portfolio data found at all.")
+    sys.exit(1)
 
 
 def fetch_technicals(ticker):
@@ -112,9 +129,15 @@ def analyze_with_claude(holdings_data, technicals):
     config = Config(read_timeout=300)
     bedrock = boto3.client("bedrock-runtime", region_name=REGION, config=config)
 
-    prompt = f"""You are a technical analyst reviewing a personal stock portfolio. Today is {datetime.now().strftime('%Y-%m-%d')}.
+    # Flag earnings tickers in prompt
+    earnings_tickers = [h["ticker"] for h in holdings_data if h.get("earnings_today")]
+    earnings_warning = ""
+    if earnings_tickers:
+        earnings_warning = f"\n⚡ THESE TICKERS REPORT EARNINGS TODAY: {', '.join(earnings_tickers)}. For each, note the earnings risk and whether to hold through or trim before the print.\n"
 
-PORTFOLIO HOLDINGS:
+    prompt = f"""You are a technical analyst reviewing a personal stock portfolio. Today is {datetime.now().strftime('%Y-%m-%d')}.
+{earnings_warning}
+PORTFOLIO HOLDINGS (earnings_today=true means that ticker reports earnings today):
 {json.dumps(holdings_data, indent=2)}
 
 TECHNICAL LEVELS PER HOLDING (fib retracements from 6mo swing, support/resistance, MAs, RSI, MACD):
@@ -180,15 +203,57 @@ Rules:
     return result["content"][0]["text"]
 
 
+def get_tickers_reporting_today():
+    """Check the weekly events report for tickers reporting earnings today."""
+    from datetime import timedelta
+    import re as re_mod
+
+    today = datetime.now()
+    monday = today - timedelta(days=today.weekday())
+    day_name = today.strftime("%A")
+
+    # Find the weekly report
+    report_paths = [
+        Path(f"/home/ec2-user/events/data/week_{monday.strftime('%Y-%m-%d')}.md"),
+        Path(f"/home/ec2-user/repo/events/{monday.strftime('%Y-%m')}/week_{monday.strftime('%Y-%m-%d')}.md"),
+    ]
+
+    for path in report_paths:
+        if path.exists():
+            content = path.read_text()
+            # Find today's section
+            day_pattern = re_mod.compile(
+                rf'###\s*{day_name}.*?(?=###|\Z)',
+                re_mod.DOTALL | re_mod.IGNORECASE
+            )
+            day_match = day_pattern.search(content)
+            if day_match:
+                section = day_match.group(0)
+                tickers = re_mod.findall(r'\*\*([A-Z]{1,5})\*\*', section)
+                # Also grab from calendar at-a-glance
+                cal_tickers = re_mod.findall(r'\(([A-Z]{1,5})\)', section)
+                return list(set(tickers + cal_tickers))
+    return []
+
+
 def main():
     print(f"=== Portfolio Analysis — {datetime.now().strftime('%Y-%m-%d %H:%M')} ===\n")
 
     portfolio = load_holdings()
     holdings = portfolio["holdings"]
     summary = portfolio["portfolio_summary"]
+    is_stale = portfolio.get("_stale", False)
+    stale_date = portfolio.get("_stale_date", "")
+
+    if is_stale:
+        print(f"⚠️  Using stale data from {stale_date} (today's fetch failed)")
 
     print(f"Portfolio Value: ${float(summary.get('equity', 0)):,.2f}")
     print(f"Positions: {len(holdings)}\n")
+
+    # Get tickers reporting earnings today
+    earnings_today = get_tickers_reporting_today()
+    print(f"Tickers with earnings today: {', '.join(earnings_today) if earnings_today else 'none'}")
 
     # Fetch technicals for each holding
     print("Fetching technicals...")
@@ -198,6 +263,8 @@ def main():
         tech = fetch_technicals(ticker)
         if tech:
             technicals[ticker] = tech
+
+        has_earnings = ticker in earnings_today
         holdings_data.append({
             "ticker": ticker,
             "shares": float(data.get("quantity", 0)),
@@ -206,8 +273,10 @@ def main():
             "pnl_pct": float(data.get("percent_change", 0)),
             "equity": float(data.get("equity", 0)),
             "pct_of_portfolio": float(data.get("percentage", 0)),
+            "earnings_today": has_earnings,
         })
-        print(f"  {ticker}: done")
+        earnings_label = " ⚡EARNINGS TODAY" if has_earnings else ""
+        print(f"  {ticker}: done{earnings_label}")
 
     print("\nAnalyzing with Claude Opus 4.6...")
     analysis = analyze_with_claude(holdings_data, technicals)
@@ -215,7 +284,17 @@ def main():
     # Save analysis
     date_str = datetime.now().strftime("%Y-%m-%d")
     month_str = datetime.now().strftime("%Y-%m")
-    analysis_content = f"# Portfolio Analysis — {date_str}\n\nPortfolio Value: ${float(summary.get('equity', 0)):,.2f}\n\n{analysis}"
+
+    stale_warning = ""
+    if is_stale:
+        stale_warning = f"\n⚠️ **NOTE: Portfolio fetch failed today. Using data from {stale_date}. Prices shown are from that date — technicals are still current.**\n\n"
+
+    earnings_note = ""
+    holdings_with_earnings = [h["ticker"] for h in holdings_data if h.get("earnings_today")]
+    if holdings_with_earnings:
+        earnings_note = f"\n⚡ **EARNINGS TODAY:** {', '.join(holdings_with_earnings)} — check positioning before close.\n\n"
+
+    analysis_content = f"# Portfolio Analysis — {date_str}\n\nPortfolio Value: ${float(summary.get('equity', 0)):,.2f}\n{stale_warning}{earnings_note}{analysis}"
 
     analysis_path = DATA_DIR / f"{date_str}_analysis.md"
     with open(analysis_path, "w") as f:
@@ -232,12 +311,18 @@ def main():
     s3.put_object(Bucket=S3_BUCKET, Key=f"portfolio/{month_str}/{date_str}.json", Body=holdings_json.encode())
 
     # Send email
+    subject = f"Portfolio Analysis — {date_str}"
+    if is_stale:
+        subject = f"Portfolio Analysis — {date_str} (using {stale_date} data)"
+    if holdings_with_earnings:
+        subject += f" ⚡ {', '.join(holdings_with_earnings)} report today"
+
     ses = boto3.client("ses", region_name=REGION)
     ses.send_email(
         Source=EMAIL_SENDER,
         Destination={"ToAddresses": [EMAIL_RECIPIENT]},
         Message={
-            "Subject": {"Data": f"Portfolio Analysis — {date_str}", "Charset": "UTF-8"},
+            "Subject": {"Data": subject, "Charset": "UTF-8"},
             "Body": {"Text": {"Data": analysis_content, "Charset": "UTF-8"}},
         },
     )

@@ -40,8 +40,31 @@ TICKER_PATTERN = re.compile(r'(?<![a-zA-Z])[A-Z]{2,5}(?![a-zA-Z])')
 
 
 def scrape_wsb():
-    """Scrape WSB hot, rising, and new posts."""
+    """Get WSB trending data from ApeWisdom API (works from any IP, no auth)."""
     posts = []
+
+    # Primary: ApeWisdom API — aggregates WSB mentions, works everywhere
+    try:
+        resp = requests.get(
+            "https://apewisdom.io/api/v1.0/filter/all-stocks/page/1",
+            timeout=10
+        )
+        if resp.status_code == 200:
+            data = resp.json()
+            results = data.get("results", [])
+            for r in results[:30]:
+                posts.append({
+                    "title": f"{r.get('ticker', '')} — {r.get('mentions', 0)} mentions on WSB",
+                    "text": "",
+                    "score": r.get("upvotes", 0),
+                    "comments": r.get("mentions", 0),
+                    "upvote_ratio": 0.7,
+                })
+            return posts
+    except Exception:
+        pass
+
+    # Fallback: Reddit JSON API (works locally, blocked on EC2)
     for sort in ["hot", "rising", "new"]:
         try:
             resp = requests.get(
@@ -61,6 +84,7 @@ def scrape_wsb():
                     })
         except Exception:
             continue
+
     return posts
 
 
@@ -99,6 +123,56 @@ def extract_tickers(posts):
 
 def get_wsb_trending(n=5):
     """Get top N trending WSB tickers with sentiment context."""
+    # Try ApeWisdom first (direct ticker data, no extraction needed)
+    try:
+        resp = requests.get(
+            "https://apewisdom.io/api/v1.0/filter/all-stocks/page/1",
+            timeout=10
+        )
+        if resp.status_code == 200:
+            data = resp.json()
+            results_raw = data.get("results", [])
+
+            # Filter out index ETFs and get top N actual stocks
+            skip = {"SPY", "QQQ", "VOO", "IWM", "DIA", "VTI", "DTE", "OTM", "ITM", "ATM", "ETF"}
+            results = []
+            for r in results_raw:
+                ticker = r.get("ticker", "")
+                if ticker in skip or len(ticker) < 2:
+                    continue
+                if len(results) >= n:
+                    break
+
+                mentions = r.get("mentions", 0)
+                upvotes = r.get("upvotes", 0)
+                mentions_24h_ago = r.get("mentions_24h_ago", mentions)
+
+                # Determine sentiment from momentum (more mentions = bullish bias on WSB)
+                if mentions > mentions_24h_ago * 1.5:
+                    sentiment_label = "BULLISH"
+                    bull_pct = 80
+                elif mentions < mentions_24h_ago * 0.7:
+                    sentiment_label = "BEARISH"
+                    bull_pct = 30
+                else:
+                    sentiment_label = "MIXED"
+                    bull_pct = 55
+
+                results.append({
+                    "ticker": ticker,
+                    "mentions_score": mentions,
+                    "sentiment": sentiment_label,
+                    "bullish_pct": bull_pct,
+                    "upvotes": upvotes,
+                    "sample_posts": [f"{ticker} — {mentions} mentions, {upvotes} upvotes on WSB in last 24h"],
+                })
+
+            if results:
+                return results
+    except Exception:
+        pass
+
+    # Fallback: scrape Reddit directly and extract tickers
     posts = scrape_wsb()
     if not posts:
         return []
@@ -107,7 +181,6 @@ def get_wsb_trending(n=5):
 
     results = []
     for ticker, count in ticker_counts.most_common(n * 2):
-        # Validate it looks like a real ticker (skip 2-letter unless very high score)
         if len(ticker) == 2 and count < 20:
             continue
         if len(results) >= n:
