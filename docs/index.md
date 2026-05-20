@@ -6,11 +6,18 @@ layout: default
 
 AI-powered daily stock screening and paper trading. Claude analyzes 2,700+ stocks every morning, picks the best swing trades, and tracks its own performance with real money simulation.
 
-## Live Paper Trading Performance
+## Live Paper Trading — Two Strategies Competing
 
+### Strategy A: Claude Single-Agent (since May 13)
 ![Equity Curve]({{ site.baseurl }}/assets/chart.svg)
 
-*Started May 13, 2026 with $10,000. Buys Claude's top picks daily. Auto-exits at fibonacci targets or stop losses.*
+*$10K → Claude picks 3-5 stocks daily, auto-exits at fib targets or stop losses.*
+
+### Strategy B: TradingAgents Multi-Agent Debate (since May 20)
+
+*$10K → Multiple AI agents debate bull/bear case, risk manager validates, then decides. Same stocks, different decision process.*
+
+{% include trading_agents_status.html %}
 
 ## How It Works
 
