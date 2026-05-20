@@ -6,7 +6,9 @@ Automated daily stock screening, technical analysis, portfolio monitoring, and A
 
 ![Equity Curve](paper_trading/chart.svg)
 
-*Claude starts with $10K, buys its own top picks, and auto-exits at fib targets or stop losses. Updated daily.*
+*Two AI strategies competing head-to-head with $10K each:*
+- **Strategy A (Claude):** Single-agent picks with fibonacci targets and stop losses
+- **Strategy B ([TradingAgents](https://github.com/TauricResearch/TradingAgents)):** Multi-agent debate framework — 4 analysts argue bull/bear, risk manager validates, learns from mistakes weekly
 
 ## Architecture
 
@@ -37,9 +39,27 @@ EC2 (t2.micro, us-east-1)
 ├── Every 10 min (market hours) →  Trump Alert Monitor
 │   └── trump_alert/monitor.py    Truth Social + White House, IMMEDIATE/DIGEST/IGNORE
 │
+├── Daily 10:10 AM ET →  TradingAgents Multi-Agent Experiment
+│   └── trading_agents_experiment/run.py  4 analysts debate, risk manager validates, learns weekly
+│
 Local Mac (launchd at 10:30 AM)
 └── sync_results.sh                Syncs S3 → local (results, portfolio, events, paper trading)
 ```
+
+## TradingAgents Experiment
+
+Side-by-side comparison of two AI trading approaches using the same stocks:
+
+| | Strategy A (Claude) | Strategy B (TradingAgents) |
+|---|---|---|
+| Approach | Single analyst with technicals + news | 4 agents debate bull vs bear |
+| Learning | No | Yes — weekly reflection on mistakes |
+| Debate | No | 2 rounds of bull/bear argumentation |
+| Risk check | Implicit in analysis | Explicit Risk Manager agent |
+| Capital | $10K (started May 13) | $10K (started May 20) |
+| Source | Custom pipeline | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) (77K+ stars) |
+
+Results updated daily on the [blog](https://kai-ion.github.io/stock-intelligence/ai-agent/).
 
 ## Emails You Receive
 

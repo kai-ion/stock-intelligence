@@ -189,7 +189,27 @@ The repo has a `docs/` directory with Jekyll config. GitHub Actions auto-deploys
 - **Portfolio analysis** falls back to previous day's data if morning fetch fails
 - **Paper trading** sells weakest position to fund new picks when capital is low
 - **Trump monitor** classifies posts as IMMEDIATE/DIGEST/IGNORE via Claude
+- **TradingAgents** uses custom `bedrock_client.py` adapter (langchain-aws) to connect the framework to Bedrock
 - **Bedrock model**: us.anthropic.claude-opus-4-6-v1 (inference profile)
+
+## TradingAgents Setup
+
+```bash
+# Clone TradingAgents into the experiment directory
+# The tradingagents/ package is copied to /home/ec2-user/trading_agents_experiment/tradingagents/
+
+# Install additional deps
+sudo pip3.11 install langchain-aws langchain-core langgraph langgraph-checkpoint-sqlite stockstats
+
+# The custom bedrock_client.py lives at:
+# trading_agents_experiment/tradingagents/llm_clients/bedrock_client.py
+
+# Config: provider=bedrock, deep_think=claude-sonnet-4-6, quick_think=claude-haiku-4-5
+# Features: 4 analysts, 2 debate rounds, 2 risk rounds, checkpoint enabled, weekly reflection
+
+# Cron at 10:10 AM ET (14:10 UTC):
+echo '10 14 * * 1-5 ec2-user . /home/ec2-user/.env && cd /home/ec2-user/trading_agents_experiment && python3.11 run.py >> run.log 2>&1' | sudo tee /etc/cron.d/trading-agents-experiment
+```
 
 ## Daily Schedule (all times ET)
 
@@ -199,6 +219,7 @@ Mon  8:00 AM  →  Weekly Events (next week's earnings, fed, IPOs)
      9:50 AM  →  Portfolio Fetch + Analysis + Email
     10:02 AM  →  Paper Trading (buy + exit check)
     10:05 AM  →  GitHub Push
+    10:10 AM  →  TradingAgents Experiment (multi-agent debate on top 5)
     10:30 AM  →  Local sync (launchd)
      3:55 PM  →  Paper Trading exit check
      5:00 PM  →  Portfolio EOD fetch (backup)
