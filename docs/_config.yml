@@ -6,6 +6,7 @@ theme: minima
 
 header_pages:
   - performance.md
+  - ai-agent.md
   - about.md
 
 collections:
@@ -16,6 +17,10 @@ collections:
   weekly:
     output: true
     permalink: /weekly/:name/
+    sort_by: date
+  ai_agent:
+    output: true
+    permalink: /ai-agent/:name/
     sort_by: date
 
 defaults:

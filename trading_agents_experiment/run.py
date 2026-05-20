@@ -61,8 +61,8 @@ def get_todays_tickers():
     return top["Ticker"].tolist()
 
 
-def run_trading_agents(ticker, date_str):
-    """Run TradingAgents debate on a single ticker."""
+def get_trading_agents_graph():
+    """Initialize TradingAgents with all features enabled."""
     from tradingagents.graph.trading_graph import TradingAgentsGraph
     from tradingagents.default_config import DEFAULT_CONFIG
 
@@ -70,14 +70,24 @@ def run_trading_agents(ticker, date_str):
     config["llm_provider"] = "bedrock"
     config["deep_think_llm"] = "claude-sonnet-4-6"
     config["quick_think_llm"] = "claude-haiku-4-5"
-    config["max_debate_rounds"] = 1
-    config["max_risk_discuss_rounds"] = 1
+    config["max_debate_rounds"] = 2
+    config["max_risk_discuss_rounds"] = 2
+    config["checkpoint_enabled"] = True
+    config["news_article_limit"] = 30
+    config["global_news_article_limit"] = 15
+    config["global_news_lookback_days"] = 3
 
     ta = TradingAgentsGraph(
-        selected_analysts=["market", "fundamentals", "news"],
+        selected_analysts=["market", "social", "news", "fundamentals"],
         debug=False,
         config=config
     )
+    return ta
+
+
+def run_trading_agents(ticker, date_str):
+    """Run TradingAgents full debate on a single ticker."""
+    ta = get_trading_agents_graph()
 
     try:
         _, decision = ta.propagate(ticker, date_str)
@@ -87,81 +97,227 @@ def run_trading_agents(ticker, date_str):
         return None
 
 
+def run_weekly_reflection(portfolio):
+    """Feed past week's P&L back into TradingAgents memory for learning."""
+    ta = get_trading_agents_graph()
+
+    # Calculate returns for closed positions
+    history_dir = DATA_DIR / "trade_history"
+    if not history_dir.exists():
+        return
+
+    import glob
+    recent_files = sorted(history_dir.glob("*.json"), reverse=True)[:5]
+    total_return = 0
+    for f in recent_files:
+        with open(f) as fh:
+            trades = json.load(fh)
+            for t in trades:
+                if t.get("pnl"):
+                    total_return += t["pnl"]
+
+    if total_return != 0:
+        try:
+            ta.reflect_and_remember(total_return)
+            print(f"  Reflection complete. Portfolio return fed: ${total_return:+.2f}")
+        except Exception as e:
+            print(f"  Reflection error: {e}")
+
+
 def main():
+    import yfinance as yf
+
     print(f"=== TradingAgents Experiment — {datetime.now().strftime('%Y-%m-%d %H:%M')} ===\n")
 
     portfolio = load_portfolio()
     date_str = datetime.now().strftime("%Y-%m-%d")
 
-    # Get tickers to analyze
-    tickers = get_todays_tickers()
-    if not tickers:
-        print("No tickers to analyze.")
-        return
+    # Friday reflection — learn from the week's trades
+    if datetime.now().weekday() == 4:  # Friday
+        print("Friday — running weekly reflection...")
+        run_weekly_reflection(portfolio)
+        print()
 
-    print(f"Analyzing {len(tickers)} tickers: {', '.join(tickers)}\n")
-
-    decisions = []
-    for ticker in tickers[:5]:  # Limit to top 5 to manage API costs
-        print(f"Running debate on {ticker}...")
-        decision = run_trading_agents(ticker, date_str)
-        if decision:
-            decisions.append({"ticker": ticker, "decision": decision})
-            print(f"  Decision: {decision}\n")
-
-    # Save decisions
-    decisions_path = DATA_DIR / "decisions" / f"{date_str}.json"
-    decisions_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(decisions_path, "w") as f:
-        json.dump(decisions, f, indent=2)
-
-    # Apply BUY decisions to portfolio
-    buy_decisions = [d for d in decisions if "buy" in str(d.get("decision", "")).lower()]
-    if buy_decisions and portfolio["cash"] > 100:
-        allocation = portfolio["cash"] / max(len(buy_decisions), 1)
-        allocation = min(allocation, portfolio["cash"] * 0.25)
-
-        for d in buy_decisions:
-            ticker = d["ticker"]
-            if ticker in portfolio["positions"]:
-                continue
-            import yfinance as yf
+    # Check exits on existing positions (stop loss at -10%, target at +15%)
+    positions_to_sell = []
+    for ticker, pos in portfolio["positions"].items():
+        try:
             stock = yf.Ticker(ticker)
             hist = stock.history(period="1d")
             if hist.empty:
                 continue
             price = float(hist["Close"].iloc[-1])
-            shares = allocation / price
-            cost = shares * price
+            pnl_pct = (price - pos["entry_price"]) / pos["entry_price"] * 100
+            if pnl_pct <= -10:
+                positions_to_sell.append((ticker, price, "STOP LOSS (-10%)"))
+            elif pnl_pct >= 15:
+                positions_to_sell.append((ticker, price, "TARGET HIT (+15%)"))
+        except Exception:
+            continue
 
-            portfolio["positions"][ticker] = {
-                "shares": round(shares, 4),
-                "entry_price": round(price, 2),
-                "entry_date": date_str,
-                "cost": round(cost, 2),
-                "decision": str(d["decision"])[:200],
-            }
-            portfolio["cash"] -= cost
-            print(f"  BUY {ticker}: {shares:.2f} shares @ ${price:.2f}")
+    for ticker, price, reason in positions_to_sell:
+        pos = portfolio["positions"][ticker]
+        proceeds = pos["shares"] * price
+        pnl = proceeds - pos["cost"]
+        portfolio["cash"] += proceeds
+        print(f"  SELL {ticker} @ ${price:.2f} ({reason}) P&L: ${pnl:+.2f}")
+
+        # Log trade
+        trade_history_dir = DATA_DIR / "trade_history"
+        trade_history_dir.mkdir(parents=True, exist_ok=True)
+        history_file = trade_history_dir / f"{date_str}.json"
+        trades = []
+        if history_file.exists():
+            with open(history_file) as f:
+                trades = json.load(f)
+        trades.append({
+            "action": "SELL", "ticker": ticker, "price": round(price, 2),
+            "reason": reason, "pnl": round(pnl, 2), "date": date_str
+        })
+        with open(history_file, "w") as f:
+            json.dump(trades, f, indent=2)
+
+    for ticker, _, _ in positions_to_sell:
+        del portfolio["positions"][ticker]
+
+    # Get tickers to analyze
+    tickers = get_todays_tickers()
+    if not tickers:
+        print("No tickers to analyze.")
+        save_portfolio(portfolio)
+        return
+
+    print(f"Analyzing {len(tickers)} tickers: {', '.join(tickers)}\n")
+
+    decisions = []
+    for ticker in tickers[:5]:
+        if ticker in portfolio["positions"]:
+            continue
+        print(f"Running full debate on {ticker}...")
+        decision = run_trading_agents(ticker, date_str)
+        if decision:
+            decisions.append({"ticker": ticker, "decision": str(decision), "date": date_str})
+            print(f"  Decision: {str(decision)[:100]}\n")
+
+    # Save full decisions report (for blog)
+    decisions_path = DATA_DIR / "decisions" / f"{date_str}.json"
+    decisions_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(decisions_path, "w") as f:
+        json.dump(decisions, f, indent=2)
+
+    # Generate daily report (for blog)
+    report = generate_daily_report(decisions, portfolio, date_str)
+    report_path = DATA_DIR / "reports" / f"{date_str}.md"
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(report_path, "w") as f:
+        f.write(report)
+
+    # Apply BUY decisions to portfolio
+    buy_decisions = [d for d in decisions if "buy" in d.get("decision", "").lower()]
+    if buy_decisions and portfolio["cash"] > 100:
+        allocation = portfolio["cash"] / max(len(buy_decisions), 1)
+        allocation = min(allocation, portfolio["cash"] * 0.20)
+
+        for d in buy_decisions:
+            ticker = d["ticker"]
+            if ticker in portfolio["positions"]:
+                continue
+            try:
+                stock = yf.Ticker(ticker)
+                hist = stock.history(period="1d")
+                if hist.empty:
+                    continue
+                price = float(hist["Close"].iloc[-1])
+                shares = allocation / price
+                cost = shares * price
+
+                portfolio["positions"][ticker] = {
+                    "shares": round(shares, 4),
+                    "entry_price": round(price, 2),
+                    "entry_date": date_str,
+                    "cost": round(cost, 2),
+                    "decision": d["decision"][:300],
+                }
+                portfolio["cash"] -= cost
+                print(f"  BUY {ticker}: {shares:.2f} shares @ ${price:.2f}")
+
+                # Log trade
+                trade_history_dir = DATA_DIR / "trade_history"
+                trade_history_dir.mkdir(parents=True, exist_ok=True)
+                history_file = trade_history_dir / f"{date_str}.json"
+                trades = []
+                if history_file.exists():
+                    with open(history_file) as fh:
+                        trades = json.load(fh)
+                trades.append({
+                    "action": "BUY", "ticker": ticker, "price": round(price, 2),
+                    "decision": d["decision"][:200], "date": date_str
+                })
+                with open(history_file, "w") as fh:
+                    json.dump(trades, fh, indent=2)
+            except Exception:
+                continue
 
     save_portfolio(portfolio)
 
     # Print summary
     total_value = portfolio["cash"]
     for ticker, pos in portfolio["positions"].items():
-        import yfinance as yf
-        stock = yf.Ticker(ticker)
-        hist = stock.history(period="1d")
-        if not hist.empty:
-            price = float(hist["Close"].iloc[-1])
-            total_value += pos["shares"] * price
+        try:
+            stock = yf.Ticker(ticker)
+            hist = stock.history(period="1d")
+            if not hist.empty:
+                price = float(hist["Close"].iloc[-1])
+                total_value += pos["shares"] * price
+        except Exception:
+            total_value += pos["cost"]
 
     total_return = (total_value - STARTING_CAPITAL) / STARTING_CAPITAL * 100
+    portfolio["latest_value"] = round(total_value, 2)
+    portfolio["latest_return_pct"] = round(total_return, 2)
+    save_portfolio(portfolio)
+
     print(f"\n{'='*50}")
     print(f"  TradingAgents Portfolio: ${total_value:,.2f} ({total_return:+.2f}%)")
     print(f"  Cash: ${portfolio['cash']:,.2f}")
     print(f"  Positions: {len(portfolio['positions'])}")
     print(f"{'='*50}")
+
+
+def generate_daily_report(decisions, portfolio, date_str):
+    """Generate a markdown report for the blog."""
+    report = f"# AI Agent Picks — {date_str}\n\n"
+    report += "## Today's Decisions\n\n"
+    report += "*Multi-agent debate: Market + Fundamentals + Social + News analysts deliberate, Risk Manager validates.*\n\n"
+
+    buys = [d for d in decisions if "buy" in d.get("decision", "").lower()]
+    sells = [d for d in decisions if "sell" in d.get("decision", "").lower()]
+    holds = [d for d in decisions if d not in buys and d not in sells]
+
+    if buys:
+        report += "### BUY Signals\n\n"
+        for d in buys:
+            report += f"**{d['ticker']}** — {d['decision'][:300]}\n\n"
+
+    if sells:
+        report += "### SELL/AVOID Signals\n\n"
+        for d in sells:
+            report += f"**{d['ticker']}** — {d['decision'][:300]}\n\n"
+
+    if holds:
+        report += "### HOLD/NEUTRAL\n\n"
+        for d in holds:
+            report += f"**{d['ticker']}** — {d['decision'][:300]}\n\n"
+
+    # Portfolio status
+    report += "## Portfolio Status\n\n"
+    report += f"- Cash: ${portfolio['cash']:,.2f}\n"
+    report += f"- Positions: {len(portfolio['positions'])}\n"
+    for ticker, pos in portfolio["positions"].items():
+        report += f"- {ticker}: {pos['shares']:.2f} shares @ ${pos['entry_price']:.2f} (since {pos['entry_date']})\n"
+    report += "\n"
+
+    return report
 
 
 if __name__ == "__main__":

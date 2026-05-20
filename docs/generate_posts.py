@@ -97,6 +97,42 @@ categories: weekly
     print(f"Generated {len(list(WEEKLY_DIR.glob('*.md')))} weekly posts")
 
 
+def generate_ai_agent_posts():
+    """Convert TradingAgents daily reports into Jekyll posts."""
+    ai_agent_dir = DOCS_DIR / "_ai_agent"
+    ai_agent_dir.mkdir(exist_ok=True)
+
+    reports_dir = REPO_ROOT / "trading_agents_experiment" / "data" / "reports"
+    if not reports_dir.exists():
+        # Also check if reports are in the repo root
+        reports_dir = REPO_ROOT / "trading_agents_experiment" / "reports"
+    if not reports_dir.exists():
+        print("No AI Agent reports found")
+        return
+
+    for report in sorted(reports_dir.glob("*.md")):
+        date_str = report.stem
+        try:
+            date = datetime.strptime(date_str, "%Y-%m-%d")
+        except ValueError:
+            continue
+
+        post_path = ai_agent_dir / f"{date_str}.md"
+        content = report.read_text()
+
+        front_matter = f"""---
+layout: post
+title: "AI Agent Picks — {date.strftime('%B %d, %Y')}"
+date: {date_str}
+categories: ai-agent
+---
+
+"""
+        post_path.write_text(front_matter + content)
+
+    print(f"Generated {len(list(ai_agent_dir.glob('*.md')))} AI Agent posts")
+
+
 def copy_assets():
     """Copy chart and other assets."""
     ASSETS_DIR.mkdir(exist_ok=True)
@@ -176,6 +212,7 @@ def main():
     print("Generating blog posts...")
     generate_daily_posts()
     generate_weekly_posts()
+    generate_ai_agent_posts()
     copy_assets()
     generate_portfolio_include()
     print("Done!")
