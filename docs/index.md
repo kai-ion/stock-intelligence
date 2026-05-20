@@ -13,9 +13,9 @@ AI-powered daily stock screening and paper trading. Claude analyzes 2,700+ stock
 
 *$10K → Claude picks 3-5 stocks daily, auto-exits at fib targets or stop losses.*
 
-### Strategy B: TradingAgents Multi-Agent Debate (since May 20)
+### Strategy B: [TradingAgents](https://github.com/TauricResearch/TradingAgents) Multi-Agent Debate (since May 20)
 
-*$10K → Multiple AI agents debate bull/bear case, risk manager validates, then decides. Same stocks, different decision process.*
+*$10K → Based on the open-source [TradingAgents](https://github.com/TauricResearch/TradingAgents) framework (77K+ stars, backed by academic research [arXiv:2412.20138](https://arxiv.org/abs/2412.20138)). Multiple AI agents — market analyst, fundamentals analyst, news analyst — independently analyze each stock, then debate bull vs. bear cases before a risk manager validates and a portfolio manager makes the final call. Same stocks as Strategy A, completely different decision process.*
 
 {% include trading_agents_status.html %}
 
