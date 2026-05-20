@@ -1,0 +1,11 @@
+{
+  "date": "2026-05-20",
+  "total_value": 9226.7,
+  "cash": 1947.38,
+  "positions_count": 3,
+  "positions": {
+    "TSEM": 2482.75,
+    "JD": 2407.01,
+    "NBIS": 2389.55
+  }
+}
