@@ -4,7 +4,7 @@ title: AI Agent
 permalink: /ai-agent/
 ---
 
-# AI Agent
+
 
 Powered by [TradingAgents](https://github.com/TauricResearch/TradingAgents) (77K+ stars, [arXiv:2412.20138](https://arxiv.org/abs/2412.20138)).
 
