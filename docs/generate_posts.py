@@ -102,11 +102,17 @@ def generate_ai_agent_posts():
     ai_agent_dir = DOCS_DIR / "_ai_agent"
     ai_agent_dir.mkdir(exist_ok=True)
 
-    reports_dir = REPO_ROOT / "trading_agents_experiment" / "data" / "reports"
-    if not reports_dir.exists():
-        # Also check if reports are in the repo root
-        reports_dir = REPO_ROOT / "trading_agents_experiment" / "reports"
-    if not reports_dir.exists():
+    # Check multiple possible locations for reports
+    possible_dirs = [
+        REPO_ROOT / "trading_agents_experiment" / "reports",
+        REPO_ROOT / "trading_agents_experiment" / "data" / "reports",
+    ]
+    reports_dir = None
+    for d in possible_dirs:
+        if d.exists() and list(d.glob("*.md")):
+            reports_dir = d
+            break
+    if not reports_dir:
         print("No AI Agent reports found")
         return
 
