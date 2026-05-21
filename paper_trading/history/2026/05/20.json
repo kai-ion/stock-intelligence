@@ -1,0 +1,103 @@
+[
+  {
+    "action": "BUY",
+    "ticker": "MRVL",
+    "shares": 9.6206,
+    "price": 190.53,
+    "date": "2026-05-20",
+    "target": 218.18,
+    "stop": 160.47,
+    "reasoning": {
+      "upside": "Multiple analyst upgrades with targets being raised (Wells Fargo $195, Oppenheimer calling for upside), AWS Trainium deployment scaling, and fiscal Q1 results expected to beat.",
+      "risk": "Already past Wells Fargo's $195 target; if NVDA misses tonight, this gives back 10%+ immediately. Use fib 236 at $160.47 as stop."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "NBIS",
+    "shares": 12.1708,
+    "price": 192.21,
+    "date": "2026-05-20",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -160.71,
+    "pnl_pct": -6.43,
+    "entry_price": 205.41,
+    "hold_days": 7
+  },
+  {
+    "action": "BUY",
+    "ticker": "GH",
+    "shares": 17.9128,
+    "price": 102.33,
+    "date": "2026-05-20",
+    "target": 127.8,
+    "stop": 108.15,
+    "reasoning": {
+      "upside": "FDA approval of new blood cancer test + deeply oversold RSI (10.15) = classic mean-reversion setup with a fundamental catalyst. Revenue growing 48% with full-year guide 3.1% above consensus.",
+      "risk": "Co-CEO sold $5M in stock last week; insider selling after a big approval can signal \"good as it gets\" \u2014 watch for more filings."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "JD",
+    "shares": 74.096,
+    "price": 32.46,
+    "date": "2026-05-20",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -94.7,
+    "pnl_pct": -3.79,
+    "entry_price": 33.74,
+    "hold_days": 7
+  },
+  {
+    "action": "BUY",
+    "ticker": "TJX",
+    "shares": 11.5655,
+    "price": 158.49,
+    "date": "2026-05-20",
+    "target": 169.33,
+    "stop": 156.07,
+    "reasoning": {
+      "upside": "Raised full-year outlook, RSI at 2.35 is the most oversold reading on the entire list, and the consumer trade-down thesis is structural not cyclical.",
+      "risk": "Only 6.8% to first fib extension target \u2014 smaller upside than others, but the risk/reward is excellent given the $156-157 support shelf. Lower beta pick."
+    }
+  },
+  {
+    "action": "BUY",
+    "ticker": "LPG",
+    "shares": 27.1739,
+    "price": 43.9,
+    "date": "2026-05-20",
+    "target": 54.25,
+    "stop": 41.7,
+    "reasoning": {
+      "upside": "Best volume confirmation (1.85x) on the list + earnings beat + breakout to new highs. Shipping stocks trend after earnings resets because analyst estimates take weeks to fully adjust.",
+      "risk": "VLGC freight rates are cyclical and geopolitically sensitive; any de-escalation in Red Sea/Panama routing could compress rates quickly."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "MRVL",
+    "shares": 9.6206,
+    "price": 186.56,
+    "date": "2026-05-20",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -38.19,
+    "pnl_pct": -2.08,
+    "entry_price": 190.53,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "ALAB",
+    "shares": 6.7302,
+    "price": 266.68,
+    "date": "2026-05-20",
+    "target": 328.96,
+    "stop": 237.63,
+    "reasoning": {
+      "upside": "Direct AI data center interconnect beneficiary with analyst initiation momentum (Evercore Buy), no overhead resistance at all-time highs, and structural TAM expansion in CXL/PCIe switching.",
+      "risk": "If NVDA disappoints tonight, this gives back the most as a high-beta AI derivative. Use fib 236 at $237.63 as stop \u2014 that's 11% downside risk."
+    }
+  }
+]
