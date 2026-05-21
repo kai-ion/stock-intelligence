@@ -232,7 +232,11 @@ def fetch_earnings_reactions():
     today = datetime.now()
     yesterday = today - timedelta(days=1)
     two_days_ago = today - timedelta(days=2)
-    target_days = [yesterday.strftime("%A"), two_days_ago.strftime("%A")]
+    three_days_ago = today - timedelta(days=3)
+    # Include today (Before Open reports), yesterday, and 2-3 days ago
+    target_days = [today.strftime("%A"), yesterday.strftime("%A"), two_days_ago.strftime("%A"), three_days_ago.strftime("%A")]
+    # Deduplicate (in case of weekends)
+    target_days = list(dict.fromkeys(target_days))
 
     # Find tickers that were scheduled for yesterday/day-before, with their day + timing
     scheduled_tickers = []
@@ -260,9 +264,11 @@ def fetch_earnings_reactions():
     # Deduplicate
     scheduled_tickers = list(dict.fromkeys(scheduled_tickers))
 
+    print(f"    Scheduled tickers ({len(scheduled_tickers)}): {', '.join(scheduled_tickers[:15])}")
+
     # Get price reactions for all scheduled tickers
     reactions = []
-    for ticker in scheduled_tickers[:20]:
+    for ticker in scheduled_tickers[:25]:
         try:
             stock = yf.Ticker(ticker)
             info = stock.info
@@ -306,7 +312,8 @@ def fetch_earnings_reactions():
             continue
 
     reactions.sort(key=lambda x: abs(x.get("reaction_pct", 0)), reverse=True)
-    return reactions[:12]
+    print(f"    Found {len(reactions)} earnings reactions")
+    return reactions[:15]
 
 
 def summarize_with_claude(top_movers, ticker_news, market_headlines, technicals, wsb_trending=None, earnings_reactions=None, comps_data=None):
@@ -314,6 +321,9 @@ def summarize_with_claude(top_movers, ticker_news, market_headlines, technicals,
     from botocore.config import Config
     config = Config(read_timeout=300)
     bedrock = boto3.client("bedrock-runtime", region_name=REGION, config=config)
+
+    # Load analyst expertise
+    from analyst_prompts import EARNINGS_ANALYST_CONTEXT, COMPS_ANALYST_CONTEXT, MARKET_RESEARCHER_CONTEXT
 
     wsb_section = ""
     if wsb_trending:
@@ -340,6 +350,11 @@ VALUATION COMPS (forward P/E and EV/EBITDA vs peer medians — use for picks):
 """
 
     prompt = f"""You are a technical stock market analyst preparing a morning brief. Today is {datetime.now().strftime('%Y-%m-%d')}.
+
+ANALYST EXPERTISE:
+{EARNINGS_ANALYST_CONTEXT}
+{COMPS_ANALYST_CONTEXT}
+{MARKET_RESEARCHER_CONTEXT}
 
 TOP 20 STOCKS BY DAILY GAIN:
 {json.dumps(top_movers, indent=2)}

@@ -129,6 +129,15 @@ def analyze_with_claude(holdings_data, technicals):
     config = Config(read_timeout=300)
     bedrock = boto3.client("bedrock-runtime", region_name=REGION, config=config)
 
+    # Load analyst expertise
+    try:
+        import sys as _sys
+        _sys.path.insert(0, str(Path(__file__).parent.parent))
+        from analyst_prompts import PORTFOLIO_ANALYST_CONTEXT, COMPS_ANALYST_CONTEXT
+    except ImportError:
+        PORTFOLIO_ANALYST_CONTEXT = ""
+        COMPS_ANALYST_CONTEXT = ""
+
     # Flag earnings tickers in prompt
     earnings_tickers = [h["ticker"] for h in holdings_data if h.get("earnings_today")]
     earnings_warning = ""
@@ -136,6 +145,10 @@ def analyze_with_claude(holdings_data, technicals):
         earnings_warning = f"\n⚡ THESE TICKERS REPORT EARNINGS TODAY: {', '.join(earnings_tickers)}. For each, note the earnings risk and whether to hold through or trim before the print.\n"
 
     prompt = f"""You are a technical analyst reviewing a personal stock portfolio. Today is {datetime.now().strftime('%Y-%m-%d')}.
+
+ANALYST EXPERTISE:
+{PORTFOLIO_ANALYST_CONTEXT}
+{COMPS_ANALYST_CONTEXT}
 {earnings_warning}
 PORTFOLIO HOLDINGS (earnings_today=true means that ticker reports earnings today):
 {json.dumps(holdings_data, indent=2)}

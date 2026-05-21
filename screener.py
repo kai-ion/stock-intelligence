@@ -165,20 +165,27 @@ def main():
         print("ERROR: Could not fetch ticker lists. Check network.")
         sys.exit(1)
 
-    print(f"Screening {len(tickers)} stocks (this may take 15-20 min)...\n")
-
     import time
 
-    import time
+    # Split into priority tiers:
+    # Tier 1: Top 300 by daily gain (guaranteed to be processed — includes top movers)
+    # Tier 2: Remaining tickers (best effort, rate-limiting may drop some)
+    priority_tickers = tickers[:300]
+    remaining_tickers = tickers[300:]
+
+    print(f"Screening {len(tickers)} stocks...")
+    print(f"  Priority tier (top 300 movers): {len(priority_tickers)}")
+    print(f"  Remaining: {len(remaining_tickers)}\n")
 
     results = []
     failed_tickers = []
 
-    # Process in batches to avoid rate-limiting
-    batch_size = 50
-    for i in range(0, len(tickers), batch_size):
-        batch = tickers[i:i + batch_size]
-        with ThreadPoolExecutor(max_workers=5) as executor:
+    # Tier 1: Process priority tickers with more patience
+    print("  === Priority Tier ===")
+    batch_size = 30
+    for i in range(0, len(priority_tickers), batch_size):
+        batch = priority_tickers[i:i + batch_size]
+        with ThreadPoolExecutor(max_workers=4) as executor:
             futures = {executor.submit(screen_stock, t): t for t in batch}
             for future in as_completed(futures):
                 result = future.result()
@@ -186,24 +193,43 @@ def main():
                     results.append(result)
                 elif result is None:
                     failed_tickers.append(futures[future])
-        done = min(i + batch_size, len(tickers))
-        if done % 200 == 0 or done == len(tickers):
-            print(f"  Progress: {done}/{len(tickers)} ({len(results)} passed, {len(failed_tickers)} errors)")
-        time.sleep(1)
+        done = min(i + batch_size, len(priority_tickers))
+        if done % 100 == 0 or done == len(priority_tickers):
+            print(f"  Priority: {done}/{len(priority_tickers)} ({len(results)} passed, {len(failed_tickers)} errors)")
+        time.sleep(2)
 
-    # Retry only actual failures (not filtered stocks)
-    if failed_tickers:
-        print(f"\n  Retrying {len(failed_tickers)} tickers that errored...")
-        for i in range(0, len(failed_tickers), 20):
-            batch = failed_tickers[i:i + 20]
-            with ThreadPoolExecutor(max_workers=3) as executor:
+    # Retry priority failures (these are important)
+    priority_failed = failed_tickers[:]
+    if priority_failed:
+        print(f"\n  Retrying {len(priority_failed)} priority tickers...")
+        failed_tickers = []
+        for i in range(0, len(priority_failed), 10):
+            batch = priority_failed[i:i + 10]
+            with ThreadPoolExecutor(max_workers=2) as executor:
                 futures = {executor.submit(screen_stock, t): t for t in batch}
                 for future in as_completed(futures):
                     result = future.result()
                     if result and result != FILTERED:
                         results.append(result)
-            time.sleep(2)
-        print(f"  After retry: {len(results)} total passed")
+            time.sleep(3)
+        print(f"  After priority retry: {len(results)} passed")
+
+    # Tier 2: Process remaining (best effort)
+    print(f"\n  === Remaining Tier ===")
+    for i in range(0, len(remaining_tickers), batch_size):
+        batch = remaining_tickers[i:i + batch_size]
+        with ThreadPoolExecutor(max_workers=4) as executor:
+            futures = {executor.submit(screen_stock, t): t for t in batch}
+            for future in as_completed(futures):
+                result = future.result()
+                if result and result != FILTERED:
+                    results.append(result)
+        done = min(i + batch_size, len(remaining_tickers))
+        if done % 300 == 0 or done == len(remaining_tickers):
+            print(f"  Remaining: {done}/{len(remaining_tickers)} ({len(results)} total passed)")
+        time.sleep(1)
+
+    print(f"\n  Final: {len(results)} stocks passed all filters")
 
     if not results:
         print("\nNo stocks matched all criteria today.")
