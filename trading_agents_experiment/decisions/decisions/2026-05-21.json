@@ -1,0 +1,27 @@
+[
+  {
+    "ticker": "INFQ",
+    "decision": "Underweight",
+    "date": "2026-05-21"
+  },
+  {
+    "ticker": "QBTS",
+    "decision": "Hold",
+    "date": "2026-05-21"
+  },
+  {
+    "ticker": "RGTI",
+    "decision": "Underweight",
+    "date": "2026-05-21"
+  },
+  {
+    "ticker": "AAP",
+    "decision": "Underweight",
+    "date": "2026-05-21"
+  },
+  {
+    "ticker": "RLAY",
+    "decision": "Hold",
+    "date": "2026-05-21"
+  }
+]

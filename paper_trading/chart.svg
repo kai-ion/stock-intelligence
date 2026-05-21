@@ -4,7 +4,7 @@
   <!-- Title -->
   <text x="70" y="30" fill="#c9d1d9" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold">Claude's Paper Trading — Equity Curve</text>
   <text x="70" y="48" fill="#58a6ff" font-family="system-ui, sans-serif" font-size="12">
-    $9,706.06 (-2.94%) | Win Rate: 0/4 (0%) | Realized: $-846.22
+    $9,706.06 (-2.94%) | Win Rate: 0/0 | Realized: $+0.00
   </text>
 
   <!-- Grid lines -->
@@ -24,11 +24,7 @@
   <circle cx="70.0" cy="157.0" r="3" fill="#dc2626"/><circle cx="186.7" cy="128.0" r="3" fill="#dc2626"/><circle cx="303.3" cy="147.7" r="3" fill="#dc2626"/><circle cx="420.0" cy="248.4" r="3" fill="#dc2626"/><circle cx="536.7" cy="258.5" r="3" fill="#dc2626"/><circle cx="653.3" cy="196.3" r="3" fill="#dc2626"/><circle cx="770.0" cy="179.4" r="3" fill="#dc2626"/>
 
   <!-- Trade markers -->
-  <circle cx="536.7" cy="258.5" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="653.3" cy="196.3" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="653.3" cy="196.3" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="653.3" cy="196.3" r="4" fill="#dc2626" opacity="0.8"/>
-
+  
 
   <!-- Y-axis labels -->
   <text x="62" y="320.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$8,663</text><text x="62" y="268.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$9,049</text><text x="62" y="216.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$9,434</text><text x="62" y="164.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$9,820</text><text x="62" y="112.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$10,206</text><text x="62" y="60.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$10,591</text>
