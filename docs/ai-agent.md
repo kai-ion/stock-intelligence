@@ -1,9 +1,10 @@
 ---
 layout: default
+title: AI Agent
 permalink: /ai-agent/
 ---
 
-# AI Agent — Multi-Agent Trading Decisions
+# AI Agent
 
 Powered by [TradingAgents](https://github.com/TauricResearch/TradingAgents) (77K+ stars, [arXiv:2412.20138](https://arxiv.org/abs/2412.20138)).
 
