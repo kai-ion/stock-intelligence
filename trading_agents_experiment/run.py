@@ -39,26 +39,48 @@ def save_portfolio(portfolio):
 
 
 def get_todays_tickers():
-    """Get today's top movers from the screener CSV."""
+    """Get tickers to analyze: top 3 movers + Claude's top 3 picks."""
     import pandas as pd
+    import re as re_mod
     date_str = datetime.now().strftime("%Y-%m-%d")
     month_str = datetime.now().strftime("%Y-%m")
-    csv_path = RESULTS_DIR / month_str / f"{date_str}.csv"
 
+    tickers = []
+
+    # 1. Top 3 by daily gain from screener CSV
+    csv_path = RESULTS_DIR / month_str / f"{date_str}.csv"
     if not csv_path.exists():
-        # Try yesterday
         from datetime import timedelta
         yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
         csv_path = RESULTS_DIR / month_str / f"{yesterday}.csv"
 
-    if not csv_path.exists():
-        print("No screener CSV found")
-        return []
+    if csv_path.exists():
+        df = pd.read_csv(csv_path)
+        top_movers = df.sort_values("Day%", ascending=False).head(3)["Ticker"].tolist()
+        tickers.extend(top_movers)
+        print(f"  Top 3 movers: {', '.join(top_movers)}")
 
-    df = pd.read_csv(csv_path)
-    # Get top 10 by daily gain
-    top = df.sort_values("Day%", ascending=False).head(10)
-    return top["Ticker"].tolist()
+    # 2. Claude's top picks from today's brief
+    brief_path = RESULTS_DIR / month_str / f"{date_str}_brief.md"
+    if not brief_path.exists():
+        from datetime import timedelta
+        yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+        brief_path = RESULTS_DIR / month_str / f"{yesterday}_brief.md"
+
+    if brief_path.exists():
+        content = brief_path.read_text()
+        picks_section = re_mod.search(r"## Claude's Top Picks(.*?)## Avoid", content, re_mod.DOTALL)
+        if picks_section:
+            pick_tickers = re_mod.findall(r'\*\*([A-Z]{1,5})\*\*', picks_section.group(1))
+            claude_picks = [t for t in pick_tickers[:3] if t not in tickers]
+            tickers.extend(claude_picks)
+            print(f"  Claude's picks: {', '.join(claude_picks)}")
+
+    # Deduplicate
+    tickers = list(dict.fromkeys(tickers))
+    if not tickers:
+        print("No tickers found")
+    return tickers
 
 
 def get_trading_agents_graph():
@@ -86,42 +108,98 @@ def get_trading_agents_graph():
 
 
 def run_trading_agents(ticker, date_str):
-    """Run TradingAgents full debate on a single ticker."""
+    """Run TradingAgents full debate on a single ticker. Returns (decision, full_state)."""
     ta = get_trading_agents_graph()
 
     try:
-        _, decision = ta.propagate(ticker, date_str)
-        return decision
+        state, decision = ta.propagate(ticker, date_str)
+
+        # Extract reasoning from state if available
+        reasoning = ""
+        if isinstance(state, dict):
+            # Look for analyst reports, debate transcripts, risk discussion
+            for key in ["market_report", "fundamentals_report", "news_report",
+                        "social_report", "bull_case", "bear_case",
+                        "risk_debate", "final_trade_decision"]:
+                if key in state and state[key]:
+                    content = str(state[key])
+                    if len(content) > 50:
+                        reasoning += f"\n**{key.replace('_', ' ').title()}:**\n{content[:500]}\n"
+
+        return {"decision": str(decision), "reasoning": reasoning}
     except Exception as e:
         print(f"  Error on {ticker}: {e}")
         return None
 
 
 def run_weekly_reflection(portfolio):
-    """Feed past week's P&L back into TradingAgents memory for learning."""
+    """Friday: review the week's decisions and learn from outcomes."""
     ta = get_trading_agents_graph()
 
     # Calculate returns for closed positions
     history_dir = DATA_DIR / "trade_history"
-    if not history_dir.exists():
-        return
-
-    import glob
-    recent_files = sorted(history_dir.glob("*.json"), reverse=True)[:5]
     total_return = 0
-    for f in recent_files:
-        with open(f) as fh:
-            trades = json.load(fh)
-            for t in trades:
-                if t.get("pnl"):
-                    total_return += t["pnl"]
+    if history_dir.exists():
+        recent_files = sorted(history_dir.glob("*.json"), reverse=True)[:5]
+        for f in recent_files:
+            with open(f) as fh:
+                trades = json.load(fh)
+                for t in trades:
+                    if t.get("pnl"):
+                        total_return += t["pnl"]
 
-    if total_return != 0:
+    # Also calculate unrealized P&L on open positions
+    import yfinance as yf
+    for ticker, pos in portfolio.get("positions", {}).items():
         try:
-            ta.reflect_and_remember(total_return)
-            print(f"  Reflection complete. Portfolio return fed: ${total_return:+.2f}")
-        except Exception as e:
-            print(f"  Reflection error: {e}")
+            stock = yf.Ticker(ticker)
+            hist = stock.history(period="1d")
+            if not hist.empty:
+                price = float(hist["Close"].iloc[-1])
+                unrealized = (price - pos["entry_price"]) * pos["shares"]
+                total_return += unrealized
+        except Exception:
+            continue
+
+    # Review this week's decisions (what we bought, held, avoided)
+    decisions_dir = DATA_DIR / "decisions"
+    week_decisions = []
+    if decisions_dir.exists():
+        from datetime import timedelta
+        today = datetime.now()
+        for d in range(5):
+            day = today - timedelta(days=d)
+            day_file = decisions_dir / f"{day.strftime('%Y-%m-%d')}.json"
+            if day_file.exists():
+                with open(day_file) as f:
+                    week_decisions.extend(json.load(f))
+
+    print(f"  Week summary: {len(week_decisions)} decisions made")
+    print(f"  Total return (realized + unrealized): ${total_return:+.2f}")
+
+    # Feed to reflection system
+    try:
+        ta.reflect_and_remember(total_return)
+        print(f"  Reflection complete. Memory updated.")
+    except Exception as e:
+        print(f"  Reflection error: {e}")
+
+    # Save weekly review
+    review = {
+        "date": datetime.now().strftime("%Y-%m-%d"),
+        "total_return": round(total_return, 2),
+        "decisions_count": len(week_decisions),
+        "decisions_summary": [
+            {"ticker": d.get("ticker"), "decision": d.get("decision", "")[:50]}
+            for d in week_decisions
+        ],
+        "portfolio_value": portfolio.get("latest_value", STARTING_CAPITAL),
+    }
+    review_dir = DATA_DIR / "weekly_reviews"
+    review_dir.mkdir(parents=True, exist_ok=True)
+    with open(review_dir / f"{datetime.now().strftime('%Y-%m-%d')}.json", "w") as f:
+        json.dump(review, f, indent=2)
+    print(f"  Weekly review saved")
 
 
 def main():
@@ -190,14 +268,24 @@ def main():
     print(f"Analyzing {len(tickers)} tickers: {', '.join(tickers)}\n")
 
     decisions = []
-    for ticker in tickers[:5]:
+    for ticker in tickers:
         if ticker in portfolio["positions"]:
             continue
         print(f"Running full debate on {ticker}...")
-        decision = run_trading_agents(ticker, date_str)
-        if decision:
-            decisions.append({"ticker": ticker, "decision": str(decision), "date": date_str})
-            print(f"  Decision: {str(decision)[:100]}\n")
+        result = run_trading_agents(ticker, date_str)
+        if result:
+            decision_text = result["decision"]
+            reasoning = result.get("reasoning", "")
+            decisions.append({
+                "ticker": ticker,
+                "decision": decision_text,
+                "reasoning": reasoning[:1000],
+                "date": date_str
+            })
+            print(f"  Decision: {decision_text}")
+            if reasoning:
+                print(f"  Reasoning: {reasoning[:200]}")
+            print()
 
     # Save full decisions report (for blog)
     decisions_path = DATA_DIR / "decisions" / f"{date_str}.json"
@@ -212,8 +300,8 @@ def main():
     with open(report_path, "w") as f:
         f.write(report)
 
-    # Apply BUY decisions to portfolio
-    buy_decisions = [d for d in decisions if "buy" in d.get("decision", "").lower()]
+    # Apply BUY decisions to portfolio (Overweight = Buy)
+    buy_decisions = [d for d in decisions if any(w in d.get("decision", "").lower() for w in ["buy", "overweight"])]
     if buy_decisions and portfolio["cash"] > 100:
         allocation = portfolio["cash"] / max(len(buy_decisions), 1)
         allocation = min(allocation, portfolio["cash"] * 0.20)
@@ -288,33 +376,49 @@ def generate_daily_report(decisions, portfolio, date_str):
     """Generate a markdown report for the blog."""
     report = f"# AI Agent Picks — {date_str}\n\n"
     report += "## Today's Decisions\n\n"
-    report += "*Multi-agent debate: Market + Fundamentals + Social + News analysts deliberate, Risk Manager validates.*\n\n"
+    report += "*Multi-agent debate: Market + Fundamentals + Social + News analysts deliberate (2 rounds), Risk Manager validates.*\n\n"
 
-    buys = [d for d in decisions if "buy" in d.get("decision", "").lower()]
-    sells = [d for d in decisions if "sell" in d.get("decision", "").lower()]
+    buys = [d for d in decisions if any(w in d.get("decision", "").lower() for w in ["buy", "overweight"])]
+    sells = [d for d in decisions if any(w in d.get("decision", "").lower() for w in ["sell", "underweight"])]
     holds = [d for d in decisions if d not in buys and d not in sells]
 
     if buys:
         report += "### BUY Signals\n\n"
         for d in buys:
-            report += f"**{d['ticker']}** — {d['decision'][:300]}\n\n"
+            report += f"**{d['ticker']}** — {d['decision']}\n"
+            if d.get("reasoning"):
+                report += f"\n{d['reasoning'][:500]}\n"
+            report += "\n"
 
     if sells:
         report += "### SELL/AVOID Signals\n\n"
         for d in sells:
-            report += f"**{d['ticker']}** — {d['decision'][:300]}\n\n"
+            report += f"**{d['ticker']}** — {d['decision']}\n"
+            if d.get("reasoning"):
+                report += f"\n{d['reasoning'][:500]}\n"
+            report += "\n"
 
     if holds:
         report += "### HOLD/NEUTRAL\n\n"
         for d in holds:
-            report += f"**{d['ticker']}** — {d['decision'][:300]}\n\n"
+            report += f"**{d['ticker']}** — {d['decision']}\n"
+            if d.get("reasoning"):
+                report += f"\n{d['reasoning'][:500]}\n"
+            report += "\n"
+
+    if not decisions:
+        report += "*No tickers analyzed today.*\n\n"
 
     # Portfolio status
     report += "## Portfolio Status\n\n"
-    report += f"- Cash: ${portfolio['cash']:,.2f}\n"
-    report += f"- Positions: {len(portfolio['positions'])}\n"
-    for ticker, pos in portfolio["positions"].items():
-        report += f"- {ticker}: {pos['shares']:.2f} shares @ ${pos['entry_price']:.2f} (since {pos['entry_date']})\n"
+    report += f"- **Cash:** ${portfolio['cash']:,.2f}\n"
+    report += f"- **Positions:** {len(portfolio['positions'])}\n"
+    if portfolio["positions"]:
+        report += "\n| Ticker | Shares | Entry | Date |\n|--------|--------|-------|------|\n"
+        for ticker, pos in portfolio["positions"].items():
+            report += f"| {ticker} | {pos['shares']:.2f} | ${pos['entry_price']:.2f} | {pos['entry_date']} |\n"
+    else:
+        report += "- *No positions — waiting for high-conviction BUY signals*\n"
     report += "\n"
 
     return report

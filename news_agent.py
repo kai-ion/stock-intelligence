@@ -238,9 +238,10 @@ def fetch_earnings_reactions():
     # Deduplicate (in case of weekends)
     target_days = list(dict.fromkeys(target_days))
 
-    # Find tickers that were scheduled for yesterday/day-before, with their day + timing
+    # Find tickers that were scheduled for yesterday/day-before, with their day + timing + consensus EPS
     scheduled_tickers = []
     ticker_report_day = {}  # ticker -> "Tuesday Before Open" etc.
+    ticker_consensus_eps = {}  # ticker -> "$0.65" etc.
     for day_name in target_days:
         day_pattern = re_mod.compile(
             rf'###\s*{day_name}.*?(?=###|\Z)',
@@ -256,6 +257,10 @@ def fetch_earnings_reactions():
                 timing_match = re_mod.search(rf'\*\*{t}\*\*.*?\((Before Open|After Close|TBD)\)', section)
                 timing = timing_match.group(1) if timing_match else ""
                 ticker_report_day[t] = f"{day_name} {timing}".strip()
+                # Extract consensus EPS from the report
+                eps_match = re_mod.search(rf'\*\*{t}\*\*.*?Consensus:\s*EPS\s*\$?([\-\d.]+)', section, re_mod.DOTALL)
+                if eps_match:
+                    ticker_consensus_eps[t] = eps_match.group(1)
 
     # Also include any tickers from the full weekly list as fallback
     if not scheduled_tickers:
@@ -266,30 +271,61 @@ def fetch_earnings_reactions():
 
     print(f"    Scheduled tickers ({len(scheduled_tickers)}): {', '.join(scheduled_tickers[:15])}")
 
-    # Get price reactions for all scheduled tickers
+    # Get price reactions — use screener CSV for prices (already fetched, no rate limiting)
+    import pandas as pd
+    import time as time_mod
+    from pathlib import Path as _Path
+
+    csv_path = _Path(OUTPUT_FILE).parent / "output.csv"
+    csv_prices = {}
+    if csv_path.exists():
+        try:
+            df = pd.read_csv(csv_path)
+            for _, row in df.iterrows():
+                csv_prices[row["Ticker"]] = {"price": row["Price"], "day_pct": row.get("Day%", 0)}
+        except Exception:
+            pass
+
     reactions = []
     for ticker in scheduled_tickers[:25]:
         try:
+            # Try to get price reaction from CSV first (no API call needed)
+            if ticker in csv_prices:
+                reaction_pct = csv_prices[ticker]["day_pct"]
+                current_price = csv_prices[ticker]["price"]
+            else:
+                # Fallback: quick yfinance call with delay
+                time_mod.sleep(1)
+                stock = yf.Ticker(ticker)
+                hist = stock.history(period="5d")
+                if hist.empty or len(hist) < 2:
+                    continue
+                prev_close = float(hist["Close"].iloc[-2])
+                current_price = float(hist["Close"].iloc[-1])
+                reaction_pct = (current_price - prev_close) / prev_close * 100
+
+            # Get EPS data (lightweight call)
+            time_mod.sleep(0.5)
             stock = yf.Ticker(ticker)
-            info = stock.info
-            hist = stock.history(period="5d")
+            info = stock.fast_info if hasattr(stock, 'fast_info') else stock.info
+            mcap = getattr(info, 'market_cap', None) or (stock.info.get("marketCap", 0) if not csv_prices.get(ticker) else 10_000_000_000)
 
-            if hist.empty or len(hist) < 2:
+            if mcap and mcap < 5_000_000_000 and ticker not in csv_prices:
                 continue
 
-            mcap = info.get("marketCap", 0)
-            if not mcap or mcap < 5_000_000_000:
-                continue
+            # Use consensus EPS from weekly report (no API needed)
+            eps_estimate_str = ticker_consensus_eps.get(ticker, "")
+            eps_estimate = float(eps_estimate_str) if eps_estimate_str else None
 
-            # Get price reaction (today vs yesterday)
-            prev_close = float(hist["Close"].iloc[-2])
-            current = float(hist["Close"].iloc[-1])
-            reaction_pct = (current - prev_close) / prev_close * 100
-
-            # Get EPS data
-            trailing_eps = info.get("trailingEps", None)
-            cal = stock.calendar
-            eps_estimate = cal.get("Earnings Average", None) if cal else None
+            # Try to get actual EPS from yfinance (lightweight)
+            trailing_eps = None
+            name = ticker
+            try:
+                info = stock.info
+                trailing_eps = info.get("trailingEps", None)
+                name = info.get("shortName", ticker)
+            except Exception:
+                pass
 
             beat_miss = "REPORTED"
             surprise_pct = ""
@@ -300,7 +336,7 @@ def fetch_earnings_reactions():
 
             reactions.append({
                 "ticker": ticker,
-                "name": info.get("shortName", ticker),
+                "name": name,
                 "reported": ticker_report_day.get(ticker, ""),
                 "eps_estimate": f"${eps_estimate:.2f}" if eps_estimate else "N/A",
                 "eps_actual": f"${trailing_eps:.2f}" if trailing_eps else "N/A",
@@ -309,6 +345,19 @@ def fetch_earnings_reactions():
                 "beat_miss": beat_miss,
             })
         except Exception:
+            # If all else fails, still include with price reaction from CSV + consensus from report
+            if ticker in csv_prices:
+                eps_est = ticker_consensus_eps.get(ticker, "")
+                reactions.append({
+                    "ticker": ticker,
+                    "name": ticker,
+                    "reported": ticker_report_day.get(ticker, ""),
+                    "eps_estimate": f"${eps_est}" if eps_est else "N/A",
+                    "eps_actual": "N/A",
+                    "surprise": "",
+                    "reaction_pct": round(csv_prices[ticker]["day_pct"], 2),
+                    "beat_miss": "REPORTED",
+                })
             continue
 
     reactions.sort(key=lambda x: abs(x.get("reaction_pct", 0)), reverse=True)

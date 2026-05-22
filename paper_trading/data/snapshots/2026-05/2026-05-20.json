@@ -1,0 +1,13 @@
+{
+  "date": "2026-05-20",
+  "total_value": 9580.56,
+  "cash": 0.0,
+  "positions_count": 5,
+  "positions": {
+    "TSEM": 2473.09,
+    "GH": 2052.9,
+    "TJX": 1838.86,
+    "LPG": 1288.59,
+    "ALAB": 1927.13
+  }
+}

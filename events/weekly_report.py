@@ -217,11 +217,8 @@ def generate_report_with_claude(earnings, econ_events, ipos_priced, ipos_filed):
 
     prompt = f"""You are a financial analyst preparing a WEEKLY EVENTS PREVIEW for a swing trader. Week of {monday.strftime('%B %d')} - {friday.strftime('%B %d, %Y')}.
 
-ALL EARNINGS THIS WEEK (for calendar grid — include ALL in the calendar view):
+ALL EARNINGS THIS WEEK (write detailed BUY/SHORT/AVOID analysis for EVERY ticker listed here):
 {json.dumps(earnings, indent=2)}
-
-TOP EARNINGS FOR DETAILED ANALYSIS (top 25 by market cap — write detailed BUY/SHORT/AVOID for these):
-{json.dumps(sorted(earnings, key=lambda x: x.get('market_cap_b', 0), reverse=True)[:25], indent=2)}
 
 ECONOMIC EVENTS (US, High/Medium impact):
 {json.dumps(econ_events, indent=2)}
@@ -290,7 +287,7 @@ Rules:
 
     body = json.dumps({
         "anthropic_version": "bedrock-2023-05-31",
-        "max_tokens": 8000,
+        "max_tokens": 12000,
         "messages": [{"role": "user", "content": prompt}]
     })
 
