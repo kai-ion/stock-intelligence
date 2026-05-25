@@ -1,1 +1,127 @@
-[]
+[
+  {
+    "action": "SELL",
+    "ticker": "TJX",
+    "shares": 11.5655,
+    "price": 158.25,
+    "date": "2026-05-22",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -2.77,
+    "pnl_pct": -0.15,
+    "entry_price": 158.49,
+    "hold_days": 2
+  },
+  {
+    "action": "BUY",
+    "ticker": "RDW",
+    "shares": 106.2857,
+    "price": 17.22,
+    "date": "2026-05-22",
+    "target": 20.0,
+    "stop": 15.5,
+    "reasoning": {
+      "upside": "Dual catalyst of real contract wins (NATO + Army) plus SpaceX IPO spillover creates a multi-week tailwind; RSI at 57 means plenty of room before overbought.",
+      "risk": "Space/defense names are highly correlated \u2014 a SpaceX IPO delay or pricing disappointment could unwind the entire group simultaneously."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "RDW",
+    "shares": 106.2857,
+    "price": 17.53,
+    "date": "2026-05-22",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 32.95,
+    "pnl_pct": 1.8,
+    "entry_price": 17.22,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "WOLF",
+    "shares": 23.4245,
+    "price": 79.54,
+    "date": "2026-05-22",
+    "target": 90.0,
+    "stop": 69.5,
+    "reasoning": {
+      "upside": "AI data center power demand is a secular theme with years of runway; management just delivered a concrete product launch that validates the investment thesis.",
+      "risk": "Company is still gross-margin negative (-21% non-GAAP in FQ3 2026) \u2014 any disappointment in the ramp timeline could trigger aggressive selling given the recent run."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "WOLF",
+    "shares": 23.4245,
+    "price": 70.04,
+    "date": "2026-05-22",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -222.54,
+    "pnl_pct": -11.94,
+    "entry_price": 79.54,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "GFS",
+    "shares": 18.7911,
+    "price": 87.31,
+    "date": "2026-05-22",
+    "target": 100.0,
+    "stop": 81.0,
+    "reasoning": {
+      "upside": "\"Picks and shovels\" across quantum, defense semiconductors, automotive, and IoT \u2014 every government industrial policy initiative flows through foundries.",
+      "risk": "Customer concentration risk (a few large automotive/defense customers) and capex intensity could pressure free cash flow if utilization doesn't improve."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "GFS",
+    "shares": 18.7911,
+    "price": 85.14,
+    "date": "2026-05-22",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -40.78,
+    "pnl_pct": -2.49,
+    "entry_price": 87.31,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "AA",
+    "shares": 22.4765,
+    "price": 71.18,
+    "date": "2026-05-22",
+    "target": 80.0,
+    "stop": 66.0,
+    "reasoning": {
+      "upside": "Iran war shows no signs of resolution; every week the conflict continues is another week of $3,600+ aluminum benefiting Alcoa's realized prices.",
+      "risk": "A ceasefire or diplomatic breakthrough in the Middle East could crater aluminum prices 20-30% overnight \u2014 this is a geopolitical trade with binary event risk."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "AA",
+    "shares": 22.4765,
+    "price": 71.5,
+    "date": "2026-05-22",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 7.2,
+    "pnl_pct": 0.45,
+    "entry_price": 71.18,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "BB",
+    "shares": 223.8259,
+    "price": 7.18,
+    "date": "2026-05-22",
+    "target": 8.5,
+    "stop": 6.462,
+    "reasoning": {
+      "upside": "QNX pivot to robotics/physical AI is a genuine new TAM story; FedRAMP High re-certification locks in recurring government revenue; RSI at 40 means the move is just starting.",
+      "risk": "BlackBerry has been a \"turnaround story\" for a decade \u2014 execution skepticism is earned, and any miss on IoT growth reignites the bear case."
+    }
+  }
+]
