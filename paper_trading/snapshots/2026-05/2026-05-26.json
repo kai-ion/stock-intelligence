@@ -1,0 +1,13 @@
+{
+  "date": "2026-05-26",
+  "total_value": 9788.11,
+  "cash": 0.0,
+  "positions_count": 5,
+  "positions": {
+    "TSEM": 2693.95,
+    "GH": 2121.95,
+    "ALAB": 1973.63,
+    "BB": 1840.97,
+    "RGTI": 1157.61
+  }
+}
