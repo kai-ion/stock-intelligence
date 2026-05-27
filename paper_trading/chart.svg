@@ -4,46 +4,51 @@
   <!-- Title -->
   <text x="70" y="30" fill="#c9d1d9" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold">Claude's Paper Trading — Equity Curve</text>
   <text x="70" y="48" fill="#58a6ff" font-family="system-ui, sans-serif" font-size="12">
-    $9,788.11 (-2.12%) | Win Rate: 3/13 (23%) | Realized: $-1,002.60
+    $8,616.52 (-13.83%) | Win Rate: 4/18 (22%) | Realized: $-1,383.47
   </text>
 
   <!-- Grid lines -->
   <line x1="70" y1="320.0" x2="770" y2="320.0" stroke="#21262d" stroke-width="0.5"/><line x1="70" y1="268.0" x2="770" y2="268.0" stroke="#21262d" stroke-width="0.5"/><line x1="70" y1="216.0" x2="770" y2="216.0" stroke="#21262d" stroke-width="0.5"/><line x1="70" y1="164.0" x2="770" y2="164.0" stroke="#21262d" stroke-width="0.5"/><line x1="70" y1="112.0" x2="770" y2="112.0" stroke="#21262d" stroke-width="0.5"/><line x1="70" y1="60.0" x2="770" y2="60.0" stroke="#21262d" stroke-width="0.5"/>
 
   <!-- Baseline (starting capital) -->
-  <line x1="70" y1="139.7" x2="770" y2="139.7" stroke="#c9d1d9" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.5"/>
-  <text x="775" y="139.7" fill="#c9d1d9" font-size="9" opacity="0.6" dominant-baseline="middle">$10K</text>
+  <line x1="70" y1="123.9" x2="770" y2="123.9" stroke="#c9d1d9" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.5"/>
+  <text x="775" y="123.9" fill="#c9d1d9" font-size="9" opacity="0.6" dominant-baseline="middle">$10K</text>
 
   <!-- Fill under curve -->
-  <path d="M 70.0 157.0 L 147.8 128.0 L 225.6 147.7 L 303.3 248.4 L 381.1 258.5 L 458.9 196.3 L 536.7 179.4 L 614.4 156.2 L 692.2 153.3 L 770.0 168.3 L 770.0 320.0 L 70.0 320.0 Z" fill="#dc2626" opacity="0.1"/>
+  <path d="M 70.0 137.7 L 140.0 114.5 L 210.0 130.3 L 280.0 211.0 L 350.0 219.1 L 420.0 169.2 L 490.0 155.7 L 560.0 137.1 L 630.0 134.8 L 700.0 146.3 L 770.0 273.4 L 770.0 320.0 L 70.0 320.0 Z" fill="#dc2626" opacity="0.1"/>
 
   <!-- Equity line -->
-  <path d="M 70.0 157.0 L 147.8 128.0 L 225.6 147.7 L 303.3 248.4 L 381.1 258.5 L 458.9 196.3 L 536.7 179.4 L 614.4 156.2 L 692.2 153.3 L 770.0 168.3" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 70.0 137.7 L 140.0 114.5 L 210.0 130.3 L 280.0 211.0 L 350.0 219.1 L 420.0 169.2 L 490.0 155.7 L 560.0 137.1 L 630.0 134.8 L 700.0 146.3 L 770.0 273.4" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 
   <!-- Data points -->
-  <circle cx="70.0" cy="157.0" r="3" fill="#dc2626"/><circle cx="147.8" cy="128.0" r="3" fill="#dc2626"/><circle cx="225.6" cy="147.7" r="3" fill="#dc2626"/><circle cx="303.3" cy="248.4" r="3" fill="#dc2626"/><circle cx="381.1" cy="258.5" r="3" fill="#dc2626"/><circle cx="458.9" cy="196.3" r="3" fill="#dc2626"/><circle cx="536.7" cy="179.4" r="3" fill="#dc2626"/><circle cx="614.4" cy="156.2" r="3" fill="#dc2626"/><circle cx="692.2" cy="153.3" r="3" fill="#dc2626"/><circle cx="770.0" cy="168.3" r="3" fill="#dc2626"/>
+  <circle cx="70.0" cy="137.7" r="3" fill="#dc2626"/><circle cx="140.0" cy="114.5" r="3" fill="#dc2626"/><circle cx="210.0" cy="130.3" r="3" fill="#dc2626"/><circle cx="280.0" cy="211.0" r="3" fill="#dc2626"/><circle cx="350.0" cy="219.1" r="3" fill="#dc2626"/><circle cx="420.0" cy="169.2" r="3" fill="#dc2626"/><circle cx="490.0" cy="155.7" r="3" fill="#dc2626"/><circle cx="560.0" cy="137.1" r="3" fill="#dc2626"/><circle cx="630.0" cy="134.8" r="3" fill="#dc2626"/><circle cx="700.0" cy="146.3" r="3" fill="#dc2626"/><circle cx="770.0" cy="273.4" r="3" fill="#dc2626"/>
 
   <!-- Trade markers -->
-  <circle cx="381.1" cy="258.5" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="458.9" cy="196.3" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="458.9" cy="196.3" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="458.9" cy="196.3" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="614.4" cy="156.2" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="614.4" cy="156.2" r="4" fill="#16a34a" opacity="0.8"/>
-<circle cx="614.4" cy="156.2" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="614.4" cy="156.2" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="614.4" cy="156.2" r="4" fill="#16a34a" opacity="0.8"/>
-<circle cx="692.2" cy="153.3" r="4" fill="#16a34a" opacity="0.8"/>
-<circle cx="692.2" cy="153.3" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="692.2" cy="153.3" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="692.2" cy="153.3" r="4" fill="#dc2626" opacity="0.8"/>
+  <circle cx="350.0" cy="219.1" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="420.0" cy="169.2" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="420.0" cy="169.2" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="420.0" cy="169.2" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="560.0" cy="137.1" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="560.0" cy="137.1" r="4" fill="#16a34a" opacity="0.8"/>
+<circle cx="560.0" cy="137.1" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="560.0" cy="137.1" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="560.0" cy="137.1" r="4" fill="#16a34a" opacity="0.8"/>
+<circle cx="630.0" cy="134.8" r="4" fill="#16a34a" opacity="0.8"/>
+<circle cx="630.0" cy="134.8" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="630.0" cy="134.8" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="630.0" cy="134.8" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="700.0" cy="146.3" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="700.0" cy="146.3" r="4" fill="#16a34a" opacity="0.8"/>
+<circle cx="700.0" cy="146.3" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="700.0" cy="146.3" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="700.0" cy="146.3" r="4" fill="#dc2626" opacity="0.8"/>
 
 
   <!-- Y-axis labels -->
-  <text x="62" y="320.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$8,663</text><text x="62" y="268.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$9,049</text><text x="62" y="216.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$9,434</text><text x="62" y="164.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$9,820</text><text x="62" y="112.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$10,206</text><text x="62" y="60.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$10,591</text>
+  <text x="62" y="320.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$8,186</text><text x="62" y="268.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$8,667</text><text x="62" y="216.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$9,148</text><text x="62" y="164.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$9,629</text><text x="62" y="112.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$10,110</text><text x="62" y="60.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$10,591</text>
 
   <!-- X-axis labels -->
-  <text x="70.0" y="340" fill="#c9d1d9" font-size="10" text-anchor="middle">2026-05-13</text><text x="458.9" y="340" fill="#c9d1d9" font-size="10" text-anchor="middle">2026-05-20</text><text x="770.0" y="340" fill="#c9d1d9" font-size="10" text-anchor="middle">2026-05-26</text>
+  <text x="70.0" y="340" fill="#c9d1d9" font-size="10" text-anchor="middle">2026-05-13</text><text x="420.0" y="340" fill="#c9d1d9" font-size="10" text-anchor="middle">2026-05-20</text><text x="770.0" y="340" fill="#c9d1d9" font-size="10" text-anchor="middle">2026-05-27</text>
 
   <!-- Legend -->
   <circle cx="650" cy="380" r="4" fill="#16a34a"/>

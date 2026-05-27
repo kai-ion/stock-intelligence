@@ -1,0 +1,13 @@
+{
+  "date": "2026-05-27",
+  "total_value": 8616.52,
+  "cash": 0.0,
+  "positions_count": 5,
+  "positions": {
+    "TSEM": 2499.99,
+    "GH": 1833.02,
+    "ALAB": 1794.81,
+    "BB": 1607.07,
+    "ACMR": 881.63
+  }
+}
