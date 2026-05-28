@@ -1,0 +1,127 @@
+[
+  {
+    "action": "SELL",
+    "ticker": "BB",
+    "shares": 223.8259,
+    "price": 8.68,
+    "date": "2026-05-27",
+    "reason": "TARGET HIT",
+    "pnl": 334.62,
+    "pnl_pct": 20.82,
+    "entry_price": 7.18,
+    "hold_days": 5
+  },
+  {
+    "action": "BUY",
+    "ticker": "CCL",
+    "shares": 69.3956,
+    "price": 27.98,
+    "date": "2026-05-27",
+    "target": 32.0,
+    "stop": 26.0,
+    "reasoning": {
+      "upside": "Oil crash + CEO insider buying + extreme oversold condition = textbook snap-back setup with summer booking season as a fundamental tailwind.",
+      "risk": "If Iran peace deal collapses and oil spikes back above $100, the fuel cost headwind returns immediately and demand softness the company warned about could deepen."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "CCL",
+    "shares": 69.3956,
+    "price": 27.9,
+    "date": "2026-05-27",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -5.9,
+    "pnl_pct": -0.3,
+    "entry_price": 27.98,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "APP",
+    "shares": 3.5829,
+    "price": 540.29,
+    "date": "2026-05-27",
+    "target": 600.0,
+    "stop": 500.0,
+    "reasoning": {
+      "upside": "Meta retreating from competitive bidding is a company-specific moat expansion that removes the biggest overhang on the stock, with RSI at 14.7 providing massive room to mean-revert.",
+      "risk": "The Meta story could be overblown or temporary \u2014 if Meta re-enters mobile ad auctions, the competitive narrative reverses quickly."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "APP",
+    "shares": 3.5829,
+    "price": 565.32,
+    "date": "2026-05-27",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 89.7,
+    "pnl_pct": 4.63,
+    "entry_price": 540.29,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "QFIN",
+    "shares": 122.4493,
+    "price": 16.26,
+    "date": "2026-05-27",
+    "target": 18.5,
+    "stop": 14.5,
+    "reasoning": {
+      "upside": "Earnings beat confirms the business is stabilizing after a 70% drawdown, and the RSI at 22 suggests the multi-month selling is exhausted.",
+      "risk": "China consumer credit deterioration could resume, and ADR delisting risk always looms as a tail risk for Chinese names."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "QFIN",
+    "shares": 122.4493,
+    "price": 15.81,
+    "date": "2026-05-27",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -54.48,
+    "pnl_pct": -2.74,
+    "entry_price": 16.26,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "DY",
+    "shares": 3.6086,
+    "price": 546.19,
+    "date": "2026-05-27",
+    "target": 580.0,
+    "stop": 500.0,
+    "reasoning": {
+      "upside": "Raised guidance + acquisition signals management confidence that the data center/telecom buildout cycle is accelerating; analysts will be revising estimates up today.",
+      "risk": "The stock gapped up 30% in one session \u2014 some profit-taking is normal, and if the broader infrastructure spending narrative cools, DY would give back gains fast."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "DY",
+    "shares": 3.6086,
+    "price": 523.2,
+    "date": "2026-05-27",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -82.98,
+    "pnl_pct": -4.21,
+    "entry_price": 546.19,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "UAL",
+    "shares": 16.8273,
+    "price": 112.2,
+    "date": "2026-05-27",
+    "target": 125.0,
+    "stop": 100.0,
+    "reasoning": {
+      "upside": "Every $10/barrel decline in oil is worth roughly $1.5B annually to UAL's cost structure \u2014 if peace holds and oil stays below $95, current estimates are too low.",
+      "risk": "Airlines are notoriously cyclical; any demand slowdown or peace deal reversal would hit this trade from both sides simultaneously."
+    }
+  }
+]

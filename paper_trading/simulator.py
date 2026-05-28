@@ -14,7 +14,7 @@ from pathlib import Path
 
 DATA_DIR = Path(__file__).parent / "data"
 PORTFOLIO_FILE = DATA_DIR / "portfolio.json"
-RESULTS_DIR = Path(__file__).parent.parent / "results"
+RESULTS_DIR = Path(__file__).parent.parent / "screener_output"
 STARTING_CAPITAL = 10000.0
 
 

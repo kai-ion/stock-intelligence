@@ -1,0 +1,102 @@
+[
+  {
+    "action": "SELL",
+    "ticker": "LPG",
+    "shares": 27.1739,
+    "price": 46.46,
+    "date": "2026-05-25",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 69.56,
+    "pnl_pct": 5.83,
+    "entry_price": 43.9,
+    "hold_days": 5
+  },
+  {
+    "action": "BUY",
+    "ticker": "NTAP",
+    "shares": 9.0593,
+    "price": 139.36,
+    "date": "2026-05-25",
+    "target": 155.0,
+    "stop": 124.0,
+    "reasoning": {
+      "upside": "RSI at 25.5 (deeply oversold) bouncing into Q4 earnings with AI storage tailwinds and Evercore's bullish hardware call \u2014 this is a coiled spring with a real catalyst ahead.",
+      "risk": "If Q4 earnings disappoint on enterprise spending weakness, the oversold bounce reverses hard; support at $124 is the downside reference."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "NTAP",
+    "shares": 9.0593,
+    "price": 139.36,
+    "date": "2026-05-25",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 0.0,
+    "pnl_pct": 0.0,
+    "entry_price": 139.36,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "FLY",
+    "shares": 25.5051,
+    "price": 49.5,
+    "date": "2026-05-25",
+    "target": 55.0,
+    "stop": 40.5,
+    "reasoning": {
+      "upside": "RSI at 39.7 is genuinely not overbought despite massive recent gains; SpaceX IPO repricing + Texas expansion + government contracts provide multi-week catalyst runway.",
+      "risk": "Space stocks are notoriously volatile around launch events \u2014 a single mission failure would crater this 30%+; the sector is also trading on SpaceX hype that could dissipate post-IPO."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "FLY",
+    "shares": 25.5051,
+    "price": 49.5,
+    "date": "2026-05-25",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 0.0,
+    "pnl_pct": 0.0,
+    "entry_price": 49.5,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "HLIT",
+    "shares": 83.0594,
+    "price": 15.2,
+    "date": "2026-05-25",
+    "target": 17.0,
+    "stop": 12.7,
+    "reasoning": {
+      "upside": "The Q1 triple-play (beat + raise + beat-the-raise) is the strongest fundamental signal on this list; post-earnings drift typically continues 2-3 weeks for this magnitude of surprise.",
+      "risk": "RSI at 81 is elevated; a director just sold shares; if broadband capex guidance from major telcos weakens, the multiple compresses despite good execution."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "HLIT",
+    "shares": 83.0594,
+    "price": 15.2,
+    "date": "2026-05-25",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 0.0,
+    "pnl_pct": -0.0,
+    "entry_price": 15.2,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "RGTI",
+    "shares": 47.7859,
+    "price": 26.42,
+    "date": "2026-05-25",
+    "target": 30.0,
+    "stop": 17.8,
+    "reasoning": {
+      "upside": "Government funding announcements tend to have multi-week momentum as institutional investors update models; the quantum sector is in \"early innings\" of a legitimacy phase shift.",
+      "risk": "Quantum computing stocks are the most volatile names in the market \u2014 RGTI dropped 60% in January 2025 on a single bearish comment from a CEO; position size accordingly."
+    }
+  }
+]

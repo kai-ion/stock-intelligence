@@ -91,16 +91,7 @@ def parse_results(content):
 
 
 def build_html(date_str, headers, rows, total_count):
-    """Build mobile-friendly HTML email."""
-    # Key columns to show in email
-    key_cols = ["Ticker", "Price", "Day%", "Week%", "MCap($B)", "Sector", "Industry", "Momentum", "Rating", "Vol Ratio"]
-    col_indices = []
-    display_headers = []
-    for col in key_cols:
-        if col in headers:
-            col_indices.append(headers.index(col))
-            display_headers.append(col)
-
+    """Build mobile-friendly HTML email — brief first, screener table last."""
     html = f"""<!DOCTYPE html>
 <html>
 <head>
@@ -121,6 +112,40 @@ tr:nth-child(even) {{ background: #f9fafb; }}
 <body>
 <h2>Stock Screener — {date_str}</h2>
 <p>{total_count} stocks passed | Above 50d EMA | +Week | MCap &gt;$1B | Sorted by Momentum</p>
+"""
+
+    # News brief first (top movers, Claude's picks, WSB, earnings)
+    if os.path.exists(NEWS_FILE):
+        with open(NEWS_FILE) as f:
+            news_content = f.read().strip()
+        if news_content:
+            import re as re_mod
+            news_html = news_content
+            news_html = re_mod.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', news_html)
+            news_html = re_mod.sub(r'^### (.+)$', r'<h4 style="color:#1a1a1a;margin:12px 0 4px;">\1</h4>', news_html, flags=re_mod.MULTILINE)
+            news_html = re_mod.sub(r'^## (.+)$', r'<h3 style="color:#1a1a1a;margin:16px 0 6px;border-bottom:1px solid #eee;padding-bottom:4px;">\1</h3>', news_html, flags=re_mod.MULTILINE)
+            news_html = re_mod.sub(r'^# (.+)$', r'<h2 style="color:#1a1a1a;margin:16px 0 6px;">\1</h2>', news_html, flags=re_mod.MULTILINE)
+            news_html = news_html.replace("---", '<hr style="border-color:#eee;margin:12px 0;">')
+            news_html = re_mod.sub(r'\*(.+?)\*', r'<em style="color:#666;">\1</em>', news_html)
+            news_html = re_mod.sub(r'^- (.+)$', r'<div style="padding:4px 0 4px 12px;border-left:3px solid #e0e0e0;margin:6px 0;">\1</div>', news_html, flags=re_mod.MULTILINE)
+            news_html = news_html.replace("\n", "<br>")
+
+            html += f"""<div style="font-size: 13px; line-height: 1.7; color: #333;">
+{news_html}
+</div>
+"""
+
+    # Screener CSV table at the bottom
+    key_cols = ["Ticker", "Price", "Day%", "Week%", "MCap($B)", "Sector", "Industry", "Momentum", "Rating", "Vol Ratio"]
+    col_indices = []
+    display_headers = []
+    for col in key_cols:
+        if col in headers:
+            col_indices.append(headers.index(col))
+            display_headers.append(col)
+
+    html += f"""<hr style="border-color: #eee; margin: 20px 0;">
+<h3 style="color:#1a1a1a;margin:12px 0 6px;">Full Screener Output</h3>
 <table>
 <tr>{"".join(f"<th>{h}</th>" for h in display_headers)}</tr>
 """
@@ -145,39 +170,7 @@ tr:nth-child(even) {{ background: #f9fafb; }}
                 html += f"<td>{val}</td>"
         html += "</tr>\n"
 
-    html += "</table>\n"
-
-    # Append news brief if available
-    if os.path.exists(NEWS_FILE):
-        with open(NEWS_FILE) as f:
-            news_content = f.read().strip()
-        if news_content:
-            import re as re_mod
-            # Convert markdown to HTML
-            news_html = news_content
-            # Bold
-            news_html = re_mod.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', news_html)
-            # Headers
-            news_html = re_mod.sub(r'^### (.+)$', r'<h4 style="color:#1a1a1a;margin:12px 0 4px;">\1</h4>', news_html, flags=re_mod.MULTILINE)
-            news_html = re_mod.sub(r'^## (.+)$', r'<h3 style="color:#1a1a1a;margin:16px 0 6px;border-bottom:1px solid #eee;padding-bottom:4px;">\1</h3>', news_html, flags=re_mod.MULTILINE)
-            news_html = re_mod.sub(r'^# (.+)$', r'<h2 style="color:#1a1a1a;margin:16px 0 6px;">\1</h2>', news_html, flags=re_mod.MULTILINE)
-            # Horizontal rules
-            news_html = news_html.replace("---", '<hr style="border-color:#eee;margin:12px 0;">')
-            # Italics
-            news_html = re_mod.sub(r'\*(.+?)\*', r'<em style="color:#666;">\1</em>', news_html)
-            # Bullet points
-            news_html = re_mod.sub(r'^- (.+)$', r'<div style="padding:4px 0 4px 12px;border-left:3px solid #e0e0e0;margin:6px 0;">\1</div>', news_html, flags=re_mod.MULTILINE)
-            # Line breaks
-            news_html = news_html.replace("\n", "<br>")
-
-            html += f"""
-<hr style="border-color: #eee; margin: 20px 0;">
-<div style="font-size: 13px; line-height: 1.7; color: #333;">
-{news_html}
-</div>
-"""
-
-    html += "</body>\n</html>"
+    html += "</table>\n</body>\n</html>"
     return html
 
 

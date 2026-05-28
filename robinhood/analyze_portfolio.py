@@ -132,7 +132,7 @@ def analyze_with_claude(holdings_data, technicals):
     # Load analyst expertise
     try:
         import sys as _sys
-        _sys.path.insert(0, str(Path(__file__).parent.parent))
+        _sys.path.insert(0, str(Path(__file__).parent.parent / "brief"))
         from analyst_prompts import PORTFOLIO_ANALYST_CONTEXT, COMPS_ANALYST_CONTEXT
     except ImportError:
         PORTFOLIO_ANALYST_CONTEXT = ""

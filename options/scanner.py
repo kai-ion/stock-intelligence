@@ -22,7 +22,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 load_dotenv(Path(__file__).parent / ".env")
-load_dotenv(Path(__file__).parent.parent / "portfolio_analysis" / ".env")
+load_dotenv(Path(__file__).parent.parent / "robinhood" / ".env")
 
 DATA_DIR = Path(__file__).parent / "data"
 POSITION_FILE = DATA_DIR / "position.json"
@@ -58,7 +58,7 @@ def login():
         password=password,
         store_session=True,
         pickle_name="rh_session.pickle",
-        pickle_path=str(Path(__file__).parent.parent / "portfolio_analysis"),
+        pickle_path=str(Path(__file__).parent.parent / "robinhood"),
     )
     if result:
         print("Logged in")
@@ -408,7 +408,7 @@ def quarterly_scan():
     top_3 = affordable[:3]
     agent_opinions = {}
     try:
-        sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "trading_agents_experiment"))
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "trading_agents"))
         from run import run_trading_agents
         date_str = datetime.now().strftime("%Y-%m-%d")
         for candidate in top_3:

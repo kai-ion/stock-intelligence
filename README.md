@@ -23,10 +23,10 @@ EC2 (t2.micro, us-east-1)
 │   └── analyze_portfolio.py       Exit targets, stops, trim/hold/add/buy suggestions
 │
 ├── Daily 10:00 AM ET →  Stock Screener Pipeline
-│   ├── screener.py                Screens ~2700 US stocks (EMA, momentum, volume)
-│   ├── wsb_sentiment.py           Top 5 WSB trending tickers + sentiment
-│   ├── news_agent.py              Technicals + news + Claude morning brief
-│   └── send_email.py              HTML email + S3 upload
+│   ├── screener/screener.py       Screens ~2700 US stocks (EMA, momentum, volume)
+│   ├── brief/wsb_sentiment.py     Top 5 WSB trending tickers + sentiment
+│   ├── brief/news_agent.py        Technicals + news + Claude morning brief
+│   └── brief/send_email.py        HTML email + S3 upload
 │
 ├── Daily 10:22 AM ET →  Paper Trading Simulator
 │   └── paper_trading/simulator.py Buys Claude's picks, auto-exits at targets/stops
@@ -40,10 +40,10 @@ EC2 (t2.micro, us-east-1)
 │   └── trump_alert/monitor.py    Truth Social + White House, IMMEDIATE/DIGEST/IGNORE
 │
 ├── Daily 10:10 AM ET →  TradingAgents Multi-Agent Experiment
-│   └── trading_agents_experiment/run.py  4 analysts debate, risk manager validates, learns weekly
+│   └── trading_agents/run.py      4 analysts debate, risk manager validates, learns weekly
 │
 Local Mac (launchd at 10:30 AM)
-└── sync_results.sh                Syncs S3 → local (results, portfolio, events, paper trading)
+└── scripts/sync_results.sh        Syncs S3 → local (screener output, robinhood, events, paper trading)
 ```
 
 ## TradingAgents Experiment
@@ -109,12 +109,17 @@ Each stock gets:
 
 ```
 stock/
-├── results/                        Daily screener output
-│   └── YYYY-MM/
-│       ├── YYYY-MM-DD.csv            Sortable screener data (open in Excel/Numbers)
-│       ├── YYYY-MM-DD.txt            Full screener log
-│       └── YYYY-MM-DD_brief.md       News + picks + WSB sentiment
-├── portfolio_analysis/             Robinhood portfolio monitoring
+├── screener/                       Stock screening
+│   ├── screener.py                   Screens ~2700 US stocks (EMA, momentum, volume)
+│   └── view.py                       CLI viewer with --sort flag
+├── brief/                          Morning brief pipeline
+│   ├── news_agent.py                 Technicals + news + Claude morning brief
+│   ├── wsb_sentiment.py              Top 5 WSB trending tickers + sentiment
+│   ├── analyst_prompts.py            Analyst persona system prompts
+│   ├── financial_skills.py           Peer comps and valuation data
+│   ├── send_email.py                 HTML email + S3 upload
+│   └── send_slack.py                 Slack notifications
+├── robinhood/                      Real portfolio monitoring (Robinhood)
 │   ├── fetch_portfolio.py
 │   ├── analyze_portfolio.py
 │   └── data/YYYY-MM/
@@ -129,20 +134,30 @@ stock/
 │       ├── portfolio.json            Current state
 │       ├── history/YYYY/MM/DD.json   Daily trade log with reasoning
 │       └── snapshots/YYYY-MM/        Daily equity snapshots
+├── trading_agents/                 Multi-agent debate experiment
+│   ├── run.py                        4 analysts debate, risk manager validates
+│   ├── reports/                      Daily decision reports
+│   └── decisions/                    Buy/sell/hold decisions
 ├── events/                         Weekly earnings + fed + IPO calendar
 │   ├── weekly_report.py
 │   └── data/YYYY-MM/
 │       └── week_YYYY-MM-DD.md        Monday preview for the week
+├── options/                        Covered call scanner
+│   └── scanner.py                    5-factor scoring for mega-cap LEAPs
 ├── trump_alert/                    Real-time market-moving statement alerts
 │   ├── monitor.py
 │   └── data/                         Seen posts + daily digest
-├── screener.py
-├── news_agent.py
-├── wsb_sentiment.py
-├── send_email.py
-├── deploy.sh                       One-command EC2 deployment
-├── sync_results.sh                 Local S3 sync (launchd)
-└── view.py                         CLI viewer with --sort flag
+├── blog/                           Jekyll site (GitHub Pages)
+│   ├── generate_posts.py             Converts results to blog posts
+│   └── ...                           Jekyll config, templates, assets
+├── scripts/                        Deployment + sync
+│   ├── deploy.sh                     One-command EC2 deployment
+│   └── sync_results.sh               Local S3 sync (launchd)
+└── screener_output/                Daily screener data (synced from S3)
+    └── YYYY-MM/
+        ├── YYYY-MM-DD.csv            Sortable screener data
+        ├── YYYY-MM-DD.txt            Full screener log
+        └── YYYY-MM-DD_brief.md       News + picks + WSB sentiment
 ```
 
 ## Setup
@@ -174,15 +189,15 @@ yfinance pandas requests lxml boto3 robin_stocks python-dotenv pyotp
 
 ### Local Sync (launchd)
 ```
-# 10:30 AM weekdays — syncs S3 results + portfolio analysis locally
-com.stock.sync.plist → sync_results.sh
+# 10:30 AM weekdays — syncs S3 screener output + robinhood data locally
+com.stock.sync.plist → scripts/sync_results.sh
 ```
 
 ## Configuration
 
 ### .env (screener — not needed, uses NASDAQ public API)
 
-### portfolio_analysis/.env
+### robinhood/.env
 ```
 RH_EMAIL=your_email
 RH_PASSWORD=your_password
@@ -203,7 +218,7 @@ git clone https://github.com/kai-ion/stock-intelligence.git
 cd stock-intelligence
 
 # One command deploys everything to your EC2:
-./deploy.sh --ip <EC2_IP> --key <path/to/key.pem> --email <your@email.com> --bucket <s3-bucket>
+./scripts/deploy.sh --ip <EC2_IP> --key <path/to/key.pem> --email <your@email.com> --bucket <s3-bucket>
 ```
 
 This installs dependencies, uploads scripts, configures environment variables, and sets up cron jobs.
@@ -224,7 +239,7 @@ Before running `deploy.sh`, you need:
 ### Deploy Options
 
 ```bash
-./deploy.sh \
+./scripts/deploy.sh \
   --ip 1.2.3.4 \
   --key ~/.ssh/my-key.pem \
   --email you@gmail.com \
@@ -246,13 +261,13 @@ Before running `deploy.sh`, you need:
 
 ```bash
 # Copy and configure the sync script
-cp sync_results.sh.example sync_results.sh
-chmod +x sync_results.sh
+cp scripts/sync_results.sh.example scripts/sync_results.sh
+chmod +x scripts/sync_results.sh
 # Edit with your bucket name and paths
 
 # Create an IAM user with read-only S3 access
 # Add keys to ~/.aws/credentials under [stock-sync] profile
-# Set up macOS launchd or crontab to run sync_results.sh at 10:30 AM
+# Set up macOS launchd or crontab to run scripts/sync_results.sh at 10:30 AM
 ```
 
 ### Portfolio Bot (optional)

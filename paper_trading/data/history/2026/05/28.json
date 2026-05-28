@@ -1,0 +1,14 @@
+[
+  {
+    "action": "SELL",
+    "ticker": "ALAB",
+    "shares": 6.7302,
+    "price": 333.43,
+    "date": "2026-05-28",
+    "reason": "TARGET HIT",
+    "pnl": 449.23,
+    "pnl_pct": 25.03,
+    "entry_price": 266.68,
+    "hold_days": 8
+  }
+]

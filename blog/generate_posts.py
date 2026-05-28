@@ -11,7 +11,7 @@ from pathlib import Path
 from datetime import datetime
 
 REPO_ROOT = Path(__file__).parent.parent
-RESULTS_DIR = REPO_ROOT / "results"
+RESULTS_DIR = REPO_ROOT / "screener_output"
 EVENTS_DIRS = [REPO_ROOT / "events" / "data", REPO_ROOT / "events"]
 PAPER_TRADING_DIR = REPO_ROOT / "paper_trading"
 DOCS_DIR = Path(__file__).parent
@@ -104,8 +104,8 @@ def generate_ai_agent_posts():
 
     # Check multiple possible locations for reports
     possible_dirs = [
-        REPO_ROOT / "trading_agents_experiment" / "reports",
-        REPO_ROOT / "trading_agents_experiment" / "data" / "reports",
+        REPO_ROOT / "trading_agents" / "reports",
+        REPO_ROOT / "trading_agents" / "data" / "reports",
     ]
     reports_dir = None
     for d in possible_dirs:

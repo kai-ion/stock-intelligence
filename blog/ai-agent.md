@@ -87,7 +87,7 @@ The hypothesis: **a system that debates itself and learns from failures should o
 ### Source Code
 
 - Framework: [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents)
-- Our integration: [trading_agents_experiment/](https://github.com/kai-ion/stock-intelligence/tree/main/trading_agents_experiment)
+- Our integration: [trading_agents/](https://github.com/kai-ion/stock-intelligence/tree/main/trading_agents)
 - Bedrock adapter: Custom `bedrock_client.py` added to the framework's LLM client factory
 
 ---

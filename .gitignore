@@ -1,9 +1,10 @@
 .env
 *.pem
 *.pickle
-userdata.sh
-sync_results.sh
-portfolio_analysis/data/
+scripts/userdata.sh
+scripts/sync_results.sh
+robinhood/data/
 sync.log
 output.csv
 __pycache__/
+brief/wsb_latest.json

@@ -22,7 +22,7 @@ from datetime import datetime
 
 import pandas as pd
 
-RESULTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results")
+RESULTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "screener_output")
 
 SORT_MAP = {
     "momentum": ("Momentum", False),

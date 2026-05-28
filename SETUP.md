@@ -45,14 +45,15 @@ EOF
 
 ### 4. Deploy scripts
 
-Upload these files to `/home/ec2-user/`:
+Upload these files to `/home/ec2-user/` (from local `screener/` and `brief/`):
 - `screener.py` — stock screener (2700 US stocks, momentum/EMA/volume)
 - `news_agent.py` — fetches technicals, news, WSB, earnings reactions, comps → Claude brief
 - `wsb_sentiment.py` — ApeWisdom API for WSB trending tickers
+- `analyst_prompts.py` — analyst persona system prompts
 - `financial_skills.py` — peer comps and valuation data
 - `send_email.py` — HTML email + S3 upload
 
-Upload to `/home/ec2-user/portfolio/`:
+Upload to `/home/ec2-user/portfolio/` (from local `robinhood/`):
 - `fetch_portfolio.py` — Robinhood holdings via robin_stocks
 - `analyze_portfolio.py` — Claude analyzes positions with fib levels
 
@@ -167,7 +168,7 @@ region=us-east-1
 
 ### 2. Launchd sync (10:30 AM weekdays)
 
-Create `~/Library/LaunchAgents/com.stock.sync.plist` pointing to `sync_results.sh`.
+Create `~/Library/LaunchAgents/com.stock.sync.plist` pointing to `scripts/sync_results.sh`.
 
 The sync script:
 - Syncs S3 results/, portfolio/, paper_trading/, events/ locally
@@ -176,9 +177,9 @@ The sync script:
 
 ### 3. GitHub Pages
 
-The repo has a `docs/` directory with Jekyll config. GitHub Actions auto-deploys on push.
+The repo has a `blog/` directory with Jekyll config. GitHub Actions auto-deploys on push.
 - `.github/workflows/deploy-blog.yml` builds the site
-- `docs/generate_posts.py` converts daily briefs to blog posts
+- `blog/generate_posts.py` converts daily briefs to blog posts
 
 ## Key Architecture Decisions
 
@@ -196,19 +197,19 @@ The repo has a `docs/` directory with Jekyll config. GitHub Actions auto-deploys
 
 ```bash
 # Clone TradingAgents into the experiment directory
-# The tradingagents/ package is copied to /home/ec2-user/trading_agents_experiment/tradingagents/
+# The tradingagents/ package is copied to /home/ec2-user/trading_agents/tradingagents/
 
 # Install additional deps
 sudo pip3.11 install langchain-aws langchain-core langgraph langgraph-checkpoint-sqlite stockstats
 
 # The custom bedrock_client.py lives at:
-# trading_agents_experiment/tradingagents/llm_clients/bedrock_client.py
+# trading_agents/tradingagents/llm_clients/bedrock_client.py
 
 # Config: provider=bedrock, deep_think=claude-sonnet-4-6, quick_think=claude-haiku-4-5
 # Features: 4 analysts, 2 debate rounds, 2 risk rounds, checkpoint enabled, weekly reflection
 
 # Cron at 10:10 AM ET (14:10 UTC):
-echo '10 14 * * 1-5 ec2-user . /home/ec2-user/.env && cd /home/ec2-user/trading_agents_experiment && python3.11 run.py >> run.log 2>&1' | sudo tee /etc/cron.d/trading-agents-experiment
+echo '10 14 * * 1-5 ec2-user . /home/ec2-user/.env && cd /home/ec2-user/trading_agents && python3.11 run.py >> run.log 2>&1' | sudo tee /etc/cron.d/trading-agents
 ```
 
 ## Daily Schedule (all times ET)
@@ -233,7 +234,7 @@ Sat-Sun 10:00 AM → Portfolio session keep-alive only
 
 ```
 s3://BUCKET/
-├── results/YYYY-MM/          Daily screener (csv, txt, brief.md)
+├── results/YYYY-MM/          Daily screener output (csv, txt, brief.md)
 ├── portfolio/YYYY-MM/        Portfolio analysis (json, analysis.md)
 ├── paper_trading/
 │   ├── portfolio.json        Current paper portfolio
@@ -245,7 +246,7 @@ s3://BUCKET/
 
 ## Disaster Recovery
 
-1. Launch new EC2, run `deploy.sh`
+1. Launch new EC2, run `scripts/deploy.sh`
 2. Copy `.env` and portfolio `.env` with credentials
 3. For Robinhood: run `fetch_portfolio.py` once and approve device
 4. For GitHub push: generate new deploy key, add to repo

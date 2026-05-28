@@ -16,7 +16,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 DATA_DIR = Path(__file__).parent / "data"
 PORTFOLIO_FILE = DATA_DIR / "portfolio.json"
-RESULTS_DIR = Path(__file__).parent.parent / "results"
+RESULTS_DIR = Path(__file__).parent.parent / "screener_output"
 STARTING_CAPITAL = 10000.0
 
 
@@ -39,31 +39,37 @@ def save_portfolio(portfolio):
 
 
 def get_todays_tickers():
-    """Get tickers to analyze: top 3 movers + Claude's top 3 picks."""
+    """Get tickers to analyze: mix of momentum, value, and upcoming catalysts."""
     import pandas as pd
     import re as re_mod
+    from datetime import timedelta
     date_str = datetime.now().strftime("%Y-%m-%d")
     month_str = datetime.now().strftime("%Y-%m")
 
     tickers = []
 
-    # 1. Top 3 by daily gain from screener CSV
+    # 1. Screener stocks with strong momentum BUT not yet extended (Day% between 2-8%)
     csv_path = RESULTS_DIR / month_str / f"{date_str}.csv"
     if not csv_path.exists():
-        from datetime import timedelta
         yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
         csv_path = RESULTS_DIR / month_str / f"{yesterday}.csv"
 
     if csv_path.exists():
         df = pd.read_csv(csv_path)
-        top_movers = df.sort_values("Day%", ascending=False).head(3)["Ticker"].tolist()
-        tickers.extend(top_movers)
-        print(f"  Top 3 movers: {', '.join(top_movers)}")
+        # Sweet spot: positive day but not parabolic, high momentum score
+        sweet_spot = df[(df["Day%"] >= 2) & (df["Day%"] <= 10) & (df["Momentum"] >= 60)]
+        if not sweet_spot.empty:
+            best = sweet_spot.sort_values("Momentum", ascending=False).head(3)["Ticker"].tolist()
+            tickers.extend(best)
+            print(f"  Momentum sweet spot (2-10% day, high score): {', '.join(best)}")
+        else:
+            top = df.sort_values("Momentum", ascending=False).head(3)["Ticker"].tolist()
+            tickers.extend(top)
+            print(f"  Top momentum: {', '.join(top)}")
 
-    # 2. Claude's top picks from today's brief
+    # 2. Claude's top picks
     brief_path = RESULTS_DIR / month_str / f"{date_str}_brief.md"
     if not brief_path.exists():
-        from datetime import timedelta
         yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
         brief_path = RESULTS_DIR / month_str / f"{yesterday}_brief.md"
 
@@ -75,6 +81,18 @@ def get_todays_tickers():
             claude_picks = [t for t in pick_tickers[:3] if t not in tickers]
             tickers.extend(claude_picks)
             print(f"  Claude's picks: {', '.join(claude_picks)}")
+
+    # 3. Upcoming earnings (from weekly report) — buy BEFORE the move
+    monday = datetime.now() - timedelta(days=datetime.now().weekday())
+    week_file = Path(f"/home/ec2-user/events/data/week_{monday.strftime('%Y-%m-%d')}.md")
+    if week_file.exists():
+        week_content = week_file.read_text()
+        # Find tickers with BUY action from the weekly report
+        buy_tickers = re_mod.findall(r'\*\*([A-Z]{1,5})\*\*.*?Action:\s*BUY', week_content)
+        earnings_buys = [t for t in buy_tickers[:2] if t not in tickers]
+        if earnings_buys:
+            tickers.extend(earnings_buys)
+            print(f"  Weekly report BUY-rated earnings: {', '.join(earnings_buys)}")
 
     # Deduplicate
     tickers = list(dict.fromkeys(tickers))

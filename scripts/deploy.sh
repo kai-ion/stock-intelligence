@@ -71,17 +71,19 @@ ssh $SSH_OPTS -i "$KEY_PATH" ec2-user@"$EC2_IP" "
 
 # Step 3: Upload scripts
 echo "[3/5] Uploading scripts..."
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 scp $SSH_OPTS -i "$KEY_PATH" \
-    "$SCRIPT_DIR/screener.py" \
-    "$SCRIPT_DIR/news_agent.py" \
-    "$SCRIPT_DIR/wsb_sentiment.py" \
-    "$SCRIPT_DIR/send_email.py" \
+    "$REPO_DIR/screener/screener.py" \
+    "$REPO_DIR/brief/news_agent.py" \
+    "$REPO_DIR/brief/wsb_sentiment.py" \
+    "$REPO_DIR/brief/analyst_prompts.py" \
+    "$REPO_DIR/brief/financial_skills.py" \
+    "$REPO_DIR/brief/send_email.py" \
     ec2-user@"$EC2_IP":/home/ec2-user/
 
 scp $SSH_OPTS -i "$KEY_PATH" \
-    "$SCRIPT_DIR/portfolio_analysis/fetch_portfolio.py" \
-    "$SCRIPT_DIR/portfolio_analysis/analyze_portfolio.py" \
+    "$REPO_DIR/robinhood/fetch_portfolio.py" \
+    "$REPO_DIR/robinhood/analyze_portfolio.py" \
     ec2-user@"$EC2_IP":/home/ec2-user/portfolio/
 
 # Step 4: Create .env on EC2

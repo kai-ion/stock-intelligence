@@ -4,11 +4,11 @@ on:
   push:
     branches: [main]
     paths:
-      - 'results/**'
+      - 'screener_output/**'
       - 'events/**'
       - 'paper_trading/chart.svg'
       - 'paper_trading/snapshots/**'
-      - 'docs/**'
+      - 'blog/**'
 
 permissions:
   contents: read
@@ -30,7 +30,7 @@ jobs:
           python-version: '3.11'
 
       - name: Generate blog posts from results
-        run: python docs/generate_posts.py
+        run: python blog/generate_posts.py
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -38,7 +38,7 @@ jobs:
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./docs
+          source: ./blog
           destination: ./_site
 
       - name: Upload artifact

@@ -1,0 +1,127 @@
+[
+  {
+    "action": "SELL",
+    "ticker": "RGTI",
+    "shares": 47.7859,
+    "price": 25.11,
+    "date": "2026-05-26",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -62.6,
+    "pnl_pct": -4.96,
+    "entry_price": 26.42,
+    "hold_days": 1
+  },
+  {
+    "action": "BUY",
+    "ticker": "NNE",
+    "shares": 41.2478,
+    "price": 29.09,
+    "date": "2026-05-26",
+    "target": 34.0,
+    "stop": 25.0,
+    "reasoning": {
+      "upside": "RSI at 16 is the most oversold name on the board, now bouncing with a real acquisition catalyst and NRC construction permit acceptance \u2014 the setup for a multi-day mean reversion trade is textbook.",
+      "risk": "Pre-revenue company with years until commercialization; if broader market sells off, speculative names get hit hardest."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "NNE",
+    "shares": 41.2478,
+    "price": 29.21,
+    "date": "2026-05-26",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 4.95,
+    "pnl_pct": 0.41,
+    "entry_price": 29.09,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "MOD",
+    "shares": 3.8028,
+    "price": 316.83,
+    "date": "2026-05-26",
+    "target": 340.0,
+    "stop": 280.0,
+    "reasoning": {
+      "upside": "$4B deal is a multi-year revenue visibility event. RSI at 28.6 before today's gap means this isn't a blow-off top \u2014 it's a catalyst-driven re-rating from oversold levels with room to the prior high.",
+      "risk": "190% YTD run means any guidance disappointment in coming quarters triggers aggressive profit-taking. Gentherm spinoff adds execution complexity."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "MOD",
+    "shares": 3.8028,
+    "price": 298.21,
+    "date": "2026-05-26",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -70.82,
+    "pnl_pct": -5.88,
+    "entry_price": 316.83,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "LUNR",
+    "shares": 25.3245,
+    "price": 44.78,
+    "date": "2026-05-26",
+    "target": 50.0,
+    "stop": 38.0,
+    "reasoning": {
+      "upside": "SpaceX IPO creates sustained sector enthusiasm for weeks; LUNR has real backlog growth and upcoming NASA/defense decisions that provide company-specific upside beyond sympathy.",
+      "risk": "Customer concentration (NASA >30% of revenue) and execution risk on lunar missions \u2014 any mission failure would be devastating."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "LUNR",
+    "shares": 25.3245,
+    "price": 35.19,
+    "date": "2026-05-26",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -242.99,
+    "pnl_pct": -21.43,
+    "entry_price": 44.78,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "ASTS",
+    "shares": 7.4099,
+    "price": 120.25,
+    "date": "2026-05-26",
+    "target": 135.0,
+    "stop": 105.0,
+    "reasoning": {
+      "upside": "BlueBird satellites reaching Florida means the next launch window is imminent. Each successful satellite deployment is a step-function catalyst. WSB momentum (195 mentions) adds retail bid.",
+      "risk": "RSI at 73.9 is elevated; any satellite deployment delay or technical issue would trigger a sharp unwind given the speculative premium embedded in the stock."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "ASTS",
+    "shares": 7.4099,
+    "price": 118.98,
+    "date": "2026-05-26",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -9.41,
+    "pnl_pct": -1.06,
+    "entry_price": 120.25,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "ACMR",
+    "shares": 10.5458,
+    "price": 83.6,
+    "date": "2026-05-26",
+    "target": 92.0,
+    "stop": 72.0,
+    "reasoning": {
+      "upside": "Expanding product portfolio from cleaning tools to broader fab equipment, Wall Street consensus Buy rating, and neutral RSI at 50 means the move has room before becoming technically overextended.",
+      "risk": "China revenue concentration creates binary geopolitical risk. Any export restriction tightening would compress the multiple immediately."
+    }
+  }
+]
