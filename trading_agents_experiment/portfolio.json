@@ -1,8 +1,30 @@
 {
-  "cash": 10000.0,
-  "positions": {},
+  "cash": 4000.0,
+  "positions": {
+    "DY": {
+      "shares": 3.638,
+      "entry_price": 549.75,
+      "entry_date": "2026-05-27",
+      "cost": 2000.0,
+      "decision": "Buy"
+    },
+    "CCL": {
+      "shares": 71.6566,
+      "entry_price": 27.91,
+      "entry_date": "2026-05-27",
+      "cost": 2000.0,
+      "decision": "Buy"
+    },
+    "APP": {
+      "shares": 3.5242,
+      "entry_price": 567.51,
+      "entry_date": "2026-05-27",
+      "cost": 2000.0,
+      "decision": "Buy"
+    }
+  },
   "start_date": "2026-05-21",
   "starting_capital": 10000.0,
-  "latest_value": 10000.0,
+  "latest_value": 10000.01,
   "latest_return_pct": 0.0
 }

@@ -1,5 +1,5 @@
 {
-  "cash": 0.0,
+  "cash": 2244.0505367065425,
   "positions": {
     "TSEM": {
       "shares": 9.4222,
@@ -17,22 +17,6 @@
       "entry_date": "2026-05-20",
       "cost": 1833.01
     },
-    "ALAB": {
-      "shares": 6.7302,
-      "entry_price": 266.68,
-      "exit_target": 328.96,
-      "stop_loss": 237.63,
-      "entry_date": "2026-05-20",
-      "cost": 1794.82
-    },
-    "BB": {
-      "shares": 223.8259,
-      "entry_price": 7.18,
-      "exit_target": 8.5,
-      "stop_loss": 6.462,
-      "entry_date": "2026-05-22",
-      "cost": 1607.07
-    },
     "ACMR": {
       "shares": 10.5458,
       "entry_price": 83.6,
@@ -40,6 +24,14 @@
       "stop_loss": 72.0,
       "entry_date": "2026-05-26",
       "cost": 881.63
+    },
+    "UAL": {
+      "shares": 16.8273,
+      "entry_price": 112.2,
+      "exit_target": 125.0,
+      "stop_loss": 100.0,
+      "entry_date": "2026-05-27",
+      "cost": 1888.02
     }
   },
   "start_date": "2026-05-13",
