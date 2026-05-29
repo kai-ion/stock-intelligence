@@ -1,12 +1,10 @@
 {
   "date": "2026-05-28",
-  "total_value": 9948.48,
-  "cash": 2244.05,
-  "positions_count": 4,
+  "total_value": 10128.45,
+  "cash": 5612.72,
+  "positions_count": 2,
   "positions": {
-    "TSEM": 2606.18,
-    "GH": 2278.33,
-    "ACMR": 928.03,
-    "UAL": 1891.89
+    "TSEM": 2577.73,
+    "UAL": 1938.0
   }
 }
