@@ -1,0 +1,10 @@
+{
+  "date": "2026-06-01",
+  "total_value": 9768.38,
+  "cash": 5612.72,
+  "positions_count": 2,
+  "positions": {
+    "TSEM": 2280.93,
+    "UAL": 1874.73
+  }
+}

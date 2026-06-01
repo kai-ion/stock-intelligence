@@ -4,7 +4,7 @@
   <!-- Title -->
   <text x="70" y="30" fill="#c9d1d9" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold">Claude's Paper Trading — Equity Curve</text>
   <text x="70" y="48" fill="#58a6ff" font-family="system-ui, sans-serif" font-size="12">
-    $10,110.79 (+1.11%) | Win Rate: 9/26 (35%) | Realized: $+0.75
+    $9,768.38 (-2.32%) | Win Rate: 9/26 (35%) | Realized: $+0.75
   </text>
 
   <!-- Grid lines -->
@@ -15,48 +15,48 @@
   <text x="775" y="143.7" fill="#c9d1d9" font-size="9" opacity="0.6" dominant-baseline="middle">$10K</text>
 
   <!-- Fill under curve -->
-  <path d="M 70.0 160.6 L 128.3 132.3 L 186.7 151.5 L 245.0 250.0 L 303.3 259.9 L 361.7 199.0 L 420.0 182.5 L 478.3 159.8 L 536.7 157.0 L 595.0 171.0 L 653.3 155.9 L 711.7 126.8 L 770.0 129.1 L 770.0 320.0 L 70.0 320.0 Z" fill="#16a34a" opacity="0.1"/>
+  <path d="M 70.0 160.6 L 123.8 132.3 L 177.7 151.5 L 231.5 250.0 L 285.4 259.9 L 339.2 199.0 L 393.1 182.5 L 446.9 159.8 L 500.8 157.0 L 554.6 171.0 L 608.5 155.9 L 662.3 126.8 L 716.2 129.1 L 770.0 174.3 L 770.0 320.0 L 70.0 320.0 Z" fill="#dc2626" opacity="0.1"/>
 
   <!-- Equity line -->
-  <path d="M 70.0 160.6 L 128.3 132.3 L 186.7 151.5 L 245.0 250.0 L 303.3 259.9 L 361.7 199.0 L 420.0 182.5 L 478.3 159.8 L 536.7 157.0 L 595.0 171.0 L 653.3 155.9 L 711.7 126.8 L 770.0 129.1" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 70.0 160.6 L 123.8 132.3 L 177.7 151.5 L 231.5 250.0 L 285.4 259.9 L 339.2 199.0 L 393.1 182.5 L 446.9 159.8 L 500.8 157.0 L 554.6 171.0 L 608.5 155.9 L 662.3 126.8 L 716.2 129.1 L 770.0 174.3" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 
   <!-- Data points -->
-  <circle cx="70.0" cy="160.6" r="3" fill="#16a34a"/><circle cx="128.3" cy="132.3" r="3" fill="#16a34a"/><circle cx="186.7" cy="151.5" r="3" fill="#16a34a"/><circle cx="245.0" cy="250.0" r="3" fill="#16a34a"/><circle cx="303.3" cy="259.9" r="3" fill="#16a34a"/><circle cx="361.7" cy="199.0" r="3" fill="#16a34a"/><circle cx="420.0" cy="182.5" r="3" fill="#16a34a"/><circle cx="478.3" cy="159.8" r="3" fill="#16a34a"/><circle cx="536.7" cy="157.0" r="3" fill="#16a34a"/><circle cx="595.0" cy="171.0" r="3" fill="#16a34a"/><circle cx="653.3" cy="155.9" r="3" fill="#16a34a"/><circle cx="711.7" cy="126.8" r="3" fill="#16a34a"/><circle cx="770.0" cy="129.1" r="3" fill="#16a34a"/>
+  <circle cx="70.0" cy="160.6" r="3" fill="#dc2626"/><circle cx="123.8" cy="132.3" r="3" fill="#dc2626"/><circle cx="177.7" cy="151.5" r="3" fill="#dc2626"/><circle cx="231.5" cy="250.0" r="3" fill="#dc2626"/><circle cx="285.4" cy="259.9" r="3" fill="#dc2626"/><circle cx="339.2" cy="199.0" r="3" fill="#dc2626"/><circle cx="393.1" cy="182.5" r="3" fill="#dc2626"/><circle cx="446.9" cy="159.8" r="3" fill="#dc2626"/><circle cx="500.8" cy="157.0" r="3" fill="#dc2626"/><circle cx="554.6" cy="171.0" r="3" fill="#dc2626"/><circle cx="608.5" cy="155.9" r="3" fill="#dc2626"/><circle cx="662.3" cy="126.8" r="3" fill="#dc2626"/><circle cx="716.2" cy="129.1" r="3" fill="#dc2626"/><circle cx="770.0" cy="174.3" r="3" fill="#dc2626"/>
 
   <!-- Trade markers -->
-  <circle cx="303.3" cy="259.9" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="361.7" cy="199.0" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="361.7" cy="199.0" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="361.7" cy="199.0" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="478.3" cy="159.8" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="478.3" cy="159.8" r="4" fill="#16a34a" opacity="0.8"/>
-<circle cx="478.3" cy="159.8" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="478.3" cy="159.8" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="478.3" cy="159.8" r="4" fill="#16a34a" opacity="0.8"/>
-<circle cx="536.7" cy="157.0" r="4" fill="#16a34a" opacity="0.8"/>
-<circle cx="536.7" cy="157.0" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="536.7" cy="157.0" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="536.7" cy="157.0" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="595.0" cy="171.0" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="595.0" cy="171.0" r="4" fill="#16a34a" opacity="0.8"/>
-<circle cx="595.0" cy="171.0" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="595.0" cy="171.0" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="595.0" cy="171.0" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="653.3" cy="155.9" r="4" fill="#16a34a" opacity="0.8"/>
-<circle cx="653.3" cy="155.9" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="653.3" cy="155.9" r="4" fill="#16a34a" opacity="0.8"/>
-<circle cx="653.3" cy="155.9" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="653.3" cy="155.9" r="4" fill="#dc2626" opacity="0.8"/>
-<circle cx="711.7" cy="126.8" r="4" fill="#16a34a" opacity="0.8"/>
-<circle cx="711.7" cy="126.8" r="4" fill="#16a34a" opacity="0.8"/>
-<circle cx="711.7" cy="126.8" r="4" fill="#16a34a" opacity="0.8"/>
+  <circle cx="285.4" cy="259.9" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="339.2" cy="199.0" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="339.2" cy="199.0" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="339.2" cy="199.0" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="446.9" cy="159.8" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="446.9" cy="159.8" r="4" fill="#16a34a" opacity="0.8"/>
+<circle cx="446.9" cy="159.8" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="446.9" cy="159.8" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="446.9" cy="159.8" r="4" fill="#16a34a" opacity="0.8"/>
+<circle cx="500.8" cy="157.0" r="4" fill="#16a34a" opacity="0.8"/>
+<circle cx="500.8" cy="157.0" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="500.8" cy="157.0" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="500.8" cy="157.0" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="554.6" cy="171.0" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="554.6" cy="171.0" r="4" fill="#16a34a" opacity="0.8"/>
+<circle cx="554.6" cy="171.0" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="554.6" cy="171.0" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="554.6" cy="171.0" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="608.5" cy="155.9" r="4" fill="#16a34a" opacity="0.8"/>
+<circle cx="608.5" cy="155.9" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="608.5" cy="155.9" r="4" fill="#16a34a" opacity="0.8"/>
+<circle cx="608.5" cy="155.9" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="608.5" cy="155.9" r="4" fill="#dc2626" opacity="0.8"/>
+<circle cx="662.3" cy="126.8" r="4" fill="#16a34a" opacity="0.8"/>
+<circle cx="662.3" cy="126.8" r="4" fill="#16a34a" opacity="0.8"/>
+<circle cx="662.3" cy="126.8" r="4" fill="#16a34a" opacity="0.8"/>
 
 
   <!-- Y-axis labels -->
   <text x="62" y="320.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$8,663</text><text x="62" y="268.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$9,058</text><text x="62" y="216.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$9,452</text><text x="62" y="164.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$9,846</text><text x="62" y="112.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$10,241</text><text x="62" y="60.0" fill="#c9d1d9" font-size="10" text-anchor="end" dominant-baseline="middle">$10,635</text>
 
   <!-- X-axis labels -->
-  <text x="70.0" y="340" fill="#c9d1d9" font-size="10" text-anchor="middle">2026-05-13</text><text x="420.0" y="340" fill="#c9d1d9" font-size="10" text-anchor="middle">2026-05-21</text><text x="770.0" y="340" fill="#c9d1d9" font-size="10" text-anchor="middle">2026-05-29</text>
+  <text x="70.0" y="340" fill="#c9d1d9" font-size="10" text-anchor="middle">2026-05-13</text><text x="446.9" y="340" fill="#c9d1d9" font-size="10" text-anchor="middle">2026-05-22</text><text x="770.0" y="340" fill="#c9d1d9" font-size="10" text-anchor="middle">2026-06-01</text>
 
   <!-- Legend -->
   <circle cx="650" cy="380" r="4" fill="#16a34a"/>
