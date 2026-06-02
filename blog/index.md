@@ -32,8 +32,7 @@ Every weekday at 9:45 AM ET:
 
 {% assign sorted_daily = site.daily | sort: "date" | reverse %}
 {% for post in sorted_daily limit:1 %}
-### [{{ post.title }}]({{ post.url | relative_url }})
-{{ post.content | truncatewords: 200 }}
+**→ [{{ post.title }}]({{ post.url | relative_url }})**
 {% endfor %}
 
 ## Recent Daily Reports
