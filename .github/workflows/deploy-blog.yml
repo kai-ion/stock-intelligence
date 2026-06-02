@@ -8,6 +8,7 @@ on:
       - 'events/**'
       - 'paper_trading/chart.svg'
       - 'paper_trading/snapshots/**'
+      - 'trading_agents/chart.svg'
       - 'blog/**'
 
 permissions:
