@@ -1,5 +1,5 @@
 {
-  "cash": 4000.0,
+  "cash": 3200.0,
   "positions": {
     "DY": {
       "shares": 3.638,
@@ -21,10 +21,17 @@
       "entry_date": "2026-05-27",
       "cost": 2000.0,
       "decision": "Buy"
+    },
+    "CRWV": {
+      "shares": 6.4777,
+      "entry_price": 123.5,
+      "entry_date": "2026-06-01",
+      "cost": 800.0,
+      "decision": "Overweight"
     }
   },
   "start_date": "2026-05-21",
   "starting_capital": 10000.0,
-  "latest_value": 10051.03,
-  "latest_return_pct": 0.51
+  "latest_value": 9898.27,
+  "latest_return_pct": -1.02
 }
