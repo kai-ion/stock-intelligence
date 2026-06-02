@@ -15,9 +15,7 @@ AI-powered daily stock screening and paper trading. Claude analyzes 2,700+ stock
 
 ### Strategy B: [TradingAgents](https://github.com/TauricResearch/TradingAgents) Multi-Agent Debate (since May 20)
 
-![AI Strategies Comparison]({{ site.baseurl }}/assets/trading_agents_chart.svg)
-
-*$10K → Based on the open-source [TradingAgents](https://github.com/TauricResearch/TradingAgents) framework (77K+ stars, backed by academic research [arXiv:2412.20138](https://arxiv.org/abs/2412.20138)). Multiple AI agents — market analyst, fundamentals analyst, news analyst — independently analyze each stock, then debate bull vs. bear cases before a risk manager validates and a portfolio manager makes the final call. Same stocks as Strategy A, completely different decision process.*
+*$10K → 4 AI agents debate bull vs. bear, risk manager validates, learns from mistakes weekly. [See details →]({{ site.baseurl }}/ai-agent/)*
 
 {% include trading_agents_status.html %}
 
@@ -34,7 +32,8 @@ Every weekday at 9:45 AM ET:
 
 {% assign sorted_daily = site.daily | sort: "date" | reverse %}
 {% for post in sorted_daily limit:1 %}
-**[{{ post.title }}]({{ post.url | relative_url }})**
+### [{{ post.title }}]({{ post.url | relative_url }})
+{{ post.content | truncatewords: 200 }}
 {% endfor %}
 
 ## Recent Daily Reports

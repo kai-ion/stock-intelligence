@@ -6,6 +6,14 @@ permalink: /ai-agent/
 
 
 
+## Performance — Strategy A vs Strategy B
+
+![AI Strategies Comparison]({{ site.baseurl }}/assets/trading_agents_chart.svg)
+
+*Blue = Claude single-agent | Orange = TradingAgents multi-agent debate*
+
+---
+
 Powered by [TradingAgents](https://github.com/TauricResearch/TradingAgents) (77K+ stars, [arXiv:2412.20138](https://arxiv.org/abs/2412.20138)).
 
 Four AI agents independently analyze each stock, then debate bull vs. bear before a risk manager and portfolio manager make the final call.
