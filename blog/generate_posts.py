@@ -148,6 +148,11 @@ def copy_assets():
         shutil.copy2(chart_src, ASSETS_DIR / "chart.svg")
         print("Copied chart.svg")
 
+    ta_chart = REPO_ROOT / "trading_agents" / "chart.svg"
+    if ta_chart.exists():
+        shutil.copy2(ta_chart, ASSETS_DIR / "trading_agents_chart.svg")
+        print("Copied trading_agents_chart.svg")
+
 
 def generate_portfolio_include():
     """Generate portfolio HTML include from portfolio.json and latest snapshot."""
@@ -214,6 +219,48 @@ def generate_portfolio_include():
     print("Generated portfolio include")
 
 
+def generate_ai_agent_portfolio_include():
+    """Generate AI Agent portfolio HTML include from trading_agents/portfolio.json."""
+    includes_dir = DOCS_DIR / "_includes"
+    includes_dir.mkdir(exist_ok=True)
+
+    portfolio_file = REPO_ROOT / "trading_agents" / "portfolio.json"
+    if not portfolio_file.exists():
+        (includes_dir / "ai_agent_portfolio.html").write_text("<p><em>No AI Agent portfolio data available.</em></p>")
+        return
+
+    with open(portfolio_file) as f:
+        portfolio = json.load(f)
+
+    positions = portfolio.get("positions", {})
+    cash = portfolio.get("cash", 0)
+    starting = portfolio.get("starting_capital", 10000)
+    latest_value = portfolio.get("latest_value", starting)
+    total_return = (latest_value - starting) / starting * 100
+
+    color = "#16a34a" if total_return >= 0 else "#dc2626"
+
+    html = f'<p style="font-size:16px;margin-bottom:12px;"><strong>Total Value: ${latest_value:,.2f}</strong> '
+    html += f'<span style="color:{color};">({total_return:+.2f}%)</span></p>\n'
+    html += f'<p style="color:#666;font-size:13px;">Cash: ${cash:,.2f} | Positions: {len(positions)} | Started: ${starting:,.2f}</p>\n'
+
+    if positions:
+        html += '<table style="width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;">\n'
+        html += '<tr style="border-bottom:2px solid #ddd;"><th>Ticker</th><th>Shares</th><th>Entry</th><th>Entry Date</th><th>Cost</th></tr>\n'
+        for ticker, pos in positions.items():
+            html += f'<tr style="border-bottom:1px solid #eee;">'
+            html += f'<td><strong>{ticker}</strong></td>'
+            html += f'<td>{pos["shares"]:.2f}</td>'
+            html += f'<td>${pos["entry_price"]:.2f}</td>'
+            html += f'<td>{pos["entry_date"]}</td>'
+            html += f'<td>${pos["cost"]:,.0f}</td>'
+            html += f'</tr>\n'
+        html += '</table>\n'
+
+    (includes_dir / "ai_agent_portfolio.html").write_text(html)
+    print("Generated AI Agent portfolio include")
+
+
 def main():
     print("Generating blog posts...")
     generate_daily_posts()
@@ -221,6 +268,7 @@ def main():
     generate_ai_agent_posts()
     copy_assets()
     generate_portfolio_include()
+    generate_ai_agent_portfolio_include()
     print("Done!")
 
 
