@@ -215,16 +215,19 @@ echo '10 14 * * 1-5 ec2-user . /home/ec2-user/.env && cd /home/ec2-user/trading_
 ## Daily Schedule (all times ET)
 
 ```
+EC2 auto-starts at 8:30 AM (weekdays), 9:30 AM (weekends)
+EC2 auto-stops at 5:00 PM (weekdays), 11:00 AM (weekends)
+
 Mon  8:00 AM  →  Weekly Events (next week's earnings, fed, IPOs)
      9:45 AM  →  Screener + News Agent + Email
      9:50 AM  →  Portfolio Fetch + Analysis + Email
     10:02 AM  →  Paper Trading (buy + exit check)
-    10:05 AM  →  GitHub Push
     10:10 AM  →  TradingAgents Experiment (multi-agent debate on top 5)
+    10:30 AM  →  GitHub Push (after all jobs complete)
     10:30 AM  →  Local sync (launchd)
+    11:00 AM  →  Sports Picks (NBA + WNBA) + Email
      3:55 PM  →  Paper Trading exit check
-     5:00 PM  →  Portfolio EOD fetch (backup)
-  9:30-4 PM  →  Trump Monitor (every 10 min)
+     5:00 PM  →  Portfolio EOD fetch (backup) → EC2 stops
 
 Tue-Fri same as Mon minus the weekly report
 Sat-Sun 10:00 AM → Portfolio session keep-alive only
