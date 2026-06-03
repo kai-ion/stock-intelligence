@@ -17,6 +17,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = Path(__file__).parent / "data"
 PORTFOLIO_FILE = DATA_DIR / "portfolio.json"
 RESULTS_DIR = Path(__file__).parent.parent / "screener_output"
+_EC2_RESULTS = Path("/home/ec2-user/repo/screener_output")
+if _EC2_RESULTS.exists():
+    RESULTS_DIR = _EC2_RESULTS
 STARTING_CAPITAL = 10000.0
 
 

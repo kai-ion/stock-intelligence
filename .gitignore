@@ -8,3 +8,4 @@ sync.log
 output.csv
 __pycache__/
 brief/wsb_latest.json
+ec2_backup/

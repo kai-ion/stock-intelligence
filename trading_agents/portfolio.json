@@ -1,5 +1,5 @@
 {
-  "cash": 3200.0,
+  "cash": 1920.0,
   "positions": {
     "DY": {
       "shares": 3.638,
@@ -28,10 +28,24 @@
       "entry_date": "2026-06-01",
       "cost": 800.0,
       "decision": "Overweight"
+    },
+    "INFQ": {
+      "shares": 33.4466,
+      "entry_price": 19.14,
+      "entry_date": "2026-06-02",
+      "cost": 640.0,
+      "decision": "Overweight"
+    },
+    "MRVL": {
+      "shares": 2.337,
+      "entry_price": 273.86,
+      "entry_date": "2026-06-02",
+      "cost": 640.0,
+      "decision": "Overweight"
     }
   },
   "start_date": "2026-05-21",
   "starting_capital": 10000.0,
-  "latest_value": 9898.27,
-  "latest_return_pct": -1.02
+  "latest_value": 9916.05,
+  "latest_return_pct": -0.84
 }
