@@ -16,11 +16,26 @@ STARTING_CAPITAL = 10000.0
 
 
 def load_trading_agents_history():
-    """Load TradingAgents daily values from decisions + portfolio."""
-    decisions_dir = DATA_DIR / "decisions"
-    if not decisions_dir.exists():
-        return []
+    """Load TradingAgents daily values from snapshots."""
+    snapshots_dir = DATA_DIR / "snapshots"
 
+    # Try snapshots first (accurate daily data)
+    if snapshots_dir.exists():
+        points = []
+        for month_dir in sorted(snapshots_dir.iterdir()):
+            if not month_dir.is_dir():
+                continue
+            for f in sorted(month_dir.glob("*.json")):
+                with open(f) as fh:
+                    data = json.load(fh)
+                points.append({
+                    "date": data.get("date", f.stem),
+                    "value": data.get("total_value", STARTING_CAPITAL),
+                })
+        if points:
+            return points
+
+    # Fallback: interpolate from decisions
     portfolio_file = DATA_DIR / "portfolio.json"
     if not portfolio_file.exists():
         return []
@@ -28,40 +43,19 @@ def load_trading_agents_history():
     with open(portfolio_file) as f:
         portfolio = json.load(f)
 
-    points = []
-
-    # Get daily values from decision files (they contain portfolio snapshots)
-    for f in sorted(decisions_dir.glob("*.json")):
-        date_str = f.stem
-        try:
-            date = datetime.strptime(date_str, "%Y-%m-%d")
-        except ValueError:
-            continue
-        points.append({"date": date_str, "value": None})
-
-    # Use latest_value from portfolio for the most recent point
-    if portfolio.get("latest_value"):
-        points = [{"date": portfolio.get("start_date", "2026-05-21"), "value": STARTING_CAPITAL}]
-        # For now, use start + latest as two points
-        # TODO: store daily snapshots like paper trading does
-
-    # If we have the portfolio with positions, calculate current value
     latest = portfolio.get("latest_value", STARTING_CAPITAL)
     start_date = portfolio.get("start_date", "2026-05-21")
+    decisions_dir = DATA_DIR / "decisions"
+    if not decisions_dir.exists():
+        return []
 
-    # Build simple timeline from decisions
     decision_dates = sorted([f.stem for f in decisions_dir.glob("*.json")])
     if not decision_dates:
         return []
 
-    # Linear interpolation between start and current (until we have daily snapshots)
-    points = [
-        {"date": start_date, "value": STARTING_CAPITAL},
-    ]
-    # Add intermediate points based on decision dates
+    points = [{"date": start_date, "value": STARTING_CAPITAL}]
     n = len(decision_dates)
     for i, d in enumerate(decision_dates):
-        # Approximate value progression
         progress = (i + 1) / n
         interp_value = STARTING_CAPITAL + (latest - STARTING_CAPITAL) * progress
         points.append({"date": d, "value": round(interp_value, 2)})

@@ -383,6 +383,32 @@ def main():
     portfolio["latest_return_pct"] = round(total_return, 2)
     save_portfolio(portfolio)
 
+    # Save daily snapshot (for equity chart)
+    snapshots_dir = DATA_DIR / "snapshots"
+    month_dir = snapshots_dir / datetime.now().strftime("%Y-%m")
+    month_dir.mkdir(parents=True, exist_ok=True)
+    snapshot = {
+        "date": date_str,
+        "total_value": round(total_value, 2),
+        "cash": round(portfolio["cash"], 2),
+        "positions_count": len(portfolio["positions"]),
+        "positions": {
+            ticker: round(pos["shares"] * total_value / max(total_value, 1) if total_value else pos["cost"], 2)
+            for ticker, pos in portfolio["positions"].items()
+        },
+    }
+    # Get actual position values
+    for ticker, pos in portfolio["positions"].items():
+        try:
+            stock = yf.Ticker(ticker)
+            hist = stock.history(period="1d")
+            if not hist.empty:
+                snapshot["positions"][ticker] = round(pos["shares"] * float(hist["Close"].iloc[-1]), 2)
+        except Exception:
+            snapshot["positions"][ticker] = round(pos["cost"], 2)
+    with open(month_dir / f"{date_str}.json", "w") as f:
+        json.dump(snapshot, f, indent=2)
+
     print(f"\n{'='*50}")
     print(f"  TradingAgents Portfolio: ${total_value:,.2f} ({total_return:+.2f}%)")
     print(f"  Cash: ${portfolio['cash']:,.2f}")
