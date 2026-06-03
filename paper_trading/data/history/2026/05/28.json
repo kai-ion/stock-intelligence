@@ -10,5 +10,29 @@
     "pnl_pct": 25.03,
     "entry_price": 266.68,
     "hold_days": 8
+  },
+  {
+    "action": "SELL",
+    "ticker": "GH",
+    "shares": 17.9128,
+    "price": 133.39,
+    "date": "2026-05-28",
+    "reason": "TARGET HIT",
+    "pnl": 556.38,
+    "pnl_pct": 30.35,
+    "entry_price": 102.33,
+    "hold_days": 8
+  },
+  {
+    "action": "SELL",
+    "ticker": "ACMR",
+    "shares": 10.5458,
+    "price": 92.86,
+    "date": "2026-05-28",
+    "reason": "TARGET HIT",
+    "pnl": 97.65,
+    "pnl_pct": 11.08,
+    "entry_price": 83.6,
+    "hold_days": 2
   }
 ]

@@ -240,22 +240,21 @@ def generate_ai_agent_portfolio_include():
 
     color = "#16a34a" if total_return >= 0 else "#dc2626"
 
-    html = f'<p style="font-size:16px;margin-bottom:12px;"><strong>Total Value: ${latest_value:,.2f}</strong> '
-    html += f'<span style="color:{color};">({total_return:+.2f}%)</span></p>\n'
-    html += f'<p style="color:#666;font-size:13px;">Cash: ${cash:,.2f} | Positions: {len(positions)} | Started: ${starting:,.2f}</p>\n'
-
+    html = '<table style="width:100%;border-collapse:collapse;font-size:14px;">\n'
+    html += '<tr style="border-bottom:2px solid #ddd;"><th>Ticker</th><th>Shares</th><th>Entry</th><th>Cost</th><th>Entry Date</th></tr>\n'
     if positions:
-        html += '<table style="width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;">\n'
-        html += '<tr style="border-bottom:2px solid #ddd;"><th>Ticker</th><th>Shares</th><th>Entry</th><th>Entry Date</th><th>Cost</th></tr>\n'
         for ticker, pos in positions.items():
             html += f'<tr style="border-bottom:1px solid #eee;">'
             html += f'<td><strong>{ticker}</strong></td>'
             html += f'<td>{pos["shares"]:.2f}</td>'
             html += f'<td>${pos["entry_price"]:.2f}</td>'
-            html += f'<td>{pos["entry_date"]}</td>'
             html += f'<td>${pos["cost"]:,.0f}</td>'
+            html += f'<td>{pos["entry_date"]}</td>'
             html += f'</tr>\n'
-        html += '</table>\n'
+    html += '</table>\n'
+    html += f'<p style="margin-top:12px;font-size:16px;"><strong>Total Value: ${latest_value:,.2f}</strong> '
+    html += f'<span style="color:{color};">({total_return:+.2f}%)</span></p>\n'
+    html += f'<p style="color:#666;">Cash: ${cash:,.2f} | Positions: {len(positions)} | Started: ${starting:,.2f}</p>'
 
     (includes_dir / "ai_agent_portfolio.html").write_text(html)
     print("Generated AI Agent portfolio include")
