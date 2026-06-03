@@ -159,7 +159,9 @@ def generate_portfolio_include():
     includes_dir = DOCS_DIR / "_includes"
     includes_dir.mkdir(exist_ok=True)
 
-    portfolio_file = PAPER_TRADING_DIR / "portfolio.json"
+    portfolio_file = PAPER_TRADING_DIR / "data" / "portfolio.json"
+    if not portfolio_file.exists():
+        portfolio_file = PAPER_TRADING_DIR / "portfolio.json"
     if not portfolio_file.exists():
         (includes_dir / "portfolio.html").write_text("<p><em>No portfolio data available.</em></p>")
         return
@@ -172,7 +174,9 @@ def generate_portfolio_include():
     starting = portfolio.get("starting_capital", 10000)
 
     # Get current values from latest snapshot
-    snapshot_dir = PAPER_TRADING_DIR / "snapshots"
+    snapshot_dir = PAPER_TRADING_DIR / "data" / "snapshots"
+    if not snapshot_dir.exists():
+        snapshot_dir = PAPER_TRADING_DIR / "snapshots"
     current_values = {}
     if snapshot_dir.exists():
         all_snapshots = []
