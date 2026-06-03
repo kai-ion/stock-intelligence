@@ -21,6 +21,10 @@ AI-powered daily stock screening and paper trading. Claude analyzes 2,700+ stock
 
 {% include ai_agent_portfolio.html %}
 
+## Market Overview
+
+{% include market_overview.html %}
+
 ## How It Works
 
 Every weekday at 9:45 AM ET:

@@ -6,8 +6,15 @@ Run after syncing results to generate/update the blog.
 
 import json
 import os
+import re
 import shutil
 from pathlib import Path
+
+try:
+    import yfinance as yf
+    HAS_YFINANCE = True
+except ImportError:
+    HAS_YFINANCE = False
 from datetime import datetime
 
 REPO_ROOT = Path(__file__).parent.parent
@@ -239,29 +246,133 @@ def generate_ai_agent_portfolio_include():
     positions = portfolio.get("positions", {})
     cash = portfolio.get("cash", 0)
     starting = portfolio.get("starting_capital", 10000)
-    latest_value = portfolio.get("latest_value", starting)
-    total_return = (latest_value - starting) / starting * 100
 
+    # Fetch current prices for P&L
+    total_value = cash
+    position_values = {}
+    if HAS_YFINANCE and positions:
+        tickers_str = " ".join(positions.keys())
+        try:
+            data = yf.download(tickers_str, period="1d", progress=False)
+            for ticker in positions:
+                try:
+                    price = float(data["Close"][ticker].iloc[-1]) if len(positions) > 1 else float(data["Close"].iloc[-1])
+                    position_values[ticker] = price
+                except Exception:
+                    position_values[ticker] = positions[ticker]["entry_price"]
+        except Exception:
+            for ticker in positions:
+                position_values[ticker] = positions[ticker]["entry_price"]
+    else:
+        for ticker in positions:
+            position_values[ticker] = positions[ticker]["entry_price"]
+
+    for ticker, pos in positions.items():
+        total_value += pos["shares"] * position_values.get(ticker, pos["entry_price"])
+
+    if not HAS_YFINANCE:
+        total_value = portfolio.get("latest_value", starting)
+
+    total_return = (total_value - starting) / starting * 100
     color = "#16a34a" if total_return >= 0 else "#dc2626"
 
     html = '<table style="width:100%;border-collapse:collapse;font-size:14px;">\n'
-    html += '<tr style="border-bottom:2px solid #ddd;"><th>Ticker</th><th>Shares</th><th>Entry</th><th>Cost</th><th>Entry Date</th></tr>\n'
+    html += '<tr style="border-bottom:2px solid #ddd;"><th>Ticker</th><th>Shares</th><th>Entry</th><th>Current</th><th>P&L</th></tr>\n'
     if positions:
         for ticker, pos in positions.items():
+            current_price = position_values.get(ticker, pos["entry_price"])
+            entry_cost = pos["shares"] * pos["entry_price"]
+            current_val = pos["shares"] * current_price
+            pnl = current_val - entry_cost
+            pnl_pct = (pnl / entry_cost) * 100 if entry_cost > 0 else 0
+            pnl_color = "#16a34a" if pnl >= 0 else "#dc2626"
             html += f'<tr style="border-bottom:1px solid #eee;">'
             html += f'<td><strong>{ticker}</strong></td>'
             html += f'<td>{pos["shares"]:.2f}</td>'
             html += f'<td>${pos["entry_price"]:.2f}</td>'
-            html += f'<td>${pos["cost"]:,.0f}</td>'
-            html += f'<td>{pos["entry_date"]}</td>'
+            html += f'<td>${current_price:.2f}</td>'
+            html += f'<td style="color:{pnl_color};font-weight:500;">${pnl:+,.2f} ({pnl_pct:+.1f}%)</td>'
             html += f'</tr>\n'
     html += '</table>\n'
-    html += f'<p style="margin-top:12px;font-size:16px;"><strong>Total Value: ${latest_value:,.2f}</strong> '
+    html += f'<p style="margin-top:12px;font-size:16px;"><strong>Total Value: ${total_value:,.2f}</strong> '
     html += f'<span style="color:{color};">({total_return:+.2f}%)</span></p>\n'
     html += f'<p style="color:#666;">Cash: ${cash:,.2f} | Positions: {len(positions)} | Started: ${starting:,.2f}</p>'
 
     (includes_dir / "ai_agent_portfolio.html").write_text(html)
     print("Generated AI Agent portfolio include")
+
+
+def generate_market_overview_include():
+    """Extract market overview from the latest daily brief for the home page."""
+    includes_dir = DOCS_DIR / "_includes"
+    includes_dir.mkdir(exist_ok=True)
+
+    # Find latest brief
+    if not RESULTS_DIR.exists():
+        (includes_dir / "market_overview.html").write_text("")
+        return
+
+    latest_brief = None
+    for month_dir in sorted(RESULTS_DIR.iterdir(), reverse=True):
+        if not month_dir.is_dir():
+            continue
+        briefs = sorted(month_dir.glob("*_brief.md"), reverse=True)
+        if briefs:
+            latest_brief = briefs[0]
+            break
+
+    if not latest_brief:
+        (includes_dir / "market_overview.html").write_text("")
+        return
+
+    content = latest_brief.read_text()
+
+    # Extract the market overview section (usually the first paragraph or "Market Context" section)
+    overview = ""
+    # Try finding a "Market" section
+    match = re.search(r'(?:^## (?:Market|Overview|Context).*?\n)(.*?)(?=^## |\Z)', content, re.MULTILINE | re.DOTALL)
+    if match:
+        overview = match.group(1).strip()
+    else:
+        # Fallback: first substantive paragraph (skip headers)
+        lines = content.split("\n")
+        para = []
+        started = False
+        for line in lines:
+            if line.startswith("#"):
+                if started:
+                    break
+                continue
+            if line.strip() and not line.startswith("---"):
+                started = True
+                para.append(line)
+            elif started and not line.strip():
+                break
+        overview = " ".join(para)
+
+    if not overview:
+        (includes_dir / "market_overview.html").write_text("")
+        return
+
+    # Truncate to ~300 words
+    words = overview.split()
+    if len(words) > 300:
+        overview = " ".join(words[:300]) + "..."
+
+    # Simple markdown to HTML
+    html_content = overview
+    html_content = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', html_content)
+    html_content = re.sub(r'\*(.+?)\*', r'<em>\1</em>', html_content)
+    html_content = html_content.replace("\n", "<br>")
+
+    date_str = latest_brief.stem.replace("_brief", "")
+    html = f'<div style="background:#f8fafc;border-left:4px solid #3b82f6;padding:12px 16px;margin:12px 0;font-size:14px;line-height:1.6;">\n'
+    html += f'<p style="margin:0;color:#333;">{html_content}</p>\n'
+    html += f'<p style="margin:8px 0 0;color:#666;font-size:12px;">— Daily Brief, {date_str}</p>\n'
+    html += f'</div>'
+
+    (includes_dir / "market_overview.html").write_text(html)
+    print("Generated market overview include")
 
 
 def main():
@@ -272,6 +383,7 @@ def main():
     copy_assets()
     generate_portfolio_include()
     generate_ai_agent_portfolio_include()
+    generate_market_overview_include()
     print("Done!")
 
 
