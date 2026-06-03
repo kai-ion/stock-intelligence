@@ -1,23 +1,6 @@
 {
-  "cash": 5612.721912210083,
-  "positions": {
-    "TSEM": {
-      "shares": 9.4222,
-      "entry_price": 265.33,
-      "exit_target": 300.0,
-      "stop_loss": 240.0,
-      "entry_date": "2026-05-13",
-      "cost": 2500.0
-    },
-    "UAL": {
-      "shares": 16.8273,
-      "entry_price": 112.2,
-      "exit_target": 125.0,
-      "stop_loss": 100.0,
-      "entry_date": "2026-05-27",
-      "cost": 1888.02
-    }
-  },
-  "start_date": "2026-05-13",
+  "cash": 10000.0,
+  "positions": {},
+  "start_date": "2026-06-02",
   "starting_capital": 10000.0
 }
