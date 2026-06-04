@@ -1,29 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="350" style="font-family:-apple-system,Arial,sans-serif;">
 <rect width="800" height="350" fill="#ffffff"/>
 <line x1="70" y1="40.0" x2="770" y2="40.0" stroke="#f0f0f0" stroke-width="1"/>
-<text x="62" y="44.0" text-anchor="end" fill="#666" font-size="11">+1.8%</text>
+<text x="62" y="44.0" text-anchor="end" fill="#666" font-size="11">+2.3%</text>
 <line x1="70" y1="92.0" x2="770" y2="92.0" stroke="#f0f0f0" stroke-width="1"/>
-<text x="62" y="96.0" text-anchor="end" fill="#666" font-size="11">-0.5%</text>
+<text x="62" y="96.0" text-anchor="end" fill="#666" font-size="11">-0.1%</text>
 <line x1="70" y1="144.0" x2="770" y2="144.0" stroke="#f0f0f0" stroke-width="1"/>
-<text x="62" y="148.0" text-anchor="end" fill="#666" font-size="11">-2.8%</text>
+<text x="62" y="148.0" text-anchor="end" fill="#666" font-size="11">-2.6%</text>
 <line x1="70" y1="196.0" x2="770" y2="196.0" stroke="#f0f0f0" stroke-width="1"/>
-<text x="62" y="200.0" text-anchor="end" fill="#666" font-size="11">-5.1%</text>
+<text x="62" y="200.0" text-anchor="end" fill="#666" font-size="11">-5.0%</text>
 <line x1="70" y1="248.0" x2="770" y2="248.0" stroke="#f0f0f0" stroke-width="1"/>
-<text x="62" y="252.0" text-anchor="end" fill="#666" font-size="11">-7.5%</text>
+<text x="62" y="252.0" text-anchor="end" fill="#666" font-size="11">-7.4%</text>
 <line x1="70" y1="300.0" x2="770" y2="300.0" stroke="#f0f0f0" stroke-width="1"/>
 <text x="62" y="304.0" text-anchor="end" fill="#666" font-size="11">-9.8%</text>
-<line x1="70" y1="81.11673728083787" x2="770" y2="81.11673728083787" stroke="#ddd" stroke-width="1.5" stroke-dasharray="4,4"/>
+<line x1="70" y1="89.2416045761997" x2="770" y2="89.2416045761997" stroke="#ddd" stroke-width="1.5" stroke-dasharray="4,4"/>
 <text x="70.0" y="335" text-anchor="middle" fill="#666" font-size="11">05-13</text>
-<text x="197.27272727272725" y="335" text-anchor="middle" fill="#666" font-size="11">05-15</text>
-<text x="324.5454545454545" y="335" text-anchor="middle" fill="#666" font-size="11">05-19</text>
-<text x="451.8181818181818" y="335" text-anchor="middle" fill="#666" font-size="11">05-21</text>
-<text x="579.090909090909" y="335" text-anchor="middle" fill="#666" font-size="11">05-25</text>
-<text x="706.3636363636364" y="335" text-anchor="middle" fill="#666" font-size="11">05-27</text>
-<path d="M 70.0,109.72202128758931 L 133.63636363636363,61.666666666666686 L 197.27272727272725,94.32003720161205 L 260.9090909090909,261.57228479900783 L 324.5454545454545,278.3333333333333 L 388.1818181818182,175.02876235748016 L 451.8181818181818,146.929489166753 L 515.4545454545455,108.46818917708669 L 579.090909090909,103.59839481933119 L 642.7272727272727,127.51524232716753 L 706.3636363636364,101.88109262512498 L 770.0,92.65199269746154" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
+<text x="163.33333333333331" y="335" text-anchor="middle" fill="#666" font-size="11">05-15</text>
+<text x="256.66666666666663" y="335" text-anchor="middle" fill="#666" font-size="11">05-19</text>
+<text x="350.0" y="335" text-anchor="middle" fill="#666" font-size="11">05-21</text>
+<text x="443.3333333333333" y="335" text-anchor="middle" fill="#666" font-size="11">05-25</text>
+<text x="536.6666666666666" y="335" text-anchor="middle" fill="#666" font-size="11">05-27</text>
+<text x="630.0" y="335" text-anchor="middle" fill="#666" font-size="11">05-29</text>
+<text x="723.3333333333333" y="335" text-anchor="middle" fill="#666" font-size="11">06-02</text>
+<path d="M 70.0,116.66841708941041 L 116.66666666666666,70.5928318537307 L 163.33333333333331,101.90095909955613 L 210.0,262.2628012048192 L 256.66666666666663,278.3333333333333 L 303.3333333333333,179.28467158106127 L 350.0,152.34302340942742 L 396.66666666666663,115.46623995983947 L 443.3333333333333,110.79706985838104 L 490.0,133.72859860494614 L 536.6666666666666,109.1505165398437 L 583.3333333333333,61.666666666666714 L 630.0,100.35530279010803 L 676.6666666666666,138.96450935320254 L 723.3333333333333,84.1173245614035" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
 <rect x="80" y="45" width="12" height="3" fill="#3b82f6"/>
 <text x="96" y="49" fill="#333" font-size="12">Strategy A (Claude)</text>
 <rect x="80" y="61" width="12" height="3" fill="#f97316"/>
 <text x="96" y="65" fill="#333" font-size="12">Strategy B (TradingAgents)</text>
 <text x="400.0" y="20" text-anchor="middle" fill="#1a1a1a" font-size="14" font-weight="600">AI Trading Strategies — $10K Each</text>
-<text x="765" y="70" text-anchor="end" fill="#3b82f6" font-size="11" font-weight="600">$9,948 (-0.5%)</text>
+<text x="765" y="55" text-anchor="end" fill="#f97316" font-size="11" font-weight="600">$9,604 (-4.0%)</text>
+<text x="765" y="70" text-anchor="end" fill="#3b82f6" font-size="11" font-weight="600">$10,024 (+0.2%)</text>
 </svg>

@@ -1,13 +1,6 @@
 {
-  "cash": 1920.0,
+  "cash": 4896.264146822738,
   "positions": {
-    "DY": {
-      "shares": 3.638,
-      "entry_price": 549.75,
-      "entry_date": "2026-05-27",
-      "cost": 2000.0,
-      "decision": "Buy"
-    },
     "CCL": {
       "shares": 71.6566,
       "entry_price": 27.91,
@@ -22,20 +15,6 @@
       "cost": 2000.0,
       "decision": "Buy"
     },
-    "CRWV": {
-      "shares": 6.4777,
-      "entry_price": 123.5,
-      "entry_date": "2026-06-01",
-      "cost": 800.0,
-      "decision": "Overweight"
-    },
-    "INFQ": {
-      "shares": 33.4466,
-      "entry_price": 19.14,
-      "entry_date": "2026-06-02",
-      "cost": 640.0,
-      "decision": "Overweight"
-    },
     "MRVL": {
       "shares": 2.337,
       "entry_price": 273.86,
@@ -46,6 +25,6 @@
   },
   "start_date": "2026-05-21",
   "starting_capital": 10000.0,
-  "latest_value": 9916.05,
-  "latest_return_pct": -0.84
+  "latest_value": 9604.36,
+  "latest_return_pct": -3.96
 }
