@@ -88,7 +88,22 @@ def screen_stock(ticker):
             return FILTERED
 
         close = hist["Close"]
-        current_price = close.iloc[-1]
+
+        # Use real-time price and previous close for accurate daily move
+        try:
+            fi = stock.fast_info
+            current_price = fi.last_price
+            prev_close = fi.previous_close
+            if current_price and prev_close:
+                daily_move = (current_price - prev_close) / prev_close * 100
+            else:
+                current_price = close.iloc[-1]
+                prev_close = close.iloc[-2] if len(close) >= 2 else close.iloc[0]
+                daily_move = (current_price - prev_close) / prev_close * 100
+        except Exception:
+            current_price = close.iloc[-1]
+            prev_close = close.iloc[-2] if len(close) >= 2 else close.iloc[0]
+            daily_move = (current_price - prev_close) / prev_close * 100
 
         # 50-day EMA filter
         ema_50 = compute_ema(close, span=50)
@@ -96,11 +111,7 @@ def screen_stock(ticker):
         if current_price <= current_ema:
             return FILTERED
 
-        # Daily move
-        prev_close = close.iloc[-2] if len(close) >= 2 else close.iloc[0]
-        daily_move = (current_price - prev_close) / prev_close * 100
-
-        # Positive weekly gain
+        # Positive weekly gain (use real-time price vs 5 days ago close)
         five_days_ago = close.iloc[-6] if len(close) >= 6 else close.iloc[0]
         weekly_gain = (current_price - five_days_ago) / five_days_ago * 100
         if weekly_gain <= 0:
