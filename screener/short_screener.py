@@ -46,32 +46,40 @@ def compute_macd(series):
 
 
 def get_all_tickers():
-    """Fetch all US-traded stocks with market cap > $1B from NASDAQ screener."""
-    url = "https://www.nasdaq.com/api/screener/stocks?tableType=earnings&download=true"
-    headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"}
-    try:
-        resp = requests.get(url, headers=headers, timeout=15)
-        if resp.status_code == 200:
-            df = pd.read_csv(StringIO(resp.text))
-            df["Market Cap"] = pd.to_numeric(df["Market Cap"], errors="coerce")
-            big = df[df["Market Cap"] >= 1e9]
-            return big["Symbol"].str.strip().tolist()
-    except Exception:
-        pass
-
-    # Fallback: use the same tickers from the long screener output
-    from pathlib import Path
-    results_dir = Path(__file__).parent.parent / "screener_output"
-    month = datetime.now().strftime("%Y-%m")
-    date = datetime.now().strftime("%Y-%m-%d")
-    csv_path = results_dir / month / f"{date}.csv"
-    if not csv_path.exists():
-        yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
-        csv_path = results_dir / month / f"{yesterday}.csv"
-    if csv_path.exists():
-        df = pd.read_csv(csv_path)
-        return df["Ticker"].tolist()
-    return []
+    """Get large-cap ticker universe for short screening."""
+    # Hardcoded universe of 200+ liquid large/mid caps across all sectors
+    UNIVERSE = [
+        # Tech
+        "AAPL", "MSFT", "GOOGL", "AMZN", "NVDA", "META", "TSLA", "AVGO", "ORCL", "CRM",
+        "ADBE", "CSCO", "ACN", "INTC", "AMD", "QCOM", "TXN", "MU", "AMAT", "NOW",
+        "SHOP", "SNOW", "DDOG", "NET", "ZS", "CRWD", "PLTR", "COIN", "SQ", "PYPL",
+        "SNAP", "PINS", "RBLX", "U", "HOOD", "SOFI", "MARA", "RIOT", "ARM", "SMCI",
+        # Consumer
+        "AMZN", "HD", "LOW", "TGT", "WMT", "COST", "NKE", "LULU", "GPS", "ANF",
+        "DG", "DLTR", "KR", "TJX", "ROST", "MCD", "SBUX", "CMG", "DPZ", "YUM",
+        "PEP", "KO", "MNST", "EL", "PG", "CL", "CHD",
+        # Healthcare
+        "UNH", "JNJ", "LLY", "ABBV", "MRK", "PFE", "BMY", "AMGN", "GILD", "REGN",
+        "VRTX", "MRNA", "BNTX", "BIIB", "ISRG", "MDT", "ABT", "TMO", "DHR",
+        # Financials
+        "JPM", "BAC", "WFC", "GS", "MS", "C", "SCHW", "BLK", "AXP", "V", "MA",
+        # Industrials
+        "CAT", "DE", "GE", "RTX", "LMT", "NOC", "BA", "HON", "UPS", "FDX",
+        # Energy
+        "XOM", "CVX", "COP", "SLB", "OXY", "MPC", "VLO", "PSX",
+        # Media/Telecom
+        "DIS", "NFLX", "WBD", "CMCSA", "T", "VZ", "TMUS",
+        # Auto
+        "F", "GM", "RIVN", "LCID", "NIO", "XPEV",
+        # Real Estate/Utilities
+        "AMT", "PLD", "SPG", "NEE", "DUK", "SO",
+        # Solar/Clean Energy
+        "ENPH", "SEDG", "FSLR", "RUN",
+        # Other
+        "UBER", "ABNB", "DASH", "DKNG", "LYV", "SPOT", "ROKU",
+    ]
+    # Deduplicate
+    return list(dict.fromkeys(UNIVERSE))
 
 
 def analyze_short(ticker):

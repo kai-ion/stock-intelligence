@@ -101,7 +101,7 @@ def main():
         html = analysis
         html = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', html)
         html = re.sub(r'^### (.+)$', r'<h3 style="color:#dc2626;margin:16px 0 4px;">\1</h3>', html, flags=re.MULTILINE)
-        html = re.sub(r'^## (.+)$', r'<h2 style="color:#1a1a1a;margin:20px 0 8px;border-bottom:1px solid #eee;padding-bottom:4px;">\2</h2>', html, flags=re.MULTILINE)
+        html = re.sub(r'^## (.+)$', r'<h2 style="color:#1a1a1a;margin:20px 0 8px;border-bottom:1px solid #eee;padding-bottom:4px;">\1</h2>', html, flags=re.MULTILINE)
         html = re.sub(r'^- (.+)$', r'<div style="padding:3px 0 3px 12px;border-left:3px solid #dc2626;margin:4px 0;">\1</div>', html, flags=re.MULTILINE)
         html = html.replace("\n", "<br>")
 
