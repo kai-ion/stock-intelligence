@@ -23,6 +23,38 @@ if _EC2_RESULTS.exists():
 STARTING_CAPITAL = 10000.0
 
 
+def fetch_results_from_s3(date_str, month_str):
+    """Download today's screener CSV + brief from S3 into a local cache.
+
+    This job (14:10 UTC) runs BEFORE push_results.sh (14:30) syncs S3 into the
+    local repo, so reading repo/screener_output finds only stale files — and on
+    Mondays there is no weekend fallback, yielding "No tickers found". The screener
+    uploads results to S3 by ~13:49, so pull straight from there and point
+    RESULTS_DIR at the cache. Falls back silently to the existing repo path.
+    """
+    global RESULTS_DIR
+    bucket = os.environ.get("S3_BUCKET", "")
+    if not bucket:
+        return
+    try:
+        import boto3
+        s3 = boto3.client("s3", region_name=os.environ.get("AWS_REGION", "us-east-1"))
+        cache = DATA_DIR / "results_cache" / month_str
+        cache.mkdir(parents=True, exist_ok=True)
+        got = False
+        for name in (f"{date_str}.csv", f"{date_str}_brief.md"):
+            try:
+                s3.download_file(bucket, f"results/{month_str}/{name}", str(cache / name))
+                got = True
+            except Exception:
+                pass
+        if got:
+            RESULTS_DIR = cache.parent
+            print(f"  Fetched today's results from s3://{bucket}/results/{month_str}/")
+    except Exception as e:
+        print(f"  S3 results fetch skipped ({e}); using local {RESULTS_DIR}")
+
+
 def load_portfolio():
     if PORTFOLIO_FILE.exists():
         with open(PORTFOLIO_FILE) as f:
@@ -48,6 +80,9 @@ def get_todays_tickers():
     from datetime import timedelta
     date_str = datetime.now().strftime("%Y-%m-%d")
     month_str = datetime.now().strftime("%Y-%m")
+
+    # Pull today's results from S3 first (this job runs before the repo sync)
+    fetch_results_from_s3(date_str, month_str)
 
     tickers = []
 

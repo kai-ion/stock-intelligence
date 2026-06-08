@@ -18,6 +18,39 @@ RESULTS_DIR = Path(__file__).parent.parent / "screener_output"
 STARTING_CAPITAL = 10000.0
 
 
+def load_brief_text(date_str, month_str):
+    """Load the day's brief, preferring S3 (always current) then local paths.
+
+    The screener uploads the brief to s3://$S3_BUCKET/results/<month>/<date>_brief.md
+    at ~13:45 UTC. The local repo copy is only synced later by push_results.sh, and
+    the standalone simulator's parent dir has no screener_output/, so reading S3
+    directly avoids both the path mismatch and the sync-timing race.
+    """
+    key = f"results/{month_str}/{date_str}_brief.md"
+    bucket = os.environ.get("S3_BUCKET", "")
+    if bucket:
+        try:
+            import boto3
+            s3 = boto3.client("s3", region_name=os.environ.get("AWS_REGION", "us-east-1"))
+            obj = s3.get_object(Bucket=bucket, Key=key)
+            print(f"  Loaded brief from s3://{bucket}/{key}")
+            return obj["Body"].read().decode("utf-8")
+        except Exception as e:
+            print(f"  S3 brief not available ({e}); trying local paths...")
+
+    # Local fallbacks: standalone layout and repo layout
+    candidates = [
+        RESULTS_DIR / month_str / f"{date_str}_brief.md",
+        Path(__file__).parent.parent / "repo" / "screener_output" / month_str / f"{date_str}_brief.md",
+        Path.home() / "repo" / "screener_output" / month_str / f"{date_str}_brief.md",
+    ]
+    for path in candidates:
+        if path.exists():
+            print(f"  Loaded brief from {path}")
+            return path.read_text()
+    return None
+
+
 def get_history_file():
     """Get path to current month's trade history file."""
     date_str = datetime.now().strftime("%Y/%m/%d")
@@ -128,10 +161,16 @@ def load_all_trade_history():
     return all_trades
 
 
-def parse_picks_from_brief(brief_path):
-    """Extract Claude's picks with entry price and exit target from a brief."""
-    with open(brief_path) as f:
-        content = f.read()
+def parse_picks_from_brief(brief):
+    """Extract Claude's picks with entry price and exit target from a brief.
+
+    Accepts either the brief text (str) or a path to the brief file.
+    """
+    if isinstance(brief, (str, Path)) and os.path.exists(str(brief)) and str(brief).endswith(".md"):
+        with open(brief) as f:
+            content = f.read()
+    else:
+        content = brief
 
     picks = []
 
@@ -424,18 +463,18 @@ def main():
     # Parse today's picks from brief
     date_str = datetime.now().strftime("%Y-%m-%d")
     month_str = datetime.now().strftime("%Y-%m")
-    brief_path = RESULTS_DIR / month_str / f"{date_str}_brief.md"
 
-    if brief_path.exists():
-        print(f"\nParsing today's picks from {brief_path.name}...")
-        picks = parse_picks_from_brief(brief_path)
+    brief_text = load_brief_text(date_str, month_str)
+    if brief_text is not None:
+        print(f"\nParsing today's picks for {date_str}...")
+        picks = parse_picks_from_brief(brief_text)
         if picks:
             print(f"  Found {len(picks)} picks: {', '.join(p['ticker'] for p in picks)}")
             buy_picks(portfolio, picks, history)
         else:
             print("  No picks found in today's brief.")
     else:
-        print(f"  No brief found for {date_str}.")
+        print(f"  No brief found for {date_str} (checked S3 and local paths).")
 
     # Save state
     save_portfolio(portfolio)
