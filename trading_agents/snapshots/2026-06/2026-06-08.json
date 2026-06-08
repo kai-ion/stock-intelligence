@@ -1,0 +1,12 @@
+{
+  "date": "2026-06-08",
+  "total_value": 9561.01,
+  "cash": 3917.01,
+  "positions_count": 4,
+  "positions": {
+    "CCL": 1949.42,
+    "APP": 2011.26,
+    "MRVL": 704.07,
+    "GIII": 979.25
+  }
+}

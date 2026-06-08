@@ -247,32 +247,40 @@ def generate_ai_agent_portfolio_include():
     cash = portfolio.get("cash", 0)
     starting = portfolio.get("starting_capital", 10000)
 
-    # Fetch current prices for P&L
-    total_value = cash
+    # Current per-position prices. Prefer the latest snapshot written by run.py
+    # (deterministic) over a live yfinance call, which intermittently rate-limits
+    # at generation time and falls back to entry price → bogus $0.00 P&L.
     position_values = {}
-    if HAS_YFINANCE and positions:
-        tickers_str = " ".join(positions.keys())
+    snapshot_dir = REPO_ROOT / "trading_agents" / "snapshots"
+    if snapshot_dir.exists():
+        snaps = []
+        for month_dir in sorted(snapshot_dir.iterdir()):
+            if month_dir.is_dir():
+                snaps.extend(sorted(month_dir.glob("*.json")))
+        if snaps:
+            with open(snaps[-1]) as f:
+                snap = json.load(f)
+            for ticker, val in snap.get("positions", {}).items():
+                shares = positions.get(ticker, {}).get("shares", 0)
+                if shares:
+                    position_values[ticker] = val / shares  # snapshot stores $ value
+
+    # Fallback to live yfinance for any ticker the snapshot didn't cover
+    missing = [t for t in positions if t not in position_values]
+    if missing and HAS_YFINANCE:
         try:
-            data = yf.download(tickers_str, period="1d", progress=False)
-            for ticker in positions:
+            data = yf.download(" ".join(missing), period="1d", progress=False)
+            for ticker in missing:
                 try:
-                    price = float(data["Close"][ticker].iloc[-1]) if len(positions) > 1 else float(data["Close"].iloc[-1])
-                    position_values[ticker] = price
+                    position_values[ticker] = float(data["Close"][ticker].iloc[-1]) if len(missing) > 1 else float(data["Close"].iloc[-1])
                 except Exception:
                     position_values[ticker] = positions[ticker]["entry_price"]
         except Exception:
-            for ticker in positions:
-                position_values[ticker] = positions[ticker]["entry_price"]
-    else:
-        for ticker in positions:
-            position_values[ticker] = positions[ticker]["entry_price"]
+            pass
+    for ticker in positions:
+        position_values.setdefault(ticker, positions[ticker]["entry_price"])
 
-    for ticker, pos in positions.items():
-        total_value += pos["shares"] * position_values.get(ticker, pos["entry_price"])
-
-    if not HAS_YFINANCE:
-        total_value = portfolio.get("latest_value", starting)
-
+    total_value = cash + sum(pos["shares"] * position_values[t] for t, pos in positions.items())
     total_return = (total_value - starting) / starting * 100
     color = "#16a34a" if total_return >= 0 else "#dc2626"
 
@@ -316,9 +324,13 @@ def generate_market_overview_include():
     for month_dir in sorted(RESULTS_DIR.iterdir(), reverse=True):
         if not month_dir.is_dir():
             continue
-        briefs = sorted(month_dir.glob("*_brief.md"), reverse=True)
+        # Only the main daily brief (YYYY-MM-DD_brief.md), not _short_brief.md etc.
+        briefs = sorted(
+            b for b in month_dir.glob("*_brief.md")
+            if re.fullmatch(r"\d{4}-\d{2}-\d{2}_brief\.md", b.name)
+        )
         if briefs:
-            latest_brief = briefs[0]
+            latest_brief = briefs[-1]
             break
 
     if not latest_brief:
@@ -333,6 +345,10 @@ def generate_market_overview_include():
     match = re.search(r'(?:^## (?:Market|Overview|Context).*?\n)(.*?)(?=^## |\Z)', content, re.MULTILINE | re.DOTALL)
     if match:
         overview = match.group(1).strip()
+        # Append Claude's directional call if the brief includes it
+        call = re.search(r"^## Claude's Call.*?\n(.*?)(?=^## |\Z)", content, re.MULTILINE | re.DOTALL)
+        if call and call.group(1).strip():
+            overview += "\n\n**Claude's Call:** " + call.group(1).strip()
     else:
         # Fallback: first substantive paragraph (skip headers)
         lines = content.split("\n")
