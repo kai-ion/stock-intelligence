@@ -1,1 +1,67 @@
-[]
+[
+  {
+    "action": "BUY",
+    "ticker": "VOYA",
+    "shares": 22.5632,
+    "price": 88.64,
+    "date": "2026-06-08",
+    "target": 95.0,
+    "stop": 84.0,
+    "reasoning": {
+      "upside": "Activist pushing for strategic review/sale creates a hard catalyst with a defined timeline \u2014 this isn't \"hope\" investing, it's event-driven.",
+      "risk": "Activist campaigns can fizzle if the board resists or no buyers emerge; the Benefitfocus acquisition concern suggests operational complexity."
+    }
+  },
+  {
+    "action": "BUY",
+    "ticker": "GIII",
+    "shares": 56.2114,
+    "price": 35.58,
+    "date": "2026-06-08",
+    "target": 39.5,
+    "stop": 32.5,
+    "reasoning": {
+      "upside": "Raised guidance + accretive M&A + gross margin expansion is the trifecta; the stock has 15%+ 90-day return suggesting institutional re-rating is underway.",
+      "risk": "Apparel is cyclical and tariff-sensitive; the Marc Jacobs deal needs to close cleanly and tariff refund is a one-time benefit."
+    }
+  },
+  {
+    "action": "BUY",
+    "ticker": "SFM",
+    "shares": 23.6463,
+    "price": 84.58,
+    "date": "2026-06-08",
+    "target": 92.0,
+    "stop": 80.0,
+    "reasoning": {
+      "upside": "New England expansion adds a massive new addressable market; specialty grocery remains a secular share gainer vs. conventional supermarkets.",
+      "risk": "Kroger's aggressive price cuts could compress comps; valuation was previously stretched, so this \"dip\" may just be normalization."
+    }
+  },
+  {
+    "action": "BUY",
+    "ticker": "ARCB",
+    "shares": 12.5865,
+    "price": 158.9,
+    "date": "2026-06-08",
+    "target": 175.0,
+    "stop": 145.0,
+    "reasoning": {
+      "upside": "LTL pricing power returning as capacity tightens; digital platform launch (ArcBest View) adds a recurring revenue narrative.",
+      "risk": "Freight is notoriously cyclical \u2014 if macro deteriorates on Iran escalation or Fed hawkishness, this rolls over fast."
+    }
+  },
+  {
+    "action": "BUY",
+    "ticker": "ETR",
+    "shares": 18.1422,
+    "price": 110.24,
+    "date": "2026-06-08",
+    "target": 119.0,
+    "stop": 104.0,
+    "reasoning": {
+      "upside": "AI data center power demand is a multi-year secular tailwind; Entergy's southern U.S. territory is ground zero for hyperscaler buildouts through 2029.",
+      "risk": "Morgan Stanley just trimmed PT to $94 \u2014 not everyone agrees on the magnitude of the data center benefit; rising rates pressure utility valuations."
+    }
+  }
+]

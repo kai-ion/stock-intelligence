@@ -1,5 +1,5 @@
 {
-  "cash": 4896.264146822738,
+  "cash": 3917.0113174581907,
   "positions": {
     "CCL": {
       "shares": 71.6566,
@@ -21,10 +21,17 @@
       "entry_date": "2026-06-02",
       "cost": 640.0,
       "decision": "Overweight"
+    },
+    "GIII": {
+      "shares": 28.1637,
+      "entry_price": 34.77,
+      "entry_date": "2026-06-08",
+      "cost": 979.25,
+      "decision": "Overweight"
     }
   },
   "start_date": "2026-05-21",
   "starting_capital": 10000.0,
-  "latest_value": 9536.26,
-  "latest_return_pct": -4.64
+  "latest_value": 9561.01,
+  "latest_return_pct": -4.39
 }
