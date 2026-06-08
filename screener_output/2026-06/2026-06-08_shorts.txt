@@ -1,0 +1,52 @@
+Short/Bearish Screener — 2026-06-08
+48 candidates | Below 50d EMA | Negative week | MCap >$1B
+
+Ticker   Price  Day%  Week%  MCap($B)                 Sector  Below EMA%  RSI MACD  MACD Hist  ROC20%  Vol Ratio  Short% EPS Miss  Bearish
+  LCID    5.07 -1.65 -23.83       2.0      Consumer Cyclical      -26.96 37.9 Bear      -0.03  -20.11       0.37    37.9        Y     82.5
+  COIN  158.21  4.36 -13.36      41.7     Financial Services      -15.27 32.2 Bear      -3.75  -21.35       0.23    11.7        Y     81.5
+    ZS  131.27  1.31 -15.70      21.2             Technology      -11.95 33.7 Bear      -3.86  -13.71       0.13    10.6              56.9
+     T   22.49 -1.30  -8.41     156.2 Communication Services      -11.03 26.0 Bear      -0.20  -10.63       0.17     1.6              51.5
+   CMG   29.24 -0.39  -4.30      37.5      Consumer Cyclical      -10.31 21.0 Bear      -0.33  -10.02       0.13     3.8              49.0
+  LULU  115.97  1.43 -12.20      13.2      Consumer Cyclical      -16.22 43.7 Bear      -0.04  -11.59       0.32     5.8              47.6
+  PYPL   41.35  0.13  -8.18      36.5     Financial Services       -9.27 30.8 Bear      -0.22   -8.55       0.20     5.5              45.5
+  BNTX   87.06 -0.63  -5.06      22.0             Healthcare       -7.62 45.6 Bear      -0.28   -7.51       0.12     3.6        Y     44.9
+  NFLX   82.81  1.19  -3.55     348.7 Communication Services       -7.09 21.1 Bear      -0.31   -5.35       0.18     2.3        Y     43.4
+   RUN   13.17 -1.64 -15.47       3.1             Technology       -7.15 47.8 Bear      -0.21   -9.86       0.16    29.9              42.7
+   DPZ  312.86 -0.52  -0.27      10.4      Consumer Cyclical       -6.47 56.8 Bull       2.09   -3.28       0.09    11.8        Y     42.7
+  TMUS  177.99  0.18  -4.69     192.6 Communication Services       -7.09 27.7 Bear      -1.00   -7.58       0.13     3.8              39.6
+  RBLX   42.62  1.84  -9.32      30.5 Communication Services      -15.31 36.7 Bull       0.07    1.69       0.26     3.9              38.6
+    DG  105.58  3.01  -3.95      23.3     Consumer Defensive       -7.34 48.6 Bull       0.48   -6.80       0.07     4.2              37.4
+  UBER   70.32 -0.24  -4.68     143.1             Technology       -4.62 34.4 Bear      -0.19   -6.80       0.14     3.0        Y     36.9
+  SBUX   94.78 -0.01  -1.79     108.0      Consumer Cyclical       -4.55 14.1 Bear      -1.20   -9.14       0.09     5.1              36.1
+  XPEV   16.24  1.85  -5.61      15.5      Consumer Cyclical       -2.96 60.5 Bull       0.08    3.94       0.17     6.5        Y     36.0
+  SOFI   16.34  3.51 -12.03      21.0     Financial Services       -4.58 54.1 Bull       0.05    3.78       0.21    13.7        Y     35.4
+  AVGO  394.05  2.35 -14.33    1865.7             Technology       -2.53 43.1 Bear      -5.82   -8.36       0.32     1.1              32.6
+   DIS   99.48 -0.14  -3.28     172.8 Communication Services       -3.03 33.2 Bear      -0.57   -7.91       0.20     1.5              32.3
+  AMZN  246.99  0.48  -5.46    2656.9      Consumer Cyclical       -2.15 35.8 Bear      -3.56   -9.42       0.17     1.1              32.2
+    BA  216.59  0.96  -3.44     170.7            Industrials       -2.55 46.6 Bear      -1.16   -8.75       0.10     0.2              31.7
+ CMCSA   23.75 -0.19  -5.17      84.9 Communication Services       -9.51 33.1 Bear      -0.03   -6.48       0.11     2.7              31.7
+   BLK 1001.24  0.93  -1.36     163.1     Financial Services       -3.23 33.3 Bear      -8.40   -7.19       0.10     1.4              31.1
+    VZ   45.17 -0.50  -5.35     188.6 Communication Services       -4.15 37.5 Bear      -0.33   -4.33       0.13     2.1              29.6
+ GOOGL  361.07 -0.90  -4.07    4403.2 Communication Services       -0.09 27.4 Bear      -5.18   -9.91       0.18     1.4              28.8
+   WBD   26.35  0.73  -3.30      66.1 Communication Services       -3.04 34.3 Bear      -0.07   -2.80       0.13     2.5        Y     28.8
+  TSLA  401.74  2.66  -3.40    1508.8      Consumer Cyclical       -1.52 46.6 Bear      -4.92   -6.21       0.22     2.2              27.3
+   HON  212.42 -0.41 -10.20     134.6            Industrials       -4.51 44.8 Bear      -1.52    0.22       0.09     1.7              24.9
+   NIO    5.51  2.65  -7.78      13.8      Consumer Cyclical       -5.21 43.3 Bear      -0.01   -5.73       0.18     7.2              24.4
+  SHOP  112.39  3.96  -9.45     145.8             Technology       -2.40 59.6 Bull       1.11    1.79       0.17     1.8              23.2
+  META  590.82  0.17  -1.61    1499.8 Communication Services       -4.90 43.0 Bear      -1.46   -3.09       0.24     1.5              22.7
+  DASH  156.18  0.12  -5.22      68.0      Consumer Cyclical       -4.86 44.1 Bull       0.19   -4.73       0.19     3.6              20.6
+   TMO  475.21  0.77  -3.81     176.6             Healthcare       -0.90 66.8 Bull       3.12    2.20       0.09     1.3              20.1
+  SNAP    5.64 -2.00  -3.84       9.3 Communication Services       -0.77 49.0 Bear      -0.01   -7.32       0.13    11.4              19.0
+   ACN  179.24  1.22  -8.83     110.3             Technology       -3.62 51.6 Bull       0.60   -0.66       0.09     4.4              18.7
+    CL   86.94 -1.91  -1.68      69.6     Consumer Defensive       -0.59 40.3 Bear      -0.50   -0.69       0.15     2.8              18.1
+   LYV  161.52  1.22  -5.24      37.6 Communication Services       -0.03 37.9 Bear      -1.05   -1.08       0.06    13.7              16.8
+  MSFT  412.27 -0.03 -10.48    3062.6             Technology       -0.96 45.5 Bear      -1.82   -0.47       0.17     1.0              16.8
+  GILD  129.28  0.58  -1.39     160.5             Healthcare       -3.24 49.0 Bear      -0.22   -1.56       0.12     1.9              14.3
+   CRM  184.44  0.21 -12.00     151.1             Technology       -0.54 53.5 Bull       0.63    1.44       0.14     8.8              14.1
+   NKE   43.67  1.75  -4.92      64.7      Consumer Cyclical       -4.95 57.3 Bull       0.04   -0.18       0.15     5.7              13.9
+   TGT  122.30 -0.16  -1.14      55.5     Consumer Defensive       -0.34 47.9 Bear      -0.44   -1.43       0.05     3.2              13.6
+    MA  487.48 -0.63  -1.57     430.7     Financial Services       -2.36 36.5 Bear      -0.61   -1.61       0.15     0.8              11.5
+  PLTR  137.71  2.86 -14.28     330.2             Technology       -3.29 52.1 Bear      -0.13   -0.06       0.17     3.3              10.7
+  ADBE  248.48 -0.45  -9.32     100.4             Technology       -1.44 45.8 Bull       0.23   -1.80       0.20     5.2               9.2
+  SCHW   88.71  0.69  -0.03     154.3     Financial Services       -2.25 38.2 Bull       0.11    0.11       0.09     0.0               8.9
+   AXP  313.35  1.09  -0.06     213.8     Financial Services       -0.63 51.2 Bull       0.08   -0.85       0.09     2.3               3.8
