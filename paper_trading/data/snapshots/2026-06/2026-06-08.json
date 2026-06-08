@@ -1,0 +1,13 @@
+{
+  "date": "2026-06-08",
+  "total_value": 10058.48,
+  "cash": 0.0,
+  "positions_count": 5,
+  "positions": {
+    "VOYA": 1989.57,
+    "GIII": 1958.41,
+    "SFM": 2065.5,
+    "ARCB": 2064.06,
+    "ETR": 1980.95
+  }
+}
