@@ -1,0 +1,13 @@
+{
+  "date": "2026-06-09",
+  "total_value": 10249.36,
+  "cash": 6.27,
+  "positions_count": 5,
+  "positions": {
+    "ARCB": 2119.44,
+    "UCTT": 1997.06,
+    "CECO": 2039.12,
+    "CRDO": 2066.28,
+    "FLUT": 2021.19
+  }
+}
