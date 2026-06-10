@@ -1,5 +1,5 @@
 {
-  "cash": 3917.0113174581907,
+  "cash": 1566.804526983276,
   "positions": {
     "CCL": {
       "shares": 71.6566,
@@ -28,10 +28,31 @@
       "entry_date": "2026-06-08",
       "cost": 979.25,
       "decision": "Overweight"
+    },
+    "GENI": {
+      "shares": 114.7002,
+      "entry_price": 6.83,
+      "entry_date": "2026-06-09",
+      "cost": 783.4,
+      "decision": "Buy"
+    },
+    "LRCX": {
+      "shares": 2.306,
+      "entry_price": 339.73,
+      "entry_date": "2026-06-09",
+      "cost": 783.4,
+      "decision": "Overweight"
+    },
+    "CECO": {
+      "shares": 8.9139,
+      "entry_price": 87.89,
+      "entry_date": "2026-06-09",
+      "cost": 783.4,
+      "decision": "Overweight"
     }
   },
   "start_date": "2026-05-21",
   "starting_capital": 10000.0,
-  "latest_value": 9561.01,
-  "latest_return_pct": -4.39
+  "latest_value": 9454.75,
+  "latest_return_pct": -5.45
 }

@@ -1,0 +1,102 @@
+[
+  {
+    "action": "SELL",
+    "ticker": "CECO",
+    "shares": 23.1613,
+    "price": 97.22,
+    "date": "2026-06-10",
+    "reason": "TARGET HIT",
+    "pnl": 250.84,
+    "pnl_pct": 12.54,
+    "entry_price": 86.39,
+    "hold_days": 1
+  },
+  {
+    "action": "BUY",
+    "ticker": "TGTX",
+    "shares": 44.051,
+    "price": 47.87,
+    "date": "2026-06-10",
+    "target": 54.0,
+    "stop": 42.5,
+    "reasoning": {
+      "upside": "Pipeline expansion from MS-only to multi-indication neuroimmunology platform doubles the TAM story; subcutaneous at-home formulation is a competitive moat vs. IV-only competitors.",
+      "risk": "Phase 1 data is early \u2014 larger trials could disappoint, and RSI-neutral means no technical urgency to the upside if news flow goes quiet."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "TGTX",
+    "shares": 44.051,
+    "price": 48.42,
+    "date": "2026-06-10",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 24.45,
+    "pnl_pct": 1.16,
+    "entry_price": 47.87,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "AXSM",
+    "shares": 8.2611,
+    "price": 255.26,
+    "date": "2026-06-10",
+    "target": 280.0,
+    "stop": 235.0,
+    "reasoning": {
+      "upside": "Alzheimer's agitation launch in June 2026 is an imminent, high-conviction catalyst into a $3B+ underserved market with limited competition; SUNOSI patents locked to 2040.",
+      "risk": "New drug launches can disappoint on payer coverage/formulary access; if AD agitation uptake is slower than modeled, the premium unwinds."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "AXSM",
+    "shares": 8.2611,
+    "price": 252.37,
+    "date": "2026-06-10",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -23.91,
+    "pnl_pct": -1.13,
+    "entry_price": 255.26,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "TPG",
+    "shares": 48.9376,
+    "price": 43.09,
+    "date": "2026-06-10",
+    "target": 48.0,
+    "stop": 40.0,
+    "reasoning": {
+      "upside": "Extreme RSI oversold condition reversing with fundamental catalysts (Goldman addition, active deal deployment, rate-cut cycle beneficiary) \u2014 classic mean-reversion setup.",
+      "risk": "Private equity liquidity concerns (Partners Group redemption cap news) could create sector-wide contagion if investor withdrawals accelerate."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "TPG",
+    "shares": 48.9376,
+    "price": 43.63,
+    "date": "2026-06-10",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 26.43,
+    "pnl_pct": 1.25,
+    "entry_price": 43.09,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "DGX",
+    "shares": 10.286,
+    "price": 205.01,
+    "date": "2026-06-10",
+    "target": 215.0,
+    "stop": 195.0,
+    "reasoning": {
+      "upside": "Perfect risk-off positioning \u2014 Iran escalation + hot CPI drives money into defensive healthcare; AI-enabled diagnostics provide growth optionality in a traditionally boring business.",
+      "risk": "Limited upside vs. other picks; if geopolitical tensions resolve quickly, the defensive bid evaporates and money rotates back to growth."
+    }
+  }
+]
