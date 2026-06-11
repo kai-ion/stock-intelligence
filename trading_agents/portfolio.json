@@ -1,5 +1,5 @@
 {
-  "cash": 1566.804526983276,
+  "cash": 626.7218107933104,
   "positions": {
     "CCL": {
       "shares": 71.6566,
@@ -49,10 +49,31 @@
       "entry_date": "2026-06-09",
       "cost": 783.4,
       "decision": "Overweight"
+    },
+    "ABSI": {
+      "shares": 43.7349,
+      "entry_price": 7.16,
+      "entry_date": "2026-06-10",
+      "cost": 313.36,
+      "decision": "Overweight"
+    },
+    "TGTX": {
+      "shares": 6.4544,
+      "entry_price": 48.55,
+      "entry_date": "2026-06-10",
+      "cost": 313.36,
+      "decision": "Buy"
+    },
+    "AXSM": {
+      "shares": 1.247,
+      "entry_price": 251.29,
+      "entry_date": "2026-06-10",
+      "cost": 313.36,
+      "decision": "Overweight"
     }
   },
   "start_date": "2026-05-21",
   "starting_capital": 10000.0,
-  "latest_value": 9454.75,
-  "latest_return_pct": -5.45
+  "latest_value": 9376.91,
+  "latest_return_pct": -6.23
 }

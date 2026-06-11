@@ -1,0 +1,102 @@
+[
+  {
+    "action": "SELL",
+    "ticker": "TPG",
+    "shares": 45.0412,
+    "price": 42.23,
+    "date": "2026-06-11",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -38.74,
+    "pnl_pct": -2.0,
+    "entry_price": 43.09,
+    "hold_days": 1
+  },
+  {
+    "action": "BUY",
+    "ticker": "CHEF",
+    "shares": 21.6762,
+    "price": 87.75,
+    "date": "2026-06-11",
+    "target": 95.0,
+    "stop": 76.46,
+    "reasoning": {
+      "upside": "RSI at 16.96 is extreme oversold reading bouncing with a Zacks #1 Strong Buy upgrade \u2014 mean reversion alone suggests $95+.",
+      "risk": "Specialty foodservice is tied to restaurant spending, which could soften if consumer discretionary weakens further on geopolitical uncertainty."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "DGX",
+    "shares": 10.286,
+    "price": 205.58,
+    "date": "2026-06-11",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 5.84,
+    "pnl_pct": 0.28,
+    "entry_price": 205.01,
+    "hold_days": 1
+  },
+  {
+    "action": "BUY",
+    "ticker": "TEO",
+    "shares": 137.8006,
+    "price": 15.1,
+    "date": "2026-06-11",
+    "target": 17.0,
+    "stop": 13.0,
+    "reasoning": {
+      "upside": "RSI at 19.72 with Argentina macro reform tailwinds and multiple Zacks momentum/value screen appearances suggest significant re-rating ahead.",
+      "risk": "Argentine peso volatility and ADR liquidity risk; EM telecom names can gap down violently on macro shocks."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "CHEF",
+    "shares": 21.6762,
+    "price": 88.14,
+    "date": "2026-06-11",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 8.45,
+    "pnl_pct": 0.44,
+    "entry_price": 87.75,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "ELVN",
+    "shares": 43.6337,
+    "price": 44.56,
+    "date": "2026-06-11",
+    "target": 52.0,
+    "stop": 37.5,
+    "reasoning": {
+      "upside": "EHA Congress presentation today could drive additional re-rating as hematology community digests data; CMO insider sale at higher levels suggests $44 isn't the ceiling.",
+      "risk": "Biotech binary risk \u2014 any safety signal in data could reverse the entire move; the CMO selling 5,000 shares recently is a minor yellow flag."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "ELVN",
+    "shares": 43.6337,
+    "price": 42.13,
+    "date": "2026-06-11",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -105.81,
+    "pnl_pct": -5.44,
+    "entry_price": 44.56,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "INNV",
+    "shares": 221.5067,
+    "price": 8.3,
+    "date": "2026-06-11",
+    "target": 9.75,
+    "stop": 7.470000000000001,
+    "reasoning": {
+      "upside": "RSI at 8.11 is the most oversold reading on the entire board \u2014 this is a coiled spring if any positive catalyst hits; PACE model benefits from aging demographics secular trend.",
+      "risk": "Net losses are widening even as revenue grows, raising cash burn concerns; stock dropped 9% after raising guidance, which signals skeptical institutional sentiment."
+    }
+  }
+]

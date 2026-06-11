@@ -1,13 +1,13 @@
 {
   "date": "2026-06-10",
-  "total_value": 10581.49,
-  "cash": 176.24,
+  "total_value": 10098.29,
+  "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "ARCB": 2059.65,
-    "UCTT": 2002.64,
-    "CRDO": 2075.6,
-    "FLUT": 2147.72,
-    "DGX": 2119.64
+    "ARCB": 2078.79,
+    "CRDO": 1985.0,
+    "FLUT": 2049.2,
+    "DGX": 2097.62,
+    "TPG": 1887.68
   }
 }

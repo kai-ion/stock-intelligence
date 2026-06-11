@@ -98,5 +98,80 @@
       "upside": "Perfect risk-off positioning \u2014 Iran escalation + hot CPI drives money into defensive healthcare; AI-enabled diagnostics provide growth optionality in a traditionally boring business.",
       "risk": "Limited upside vs. other picks; if geopolitical tensions resolve quickly, the defensive bid evaporates and money rotates back to growth."
     }
+  },
+  {
+    "action": "SELL",
+    "ticker": "UCTT",
+    "shares": 20.6436,
+    "price": 91.1,
+    "date": "2026-06-10",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -79.27,
+    "pnl_pct": -4.04,
+    "entry_price": 94.94,
+    "hold_days": 1
+  },
+  {
+    "action": "BUY",
+    "ticker": "TGTX",
+    "shares": 42.8974,
+    "price": 47.87,
+    "date": "2026-06-10",
+    "target": 54.0,
+    "stop": 42.5,
+    "reasoning": {
+      "upside": "Pipeline expansion from MS-only to multi-indication neuroimmunology platform doubles the TAM story; subcutaneous at-home formulation is a competitive moat vs. IV-only competitors.",
+      "risk": "Phase 1 data is early \u2014 larger trials could disappoint, and RSI-neutral means no technical urgency to the upside if news flow goes quiet."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "TGTX",
+    "shares": 42.8974,
+    "price": 46.75,
+    "date": "2026-06-10",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -48.05,
+    "pnl_pct": -2.34,
+    "entry_price": 47.87,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "AXSM",
+    "shares": 7.8697,
+    "price": 255.26,
+    "date": "2026-06-10",
+    "target": 280.0,
+    "stop": 235.0,
+    "reasoning": {
+      "upside": "Alzheimer's agitation launch in June 2026 is an imminent, high-conviction catalyst into a $3B+ underserved market with limited competition; SUNOSI patents locked to 2040.",
+      "risk": "New drug launches can disappoint on payer coverage/formulary access; if AD agitation uptake is slower than modeled, the premium unwinds."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "AXSM",
+    "shares": 7.8697,
+    "price": 246.62,
+    "date": "2026-06-10",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -68.0,
+    "pnl_pct": -3.38,
+    "entry_price": 255.26,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "TPG",
+    "shares": 45.0412,
+    "price": 43.09,
+    "date": "2026-06-10",
+    "target": 48.0,
+    "stop": 40.0,
+    "reasoning": {
+      "upside": "Extreme RSI oversold condition reversing with fundamental catalysts (Goldman addition, active deal deployment, rate-cut cycle beneficiary) \u2014 classic mean-reversion setup.",
+      "risk": "Private equity liquidity concerns (Partners Group redemption cap news) could create sector-wide contagion if investor withdrawals accelerate."
+    }
   }
 ]
