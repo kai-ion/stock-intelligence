@@ -1,13 +1,13 @@
 {
   "date": "2026-06-11",
-  "total_value": 10379.58,
-  "cash": -0.0,
+  "total_value": 10447.02,
+  "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "ARCB": 2123.78,
-    "CRDO": 2178.24,
-    "FLUT": 2085.27,
-    "TEO": 2133.84,
-    "INNV": 1858.44
+    "ARCB": 2172.81,
+    "CRDO": 2175.18,
+    "TEO": 2195.47,
+    "INNV": 2013.5,
+    "ELVN": 1890.06
   }
 }

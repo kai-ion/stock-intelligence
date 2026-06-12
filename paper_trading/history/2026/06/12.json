@@ -1,0 +1,102 @@
+[
+  {
+    "action": "SELL",
+    "ticker": "ELVN",
+    "shares": 46.3421,
+    "price": 42.32,
+    "date": "2026-06-12",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -103.81,
+    "pnl_pct": -5.03,
+    "entry_price": 44.56,
+    "hold_days": 1
+  },
+  {
+    "action": "BUY",
+    "ticker": "ATEX",
+    "shares": 23.5156,
+    "price": 83.4,
+    "date": "2026-06-12",
+    "target": 95.0,
+    "stop": 75.0,
+    "reasoning": {
+      "upside": "Accelerating utility adoption, new non-utility use cases, and strong Q4 cash flow create a multi-quarter re-rating narrative with visible revenue ramps ahead.",
+      "risk": "Spectrum monetization has historically been lumpy; one delayed contract signing could create a gap quarter that spooks momentum investors."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "ATEX",
+    "shares": 23.5156,
+    "price": 83.99,
+    "date": "2026-06-12",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 13.88,
+    "pnl_pct": 0.71,
+    "entry_price": 83.4,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "CIFR",
+    "shares": 83.1261,
+    "price": 23.76,
+    "date": "2026-06-12",
+    "target": 28.0,
+    "stop": 22.0,
+    "reasoning": {
+      "upside": "AI data center capex is accelerating (Google/Anthropic $35B deal this week), and CIFR is a direct beneficiary with Wall Street consensus firmly bullish.",
+      "risk": "The stock is up 620% in a year \u2014 any macro risk-off event could trigger violent profit-taking in the most extended AI names."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "CRDO",
+    "shares": 8.2509,
+    "price": 250.71,
+    "date": "2026-06-12",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 51.24,
+    "pnl_pct": 2.54,
+    "entry_price": 244.5,
+    "hold_days": 3
+  },
+  {
+    "action": "BUY",
+    "ticker": "SQM",
+    "shares": 25.0161,
+    "price": 82.69,
+    "date": "2026-06-12",
+    "target": 95.0,
+    "stop": 78.0,
+    "reasoning": {
+      "upside": "Lithium price recovery is structural (EV adoption + grid storage), BATT ETF outperformance is attracting rotation flows, and RSI 0.91 is screaming mean-reversion.",
+      "risk": "China lithium oversupply could cap price recovery; SQM's Chile operations face ongoing royalty/regulatory uncertainty."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "SQM",
+    "shares": 25.0161,
+    "price": 82.88,
+    "date": "2026-06-12",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 4.75,
+    "pnl_pct": 0.23,
+    "entry_price": 82.69,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "NRIX",
+    "shares": 116.0881,
+    "price": 17.86,
+    "date": "2026-06-12",
+    "target": 21.0,
+    "stop": 15.5,
+    "reasoning": {
+      "upside": "Roche's validation of BTK degradation as a therapeutic approach opens multiple follow-on indications and positions NRIX as an acquisition target.",
+      "risk": "Biotech deal economics are back-loaded; if bex-deg fails in later trials, milestone payments evaporate and the stock reverts to pre-deal levels."
+    }
+  }
+]
