@@ -1,33 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="350" style="font-family:-apple-system,Arial,sans-serif;">
 <rect width="800" height="350" fill="#ffffff"/>
 <line x1="70" y1="40.0" x2="770" y2="40.0" stroke="#f0f0f0" stroke-width="1"/>
-<text x="62" y="44.0" text-anchor="end" fill="#666" font-size="11">+8.0%</text>
+<text x="62" y="44.0" text-anchor="end" fill="#666" font-size="11">+6.8%</text>
 <line x1="70" y1="92.0" x2="770" y2="92.0" stroke="#f0f0f0" stroke-width="1"/>
-<text x="62" y="96.0" text-anchor="end" fill="#666" font-size="11">+4.3%</text>
+<text x="62" y="96.0" text-anchor="end" fill="#666" font-size="11">+3.4%</text>
 <line x1="70" y1="144.0" x2="770" y2="144.0" stroke="#f0f0f0" stroke-width="1"/>
-<text x="62" y="148.0" text-anchor="end" fill="#666" font-size="11">+0.7%</text>
+<text x="62" y="148.0" text-anchor="end" fill="#666" font-size="11">-0.0%</text>
 <line x1="70" y1="196.0" x2="770" y2="196.0" stroke="#f0f0f0" stroke-width="1"/>
-<text x="62" y="200.0" text-anchor="end" fill="#666" font-size="11">-3.0%</text>
+<text x="62" y="200.0" text-anchor="end" fill="#666" font-size="11">-3.4%</text>
 <line x1="70" y1="248.0" x2="770" y2="248.0" stroke="#f0f0f0" stroke-width="1"/>
-<text x="62" y="252.0" text-anchor="end" fill="#666" font-size="11">-6.7%</text>
+<text x="62" y="252.0" text-anchor="end" fill="#666" font-size="11">-6.8%</text>
 <line x1="70" y1="300.0" x2="770" y2="300.0" stroke="#f0f0f0" stroke-width="1"/>
-<text x="62" y="304.0" text-anchor="end" fill="#666" font-size="11">-10.3%</text>
-<line x1="70" y1="153.58972096397827" x2="770" y2="153.58972096397827" stroke="#ddd" stroke-width="1.5" stroke-dasharray="4,4"/>
+<text x="62" y="304.0" text-anchor="end" fill="#666" font-size="11">-10.2%</text>
+<line x1="70" y1="143.43755522099005" x2="770" y2="143.43755522099005" stroke="#ddd" stroke-width="1.5" stroke-dasharray="4,4"/>
 <text x="70.0" y="335" text-anchor="middle" fill="#666" font-size="11">05-13</text>
-<text x="165.45454545454544" y="335" text-anchor="middle" fill="#666" font-size="11">05-18</text>
-<text x="260.9090909090909" y="335" text-anchor="middle" fill="#666" font-size="11">05-21</text>
-<text x="356.3636363636364" y="335" text-anchor="middle" fill="#666" font-size="11">05-26</text>
-<text x="451.8181818181818" y="335" text-anchor="middle" fill="#666" font-size="11">05-29</text>
-<text x="547.2727272727273" y="335" text-anchor="middle" fill="#666" font-size="11">06-03</text>
-<text x="642.7272727272727" y="335" text-anchor="middle" fill="#666" font-size="11">06-08</text>
-<text x="738.1818181818181" y="335" text-anchor="middle" fill="#666" font-size="11">06-11</text>
-<path d="M 70.0,171.6831600115911 L 101.81818181818181,141.2871454312126 L 133.63636363636363,161.94108368030354 L 165.45454545454544,267.7316203785407 L 197.27272727272725,278.3333333333333 L 229.0909090909091,212.99103650977295 L 260.9090909090909,195.2176598623449 L 292.72727272727275,170.89008503768193 L 324.5454545454545,167.80983848723125 L 356.3636363636364,182.93774361454805 L 388.1818181818182,166.72360901403783 L 420.0,135.39856374993724 L 451.8181818181818,137.89958232837213 L 483.6363636363636,186.39186836698462 L 515.4545454545455,153.58972096397827 L 547.2727272727273,153.58972096397827 L 579.090909090909,153.58972096397827 L 610.9090909090909,153.58972096397827 L 642.7272727272727,145.30775230786998 L 674.5454545454545,118.27522534005257 L 706.3636363636364,139.66983896656217 L 738.1818181818181,90.28251117168102 L 770.0,61.66666666666666" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
-<path d="M 579.090909090909,209.62046787065896 L 610.9090909090909,219.26482603551838 L 642.7272727272727,215.75971789190208 L 674.5454545454545,230.80831552182806 L 706.3636363636364,241.83205765916517" fill="none" stroke="#f97316" stroke-width="2.5" stroke-linecap="round"/>
+<text x="191.73913043478262" y="335" text-anchor="middle" fill="#666" font-size="11">05-19</text>
+<text x="313.47826086956525" y="335" text-anchor="middle" fill="#666" font-size="11">05-25</text>
+<text x="435.2173913043478" y="335" text-anchor="middle" fill="#666" font-size="11">05-29</text>
+<text x="556.9565217391305" y="335" text-anchor="middle" fill="#666" font-size="11">06-04</text>
+<text x="678.695652173913" y="335" text-anchor="middle" fill="#666" font-size="11">06-10</text>
+<path d="M 70.0,163.00351529459448 L 100.43478260869566,130.13374376518203 L 130.8695652173913,152.46858735577743 L 161.30434782608694,266.868807886323 L 191.73913043478262,278.3333333333333 L 222.17391304347825,207.67320247578533 L 252.6086956521739,188.45335284180481 L 283.04347826086956,162.1458965061459 L 313.47826086956525,158.8149663902967 L 343.9130434782609,175.1740447799524 L 374.3478260869565,157.64033494254664 L 404.7826086956522,123.76592426095166 L 435.2173913043478,126.47048636880899 L 465.6521739130435,178.9092808960704 L 496.0869565217391,143.43755522099005 L 526.5217391304348,143.43755522099005 L 556.9565217391305,143.43755522099005 L 587.3913043478261,143.43755522099005 L 617.8260869565217,134.48156473019182 L 648.2608695652174,105.24901574107449 L 678.695652173913,128.3848140215959 L 709.1304347826087,74.9781354330857 L 739.5652173913044,61.666666666666686 L 770.0,78.20186320037902" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M 556.9565217391305,204.0283226248789 L 587.3913043478261,214.45757967726203 L 617.8260869565217,210.66721092474396 L 648.2608695652174,226.94052743555494 L 678.695652173913,238.86142859498958" fill="none" stroke="#f97316" stroke-width="2.5" stroke-linecap="round"/>
 <rect x="80" y="45" width="12" height="3" fill="#3b82f6"/>
 <text x="96" y="49" fill="#333" font-size="12">Strategy A (Claude)</text>
 <rect x="80" y="61" width="12" height="3" fill="#f97316"/>
 <text x="96" y="65" fill="#333" font-size="12">Strategy B (TradingAgents)</text>
 <text x="400.0" y="20" text-anchor="middle" fill="#1a1a1a" font-size="14" font-weight="600">AI Trading Strategies — $10K Each</text>
 <text x="765" y="55" text-anchor="end" fill="#f97316" font-size="11" font-weight="600">$9,377 (-6.2%)</text>
-<text x="765" y="70" text-anchor="end" fill="#3b82f6" font-size="11" font-weight="600">$10,649 (+6.5%)</text>
+<text x="765" y="70" text-anchor="end" fill="#3b82f6" font-size="11" font-weight="600">$10,426 (+4.3%)</text>
 </svg>

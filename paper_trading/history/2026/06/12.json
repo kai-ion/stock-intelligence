@@ -98,5 +98,80 @@
       "upside": "Roche's validation of BTK degradation as a therapeutic approach opens multiple follow-on indications and positions NRIX as an acquisition target.",
       "risk": "Biotech deal economics are back-loaded; if bex-deg fails in later trials, milestone payments evaporate and the stock reverts to pre-deal levels."
     }
+  },
+  {
+    "action": "SELL",
+    "ticker": "NRIX",
+    "shares": 116.0881,
+    "price": 17.06,
+    "date": "2026-06-12",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -92.87,
+    "pnl_pct": -4.48,
+    "entry_price": 17.86,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "ATEX",
+    "shares": 23.7466,
+    "price": 83.4,
+    "date": "2026-06-12",
+    "target": 95.0,
+    "stop": 75.0,
+    "reasoning": {
+      "upside": "Accelerating utility adoption, new non-utility use cases, and strong Q4 cash flow create a multi-quarter re-rating narrative with visible revenue ramps ahead.",
+      "risk": "Spectrum monetization has historically been lumpy; one delayed contract signing could create a gap quarter that spooks momentum investors."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "ATEX",
+    "shares": 23.7466,
+    "price": 81.54,
+    "date": "2026-06-12",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -44.28,
+    "pnl_pct": -2.24,
+    "entry_price": 83.4,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "ELVN",
+    "shares": 47.0746,
+    "price": 41.13,
+    "date": "2026-06-12",
+    "target": 48.0,
+    "stop": 36.0,
+    "reasoning": {
+      "upside": "FDA alignment on pivotal trial design is the single biggest de-risking event for a clinical-stage name; this removes the \"will they accept the endpoint?\" overhang entirely.",
+      "risk": "Binary clinical risk remains \u2014 Phase 3 failure would wipe 60%+ regardless of Phase 1 signals."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "TEO",
+    "shares": 137.8006,
+    "price": 15.23,
+    "date": "2026-06-12",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 18.6,
+    "pnl_pct": 0.89,
+    "entry_price": 15.1,
+    "hold_days": 1
+  },
+  {
+    "action": "BUY",
+    "ticker": "SQM",
+    "shares": 24.9441,
+    "price": 82.69,
+    "date": "2026-06-12",
+    "target": 95.0,
+    "stop": 78.0,
+    "reasoning": {
+      "upside": "Lithium price recovery is structural (EV adoption + grid storage), BATT ETF outperformance is attracting rotation flows, and RSI 0.91 is screaming mean-reversion.",
+      "risk": "China lithium oversupply could cap price recovery; SQM's Chile operations face ongoing royalty/regulatory uncertainty."
+    }
   }
 ]
