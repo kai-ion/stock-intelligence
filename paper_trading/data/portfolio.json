@@ -33,13 +33,13 @@
       "entry_date": "2026-06-12",
       "cost": 1936.18
     },
-    "ALGT": {
-      "shares": 20.9645,
-      "entry_price": 99.37,
-      "exit_target": 110.0,
-      "stop_loss": 90.0,
-      "entry_date": "2026-06-15",
-      "cost": 2083.24
+    "HON": {
+      "shares": 7.1499,
+      "entry_price": 229.91,
+      "exit_target": 250.0,
+      "stop_loss": 212.0,
+      "entry_date": "2026-06-16",
+      "cost": 1643.82
     }
   },
   "start_date": "2026-06-02",

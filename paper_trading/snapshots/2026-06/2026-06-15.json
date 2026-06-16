@@ -1,13 +1,13 @@
 {
   "date": "2026-06-15",
-  "total_value": 10425.97,
+  "total_value": 9856.62,
   "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "ARCB": 2076.58,
-    "INNV": 1980.27,
-    "CIFR": 2189.96,
-    "ELVN": 2133.66,
-    "ALGT": 2045.51
+    "ARCB": 2046.56,
+    "INNV": 2029.0,
+    "CIFR": 2163.77,
+    "ELVN": 1962.54,
+    "AEHR": 1654.74
   }
 }

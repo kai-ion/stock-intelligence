@@ -123,5 +123,105 @@
       "upside": "Direct oil price beneficiary (fuel costs just dropped materially), refinanced debt improves balance sheet, and summer travel season is the strongest seasonal catalyst for leisure airlines.",
       "risk": "If Iran deal falls apart before June 19 signing, oil spikes back and the entire airline rally reverses; Allegiant's leisure-focused model is more cyclically exposed than legacy carriers."
     }
+  },
+  {
+    "action": "SELL",
+    "ticker": "ALGT",
+    "shares": 20.9645,
+    "price": 95.03,
+    "date": "2026-06-15",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -90.98,
+    "pnl_pct": -4.37,
+    "entry_price": 99.37,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "REAL",
+    "shares": 172.0429,
+    "price": 11.58,
+    "date": "2026-06-15",
+    "target": 14.0,
+    "stop": 10.25,
+    "reasoning": {
+      "upside": "Classic mean-reversion setup \u2014 beat earnings, got upgraded to Buy, and the oversold bounce has just begun with significant room to recover to pre-earnings levels.",
+      "risk": "Luxury handbag demand declining 10% from peaks; if macro weakens, consignment volumes could soften and the CFO just sold 35,000 shares."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "REAL",
+    "shares": 172.0429,
+    "price": 10.94,
+    "date": "2026-06-15",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -109.25,
+    "pnl_pct": -5.48,
+    "entry_price": 11.58,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "SVM",
+    "shares": 146.6518,
+    "price": 12.84,
+    "date": "2026-06-15",
+    "target": 14.5,
+    "stop": 11.3,
+    "reasoning": {
+      "upside": "Singapore USD silver futures launching this month provides a structural silver price catalyst, and the company is diversifying geographically to reduce China concentration risk.",
+      "risk": "Kyrgyz political risk and Hong Kong listing may not materialize on expected timeline; silver price correlation means a dollar spike would hurt."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "SVM",
+    "shares": 146.6518,
+    "price": 12.18,
+    "date": "2026-06-15",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -96.79,
+    "pnl_pct": -5.14,
+    "entry_price": 12.84,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "IAG",
+    "shares": 97.5543,
+    "price": 18.31,
+    "date": "2026-06-15",
+    "target": 21.0,
+    "stop": 16.7,
+    "reasoning": {
+      "upside": "12% resource upgrade just announced with expansion study due later in 2026 \u2014 each update re-rates the stock; C\u00f4t\u00e9 is a Tier 1 asset in a safe jurisdiction (Ontario).",
+      "risk": "Gold below $4,200 and falling 25% from highs; if gold corrects further toward $3,500, miners will give back gains quickly regardless of fundamentals."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "IAG",
+    "shares": 97.5543,
+    "price": 17.86,
+    "date": "2026-06-15",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -43.9,
+    "pnl_pct": -2.46,
+    "entry_price": 18.31,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "AEHR",
+    "shares": 14.2184,
+    "price": 122.54,
+    "date": "2026-06-15",
+    "target": 140.0,
+    "stop": 109.0,
+    "reasoning": {
+      "upside": "\"Picks and shovels\" for AI chip reliability testing is a structural growth story with a massive TAM expansion; every new AI ASIC needs burn-in testing.",
+      "risk": "Insider selling noted in recent analysis; at these multiples, any order cancellation or delay would cause a violent correction. The 3-month move is extreme."
+    }
   }
 ]
