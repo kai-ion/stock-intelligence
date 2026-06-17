@@ -1,13 +1,13 @@
 {
   "date": "2026-06-16",
-  "total_value": 10032.69,
+  "total_value": 9949.38,
   "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "ARCB": 2055.12,
-    "INNV": 2054.47,
-    "CIFR": 2258.12,
-    "ELVN": 2019.78,
-    "HON": 1645.19
+    "INNV": 2029.0,
+    "CIFR": 2205.75,
+    "ELVN": 2036.33,
+    "CCL": 2013.58,
+    "SSRM": 1664.72
   }
 }

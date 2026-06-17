@@ -123,5 +123,105 @@
       "upside": "Calendar certainty (13 days to spin) gives this a defined catalyst window \u2014 aerospace pure-plays command 25-30x EBITDA vs. HON's current ~18x blended.",
       "risk": "If broad market sells off on a hawkish Fed, the spin-off premium gets overwhelmed by beta; execution risk is low but not zero on complex separations."
     }
+  },
+  {
+    "action": "SELL",
+    "ticker": "HON",
+    "shares": 7.1499,
+    "price": 230.05,
+    "date": "2026-06-16",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 1.01,
+    "pnl_pct": 0.06,
+    "entry_price": 229.91,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "CRWV",
+    "shares": 14.2164,
+    "price": 115.7,
+    "date": "2026-06-16",
+    "target": 140.0,
+    "stop": 105.0,
+    "reasoning": {
+      "upside": "Vera Rubin deployment validates technology leadership; diversified customer base (the \"critical number\" articles reference) undermines the bear thesis of Microsoft concentration risk.",
+      "risk": "CFO selling $6M in stock is never great optics; if the broader AI trade reverses on a hawkish Fed surprise, this gets hit hardest as a high-beta name."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "ARCB",
+    "shares": 12.5865,
+    "price": 159.23,
+    "date": "2026-06-16",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 4.09,
+    "pnl_pct": 0.2,
+    "entry_price": 158.9,
+    "hold_days": 8
+  },
+  {
+    "action": "BUY",
+    "ticker": "CCL",
+    "shares": 65.0066,
+    "price": 30.52,
+    "date": "2026-06-16",
+    "target": 34.0,
+    "stop": 28.5,
+    "reasoning": {
+      "upside": "RSI of 12.7 is the most oversold stock on this entire list \u2014 mean reversion alone should drive 10%+ within two weeks, and the Iran deal is a structural positive for fuel costs and Eastern Mediterranean itineraries.",
+      "risk": "If the peace deal collapses or oil reverses, CCL gives back gains quickly; cruise lines carry heavy debt loads that remain a structural overhang."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "CRWV",
+    "shares": 14.2164,
+    "price": 117.32,
+    "date": "2026-06-16",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 23.04,
+    "pnl_pct": 1.4,
+    "entry_price": 115.7,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "ELF",
+    "shares": 24.6561,
+    "price": 68.46,
+    "date": "2026-06-16",
+    "target": 78.0,
+    "stop": 52.0,
+    "reasoning": {
+      "upside": "Rhode brand international expansion (Mexico, Europe) is just beginning, and Gen Z brand loyalty creates recurring revenue characteristics unusual for CPG.",
+      "risk": "Tariff exposure on China-sourced products could compress margins; if consumer spending weakens, prestige beauty holds but mass-market (ELF's core) gets traded down first."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "ELF",
+    "shares": 24.6561,
+    "price": 67.39,
+    "date": "2026-06-16",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -26.38,
+    "pnl_pct": -1.56,
+    "entry_price": 68.46,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "SSRM",
+    "shares": 52.3331,
+    "price": 31.75,
+    "date": "2026-06-16",
+    "target": 36.0,
+    "stop": 29.0,
+    "reasoning": {
+      "upside": "Gold remains structurally supported by central bank buying and geopolitical uncertainty; buyback provides a price floor that limits downside.",
+      "risk": "Gold price sensitivity is high \u2014 if the Iran deal removes safe-haven demand for gold, miners get hit disproportionately on the leverage to spot prices."
+    }
   }
 ]

@@ -1,0 +1,294 @@
+=== Stock Screener — 2026-06-17 13:45 ===
+Criteria: Above 50d EMA | Positive weekly gain | Market cap > $1B
+Fetching universe...
+
+  NASDAQ screener: 2775 stocks with market cap > $1B
+  Top 5 by daily gain: SLBT(+167.0%), HONAV(+35.0%), WYFI(+18.9%), BVC(+18.2%), LION(+13.8%)
+Screening 2775 stocks...
+  Priority tier (top 300 movers): 300
+  Remaining: 2475
+
+  === Priority Tier ===
+  Priority: 300/300 (197 passed, 0 errors)
+
+  === Remaining Tier ===
+  Remaining: 300/2475 (259 total passed)
+  Remaining: 600/2475 (259 total passed)
+  Remaining: 900/2475 (259 total passed)
+  Remaining: 1200/2475 (259 total passed)
+  Remaining: 1500/2475 (259 total passed)
+  Remaining: 1800/2475 (259 total passed)
+  Remaining: 2100/2475 (259 total passed)
+  Remaining: 2400/2475 (259 total passed)
+  Remaining: 2475/2475 (259 total passed)
+
+  Final: 259 stocks passed all filters
+
+================================================================================
+  259 stocks passed all filters
+  Sorted by composite momentum (MACD 35 | ROC 30 | Volume 25 | EMA 10)
+  Rating: 5=Strong Buy → 1=Strong Sell | Vol Ratio: >1 = above avg volume
+================================================================================
+
+    Ticker    Price   Day%  Week%  MCap($B)                  Sector                                  Industry  Above EMA%   RSI  MACD  MACD Hist  ROC20%  Vol Ratio  Momentum  Rating
+1     SHAZ    94.16  23.62  49.72       1.6              Technology           Information Technology Services       64.27  68.7  Bull       0.56   79.42       1.26      85.5    5.00
+2     WYFI    37.60   5.32  64.77       1.5              Technology           Information Technology Services       55.43  71.4  Bull       0.62   47.34       0.45      78.8    4.40
+3      RXT     7.16  15.85  53.65       1.8              Technology                 Software - Infrastructure       77.41  67.1  Bull       0.06   49.17       0.42      78.5    3.00
+4     MAAS    16.80  20.00  53.14       7.4      Financial Services                          Asset Management       62.69  80.9  Bull       0.47   76.47       0.30      77.5     NaN
+5     FRMI     8.86  12.15  28.59       5.7             Real Estate                          REIT - Specialty       35.54  73.1  Bull       0.23   50.94       0.27      77.3     NaN
+6      WDC   711.48   3.41  45.17     245.2              Technology                         Computer Hardware       47.47  75.7  Bull      13.42   56.14       0.24      77.0    4.44
+7     NBIS   279.51   5.77  32.04      71.0  Communication Services            Internet Content & Information       40.46  68.3  Bull       1.59   41.36       0.13      76.1    3.94
+8      AMC     2.58   4.25  32.73       1.9  Communication Services                             Entertainment       51.21  73.6  Bull       0.07   89.34       0.13      76.1    3.29
+9     HIMS    31.71   0.92   9.42       7.3              Healthcare  Drug Manufacturers - Specialty & Generic       21.46  64.0  Bull       0.43   42.26       0.12      76.0    3.25
+10    MGNI    18.80   2.06  18.91       2.7  Communication Services                      Advertising Agencies       32.23  79.8  Bull       0.34   40.40       0.10      75.8    4.53
+11     FUN    26.10   4.24  12.79       2.7       Consumer Cyclical                                   Leisure       26.76  72.4  Bull       0.39   33.64       0.09      75.7    4.25
+12    CLOV     4.78  -3.48  11.54       2.5              Healthcare                          Healthcare Plans       39.67  72.1  Bull       0.06   41.15       0.07      75.5    3.67
+13     BVC    13.39  18.18  44.06       2.2              Technology                    Software - Application       32.73  54.5  Bull       0.23   32.31       0.06      75.5     NaN
+14     MBX    39.83  -3.57  28.54       1.9              Healthcare                             Biotechnology       20.58  67.2  Bull       1.10   31.08       0.06      75.5    4.50
+15     PEB    19.48  -0.05  13.06       2.2             Real Estate                      REIT - Hotel & Motel       26.20  89.0  Bull       0.28   36.41       0.05      75.5    3.06
+16    MTRN   257.87  -0.22  15.09       5.4         Basic Materials          Other Industrial Metals & Mining       24.56  75.5  Bull       2.01   33.01       0.07      75.5     NaN
+17    TWST    85.56  -0.57  22.12       5.3              Healthcare                    Diagnostics & Research       37.32  75.7  Bull       1.35   71.84       0.05      75.4    4.64
+18    RMIX    23.35   0.65  17.51       2.3         Basic Materials                        Building Materials       38.17  81.5  Bull       0.51   44.58       0.03      75.3    5.00
+19    BIRK    49.83  -0.29  13.39       9.2       Consumer Cyclical                    Footwear & Accessories       20.30  68.7  Bull       0.58   53.34       0.03      75.3    4.62
+20      PK    14.89   1.02   5.23       3.0             Real Estate                      REIT - Hotel & Motel       21.15  82.3  Bull       0.13   34.27       0.02      75.2    3.28
+21     AAL    15.99   1.88  19.19      10.6             Industrials                                  Airlines       19.21  70.2  Bull       0.16   32.63       0.04      74.9    3.81
+22     WSM   232.40   1.59  12.30      27.4       Consumer Cyclical                          Specialty Retail       16.99  74.8  Bull       2.50   35.31       0.09      74.3    3.77
+23     JHX    25.83   1.08  17.33      15.0         Basic Materials                        Building Materials       16.69  69.1  Bull       0.30   38.69       0.05      73.8    4.86
+24    VLRS     8.85   2.08  18.63       1.0             Industrials                                  Airlines       16.50  68.4  Bull       0.13   39.37       0.02      73.4    4.00
+25      SN   137.91   1.20   7.56      19.5       Consumer Cyclical        Furnishings, Fixtures & Appliances       15.71  71.4  Bull       1.60   35.22       0.03      73.1    4.69
+26    CVCO   615.05   1.75   8.95       4.7       Consumer Cyclical                  Residential Construction       14.64  73.2  Bull       6.24   32.35       0.08      73.0    4.67
+27     CCL    31.24   1.21  20.20      43.3       Consumer Cyclical                           Travel Services       14.16  67.4  Bull       0.42   30.77       0.09      72.9    4.43
+28     AYA    21.32   1.42  32.59       3.1         Basic Materials                                    Silver       16.02  60.8  Bull       0.24   29.06       0.10      72.9     NaN
+29    BBWI    21.69   3.04  19.70       4.4       Consumer Cyclical                          Specialty Retail       14.90  69.0  Bull       0.38   36.15       0.04      72.8     NaN
+30     MAN    34.64   1.26   4.75       1.6             Industrials            Staffing & Employment Services       14.34  67.7  Bull       0.29   30.13       0.06      72.7    3.58
+31    TRIP    12.88   0.54  11.31       1.5       Consumer Cyclical                           Travel Services       14.57  72.0  Bull       0.14   38.48       0.04      72.6    3.29
+32     LUV    48.19   1.42  16.90      23.6             Industrials                                  Airlines       15.06  70.6  Bull       0.64   29.57       0.04      72.5    3.44
+33     ROG   165.04   1.07  20.06       2.9              Technology                     Electronic Components       21.00  69.9  Bull       1.57   26.18       0.15      72.4    4.33
+34    IMAX    43.83  -0.36   3.91       2.4  Communication Services                             Entertainment       13.67  72.5  Bull       0.41   32.46       0.03      72.1    4.64
+35     YSS    33.85   4.78  22.57       4.4             Industrials                       Aerospace & Defense       11.40  55.4  Bull       0.38   31.83       0.10      71.6     NaN
+36    AKTS    23.37   0.73  25.78       1.3              Healthcare                             Biotechnology       18.30  65.2  Bull       0.37   26.32       0.12      71.5    4.86
+37     WIT     2.47   8.55  17.86      26.0              Technology           Information Technology Services       14.73  67.6  Bull       0.03   28.24       0.05      71.0    2.14
+38    ETSY    74.50   1.97   8.35       7.1       Consumer Cyclical                           Internet Retail       17.23  73.9  Bull       0.51   26.64       0.05      70.7    3.43
+39    REAL    11.95   5.57  25.26       1.4       Consumer Cyclical                              Luxury Goods       15.90  67.6  Bull       0.31   26.32       0.06      69.8    4.56
+40     IFS    56.67   1.55   7.85       6.3      Financial Services                          Banks - Regional       16.35  68.5  Bull       0.70   26.08       0.02      69.4    4.33
+41    KLIC   121.04   1.90  18.63       6.3              Technology       Semiconductor Equipment & Materials       25.00  71.7  Bull       0.93   23.99       0.04      69.3     NaN
+42     SKY    83.60   3.56  11.27       4.6       Consumer Cyclical                  Residential Construction       10.07  66.9  Bull       1.12   28.15       0.03      68.5    4.17
+43      GE   358.11   1.76  12.36     374.2             Industrials                       Aerospace & Defense       14.20  71.6  Bull       3.11   25.53       0.06      68.1    4.50
+44     ELF    68.83   2.53  23.65       4.1      Consumer Defensive             Household & Personal Products       13.75  70.1  Bull       1.99   25.47       0.05      67.7    4.17
+45     GHM   114.22   2.58  18.90       1.3             Industrials            Specialty Industrial Machinery       17.15  64.9  Bull       1.04   22.88       0.15      67.7    4.40
+46     NPO   364.56   1.78  13.32       7.7             Industrials            Specialty Industrial Machinery       18.90  74.7  Bull       3.96   22.13       0.12      67.5     NaN
+47    ALHC    20.43  -1.21   6.41       4.2              Healthcare                          Healthcare Plans       12.99  64.8  Bull       0.72   25.49       0.02      67.2    4.57
+48     WWD   427.44   1.21  16.38      25.5             Industrials                       Aerospace & Defense       15.37  73.1  Bull       8.20   24.06       0.04      67.1    4.58
+49      LC    19.33   3.59   9.58       2.2      Financial Services                          Banks - Regional       14.85  65.5  Bull       0.19   23.67       0.05      66.6    4.50
+50     TLN   409.45   0.59  14.14      19.6               Utilities   Utilities - Independent Power Producers       12.98  63.1  Bull       1.94   26.29       0.06      66.4    4.47
+51     TOL   155.64   0.99  12.05      14.5       Consumer Cyclical                  Residential Construction       10.44  68.3  Bull       1.93   25.37       0.03      65.8    4.11
+52    AAMI    83.43  -0.12   8.02       3.0      Financial Services                          Asset Management       19.55  73.4  Bull       0.57   20.48       0.04      65.6    3.00
+53     MTH    75.19   1.08   7.27       5.0       Consumer Cyclical                  Residential Construction       11.75  69.1  Bull       0.81   24.34       0.01      65.3    3.90
+54    CRWV   121.49   3.49  27.06      66.2              Technology                 Software - Infrastructure       14.73  60.5  Bull       1.32   21.72       0.15      65.3    4.08
+55    ROCK    42.53   2.56  13.44       1.3             Industrials             Building Products & Equipment        7.80  63.4  Bull       0.54   25.75       0.03      64.9     NaN
+56    COMP     9.59   1.70  17.38       7.2             Real Estate                      Real Estate Services       15.52  65.5  Bull       0.14   21.24       0.04      64.3    4.25
+57     XHR    19.69   0.48   6.63       1.9             Real Estate                      REIT - Hotel & Motel       15.05  77.3  Bull       0.14   20.31       0.03      63.1    4.33
+58    FTAI   279.00   3.90  19.36      28.6             Industrials                       Aerospace & Defense       12.25  63.0  Bull       2.89   20.99       0.08      62.7     NaN
+59    ENVA   195.63   0.94   9.04       4.9      Financial Services                           Credit Services       17.61  75.9  Bull       3.04   18.34       0.05      62.5     NaN
+60    URGN    33.29   4.19  18.13       1.6              Healthcare                             Biotechnology       25.37  72.0  Bull       0.30   16.48       0.08      62.2    4.57
+61     RLJ    11.30  -1.70   6.16       1.7             Real Estate                      REIT - Hotel & Motel       19.33  85.2  Bull       0.05   23.44       0.04      62.2    3.08
+62     RRX   227.15   2.32  13.32      15.1             Industrials            Specialty Industrial Machinery       10.12  62.0  Bull       1.96   21.80       0.02      62.0    4.64
+63    TRVI    15.86   1.96  16.70       2.3              Healthcare                             Biotechnology       15.26  68.3  Bull       0.15   18.09       0.05      61.2     NaN
+64    CPNG    18.98   5.71  19.26      34.1       Consumer Cyclical                           Internet Retail        8.27  62.3  Bull       0.38   20.86       0.12      61.0    4.11
+65     PRG    39.27   0.69   8.45       1.6             Industrials                 Rental & Leasing Services       13.05  66.4  Bull       0.29   18.89       0.01      60.5    4.38
+66    MRNA    56.28   1.68  17.91      22.3              Healthcare                             Biotechnology       14.48  65.9  Bull       0.86   16.98       0.12      60.2    2.91
+67      OC   130.09   0.84  13.04      10.5             Industrials             Building Products & Equipment        8.60  63.1  Bull       0.91   20.51       0.04      60.2    4.06
+68     MHO   146.09   0.72   6.32       3.8       Consumer Cyclical                  Residential Construction        9.35  66.8  Bull       0.85   19.36       0.02      59.2     NaN
+69     SAN    13.72   2.01  15.10     197.0      Financial Services                       Banks - Diversified       12.08  69.5  Bull       0.13   16.47       0.20      59.2     NaN
+70     EVR   378.35   1.22  11.02      14.6      Financial Services                           Capital Markets       11.06  66.9  Bull       3.10   17.34       0.02      58.0     NaN
+71    ESAB   104.03   1.49  17.57       6.3             Industrials                         Metal Fabrication        8.77  66.0  Bull       1.61   18.18       0.03      57.8    4.80
+72     GPC   108.69   1.32  10.42      15.1       Consumer Cyclical                                Auto Parts        5.96  69.1  Bull       1.54   18.82       0.02      57.0    3.90
+73     BDC   120.90   1.60  14.29       4.7              Technology                   Communication Equipment        5.89  63.3  Bull       1.93   18.63       0.03      56.8    5.00
+74    BBVA    25.00   1.23  13.51     138.7      Financial Services                       Banks - Diversified       10.54  68.8  Bull       0.20   15.56       0.05      56.2    3.33
+75     WTS   341.70   0.70   9.05      11.4             Industrials            Specialty Industrial Machinery       10.38  76.0  Bull       2.81   15.65       0.03      56.1    3.33
+76     EMR   151.93   1.97  10.81      85.1             Industrials            Specialty Industrial Machinery        8.24  65.7  Bull       1.15   16.29       0.04      55.8    4.03
+77     GEF    71.36   0.90  10.62       4.1       Consumer Cyclical                    Packaging & Containers        7.66  71.9  Bull       0.99   16.37       0.05      55.7    3.33
+78    PRCH    11.36  -1.13  19.20       1.2      Financial Services           Insurance - Property & Casualty       19.07  66.0  Bull       0.05   13.94       0.06      55.6    4.88
+79     VMC   302.07   4.16  10.78      39.2         Basic Materials                        Building Materials        6.91  65.4  Bull       3.12   16.65       0.02      55.3    4.17
+80     WFC    86.35   1.63   5.34     264.2      Financial Services                       Banks - Diversified        7.72  71.5  Bull       0.76   15.82       0.08      55.3    4.17
+81    AMBP     4.47   2.41  12.48       2.7       Consumer Cyclical                    Packaging & Containers       11.71  74.9  Bull       0.05   14.17       0.03      55.2     NaN
+82     BAC    57.71   1.51   5.80     409.5      Financial Services                       Banks - Diversified        9.71  78.1  Bull       0.50   14.41       0.10      55.1    4.58
+83    SOFI    18.19   0.80  10.47      23.3      Financial Services                           Credit Services        6.64  59.9  Bull       0.12   15.82       0.11      55.1    3.29
+84    TGLS    45.84   1.87   5.16       2.0         Basic Materials                        Building Materials        6.34  62.3  Bull       0.32   16.14       0.04      54.7     NaN
+85    AMRZ    56.34   0.83  11.55      31.2         Basic Materials                        Building Materials        4.89  59.9  Bull       0.47   16.68       0.06      54.6    4.05
+86    UPBD    19.33   2.11   9.19       1.1              Technology                    Software - Application        6.20  61.2  Bull       0.13   15.65       0.05      54.2     NaN
+87     JPM   335.78   1.60   8.62     899.7      Financial Services                       Banks - Diversified        9.05  73.2  Bull       3.17   13.55       0.12      54.1    3.83
+88    KYMR    89.73   0.82  16.67       7.4              Healthcare                             Biotechnology       10.04  65.9  Bull       1.59   12.63       0.09      53.4    4.70
+89      IR    80.33   1.62   8.69      31.4             Industrials            Specialty Industrial Machinery        5.48  64.9  Bull       1.20   14.81       0.05      52.9    4.00
+90     AXP   345.52   1.03  10.27     235.8      Financial Services                           Credit Services        8.41  71.6  Bull       3.82   11.71       0.19      52.5    3.72
+91    SLGN    42.01   0.85   6.75       4.4       Consumer Cyclical                    Packaging & Containers        6.94  70.9  Bull       0.63   13.92       0.01      52.5     NaN
+92     ACA   135.18   0.66   6.16       6.6             Industrials                Engineering & Construction       10.46  65.2  Bull       0.69   10.69       0.19      52.5     NaN
+93     NWG    17.04   3.02   9.51      67.8      Financial Services                          Banks - Regional        7.13  63.5  Bull       0.11   12.48       0.17      52.4     NaN
+94    SSRM    32.93   3.46  34.08       6.8         Basic Materials                                      Gold       11.22  61.0  Bull       0.48   11.21       0.07      52.4    4.60
+95     COF   205.11   2.10  15.47     127.6      Financial Services                           Credit Services        8.35  68.2  Bull       2.56   12.68       0.07      52.4    4.39
+96    VIRT    59.52   1.42   9.10      12.8      Financial Services                           Capital Markets       17.15  73.4  Bull       0.69    8.59       0.02      52.4    3.43
+97     CRH   113.13   0.26  13.16      75.6         Basic Materials                        Building Materials        4.29  60.5  Bull       1.24   14.81       0.03      52.2    4.61
+98      HD   340.61   1.01   6.80     339.6       Consumer Cyclical                   Home Improvement Retail        5.55  69.6  Bull       3.69   13.47       0.08      51.9    4.11
+99    FRPT    56.50  -1.57  10.46       2.8      Consumer Defensive                            Packaged Foods        0.47  60.0  Bull       1.10   16.62       0.01      51.9    4.47
+100   RVLV    21.48   2.87   5.97       1.5       Consumer Cyclical                           Internet Retail        0.42  59.1  Bull       0.39   16.42       0.01      51.7    4.00
+101     BX   128.52   0.23   8.47     157.1      Financial Services                          Asset Management        6.96  63.6  Bull       1.48   12.48       0.06      51.5    3.95
+102   BCAX    22.55   2.73  11.58       1.5              Healthcare                             Biotechnology        7.37  60.5  Bull       0.24   12.58       0.03      51.5     NaN
+103    CMI   723.70   1.94  14.78      99.9             Industrials            Specialty Industrial Machinery       11.17  63.0  Bull       4.13   10.09       0.08      51.4    4.05
+104   POOL   203.33   2.62   7.08       7.4             Industrials                   Industrial Distribution        3.99  63.0  Bull       2.89   13.88       0.05      51.3    3.64
+105    MLM   605.67   0.18   9.55      36.4         Basic Materials                        Building Materials        3.34  60.1  Bull       5.52   13.87       0.01      50.6    4.04
+106   EXPE   242.51  -1.75  10.77      29.1       Consumer Cyclical                           Travel Services        4.41  60.8  Bull       2.61   13.03       0.03      50.5    3.83
+107    TDG  1314.33   1.49   8.41      73.5             Industrials                       Aerospace & Defense        6.80  63.3  Bull       7.62   11.47       0.03      50.1    4.18
+108    KEY    22.96   0.97   4.46      24.8      Financial Services                          Banks - Regional        7.01  67.6  Bull       0.15   10.84       0.05      49.8    3.95
+109   ENIC     4.67  -0.21  10.93       6.5               Utilities            Utilities - Regulated Electric        9.41  70.0  Bull       0.04    9.88       0.02      49.7     NaN
+110   OMAB   111.68  -0.04  16.43       5.4             Industrials                   Airports & Air Services        6.91  68.0  Bull       1.71   11.11       0.01      49.7    4.38
+111    ECL   274.39   0.14   7.06      77.2         Basic Materials                       Specialty Chemicals        4.88  65.1  Bull       2.45   11.97       0.03      49.7    4.26
+112    BVN    36.43   2.42  18.74       9.3         Basic Materials            Other Precious Metals & Mining        7.01  59.2  Bull       0.36   10.83       0.03      49.6     NaN
+113    HWM   277.93   0.00  11.40     111.2             Industrials                       Aerospace & Defense        8.99  64.7  Bull       2.47    9.80       0.03      49.6    4.55
+114    USB    59.09   0.15   4.01      92.0      Financial Services                          Banks - Regional        6.58  65.3  Bull       0.47   10.86       0.05      49.6    3.86
+115     WH    86.18   1.35   7.67       6.5       Consumer Cyclical                                   Lodging        6.77  61.6  Bull       0.51   10.90       0.03      49.5    4.41
+116   HUBB   513.33   1.15   9.78      27.1             Industrials              Electrical Equipment & Parts        4.68  62.7  Bull       4.89   11.57       0.06      49.4    3.93
+117    GIC    32.16  -0.22   1.77       1.2             Industrials                   Industrial Distribution        3.81  65.8  Bull       0.24   12.29       0.01      49.3     NaN
+118    STT   171.55   0.06   6.03      47.5      Financial Services                          Asset Management       11.82  75.5  Bull       0.72   13.70       0.04      49.1    3.88
+119    PHM   124.14   0.92   4.99      23.6       Consumer Cyclical                  Residential Construction        3.51  59.7  Bull       0.87   12.02       0.03      49.0    3.81
+120     PH   946.60   0.91   8.11     119.4             Industrials            Specialty Industrial Machinery        5.37  66.0  Bull      11.38   11.03       0.02      48.9    4.33
+121   HGTY    11.04  -2.47   7.92       3.8      Financial Services           Insurance - Property & Casualty        4.08  53.8  Bull       0.06    5.75       0.70      48.6    3.38
+122    SON    51.73   1.55   5.59       5.1       Consumer Cyclical                    Packaging & Containers        3.31  60.0  Bull       0.45   11.58       0.01      48.4    4.09
+123    HMY    17.95   1.04  24.51      11.3         Basic Materials                                      Gold        6.37  57.9  Bull       0.13    9.68       0.06      48.4     NaN
+124    RTX   191.13   2.37   7.74     257.4             Industrials                       Aerospace & Defense        4.85  64.9  Bull       1.62   10.00       0.09      48.2    4.13
+125    CHH   116.41   0.29  11.69       5.3       Consumer Cyclical                                   Lodging        6.60  59.7  Bull       0.76    9.66       0.01      48.1    2.81
+126    APO   140.83   1.65   7.39      81.2      Financial Services                          Asset Management       10.00  69.2  Bull       0.92    7.38       0.08      48.1    4.21
+127    ASM     7.13   1.30  30.14       1.2         Basic Materials            Other Precious Metals & Mining        4.47  55.9  Bull       0.07   10.05       0.07      47.8     NaN
+128   HAYW    15.03   1.62   2.24       3.3             Industrials              Electrical Equipment & Parts        4.29  61.2  Bull       0.12   10.43       0.02      47.7     NaN
+129   LECO   277.49  -0.47   9.58      15.2             Industrials                       Tools & Accessories        5.80  63.2  Bull       1.75    9.33       0.05      47.6    3.73
+130    NVR  6437.58   0.00   2.10      17.4       Consumer Cyclical                  Residential Construction        1.79  59.4  Bull      43.50   11.50       0.02      47.5    3.29
+131    CCK   103.94   2.17   8.90      11.6       Consumer Cyclical                    Packaging & Containers        4.77  66.4  Bull       1.19    9.14       0.08      47.2     NaN
+132   CGAU    17.84   0.28  21.03       3.5         Basic Materials                                      Gold        3.71  56.9  Bull       0.21    9.72       0.04      46.9    3.83
+133     NG     8.55   1.97  25.66       3.7         Basic Materials                                      Gold        1.43  56.2  Bull       0.12   10.54       0.07      46.9    4.38
+134    SHG    68.62  -3.46   6.77      32.3      Financial Services                          Banks - Regional        4.88  56.7  Bull       0.64    8.61       0.10      46.8    5.00
+135    TPG    45.05  -0.99   4.35      17.3      Financial Services                          Asset Management        5.16  61.4  Bull       0.30    8.95       0.02      46.7    4.13
+136    KNF    81.86  -0.27   7.30       4.6         Basic Materials                        Building Materials        2.46  56.2  Bull       0.95    9.86       0.01      46.2    4.00
+137     AU    96.05   3.28  22.40      48.6         Basic Materials                                      Gold        2.75  55.7  Bull       1.00    8.82       0.07      45.8    4.00
+138      B    42.78  -0.12  15.03      71.9         Basic Materials                                      Gold        3.11  55.8  Bull       0.22    8.76       0.03      45.6    4.04
+139   LION    15.05  -3.06  11.28       4.4                     N/A                                       N/A       18.52  71.3  Bull       0.03   19.79       0.27      45.5    4.10
+140    NAT     5.63   1.92   8.61       1.2                  Energy                       Oil & Gas Midstream        7.21  62.9  Bull       0.07    6.32       0.07      45.5     NaN
+141   UFPI    86.56   0.54   5.46       4.9         Basic Materials                  Lumber & Wood Production        1.07  60.2  Bull       0.99    9.83       0.01      45.5     NaN
+142    GVA   147.37   1.51   8.55       6.4             Industrials                Engineering & Construction        9.14  67.5  Bull       0.62   11.25       0.01      45.5     NaN
+143   CART    43.69  -1.41   6.01      10.3       Consumer Cyclical                           Internet Retail        6.60  59.0  Bull       0.28    6.60       0.02      45.1    3.97
+144   NMRK    15.51   1.24   2.11       3.9             Real Estate                      Real Estate Services        2.84  57.8  Bull       0.15    8.46       0.02      45.0    4.14
+145   AFRM    75.50   0.60  15.96      25.3      Financial Services                           Credit Services       16.80  63.5  Bull       0.20   17.22       0.05      44.8    4.32
+146    SKE    31.65   2.59  21.64       3.9         Basic Materials          Other Industrial Metals & Mining        6.31  58.0  Bull       0.30    5.92       0.09      44.8     NaN
+147    MMM   162.51   0.25   3.61      84.8             Industrials                             Conglomerates        6.84  73.0  Bull       0.74    9.36       0.03      44.8    3.80
+148    VST   160.15   0.81   9.53      54.0               Utilities   Utilities - Independent Power Producers        4.47  57.8  Bull       0.57   17.11       0.06      44.7    4.60
+149    PNC   234.99   0.11   1.01      94.4      Financial Services                          Banks - Regional        5.79  63.0  Bull       1.05   10.18       0.02      44.6    4.27
+150   ACIW    45.40  -0.21   3.83       4.6              Technology                 Software - Infrastructure        5.22  60.1  Bull       0.28    6.61       0.03      44.4    4.50
+151   TRUP    24.36   0.12   9.88       1.1      Financial Services           Insurance - Property & Casualty        1.06  61.5  Bull       0.41    8.51       0.02      44.2    3.83
+152     DE   590.18   0.66   5.38     159.3             Industrials       Farm & Heavy Construction Machinery        3.38  58.7  Bull       3.21    5.75       0.17      43.9    3.88
+153    FSM     9.84   1.73  21.59       3.0         Basic Materials                                      Gold        1.33  55.0  Bull       0.09    7.74       0.05      43.8    4.00
+154    KMT    36.86   0.99  10.69       2.8             Industrials                       Tools & Accessories        3.43  57.9  Bull       0.52    6.59       0.01      43.4    2.44
+155    NLY    22.58  -0.04   5.46      16.5             Real Estate                           REIT - Mortgage        3.22  62.1  Bull       0.16    6.11       0.08      43.4    4.08
+156    WMS   144.01   0.54   6.13      11.0             Industrials             Building Products & Equipment        2.85  58.7  Bull       1.17    6.60       0.02      43.2    4.80
+157   ABNB   141.32   0.37   7.59      83.9       Consumer Cyclical                           Travel Services        5.07  62.0  Bull       0.73    5.23       0.04      43.1    3.88
+158   PIPR    82.33   1.68   7.58       5.6      Financial Services                           Capital Markets        3.12  59.9  Bull       0.62    6.34       0.01      43.0     NaN
+159    ATR   121.46   0.67   5.92       7.8              Healthcare            Medical Instruments & Supplies        1.63  61.6  Bull       1.22    6.91       0.02      42.9    4.25
+160   LPLA   305.48   1.32   5.63      24.4      Financial Services                           Capital Markets        2.25  59.3  Bull       3.74    6.42       0.02      42.7    4.31
+161    RJF   158.85   0.34   5.49      31.0      Financial Services                          Asset Management        4.56  65.2  Bull       1.25    5.19       0.01      42.5     NaN
+162   MELI  1698.65   1.74   6.95      86.1       Consumer Cyclical                           Internet Retail        0.12  54.5  Bull       8.98    6.51       0.08      42.3    4.46
+163   BRAI     9.76  33.58  26.81       2.0              Technology                         Computer Hardware       17.03  57.5  Bear      -0.11   39.29       0.43      42.1    4.00
+164   USAS     5.99   2.13  31.18       2.0         Basic Materials          Other Industrial Metals & Mining        0.86  54.1  Bull       0.06    6.11       0.06      42.0    4.75
+165    SII   132.00   0.79  17.01       3.4      Financial Services                          Asset Management        1.21  54.7  Bull       1.07    5.91       0.03      41.7    4.40
+166   PLGO    23.75   0.55   5.71       2.0      Financial Services                   Insurance - Diversified       10.37  66.8  Bull       0.14    1.06       0.04      41.6    3.11
+167    WPM   130.38   2.25  21.26      59.2         Basic Materials                                      Gold        1.25  54.8  Bull       1.16    5.18       0.05      41.3    4.69
+168    AEG     8.63  -0.58   6.77      13.1      Financial Services                   Insurance - Diversified        7.54  68.0  Bull       0.04    6.01       0.08      41.2     NaN
+169    ZWS    49.97   0.81   3.41       8.4             Industrials            Pollution & Treatment Controls        3.40  59.8  Bull       0.27    4.31       0.01      41.1    3.80
+170   KEEL     6.24   3.43  15.04       3.8              Technology           Information Technology Services       41.10  67.8  Bear      -0.05   49.16       0.10      40.9    4.67
+171    EXK     9.46   2.16  27.49       2.8         Basic Materials                                    Silver        0.33  53.4  Bull       0.08    4.99       0.07      40.7    4.75
+172    HDB    25.42   0.49   9.55     130.4      Financial Services                          Banks - Regional        1.10  61.4  Bull       0.28    4.76       0.05      40.7     NaN
+173    MWA    26.37   0.53   2.89       4.1             Industrials            Specialty Industrial Machinery        0.13  56.2  Bull       0.20    5.48       0.02      40.7     NaN
+174    FOR    28.86  -0.55   1.91       1.5             Real Estate                 Real Estate - Development        5.50  59.5  Bull       0.10   14.52       0.00      40.6     NaN
+175   UMAC    25.50   0.93  11.62       1.2              Technology                         Computer Hardware       25.35  55.5  Bear      -0.53   86.71       0.04      40.3    4.67
+176    WPP    19.06   0.90   4.04       4.1  Communication Services                      Advertising Agencies        6.63  59.1  Bull       0.08    6.73       0.14      40.3     NaN
+177   JBTM   133.20   1.79  11.93       6.9             Industrials            Specialty Industrial Machinery        2.45  58.5  Bull       0.60    6.56       0.08      39.8    4.33
+178   ASIC    21.22  -0.28   0.76       1.0      Financial Services           Insurance - Property & Casualty        4.97  60.6  Bull       0.13    2.12       0.01      39.7     NaN
+179    NEM   108.97   0.89  17.46     116.3         Basic Materials                                      Gold        0.62  53.6  Bull       0.72    3.93       0.05      39.6    4.36
+180    YUM   156.55  -0.60   3.62      43.1       Consumer Cyclical                               Restaurants        1.94  58.8  Bull       1.11    3.37       0.02      39.5    3.77
+181    FNV   231.18  -0.48  11.14      44.6         Basic Materials                                      Gold        0.36  54.7  Bull       1.41    4.01       0.02      39.4    4.33
+182    FSS   113.51   0.72   2.59       6.9             Industrials       Farm & Heavy Construction Machinery        1.27  54.9  Bull       0.66    3.60       0.01      39.3    4.33
+183     OR    37.31   1.10  12.91       7.0         Basic Materials                                      Gold        1.34  55.4  Bull       0.25    3.14       0.03      39.1    3.82
+184   AVAH     7.51  -2.72   9.32       1.6              Healthcare                   Medical Care Facilities        7.18  62.5  Bull       0.04   -2.47       0.03      38.8    4.27
+185   SCHW    93.60  -0.15   4.85     162.8      Financial Services                           Capital Markets        3.07  62.0  Bull       0.76    1.95       0.03      38.7    4.33
+186    AMP   472.14  -0.16   4.77      42.4      Financial Services                          Asset Management        3.01  63.0  Bull       2.87    1.81       0.03      38.5     NaN
+187    GBX    49.13  -0.37   4.60       1.5             Industrials                                 Railroads        0.54  56.3  Bull       0.33    3.06       0.01      38.4     NaN
+188     SF    74.17  -0.12   5.27      11.4      Financial Services                           Capital Markets        0.74  57.9  Bull       0.63    2.65       0.04      38.4     NaN
+189   GRND    13.28  -3.42  16.70       2.4              Technology                    Software - Application        6.04  59.7  Bull       0.15   -3.07       0.03      38.3     NaN
+190     RS   412.54  -1.77   4.63      21.1         Basic Materials                                     Steel       11.54  70.6  Bull       0.96   15.80       0.01      37.9    3.38
+191    MCO   468.23  -0.59   3.89      81.8      Financial Services          Financial Data & Stock Exchanges        3.81  61.4  Bull       1.85    7.76       0.05      37.8    4.22
+192   PURR     9.89  -2.80  30.58       1.4      Financial Services                           Capital Markets       28.59  60.2  Bear      -0.03   26.89       0.06      37.4    4.50
+193    VMI   569.58   2.14  11.19      11.1             Industrials                             Conglomerates       12.82  67.6  Bull       1.16   15.97       0.07      37.3     NaN
+194    BEN    33.71   1.60   8.25      17.5      Financial Services                          Asset Management       12.03  68.7  Bull       0.10    9.48       0.06      37.1    3.18
+195    DKS   228.76   1.31   7.01      20.5       Consumer Cyclical                          Specialty Retail        5.49  57.4  Bull       0.82    8.74       0.02      36.8    3.96
+196   PRVA    23.26  -1.15   4.92       2.9              Healthcare               Health Information Services        2.65  57.3  Bull       0.24   -1.82       0.02      36.5    4.55
+197   DFTX    24.41   1.71   6.36       2.7              Healthcare                             Biotechnology       10.22  58.1  Bull       0.04   19.19       0.05      36.4    4.75
+198    MTG    26.30   0.54   2.26       5.6      Financial Services                     Insurance - Specialty        0.59  56.4  Bull       0.16    0.88       0.02      36.4    3.17
+199    BTG     4.63   1.95  19.33       6.2         Basic Materials                                      Gold        0.77  53.9  Bull       0.03    0.72       0.03      36.3    3.69
+200   EQPT    22.24  -0.04  20.54       5.6             Industrials                 Rental & Leasing Services        1.77  55.5  Bull       0.26   -0.67       0.01      36.0     NaN
+201    FER    69.77   2.47   6.02      50.0             Industrials                Engineering & Construction        3.29  59.1  Bull       0.29    3.84       0.10      35.8     NaN
+202   NMIH    37.97  -0.13   3.60       2.9      Financial Services                     Insurance - Specialty        0.97  57.0  Bull       0.24   -1.53       0.01      35.5     NaN
+203   HIVE     4.17   2.46  19.14       1.1      Financial Services                           Capital Markets       23.08  58.9  Bear      -0.07   24.48       0.05      34.9    4.71
+204   ASND   235.83   2.00  10.60      15.5              Healthcare                             Biotechnology        3.57  57.7  Bull       1.10   -0.76       0.05      34.7    4.78
+205   GLBE    32.42   1.27   0.12       5.4       Consumer Cyclical                           Internet Retail        2.15  54.1  Bull       0.09   12.30       0.05      34.1    4.62
+206   VCYT    51.20  -0.08   3.98       4.1              Healthcare                    Diagnostics & Research       21.23  68.5  Bear      -0.17   23.37       0.05      33.8    4.36
+207   CVBF    21.17  -0.33   1.44       3.7      Financial Services                          Banks - Regional        4.11  60.2  Bull       0.07    6.81       0.04      33.7    3.33
+208    UBS    50.88   0.17   6.30     166.8      Financial Services                       Banks - Diversified       11.99  70.5  Bull       0.12    9.90       0.09      33.0     NaN
+209   SPGI   430.23  -0.04   0.90     127.4      Financial Services          Financial Data & Stock Exchanges        1.29  55.5  Bull       1.65    5.08       0.05      33.0    4.71
+210    SLM    22.96   4.33   7.79       4.3      Financial Services                           Credit Services        3.81  57.4  Bull       0.08    7.64       0.02      32.6    4.00
+211   SDGR    15.19   1.33   4.61       1.1              Healthcare               Health Information Services       12.28  61.3  Bear      -0.03   26.06       0.04      32.5     NaN
+212   INOD   106.90  -0.74   7.02       3.5              Technology           Information Technology Services       29.19  58.7  Bear      -1.97   21.22       0.06      31.7    4.75
+213    FAF    68.39   0.86   3.41       7.0      Financial Services                     Insurance - Specialty        3.62  58.7  Bull       0.25    2.26       0.03      30.0    4.60
+214    LTH    35.19  -4.64   7.89       7.8       Consumer Cyclical                                   Leisure       12.30  64.9  Bull       0.09    5.91       0.02      29.8    4.71
+215    AIT   327.73   1.47   4.35      12.1             Industrials                   Industrial Distribution        7.72  64.7  Bull       0.78    8.29       0.04      29.2    4.50
+216    DLR   190.70   0.21   6.19      68.2             Real Estate                          REIT - Specialty        2.07  55.1  Bull       0.67    3.05       0.02      29.0    4.28
+217   HSBC    96.09   1.74  11.53     329.6      Financial Services                       Banks - Diversified        6.56  60.7  Bull       0.22    8.61       0.10      28.6    4.00
+218     MA   501.69   0.04   2.58     443.3      Financial Services                           Credit Services        0.74  55.7  Bull       1.95    0.40       0.05      28.4    4.69
+219    PBI    17.67   0.83   4.46       2.4             Industrials            Integrated Freight & Logistics       15.72  71.7  Bull       0.02   13.16       0.02      28.0    3.20
+220   SIMO   296.96   3.37  17.99      10.1              Technology                            Semiconductors       26.67  62.7  Bear      -2.46   17.41       0.04      27.8    4.55
+221    NNI   131.32   0.29   0.46       4.7      Financial Services                           Credit Services        0.43  53.5  Bull       0.45    2.22       0.05      27.1     NaN
+222   TTWO   230.17   0.32   9.37      42.7  Communication Services            Electronic Gaming & Multimedia        5.06  61.1  Bull       0.79   -3.35       0.06      27.1    4.79
+223    SVM    12.77   1.15  26.76       2.8         Basic Materials                                    Silver        6.42  55.3  Bull       0.04   -2.90       0.07      26.9    4.67
+224    AMN    31.33  -2.85   6.64       1.2              Healthcare                   Medical Care Facilities       18.23  63.2  Bear      -0.11   16.38       0.06      26.0    3.44
+225   TDOC     7.53   0.13   8.66       1.4              Healthcare               Health Information Services       13.25  62.0  Bear      -0.01   18.58       0.03      25.5    3.52
+226   FCEL    19.91   0.61  22.83       1.3             Industrials              Electrical Equipment & Parts       21.78  53.9  Bear      -0.51   14.69       0.07      25.3    2.88
+227   MTCH    36.10  -1.16   5.11       8.4  Communication Services            Internet Content & Information        3.20  55.0  Bull       0.11    2.14       0.07      25.2    3.60
+228      V   335.08   0.56   3.75     637.2      Financial Services                           Credit Services        4.19  61.7  Bull       0.90    1.57       0.07      23.2    4.67
+229    ACT    42.91  -0.51   2.53       6.0      Financial Services                     Insurance - Specialty        1.94  56.2  Bull       0.13   -2.01       0.03      22.6     NaN
+230    ING    31.58   1.49  10.01      90.5      Financial Services                       Banks - Diversified        7.49  63.2  Bull       0.04    8.02       0.14      22.1     NaN
+231    RDN    35.04  -0.54   0.89       4.7      Financial Services                     Insurance - Specialty        0.53  51.7  Bull       0.11   -5.32       0.02      22.1    4.00
+232     BE   290.86   3.12  12.04      82.7             Industrials              Electrical Equipment & Parts       16.12  56.4  Bear      -2.54   12.43       0.09      21.2    3.71
+233   EQIX  1098.17   0.20   5.76     108.3             Real Estate                          REIT - Specialty        4.56  60.9  Bull       1.97    5.26       0.02      20.3    4.42
+234   CYTK    76.96   2.63  14.75      10.4              Healthcare                             Biotechnology        8.70  61.0  Bull       0.16    0.67       0.08      20.2    4.41
+235   PNFP    98.66   0.42   5.96      14.9      Financial Services                          Banks - Regional        3.46  58.0  Bull       0.19    4.59       0.02      20.1    4.26
+236     SA    31.80   1.86  26.90       3.4         Basic Materials                                      Gold        4.25  54.1  Bull       0.00   15.18       0.03      18.4    4.00
+237    DCH     6.51  -1.51   7.78       1.5       Consumer Cyclical                                Auto Parts        3.65  53.8  Bear      -0.00   16.04       0.02      18.1    3.91
+238    MSM   116.71  -0.49   1.35       6.5             Industrials                   Industrial Distribution        9.34  64.6  Bear      -0.20   12.38       0.03      17.3    3.22
+239   STGW     6.85  -2.14   4.90       1.7  Communication Services                      Advertising Agencies        5.43  56.3  Bull       0.01    8.90       0.02      17.0     NaN
+240    MCY   102.50  -0.11   1.42       5.7      Financial Services           Insurance - Property & Casualty        4.94  60.0  Bull       0.18    1.37       0.02      16.3     NaN
+241    WLY    44.88  -0.32   1.12       2.3  Communication Services                                Publishing        8.46  62.7  Bull       0.03    6.79       0.10      15.9     NaN
+242     EW    88.57   1.54   3.02      51.0              Healthcare                           Medical Devices        5.06  61.1  Bull       0.03    7.81       0.03      13.1    4.31
+243     SG     9.05  -1.63  13.13       1.1       Consumer Cyclical                               Restaurants       16.65  58.3  Bear      -0.03    4.62       0.02      13.1    3.20
+244    ALM    18.99   2.60  18.91       5.4         Basic Materials          Other Industrial Metals & Mining        2.53  51.9  Bear      -0.01    9.77       0.06      11.6    4.78
+245     IX    39.65   0.72   3.94      43.5      Financial Services                   Financial Conglomerates        9.31  62.2  Bear      -0.18    6.54       0.01      11.3     NaN
+246    UVE    37.94   0.65   0.25       1.1      Financial Services           Insurance - Property & Casualty        2.24  52.4  Bull       0.05   -3.77       0.01      11.2     NaN
+247    WCC   361.71   1.54   8.39      17.6             Industrials                   Industrial Distribution        6.58  55.6  Bear      -1.80    7.47       0.02      11.0    4.36
+248   KYIV    14.13   1.07   6.24       3.3  Communication Services                          Telecom Services        7.21  59.2  Bear      -0.07    5.29       0.05       9.3    4.67
+249   CPAY   361.70  -0.63   3.64      23.6              Technology                 Software - Infrastructure        6.77  60.7  Bear      -0.67    5.41       0.02       8.9    4.29
+250   PNTG    33.17  -2.11   1.21       1.2              Healthcare                   Medical Care Facilities        1.95  52.6  Bull       0.03   -6.15       0.02       8.3    4.86
+251    IRM   128.38   0.14   4.78      38.2             Real Estate                          REIT - Specialty        6.03  57.8  Bear      -0.13    4.65       0.02       7.9    4.27
+252   RELY    20.71   0.19  12.80       4.4              Technology                 Software - Infrastructure        4.59  54.8  Bull       0.01   -3.40       0.02       7.2    4.80
+253   NEXA    14.90   0.61  16.82       2.0         Basic Materials          Other Industrial Metals & Mining        7.74  54.9  Bear      -0.03    2.16       0.03       6.3    2.88
+254   EOSE     7.57  10.26  21.01       2.6             Industrials              Electrical Equipment & Parts        2.17  52.4  Bear      -0.17    1.95       0.38       6.2    3.50
+255    OWL     9.97   0.45   3.91      15.5      Financial Services                          Asset Management        1.60  53.2  Bear      -0.04    5.01       0.03       6.1    4.07
+256   TBLA     4.92  -2.38   4.90       1.3  Communication Services            Internet Content & Information       10.69  59.3  Bear      -0.03   -1.80       0.08       6.0    4.00
+257   FLYW    15.90  -1.52  12.56       2.0              Technology                 Software - Infrastructure        8.36  58.6  Bear      -0.03   -0.72       0.02       4.3    4.07
+258     BW    17.46   3.01  12.72       2.6             Industrials            Specialty Industrial Machinery        5.06  51.3  Bear      -0.21  -13.35       0.06       3.0    5.00
+259   ATAI     4.12  -3.17   6.04       1.5              Healthcare                             Biotechnology        0.46  50.0  Bear      -0.05   -0.60       0.07       0.8    4.86
+
+CSV saved to /home/ec2-user/output.csv

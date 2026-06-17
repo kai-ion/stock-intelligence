@@ -1,0 +1,102 @@
+[
+  {
+    "action": "SELL",
+    "ticker": "CCL",
+    "shares": 65.0066,
+    "price": 31.34,
+    "date": "2026-06-17",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 53.31,
+    "pnl_pct": 2.69,
+    "entry_price": 30.52,
+    "hold_days": 1
+  },
+  {
+    "action": "BUY",
+    "ticker": "CPNG",
+    "shares": 106.1014,
+    "price": 18.98,
+    "date": "2026-06-17",
+    "target": 22.5,
+    "stop": 16.82,
+    "reasoning": {
+      "upside": "RSI of 8.27 is among the most oversold readings I've seen in a liquid mid-cap \u2014 mean reversion alone should carry this 15-20% higher, and a successful appeal (partial or full) would be an additional catalyst.",
+      "risk": "If the appeal fails and the full $410M fine sticks, it represents a material hit to near-term earnings and could trigger further institutional selling."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "CPNG",
+    "shares": 106.1014,
+    "price": 18.91,
+    "date": "2026-06-17",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -7.95,
+    "pnl_pct": -0.4,
+    "entry_price": 18.98,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "FTAI",
+    "shares": 7.2179,
+    "price": 279.0,
+    "date": "2026-06-17",
+    "target": 315.0,
+    "stop": 260.0,
+    "reasoning": {
+      "upside": "Capital structure cleanup (preferred redemption + $612M ABS pricing) removes overhang and demonstrates balance sheet strength; strong Q1 earnings in industrial distributors space provides fundamental support.",
+      "risk": "Short interest and the Artisan exit signal that sophisticated money sees risks here \u2014 if aviation cycle turns or interest rates spike further, the leveraged model faces pressure."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "FTAI",
+    "shares": 7.2179,
+    "price": 272.37,
+    "date": "2026-06-17",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -47.86,
+    "pnl_pct": -2.38,
+    "entry_price": 279.0,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "VMC",
+    "shares": 6.5597,
+    "price": 302.07,
+    "date": "2026-06-17",
+    "target": 325.0,
+    "stop": 286.0,
+    "reasoning": {
+      "upside": "RSI 6.91 is comically oversold for a blue-chip materials name that just beat estimates \u2014 this is a classic \"market didn't believe it\" setup that tends to resolve higher over 1-2 weeks as analysts raise estimates.",
+      "risk": "Construction spending deceleration or a hawkish Fed surprise today could pressure cyclicals broadly."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "VMC",
+    "shares": 6.5597,
+    "price": 302.35,
+    "date": "2026-06-17",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 1.84,
+    "pnl_pct": 0.09,
+    "entry_price": 302.07,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "EOSE",
+    "shares": 261.9981,
+    "price": 7.57,
+    "date": "2026-06-17",
+    "target": 10.0,
+    "stop": 6.0,
+    "reasoning": {
+      "upside": "Production start at new Pennsylvania facility is a genuine inflection point \u2014 moves the company from \"story stock\" to \"revenue stock\" with 2GWh of contracted demand from Frontier Power.",
+      "risk": "Pre-profit energy storage companies burn cash aggressively during scale-up; any production ramp hiccup or customer delay could trigger a sharp selloff."
+    }
+  }
+]
