@@ -1,0 +1,13 @@
+{
+  "date": "2026-06-18",
+  "total_value": 9898.09,
+  "cash": 0.0,
+  "positions_count": 5,
+  "positions": {
+    "INNV": 2018.81,
+    "CIFR": 2232.77,
+    "ELVN": 2125.42,
+    "EAT": 1864.52,
+    "ICHR": 1656.57
+  }
+}

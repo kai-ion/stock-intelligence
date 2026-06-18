@@ -1,13 +1,13 @@
 {
   "date": "2026-06-17",
-  "total_value": 10041.27,
+  "total_value": 9940.46,
   "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "INNV": 2088.81,
-    "CIFR": 2224.45,
-    "ELVN": 2003.5,
-    "SSRM": 1714.96,
-    "EOSE": 2009.55
+    "INNV": 2013.5,
+    "CIFR": 2193.7,
+    "ELVN": 2109.88,
+    "EOSE": 1995.12,
+    "VMC": 1628.27
   }
 }

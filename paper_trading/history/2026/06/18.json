@@ -1,0 +1,102 @@
+[
+  {
+    "action": "SELL",
+    "ticker": "EOSE",
+    "shares": 261.9981,
+    "price": 7.43,
+    "date": "2026-06-18",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -36.66,
+    "pnl_pct": -1.85,
+    "entry_price": 7.57,
+    "hold_days": 1
+  },
+  {
+    "action": "BUY",
+    "ticker": "INTC",
+    "shares": 14.607,
+    "price": 133.27,
+    "date": "2026-06-18",
+    "target": 145.0,
+    "stop": 124.0,
+    "reasoning": {
+      "upside": "Apple partnership validates the foundry model, likely triggers multiple analyst upgrades and could catalyze other U.S. OEMs to announce similar deals; narrative shift from \"turnaround hope\" to \"turnaround reality.\"",
+      "risk": "Nvidia's entry into adjacent markets (per CFO comments today) and execution risk on actually delivering Apple's chips at competitive yields \u2014 Intel has disappointed on manufacturing timelines before."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "INTC",
+    "shares": 14.607,
+    "price": 130.25,
+    "date": "2026-06-18",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -44.11,
+    "pnl_pct": -2.27,
+    "entry_price": 133.27,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "DYN",
+    "shares": 94.1396,
+    "price": 20.21,
+    "date": "2026-06-18",
+    "target": 23.0,
+    "stop": 18.4,
+    "reasoning": {
+      "upside": "Priority Review designation if granted would compress the timeline to commercialization; the DMD market is $5B+ TAM with limited competition, and a completed BLA is the biggest regulatory milestone short of approval.",
+      "risk": "FDA could issue a Refuse to File letter or request additional data; biotech binary outcomes mean position sizing matters more than conviction."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "DYN",
+    "shares": 94.1396,
+    "price": 19.68,
+    "date": "2026-06-18",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -49.89,
+    "pnl_pct": -2.62,
+    "entry_price": 20.21,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "EAT",
+    "shares": 11.2405,
+    "price": 164.82,
+    "date": "2026-06-18",
+    "target": 175.0,
+    "stop": 153.0,
+    "reasoning": {
+      "upside": "Falling gas prices are a direct tailwind to casual dining traffic; the company is executing on its turnaround and Wall Street coverage remains bullish with significant upside to consensus targets.",
+      "risk": "Consumer spending deceleration if the Fed actually hikes; restaurant comps are tough to sustain at this growth rate and any traffic slowdown gets punished severely."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "VMC",
+    "shares": 5.522,
+    "price": 303.24,
+    "date": "2026-06-18",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 6.49,
+    "pnl_pct": 0.39,
+    "entry_price": 302.07,
+    "hold_days": 1
+  },
+  {
+    "action": "BUY",
+    "ticker": "ICHR",
+    "shares": 17.0088,
+    "price": 98.45,
+    "date": "2026-06-18",
+    "target": 110.0,
+    "stop": 91.5,
+    "reasoning": {
+      "upside": "Intel-Apple deal means more U.S. fab construction which directly drives orders for Ichor's fluid and gas delivery subsystems; this is a \"picks and shovels\" play on the domestic chip manufacturing boom.",
+      "risk": "Insider selling at these levels is a clear caution flag; semiconductor equipment is deeply cyclical and any capex pullback would hit this name hard \u2014 the CEO selling 13K shares says he thinks risk/reward is getting balanced."
+    }
+  }
+]
