@@ -1,0 +1,13 @@
+{
+  "date": "2026-06-19",
+  "total_value": 10002.16,
+  "cash": 198.23,
+  "positions_count": 5,
+  "positions": {
+    "INNV": 1986.92,
+    "ELVN": 2123.06,
+    "ICHR": 1677.24,
+    "INTC": 2016.28,
+    "BE": 2000.43
+  }
+}

@@ -98,5 +98,55 @@
       "upside": "Intel-Apple deal means more U.S. fab construction which directly drives orders for Ichor's fluid and gas delivery subsystems; this is a \"picks and shovels\" play on the domestic chip manufacturing boom.",
       "risk": "Insider selling at these levels is a clear caution flag; semiconductor equipment is deeply cyclical and any capex pullback would hit this name hard \u2014 the CEO selling 13K shares says he thinks risk/reward is getting balanced."
     }
+  },
+  {
+    "action": "SELL",
+    "ticker": "CIFR",
+    "shares": 83.1261,
+    "price": 28.88,
+    "date": "2026-06-18",
+    "reason": "TARGET HIT",
+    "pnl": 425.6,
+    "pnl_pct": 21.55,
+    "entry_price": 23.76,
+    "hold_days": 6
+  },
+  {
+    "action": "BUY",
+    "ticker": "INTC",
+    "shares": 15.048,
+    "price": 133.27,
+    "date": "2026-06-18",
+    "target": 145.0,
+    "stop": 124.0,
+    "reasoning": {
+      "upside": "Apple partnership validates the foundry model, likely triggers multiple analyst upgrades and could catalyze other U.S. OEMs to announce similar deals; narrative shift from \"turnaround hope\" to \"turnaround reality.\"",
+      "risk": "Nvidia's entry into adjacent markets (per CFO comments today) and execution risk on actually delivering Apple's chips at competitive yields \u2014 Intel has disappointed on manufacturing timelines before."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "EAT",
+    "shares": 11.2405,
+    "price": 164.06,
+    "date": "2026-06-18",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -8.55,
+    "pnl_pct": -0.46,
+    "entry_price": 164.82,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "DYN",
+    "shares": 99.2303,
+    "price": 20.21,
+    "date": "2026-06-18",
+    "target": 23.0,
+    "stop": 18.4,
+    "reasoning": {
+      "upside": "Priority Review designation if granted would compress the timeline to commercialization; the DMD market is $5B+ TAM with limited competition, and a completed BLA is the biggest regulatory milestone short of approval.",
+      "risk": "FDA could issue a Refuse to File letter or request additional data; biotech binary outcomes mean position sizing matters more than conviction."
+    }
   }
 ]
