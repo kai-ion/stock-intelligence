@@ -123,5 +123,105 @@
       "upside": "Multi-gigawatt, 20-year contracts provide revenue visibility that no other fuel cell company can match; AI data center buildout is a secular multi-year spending cycle in early innings.",
       "risk": "Execution risk on deploying fuel cells at unprecedented scale; higher-for-longer rates increase the discount rate on long-duration contracted cash flows."
     }
+  },
+  {
+    "action": "SELL",
+    "ticker": "BE",
+    "shares": 6.082,
+    "price": 328.91,
+    "date": "2026-06-19",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 0.0,
+    "pnl_pct": 0.0,
+    "entry_price": 328.91,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "QS",
+    "shares": 248.8101,
+    "price": 8.04,
+    "date": "2026-06-19",
+    "target": 9.5,
+    "stop": 7.0,
+    "reasoning": {
+      "upside": "RSI at 3.98 entering this move means extreme oversold conditions with a genuine fundamental catalyst \u2014 this combination historically produces multi-day follow-through in speculative names.",
+      "risk": "Pre-revenue company with ongoing cash burn; Honda \"research agreement\" is non-binding and could fizzle without production commitments."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "QS",
+    "shares": 248.8101,
+    "price": 8.04,
+    "date": "2026-06-19",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 0.0,
+    "pnl_pct": -0.0,
+    "entry_price": 8.04,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "LEU",
+    "shares": 10.4521,
+    "price": 191.39,
+    "date": "2026-06-19",
+    "target": 210.0,
+    "stop": 171.0,
+    "reasoning": {
+      "upside": "Oklo deal for five reactors with 2029 deliveries creates visible future revenue; Zacks notes positive earnings revision momentum, and nuclear policy tailwinds are bipartisan and strengthening.",
+      "risk": "HALEU production capacity remains limited and execution-dependent; any nuclear policy reversal or reactor project cancellation would hit sentiment hard."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "LEU",
+    "shares": 10.4521,
+    "price": 191.39,
+    "date": "2026-06-19",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -0.0,
+    "pnl_pct": -0.0,
+    "entry_price": 191.39,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "HIMS",
+    "shares": 56.3979,
+    "price": 35.47,
+    "date": "2026-06-19",
+    "target": 39.0,
+    "stop": 30.0,
+    "reasoning": {
+      "upside": "July FDA peptide decision is a defined catalyst with asymmetric payoff \u2014 if favorable, it removes the biggest regulatory overhang and opens a massive addressable market expansion.",
+      "risk": "Adverse FDA ruling on compounded peptides would crater the GLP-1 thesis overnight; binary catalyst means position sizing matters."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "HIMS",
+    "shares": 56.3979,
+    "price": 35.47,
+    "date": "2026-06-19",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 0.0,
+    "pnl_pct": 0.0,
+    "entry_price": 35.47,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "MTN",
+    "shares": 13.8171,
+    "price": 144.78,
+    "date": "2026-06-19",
+    "target": 155.0,
+    "stop": 130.0,
+    "reasoning": {
+      "upside": "Proxy fight creates a hard catalyst timeline; named potential buyers (including a billionaire CEO publicly stating willingness to invest) establish credible M&A interest and create a valuation floor.",
+      "risk": "Proxy fight may fail or result in modest board changes rather than a sale; underlying fundamentals (softer visitation, pass sales pressure) haven't inflected yet."
+    }
   }
 ]

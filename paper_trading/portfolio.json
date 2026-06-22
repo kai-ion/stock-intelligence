@@ -1,5 +1,5 @@
 {
-  "cash": 198.23498274669487,
+  "cash": 53.789824486232874,
   "positions": {
     "INNV": {
       "shares": 221.5067,
@@ -17,14 +17,6 @@
       "entry_date": "2026-06-12",
       "cost": 1936.18
     },
-    "ICHR": {
-      "shares": 17.0088,
-      "entry_price": 98.45,
-      "exit_target": 110.0,
-      "stop_loss": 91.5,
-      "entry_date": "2026-06-18",
-      "cost": 1674.52
-    },
     "INTC": {
       "shares": 15.048,
       "entry_price": 133.27,
@@ -33,13 +25,21 @@
       "entry_date": "2026-06-18",
       "cost": 2005.45
     },
-    "BE": {
-      "shares": 6.082,
-      "entry_price": 328.91,
-      "exit_target": 360.0,
-      "stop_loss": 290.0,
-      "entry_date": "2026-06-19",
-      "cost": 2000.43
+    "HIVE": {
+      "shares": 359.9569,
+      "entry_price": 5.12,
+      "exit_target": 6.5,
+      "stop_loss": 4.3,
+      "entry_date": "2026-06-22",
+      "cost": 1842.98
+    },
+    "ON": {
+      "shares": 15.7267,
+      "entry_price": 129.34,
+      "exit_target": 140.0,
+      "stop_loss": 122.0,
+      "entry_date": "2026-06-22",
+      "cost": 2034.09
     }
   },
   "start_date": "2026-06-02",

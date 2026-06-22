@@ -1,0 +1,102 @@
+[
+  {
+    "action": "SELL",
+    "ticker": "ICHR",
+    "shares": 17.0088,
+    "price": 96.7,
+    "date": "2026-06-22",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -29.77,
+    "pnl_pct": -1.78,
+    "entry_price": 98.45,
+    "hold_days": 4
+  },
+  {
+    "action": "BUY",
+    "ticker": "HIVE",
+    "shares": 359.9569,
+    "price": 5.12,
+    "date": "2026-06-22",
+    "target": 6.5,
+    "stop": 4.3,
+    "reasoning": {
+      "upside": "Three catalysts landed in one week (contract, acquisition, AI trial) and RSI at 47 means this isn't technically overbought \u2014 the re-rating from \"Bitcoin miner\" to \"AI infrastructure\" multiple is still early.",
+      "risk": "Bitcoin mining legacy business creates earnings volatility; execution risk on the AI pivot at scale; Canadian dollar exposure."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "MTN",
+    "shares": 13.8171,
+    "price": 146.0,
+    "date": "2026-06-22",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 16.87,
+    "pnl_pct": 0.84,
+    "entry_price": 144.78,
+    "hold_days": 3
+  },
+  {
+    "action": "BUY",
+    "ticker": "CRDO",
+    "shares": 6.6926,
+    "price": 301.42,
+    "date": "2026-06-22",
+    "target": 325.0,
+    "stop": 273.0,
+    "reasoning": {
+      "upside": "Fresh Evercore initiation provides institutional validation and the $325 PT gives a clear near-term magnet; AI networking TAM is expanding as cluster sizes grow.",
+      "risk": "Already at record highs with no technical resistance above; any broad semiconductor rotation (per the BofA crowding survey) would hit this hardest."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "CRDO",
+    "shares": 6.6926,
+    "price": 301.33,
+    "date": "2026-06-22",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -0.62,
+    "pnl_pct": -0.03,
+    "entry_price": 301.42,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "SMCI",
+    "shares": 58.8468,
+    "price": 34.27,
+    "date": "2026-06-22",
+    "target": 39.0,
+    "stop": 30.0,
+    "reasoning": {
+      "upside": "$7B capital raise removes the funding constraint on the backlog; margin recovery is underway and every quarter of clean execution compresses the governance discount.",
+      "risk": "Open investigation, auditor departure, and export control reviews could each independently crater the stock; this is a high-conviction/high-risk setup."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "SMCI",
+    "shares": 58.8468,
+    "price": 35.48,
+    "date": "2026-06-22",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 71.2,
+    "pnl_pct": 3.53,
+    "entry_price": 34.27,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "ON",
+    "shares": 15.7267,
+    "price": 129.34,
+    "date": "2026-06-22",
+    "target": 140.0,
+    "stop": 122.0,
+    "reasoning": {
+      "upside": "GaNEXUS product launch opens a new TAM in AI power delivery; Wells Fargo's $140 PT provides near-term upside; \"physical AI\" narrative is just gaining traction.",
+      "risk": "Semiconductor crowding trade means any sector-wide de-risking hits ON proportionally; auto/industrial cycle recovery could disappoint."
+    }
+  }
+]
