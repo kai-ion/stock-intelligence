@@ -1,0 +1,127 @@
+[
+  {
+    "action": "SELL",
+    "ticker": "ON",
+    "shares": 15.7267,
+    "price": 122.17,
+    "date": "2026-06-23",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -112.76,
+    "pnl_pct": -5.54,
+    "entry_price": 129.34,
+    "hold_days": 1
+  },
+  {
+    "action": "BUY",
+    "ticker": "VKTX",
+    "shares": 57.8192,
+    "price": 33.23,
+    "date": "2026-06-23",
+    "target": 40.0,
+    "stop": 30.0,
+    "reasoning": {
+      "upside": "Takeover narrative is strengthening post-Apogee deal, and Viking's oral + injectable dual approach gives any acquirer a complete obesity franchise. Phase 3 data readouts in H2 2026 provide additional catalysts.",
+      "risk": "Clinical failure in Phase 3 would crater this 50%+; also, if Lilly/Novo resolve supply issues faster than expected, the urgency for big pharma to acquire diminishes."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "SMCI",
+    "shares": 52.9618,
+    "price": 34.34,
+    "date": "2026-06-23",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 3.71,
+    "pnl_pct": 0.2,
+    "entry_price": 34.27,
+    "hold_days": 1
+  },
+  {
+    "action": "BUY",
+    "ticker": "GSHD",
+    "shares": 44.3587,
+    "price": 41.0,
+    "date": "2026-06-23",
+    "target": 55.0,
+    "stop": 38.0,
+    "reasoning": {
+      "upside": "RSI at 1.46 is historically unprecedented oversold; mean reversion alone suggests 20-30% upside, and fundamental re-rating toward analyst targets ($64 median) provides the multi-week catalyst.",
+      "risk": "Franchise churn or retention issues could justify the discount; also, rising rates eventually slow homebuying activity (their core distribution channel)."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "GSHD",
+    "shares": 44.3587,
+    "price": 40.68,
+    "date": "2026-06-23",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -14.2,
+    "pnl_pct": -0.78,
+    "entry_price": 41.0,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "BWIN",
+    "shares": 73.1164,
+    "price": 24.68,
+    "date": "2026-06-23",
+    "target": 30.0,
+    "stop": 22.0,
+    "reasoning": {
+      "upside": "PE take-private reports are rarely leaked unless serious; insurance brokerages are among the most attractive PE targets given predictable cash flows and multiple expansion potential under private ownership.",
+      "risk": "Deal talks could collapse or never formalize \u2014 these \"exploring strategic options\" headlines sometimes lead nowhere, and the stock would retrace most of the 36% weekly gain."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "BWIN",
+    "shares": 73.1164,
+    "price": 24.2,
+    "date": "2026-06-23",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -35.09,
+    "pnl_pct": -1.94,
+    "entry_price": 24.68,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "DYN",
+    "shares": 83.1493,
+    "price": 21.28,
+    "date": "2026-06-23",
+    "target": 26.0,
+    "stop": 18.5,
+    "reasoning": {
+      "upside": "Priority Review designation (if granted) compresses the timeline to potential approval, and DMD/DM1 have limited competition \u2014 first-mover advantage in these indications is durable.",
+      "risk": "FDA could issue a Refuse to File letter or require additional data; also, manufacturing scale-up for gene therapies often causes unexpected delays."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "DYN",
+    "shares": 83.1493,
+    "price": 21.23,
+    "date": "2026-06-23",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -4.16,
+    "pnl_pct": -0.23,
+    "entry_price": 21.28,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "OCUL",
+    "shares": 168.7629,
+    "price": 10.46,
+    "date": "2026-06-23",
+    "target": 12.5,
+    "stop": 9.5,
+    "reasoning": {
+      "upside": "FDA-aligned NDA pathway removes the biggest regulatory overhang; Q4 submission gives a clear catalyst calendar and institutions tend to build positions ahead of submissions.",
+      "risk": "Wet AMD is competitive (Eylea, Vabysmo, Lucentis biosimilars) and AXPAXLI's sustained-release mechanism needs to demonstrate clear superiority on convenience to win share."
+    }
+  }
+]

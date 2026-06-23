@@ -1,13 +1,13 @@
 {
   "date": "2026-06-22",
-  "total_value": 10337.33,
-  "cash": 53.79,
+  "total_value": 10305.76,
+  "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "INNV": 2033.43,
-    "ELVN": 2199.09,
-    "INTC": 2077.68,
-    "HIVE": 1916.45,
-    "ON": 2056.89
+    "INNV": 2085.49,
+    "ELVN": 2164.25,
+    "INTC": 2118.01,
+    "ON": 2062.64,
+    "SMCI": 1875.38
   }
 }

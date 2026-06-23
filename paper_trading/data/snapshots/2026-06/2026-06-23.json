@@ -1,0 +1,13 @@
+{
+  "date": "2026-06-23",
+  "total_value": 10122.65,
+  "cash": 0.0,
+  "positions_count": 5,
+  "positions": {
+    "INNV": 2100.99,
+    "ELVN": 2212.04,
+    "INTC": 2059.92,
+    "VKTX": 1997.94,
+    "OCUL": 1751.76
+  }
+}

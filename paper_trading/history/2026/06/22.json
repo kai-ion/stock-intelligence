@@ -98,5 +98,55 @@
       "upside": "GaNEXUS product launch opens a new TAM in AI power delivery; Wells Fargo's $140 PT provides near-term upside; \"physical AI\" narrative is just gaining traction.",
       "risk": "Semiconductor crowding trade means any sector-wide de-risking hits ON proportionally; auto/industrial cycle recovery could disappoint."
     }
+  },
+  {
+    "action": "SELL",
+    "ticker": "HIVE",
+    "shares": 359.9569,
+    "price": 4.89,
+    "date": "2026-06-22",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -80.99,
+    "pnl_pct": -4.39,
+    "entry_price": 5.12,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "CRDO",
+    "shares": 6.0241,
+    "price": 301.42,
+    "date": "2026-06-22",
+    "target": 325.0,
+    "stop": 273.0,
+    "reasoning": {
+      "upside": "Fresh Evercore initiation provides institutional validation and the $325 PT gives a clear near-term magnet; AI networking TAM is expanding as cluster sizes grow.",
+      "risk": "Already at record highs with no technical resistance above; any broad semiconductor rotation (per the BofA crowding survey) would hit this hardest."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "CRDO",
+    "shares": 6.0241,
+    "price": 301.29,
+    "date": "2026-06-22",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -0.78,
+    "pnl_pct": -0.04,
+    "entry_price": 301.42,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "SMCI",
+    "shares": 52.9618,
+    "price": 34.27,
+    "date": "2026-06-22",
+    "target": 39.0,
+    "stop": 30.0,
+    "reasoning": {
+      "upside": "$7B capital raise removes the funding constraint on the backlog; margin recovery is underway and every quarter of clean execution compresses the governance discount.",
+      "risk": "Open investigation, auditor departure, and export control reviews could each independently crater the stock; this is a high-conviction/high-risk setup."
+    }
   }
 ]
