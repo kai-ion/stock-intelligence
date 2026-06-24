@@ -1,0 +1,102 @@
+[
+  {
+    "action": "SELL",
+    "ticker": "DYN",
+    "shares": 91.588,
+    "price": 20.8,
+    "date": "2026-06-24",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -43.96,
+    "pnl_pct": -2.26,
+    "entry_price": 21.28,
+    "hold_days": 1
+  },
+  {
+    "action": "BUY",
+    "ticker": "BRBR",
+    "shares": 159.9522,
+    "price": 11.91,
+    "date": "2026-06-24",
+    "target": 13.5,
+    "stop": 8.8,
+    "reasoning": {
+      "upside": "RSI at 4.95 is historically extreme; mean-reversion alone should carry this 10-15% higher within two weeks, and the rotation out of tech into staples provides sustained bid.",
+      "risk": "If the broader market selloff accelerates into a true risk-off event, even cheap staples names can get caught in forced liquidation; stop at $10.50."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "INTC",
+    "shares": 15.048,
+    "price": 131.66,
+    "date": "2026-06-24",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -24.23,
+    "pnl_pct": -1.21,
+    "entry_price": 133.27,
+    "hold_days": 6
+  },
+  {
+    "action": "BUY",
+    "ticker": "NTRA",
+    "shares": 8.0387,
+    "price": 246.46,
+    "date": "2026-06-24",
+    "target": 260.0,
+    "stop": 220.0,
+    "reasoning": {
+      "upside": "Japan approval + Pirche collaboration announced same day creates a dual-catalyst setup; deeply oversold RSI at 15 means short-covering should provide mechanical lift.",
+      "risk": "Broad biotech funding environment could tighten if tech selloff creates liquidity withdrawal across growth sectors; stop at $230."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "BWIN",
+    "shares": 81.7016,
+    "price": 24.7,
+    "date": "2026-06-24",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 1.63,
+    "pnl_pct": 0.08,
+    "entry_price": 24.68,
+    "hold_days": 1
+  },
+  {
+    "action": "BUY",
+    "ticker": "MEDP",
+    "shares": 4.0716,
+    "price": 495.64,
+    "date": "2026-06-24",
+    "target": 530.0,
+    "stop": 461.0,
+    "reasoning": {
+      "upside": "RSI at 8.39 is absurdly oversold for a profitable, growing business; institutional buying (Turtle Creek) signals smart money accumulating at these levels.",
+      "risk": "If pharma R&D budgets get cut due to macro uncertainty, CRO spending could decelerate; stop at $460."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "NTRA",
+    "shares": 8.0387,
+    "price": 248.3,
+    "date": "2026-06-24",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 14.83,
+    "pnl_pct": 0.75,
+    "entry_price": 246.46,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "ALKS",
+    "shares": 38.8563,
+    "price": 51.37,
+    "date": "2026-06-24",
+    "target": 56.5,
+    "stop": 47.5,
+    "reasoning": {
+      "upside": "Orphan drug designations provide 7-year market exclusivity moats; CEO transition typically creates \"prove it\" rallies as new leadership articulates growth vision.",
+      "risk": "Integration risk from Avadel acquisition could distract management; sleep-medicine competition (Harmony, Jazz) is intensifying; stop at $47."
+    }
+  }
+]
