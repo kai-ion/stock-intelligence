@@ -1,5 +1,5 @@
 {
-  "cash": 2.2737367544323206e-13,
+  "cash": -2.2737367544323206e-13,
   "positions": {
     "INNV": {
       "shares": 221.5067,
@@ -17,14 +17,6 @@
       "entry_date": "2026-06-23",
       "cost": 1921.33
     },
-    "BRBR": {
-      "shares": 159.9522,
-      "entry_price": 11.91,
-      "exit_target": 13.5,
-      "stop_loss": 8.8,
-      "entry_date": "2026-06-24",
-      "cost": 1905.03
-    },
     "MEDP": {
       "shares": 4.0716,
       "entry_price": 495.64,
@@ -33,13 +25,21 @@
       "entry_date": "2026-06-24",
       "cost": 2018.03
     },
-    "ALKS": {
-      "shares": 38.8563,
-      "entry_price": 51.37,
-      "exit_target": 56.5,
-      "stop_loss": 47.5,
-      "entry_date": "2026-06-24",
-      "cost": 1996.05
+    "ICLR": {
+      "shares": 12.7779,
+      "entry_price": 165.17,
+      "exit_target": 180.0,
+      "stop_loss": 157.0,
+      "entry_date": "2026-06-25",
+      "cost": 2110.53
+    },
+    "RVTY": {
+      "shares": 16.1275,
+      "entry_price": 112.46,
+      "exit_target": 125.0,
+      "stop_loss": 101.214,
+      "entry_date": "2026-06-25",
+      "cost": 1813.7
     }
   },
   "start_date": "2026-06-02",

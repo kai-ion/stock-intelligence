@@ -1,0 +1,13 @@
+{
+  "date": "2026-06-25",
+  "total_value": 10474.84,
+  "cash": -0.0,
+  "positions_count": 5,
+  "positions": {
+    "INNV": 2144.18,
+    "VKTX": 2239.05,
+    "MEDP": 2157.5,
+    "ICLR": 2102.35,
+    "RVTY": 1831.76
+  }
+}

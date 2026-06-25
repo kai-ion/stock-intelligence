@@ -1,13 +1,13 @@
 {
   "date": "2026-06-24",
-  "total_value": 10176.88,
+  "total_value": 10379.56,
   "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "INNV": 2120.93,
-    "VKTX": 2073.97,
-    "BRBR": 1939.42,
-    "MEDP": 2047.0,
-    "ALKS": 1995.56
+    "INNV": 2122.03,
+    "VKTX": 2172.65,
+    "BRBR": 1901.83,
+    "MEDP": 2101.78,
+    "NTRA": 2081.26
   }
 }

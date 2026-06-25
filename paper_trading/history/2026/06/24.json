@@ -98,5 +98,30 @@
       "upside": "Orphan drug designations provide 7-year market exclusivity moats; CEO transition typically creates \"prove it\" rallies as new leadership articulates growth vision.",
       "risk": "Integration risk from Avadel acquisition could distract management; sleep-medicine competition (Harmony, Jazz) is intensifying; stop at $47."
     }
+  },
+  {
+    "action": "SELL",
+    "ticker": "ALKS",
+    "shares": 38.8563,
+    "price": 50.29,
+    "date": "2026-06-24",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -41.97,
+    "pnl_pct": -2.1,
+    "entry_price": 51.37,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "NTRA",
+    "shares": 7.9286,
+    "price": 246.46,
+    "date": "2026-06-24",
+    "target": 260.0,
+    "stop": 220.0,
+    "reasoning": {
+      "upside": "Japan approval + Pirche collaboration announced same day creates a dual-catalyst setup; deeply oversold RSI at 15 means short-covering should provide mechanical lift.",
+      "risk": "Broad biotech funding environment could tighten if tech selloff creates liquidity withdrawal across growth sectors; stop at $230."
+    }
   }
 ]

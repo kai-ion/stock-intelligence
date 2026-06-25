@@ -1,0 +1,127 @@
+[
+  {
+    "action": "SELL",
+    "ticker": "NTRA",
+    "shares": 7.9286,
+    "price": 267.95,
+    "date": "2026-06-25",
+    "reason": "TARGET HIT",
+    "pnl": 170.39,
+    "pnl_pct": 8.72,
+    "entry_price": 246.46,
+    "hold_days": 1
+  },
+  {
+    "action": "BUY",
+    "ticker": "ICLR",
+    "shares": 12.7779,
+    "price": 165.17,
+    "date": "2026-06-25",
+    "target": 180.0,
+    "stop": 157.0,
+    "reasoning": {
+      "upside": "Strong bookings growth and multiple analyst upgrades provide fundamental support for a multi-week mean reversion back toward $180-190.",
+      "risk": "If broader pharma spending slows or the company loses major trial contracts, the recovery stalls."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "BRBR",
+    "shares": 159.9522,
+    "price": 11.8,
+    "date": "2026-06-25",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -17.59,
+    "pnl_pct": -0.92,
+    "entry_price": 11.91,
+    "hold_days": 1
+  },
+  {
+    "action": "BUY",
+    "ticker": "MLKN",
+    "shares": 93.1591,
+    "price": 20.41,
+    "date": "2026-06-25",
+    "target": 22.5,
+    "stop": 18.5,
+    "reasoning": {
+      "upside": "Cost discipline, debt reduction, and smaller-format retail rollout provide multiple quarters of catalyst; institutional investors who missed the print will likely add over coming days.",
+      "risk": "Office furniture is cyclically exposed; any deterioration in corporate spending or return-to-office trends would pressure the narrative."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "MLKN",
+    "shares": 93.1591,
+    "price": 20.18,
+    "date": "2026-06-25",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -21.43,
+    "pnl_pct": -1.13,
+    "entry_price": 20.41,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "ABSI",
+    "shares": 177.8572,
+    "price": 10.57,
+    "date": "2026-06-25",
+    "target": 12.0,
+    "stop": 9.0,
+    "reasoning": {
+      "upside": "AI-designed drug candidates are the hottest theme in biotech; positive Phase 1 data de-risks the pipeline and the Lilly partnership could expand.",
+      "risk": "Early-stage clinical data is just safety \u2014 efficacy in later phases is far from guaranteed; biotech momentum can reverse violently on any negative readout."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "ABSI",
+    "shares": 177.8572,
+    "price": 10.25,
+    "date": "2026-06-25",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -56.91,
+    "pnl_pct": -3.03,
+    "entry_price": 10.57,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "TEM",
+    "shares": 33.3584,
+    "price": 54.65,
+    "date": "2026-06-25",
+    "target": 62.0,
+    "stop": 49.185,
+    "reasoning": {
+      "upside": "Multiple hedge fund accumulation, FDA clearances, and open-source consortium launches provide a string of upcoming catalysts; the 23% YTD decline creates a favorable entry for a mean reversion trade.",
+      "risk": "Tempus remains unprofitable with a premium valuation on an EV/Revenue basis; any disappointment in data licensing revenue growth could resume the downtrend."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "TEM",
+    "shares": 33.3584,
+    "price": 54.37,
+    "date": "2026-06-25",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -9.34,
+    "pnl_pct": -0.51,
+    "entry_price": 54.65,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "RVTY",
+    "shares": 16.1275,
+    "price": 112.46,
+    "date": "2026-06-25",
+    "target": 125.0,
+    "stop": 101.214,
+    "reasoning": {
+      "upside": "New Signals AI product launch, China divestiture simplifying the story, and solid Q1 results provide fundamental support for a recovery toward the $120-125 zone.",
+      "risk": "Life sciences tools spending remains soft; if biopharma budget cuts deepen, the sector rotation thesis delays."
+    }
+  }
+]
