@@ -1,0 +1,127 @@
+[
+  {
+    "action": "SELL",
+    "ticker": "ICLR",
+    "shares": 12.7779,
+    "price": 164.69,
+    "date": "2026-06-26",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -6.14,
+    "pnl_pct": -0.29,
+    "entry_price": 165.17,
+    "hold_days": 1
+  },
+  {
+    "action": "BUY",
+    "ticker": "XPEL",
+    "shares": 43.0736,
+    "price": 48.21,
+    "date": "2026-06-26",
+    "target": 55.0,
+    "stop": 44.87,
+    "reasoning": {
+      "upside": "Extreme RSI of 6 signals capitulation is over; mean reversion alone gets you $55+ without needing new catalysts.",
+      "risk": "Tariff exposure on imported films and China revenue uncertainty could weigh if macro deteriorates further."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "XPEL",
+    "shares": 43.0736,
+    "price": 48.17,
+    "date": "2026-06-26",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -1.72,
+    "pnl_pct": -0.08,
+    "entry_price": 48.21,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "BOBS",
+    "shares": 129.7051,
+    "price": 16.01,
+    "date": "2026-06-26",
+    "target": 19.5,
+    "stop": 14.5,
+    "reasoning": {
+      "upside": "RSI at 21.5 is historically extreme oversold, revenue growing 8.5%, tariff mitigation in place, and insider buying confirms conviction.",
+      "risk": "25% upholstery tariff could compress margins if mitigation fails; furniture is consumer discretionary and recession-sensitive."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "BOBS",
+    "shares": 129.7051,
+    "price": 15.53,
+    "date": "2026-06-26",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -61.61,
+    "pnl_pct": -2.97,
+    "entry_price": 16.01,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "AGYS",
+    "shares": 20.7135,
+    "price": 100.17,
+    "date": "2026-06-26",
+    "target": 115.0,
+    "stop": 96.0,
+    "reasoning": {
+      "upside": "RSI 21 bounce with positive earnings revisions; the stock was thrown out in the small-cap growth rotation but fundamentals remain intact.",
+      "risk": "Hospitality spending slowdown or loss of key hotel/casino clients could justify the decline."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "AGYS",
+    "shares": 20.7135,
+    "price": 99.83,
+    "date": "2026-06-26",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -7.04,
+    "pnl_pct": -0.34,
+    "entry_price": 100.17,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "WING",
+    "shares": 12.1644,
+    "price": 169.99,
+    "date": "2026-06-26",
+    "target": 185.0,
+    "stop": 156.74,
+    "reasoning": {
+      "upside": "Falling oil directly cuts wing costs (chicken feed), and the digital loyalty flywheel drives comps; re-rating toward 35-40x is justifiable.",
+      "risk": "Same-store sales deceleration or franchisee margin pressure would confirm the \"growth deceleration\" bear case."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "WING",
+    "shares": 12.1644,
+    "price": 168.29,
+    "date": "2026-06-26",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -20.62,
+    "pnl_pct": -1.0,
+    "entry_price": 169.99,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "LMRI",
+    "shares": 184.5994,
+    "price": 11.09,
+    "date": "2026-06-26",
+    "target": 14.0,
+    "stop": 9.981,
+    "reasoning": {
+      "upside": "Advanced imaging modalities (PET +23%, MRI +8% YoY) drive same-center growth; de novo openings create multi-year compounding.",
+      "risk": "RSI at 69.8 approaches overbought; a pullback to $10 is possible before the next leg if momentum stalls."
+    }
+  }
+]

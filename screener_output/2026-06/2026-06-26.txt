@@ -1,0 +1,286 @@
+=== Stock Screener — 2026-06-26 13:45 ===
+Criteria: Above 50d EMA | Positive weekly gain | Market cap > $1B
+Fetching universe...
+
+  NASDAQ screener: 2775 stocks with market cap > $1B
+  Top 5 by daily gain: SNDK(+22.0%), TECH(+20.1%), BB(+20.0%), AYI(+17.6%), KYMR(+16.6%)
+  S&P 500 loaded: 503 tickers
+Screening 2775 stocks...
+  Priority tier: 913 (top 500 movers + 413 S&P 500)
+  Remaining: 1862
+
+  === Priority Tier ===
+  Priority: 300/913 (188 passed, 0 errors)
+  Priority: 600/913 (246 passed, 187 errors)
+  Priority: 900/913 (246 passed, 487 errors)
+  Priority: 913/913 (246 passed, 500 errors)
+
+  Retrying 500 priority tickers...
+  After priority retry: 246 passed
+
+  === Remaining Tier ===
+  Remaining: 300/1862 (246 total passed)
+  Remaining: 600/1862 (246 total passed)
+  Remaining: 900/1862 (246 total passed)
+  Remaining: 1200/1862 (246 total passed)
+  Remaining: 1500/1862 (246 total passed)
+  Remaining: 1800/1862 (246 total passed)
+  Remaining: 1862/1862 (246 total passed)
+
+  Final: 246 stocks passed all filters
+
+================================================================================
+  246 stocks passed all filters
+  Sorted by composite momentum (MACD 35 | ROC 30 | Volume 25 | EMA 10)
+  Rating: 5=Strong Buy → 1=Strong Sell | Vol Ratio: >1 = above avg volume
+================================================================================
+
+    Ticker    Price   Day%  Week%  MCap($B)                  Sector                                  Industry  Above EMA%   RSI  MACD  MACD Hist  ROC20%  Vol Ratio  Momentum  Rating
+1     TECH    70.68   0.19  22.00      11.1              Healthcare                             Biotechnology       29.72  77.7  Bull       1.71   39.03       0.22      76.8    4.19
+2     AMAT   627.34  -6.03   1.66     498.1              Technology       Semiconductor Equipment & Materials       28.41  64.0  Bull       6.36   39.51       0.13      76.1    4.51
+3     CDNL    86.49  -8.09   6.25       1.3             Industrials                Engineering & Construction       43.42  67.7  Bull       1.85   63.31       0.13      76.0    5.00
+4     KYMR   117.26   1.09  29.67       9.6              Healthcare                             Biotechnology       35.45  84.0  Bull       3.89   43.95       0.11      75.9    4.70
+5     AKTS    32.63   1.97  35.45       1.8              Healthcare                             Biotechnology       51.22  83.2  Bull       1.23   59.72       0.11      75.9    4.86
+6     ZBIO    24.90   4.84  25.88       1.6              Healthcare                             Biotechnology       24.11  70.8  Bull       0.76   34.16       0.10      75.8    4.75
+7     GOLF   115.85   4.35   7.54       6.8       Consumer Cyclical                                   Leisure       20.13  83.4  Bull       2.06   30.50       0.09      75.8    3.00
+8     NRIX    23.20   3.02  32.19       2.4              Healthcare                             Biotechnology       34.68  82.7  Bull       0.69   31.30       0.09      75.7    4.56
+9     DFTX    44.83  -0.37  83.11       6.0              Healthcare                             Biotechnology       74.22  88.3  Bull       2.31   90.91       0.09      75.7    4.73
+10    INNV    10.65   1.96  18.78       1.4              Healthcare                   Medical Care Facilities       28.20  81.1  Bull       0.22   41.88       0.06      75.5     NaN
+11    TWST    99.65   3.64  13.81       6.2              Healthcare                    Diagnostics & Research       44.21  79.3  Bull       1.81   44.36       0.07      75.5    4.64
+12    MRVI     6.16   0.73  18.37       2.3              Healthcare                             Biotechnology       32.96  83.1  Bull       0.08   32.65       0.06      75.5     NaN
+13    HNGE    75.50   0.16   8.76       5.8              Healthcare               Health Information Services       29.17  81.7  Bull       0.59   37.40       0.05      75.4    4.44
+14     NWL     5.95   1.02  20.93       2.5      Consumer Defensive             Household & Personal Products       37.25  81.1  Bull       0.16   70.00       0.04      75.4    3.22
+15    AVBP    35.58   4.66  12.11       1.7              Healthcare                             Biotechnology       19.91  68.9  Bull       0.38   31.94       0.05      75.4    5.00
+16    ULCC     7.97  -2.69  10.39       1.8             Industrials                                  Airlines       39.98  75.2  Bull       0.13   37.65       0.05      75.4    2.75
+17     MBX    52.10   1.99  21.09       2.5              Healthcare                             Biotechnology       43.88  82.4  Bull       1.78   63.34       0.04      75.4    4.50
+18    ORKA    87.73   1.90  21.27       5.3              Healthcare                             Biotechnology       33.95  73.4  Bull       2.27   51.31       0.03      75.3    4.85
+19    ADPT    20.29  -0.20  15.74       3.2              Healthcare                    Diagnostics & Research       26.31  71.0  Bull       0.24   33.57       0.04      75.3    4.50
+20     MYE    30.58  -0.34  11.55       1.1       Consumer Cyclical                    Packaging & Containers       25.39  81.3  Bull       0.42   32.11       0.03      75.3     NaN
+21     NEO    13.81  -0.36  24.08       1.8              Healthcare                    Diagnostics & Research       33.78  78.2  Bull       0.24   35.53       0.03      75.3    4.17
+22    LILA     7.02  -0.57  46.25       1.4  Communication Services                          Telecom Services       26.95  73.5  Bull       0.21   29.49       0.09      75.2    4.33
+23    COMP    11.13   0.63  11.19       8.3             Real Estate                      Real Estate Services       26.62  74.6  Bull       0.26   33.13       0.03      75.2     NaN
+24    ALKS    53.49   1.98  18.88       8.9              Healthcare  Drug Manufacturers - Specialty & Generic       30.82  86.3  Bull       0.74   33.91       0.03      75.2    4.47
+25    ALHC    22.95   1.50   4.99       4.7              Healthcare                          Healthcare Plans       20.61  71.5  Bull       0.49   44.66       0.03      75.2    4.57
+26     WGS    69.40   1.31  17.61       2.1              Healthcare                    Diagnostics & Research       18.38  66.8  Bull       1.35   38.38       0.02      74.4    4.89
+27    LMRI    11.09   6.94  17.85       1.1              Healthcare                           Medical Devices       18.08  69.8  Bull       0.26   44.03       0.01      74.1    4.75
+28    ATLC   108.50  -1.89   8.37       1.6      Financial Services                           Credit Services       27.74  77.9  Bull       1.40   28.02       0.13      74.1     NaN
+29     TXG    36.01   0.06   3.61       4.6              Healthcare               Health Information Services       30.05  67.6  Bull       0.25   28.65       0.02      73.8    3.69
+30    LIND    29.27   2.36  13.69       1.9       Consumer Cyclical                           Travel Services       32.27  81.8  Bull       0.52   27.39       0.04      72.7     NaN
+31    ALNT    99.76  -3.58   4.08       1.7              Technology                     Electronic Components       22.69  68.5  Bull       0.43   33.74       0.11      71.4     NaN
+32    GKOS   141.88  -2.09   8.57       8.3              Healthcare                           Medical Devices       12.52  65.9  Bull       2.21   33.19       0.02      71.4    4.77
+33    LGND   295.23  -0.56   7.40       5.9              Healthcare                             Biotechnology       22.35  77.2  Bull       4.21   25.81       0.02      71.0    4.78
+34   LILAK     6.93  -1.97  44.57       1.4  Communication Services                          Telecom Services       24.26  72.2  Bull       0.20   25.38       0.05      70.8    4.00
+35    VCEL    43.19   0.68   7.71       2.2              Healthcare                             Biotechnology       17.55  77.5  Bull       0.55   26.14       0.06      70.4     NaN
+36    MTRN   275.35  -2.87   0.13       5.7         Basic Materials          Other Industrial Metals & Mining       24.27  69.6  Bull       1.78   23.90       0.08      69.5    4.25
+37     CRS   593.57  -0.29   1.21      29.5             Industrials                         Metal Fabrication       20.79  76.9  Bull       2.60   28.48       0.05      69.5     NaN
+38    CGEM    19.07   3.05  26.85       1.2              Healthcare                             Biotechnology       27.59  72.6  Bull       0.59   24.12       0.04      69.4    4.92
+39    ELVN    50.20   0.40  11.31       3.6              Healthcare                             Biotechnology       21.91  68.2  Bull       1.15   23.49       0.04      68.9    5.00
+40    VRNS    39.16   0.93  17.32       4.6              Technology                 Software - Infrastructure       25.46  75.5  Bull       0.36   23.11       0.06      68.6    4.25
+41    VCYT    59.00   0.77  10.01       4.7              Healthcare                    Diagnostics & Research       29.84  79.5  Bull       0.62   22.94       0.05      68.4     NaN
+42     SLS    11.11   5.42  38.01       2.2              Healthcare                             Biotechnology       50.44  74.4  Bull       0.23   21.02       0.19      67.6     NaN
+43    RCUS    29.95  -1.80  23.20       3.8              Healthcare                             Biotechnology       20.97  71.2  Bull       0.74   22.34       0.03      67.6     NaN
+44    VLRS     9.47   1.61   5.57       1.1             Industrials                                  Airlines       18.59  74.1  Bull       0.15   22.67       0.03      67.2    3.92
+45    BJRI    56.76   0.45   4.06       1.2       Consumer Cyclical                               Restaurants       23.04  76.4  Bull       0.47   22.08       0.02      67.2     NaN
+46     HNI    39.15   2.15  12.29       2.8       Consumer Cyclical        Furnishings, Fixtures & Appliances       14.80  74.2  Bull       0.86   24.63       0.01      67.1     NaN
+47     SXI   334.95  -0.94   6.28       4.1             Industrials            Specialty Industrial Machinery       17.11  70.7  Bull       2.71   21.59       0.20      66.8     NaN
+48    ABCL     6.85   3.01  23.87       2.1              Healthcare                             Biotechnology       33.83  69.5  Bull       0.10   19.55       0.26      66.7    4.67
+49    NTLA    16.61   3.68   6.00       2.3              Healthcare                             Biotechnology       18.93  65.2  Bull       0.30   21.42       0.09      66.6    3.86
+50     TEX    72.88  -2.43   9.06       8.3             Industrials       Farm & Heavy Construction Machinery       15.20  67.1  Bull       1.11   23.51       0.04      66.4    3.93
+51     GHM   121.14  -3.30   9.40       1.4             Industrials            Specialty Industrial Machinery       19.54  65.4  Bull       1.39   20.84       0.08      66.3    4.40
+52     MOH   217.94   0.43  11.55      11.4              Healthcare                          Healthcare Plans       17.04  71.2  Bull       1.48   22.42       0.04      66.3    3.32
+53      CR   222.21  -0.89   3.40      12.8             Industrials            Specialty Industrial Machinery       14.68  76.5  Bull       1.75   22.63       0.06      65.5    4.56
+54     AIR   139.16   1.69   3.18       5.5             Industrials                       Aerospace & Defense       16.28  72.7  Bull       1.29   21.04       0.08      64.9     NaN
+55    CTOS    11.70  -4.10   3.82       2.7             Industrials                 Rental & Leasing Services       19.66  69.4  Bull       0.09   19.63       0.04      64.8     NaN
+56     GLW   216.18  -5.92  10.91     186.4              Technology                     Electronic Components       18.99  59.3  Bull       3.74   18.33       0.23      64.8    4.19
+57     UAL   136.90   2.13  15.70      44.4             Industrials                                  Airlines       25.94  75.9  Bull       2.08   18.98       0.06      64.5    4.62
+58    BOBS    16.01   7.96  19.03       2.1       Consumer Cyclical                          Specialty Retail       21.50  70.7  Bull       0.23   18.86       0.07      64.5     NaN
+59    SPHR   162.21  -1.69   3.10       5.8  Communication Services                             Entertainment       15.27  69.7  Bull       0.99   21.28       0.06      64.4    4.58
+60    KLIC   124.13  -5.55   1.85       6.5              Technology       Semiconductor Equipment & Materials       20.90  63.2  Bull       1.07   18.71       0.07      64.3     NaN
+61    WLFC   222.23  -0.13   7.65       1.8             Industrials                 Rental & Leasing Services       14.63  72.6  Bull       4.31   21.68       0.02      64.2     NaN
+62     CRL   215.31   1.22  16.38      10.4              Healthcare                    Diagnostics & Research       19.18  73.5  Bull       2.75   18.73       0.11      64.2    4.35
+63    CGON    73.31  -0.26  20.02       6.5              Healthcare                             Biotechnology       15.92  71.4  Bull       2.04   20.71       0.03      63.9    4.62
+64    PLSE    28.98   7.53  13.20       2.0              Healthcare            Medical Instruments & Supplies       19.55  64.5  Bull       0.17   17.14       0.20      63.6     NaN
+65    SVRA     6.15   1.58  11.82       1.3              Healthcare                             Biotechnology       14.38  74.7  Bull       0.10   20.83       0.07      63.6     NaN
+66    ASTE    61.46  -0.48   9.52       1.4             Industrials       Farm & Heavy Construction Machinery       13.59  70.7  Bull       1.26   21.62       0.01      63.5     NaN
+67    AROC    41.65   0.36  12.66       7.3                  Energy            Oil & Gas Equipment & Services       14.04  73.0  Bull       0.71   20.38       0.13      63.5    4.62
+68    PLOW    53.14  -1.59   7.57       1.2       Consumer Cyclical                                Auto Parts       15.39  76.5  Bull       0.72   20.01       0.08      63.4     NaN
+69     WTS   372.30  -0.85   8.26      12.4             Industrials            Specialty Industrial Machinery       16.49  76.7  Bull       4.34   19.92       0.02      63.3     NaN
+70     GRC    89.61  -1.36   2.10       2.4             Industrials            Specialty Industrial Machinery       15.43  69.7  Bull       0.52   19.73       0.04      62.7    4.00
+71    RGEN   145.77   1.44  10.42       8.2              Healthcare            Medical Instruments & Supplies       15.64  70.6  Bull       1.45   18.77       0.07      62.2    4.45
+72    ARHS     8.16   2.13  12.40       1.2       Consumer Cyclical                          Specialty Retail       15.75  67.2  Bull       0.14   18.95       0.03      62.1    3.60
+73    RVMD   180.08  -0.19  10.49      38.3              Healthcare                             Biotechnology       21.22  72.5  Bull       2.13   16.46       0.06      62.0    4.73
+74    KRYS   364.50  -0.25   4.72      10.7              Healthcare                             Biotechnology       18.27  75.2  Bull       3.63   17.47       0.04      61.9    4.82
+75    TILE    35.29   0.13   8.40       2.0       Consumer Cyclical        Furnishings, Fixtures & Appliances       16.96  73.2  Bull       0.39   18.16       0.02      61.8     NaN
+76    CMPS    13.89   1.44  10.85       1.9              Healthcare                   Medical Care Facilities       27.44  67.0  Bull       0.07   16.53       0.10      61.8    4.67
+77    LOAR    76.79  -1.80   7.14       7.2             Industrials                       Aerospace & Defense       16.94  72.9  Bull       0.94   17.79       0.03      61.5     NaN
+78    PSNL    12.74  -0.45  20.87       1.3              Healthcare                    Diagnostics & Research       40.21  72.4  Bull       0.15   16.03       0.05      61.4     NaN
+79     CXT    47.78   1.67   1.82       2.7             Industrials            Specialty Industrial Machinery       12.32  68.3  Bull       0.92   19.70       0.01      60.9    4.50
+80    GHRS    25.85   2.01  16.23       1.8              Healthcare                             Biotechnology       21.90  68.6  Bull       0.42   15.50       0.03      60.8     NaN
+81     PRG    42.94  -1.09  11.72       1.7             Industrials                 Rental & Leasing Services       19.28  71.1  Bull       0.51   15.39       0.07      60.6    4.38
+82     BKD    15.41  -0.26  12.89       3.7              Healthcare                   Medical Care Facilities       13.66  72.0  Bull       0.29   18.27       0.02      60.3    4.67
+83    TTAM    19.19  -0.54   4.49       3.5         Basic Materials                        Building Materials       14.93  72.7  Bull       0.30   17.52       0.01      60.1     NaN
+84    PVLA   135.48  -0.53  19.78       1.9              Healthcare                             Biotechnology       15.33  66.3  Bull       3.41   16.93       0.02      59.8    5.00
+85    BTSG    69.66  -1.19   5.15      13.7              Healthcare               Health Information Services       19.88  78.1  Bull       0.41   14.52       0.02      59.7    4.88
+86     ALK    53.47   0.19   8.55       6.0             Industrials                                  Airlines       19.40  70.9  Bull       0.62   14.77       0.03      59.7    4.50
+87     AYI   347.26  -3.44   9.33      10.5             Industrials              Electrical Equipment & Parts       15.35  64.8  Bull       4.54   15.63       0.11      59.2    4.11
+88    MLKN    18.80  -4.57  13.94       1.3       Consumer Cyclical        Furnishings, Fixtures & Appliances       16.42  68.0  Bull       0.41   15.39       0.06      59.1    4.00
+89     SWK    91.37  -0.68   5.33      14.2             Industrials                       Tools & Accessories       14.20  67.9  Bull       0.92   16.50       0.04      58.9    3.65
+90    BLLN   111.78  -1.95   6.31       5.1              Healthcare                    Diagnostics & Research       18.66  63.2  Bull       0.75   14.29       0.04      58.9     NaN
+91    FBIN    45.97   0.70   8.42       5.5             Industrials             Building Products & Equipment       12.18  66.2  Bull       0.47   16.70       0.02      58.0    3.31
+92    AGYS   100.17   4.76  14.47       2.8              Technology                    Software - Application       21.02  73.1  Bull       0.37   21.24       0.09      57.7    4.50
+93    GLUE    21.97  -1.66  19.99       1.9              Healthcare                             Biotechnology       17.36  71.3  Bull       0.52   13.31       0.05      57.4    4.75
+94     CAT  1015.24  -4.13   2.98     467.6             Industrials       Farm & Heavy Construction Machinery       13.38  61.3  Bull       8.99   14.37       0.13      57.1    3.89
+95    ASTH    43.20  -0.69  10.29       2.1              Healthcare                   Medical Care Facilities       17.70  73.6  Bull       0.38   12.71       0.03      56.8     NaN
+96     GVA   157.03   2.22   7.06       6.9             Industrials                Engineering & Construction       13.24  73.8  Bull       1.47   14.36       0.09      56.7     NaN
+97     RDY    15.46   9.03  16.33      12.9              Healthcare  Drug Manufacturers - Specialty & Generic       13.21  79.4  Bull       0.24   14.35       0.06      56.5    3.40
+98    BLDR    88.88   0.20  10.28       9.6             Industrials             Building Products & Equipment       10.65  66.3  Bull       1.53   15.85       0.03      56.4    3.77
+99    PLBL     8.12  -0.61   6.28       3.0       Consumer Cyclical                         Department Stores        9.85  57.2  Bull       0.16   16.33       0.01      56.3     NaN
+100   PSMT   194.75  -2.54   6.99       6.0      Consumer Defensive                           Discount Stores       14.28  77.9  Bull       1.24   13.54       0.08      56.3     NaN
+101   LXRX     2.41   8.29  20.15       1.1              Healthcare                             Biotechnology       22.54  72.5  Bull       0.04    9.28       0.20      55.9    4.00
+102   RVTY   114.09  -0.75  14.09      12.7              Healthcare                    Diagnostics & Research       15.52  70.8  Bull       1.11   12.71       0.03      55.7    3.81
+103    NIC   161.34  -0.01   9.87       3.4      Financial Services                          Banks - Regional       10.17  71.1  Bull       2.03   15.13       0.06      55.7    3.83
+104   ABBV   247.48   1.57  14.31     437.2              Healthcare              Drug Manufacturers - General       12.60  73.9  Bull       2.01   13.19       0.10      55.3    4.22
+105    ROG   163.24  -1.67   0.34       2.9              Technology                     Electronic Components       14.96  61.5  Bull       0.91   12.62       0.02      55.3    4.67
+106   NESR    27.53   1.21  12.18       2.8                  Energy            Oil & Gas Equipment & Services       11.64  62.5  Bull       0.23   13.39       0.11      55.1    4.43
+107   SDGR    16.41   1.74   4.12       1.2              Healthcare               Health Information Services       16.84  66.8  Bull       0.07   15.89       0.16      55.1     NaN
+108     DE   623.00  -1.22   5.73     168.2             Industrials       Farm & Heavy Construction Machinery        7.71  66.1  Bull       5.50   15.58       0.04      54.8    3.88
+109   UFPT   256.22   1.38   7.08       2.0              Healthcare                           Medical Devices       13.96  71.1  Bull       1.82   12.38       0.03      54.6     NaN
+110    AZZ   159.26  -4.79   1.32       4.8             Industrials               Specialty Business Services       10.84  65.4  Bull       1.16   13.64       0.04      54.4     NaN
+111   KYIV    15.39   2.60   8.69       3.6  Communication Services                          Telecom Services       14.23  72.3  Bull       0.10    7.25       0.60      54.3     NaN
+112   MPLT    32.87  -3.05  14.05       1.5              Healthcare                             Biotechnology       16.90  61.3  Bull       0.38   10.38       0.06      54.3    4.83
+113    OSK   149.31  -2.31   7.00       9.3             Industrials       Farm & Heavy Construction Machinery        7.52  64.9  Bull       2.12   15.17       0.03      54.2    4.06
+114    LII   567.28   0.76   6.54      19.7             Industrials             Building Products & Equipment        9.95  64.8  Bull       5.19   14.14       0.01      54.2    3.58
+115   ASND   262.74  -0.85  13.82      17.2              Healthcare                             Biotechnology       13.63  71.7  Bull       5.09   10.64       0.07      53.0    4.78
+116   GTES    28.70  -3.33   2.19       7.3             Industrials            Specialty Industrial Machinery       10.00  62.6  Bull       0.15   12.66       0.02      52.9     NaN
+117    SLM    24.57  -1.76   6.69       4.6      Financial Services                           Credit Services        9.36  67.6  Bull       0.25   12.97       0.03      52.9    4.00
+118     PH   973.19  -2.19   2.09     122.7             Industrials            Specialty Industrial Machinery        6.62  65.0  Bull       9.33   14.12       0.04      52.7    4.33
+119   KLAR    19.12   0.53   1.49       7.2      Financial Services                           Credit Services       14.61  64.1  Bull       0.13    9.63       0.05      52.3    4.20
+120    CAI    18.93   0.69   2.49       5.4              Healthcare                             Biotechnology        6.41  60.1  Bull       0.19   13.56       0.05      52.2     NaN
+121     IR    81.05  -1.16   4.03      31.7             Industrials            Specialty Industrial Machinery        5.59  63.7  Bull       0.96   14.17       0.03      52.2     NaN
+122    LNN   124.04  -0.77   4.15       1.3             Industrials       Farm & Heavy Construction Machinery        8.33  70.8  Bull       0.95   12.74       0.02      52.1    3.50
+123   BLBD    77.66  -2.01   4.96       2.5             Industrials       Farm & Heavy Construction Machinery       12.46  63.7  Bull       0.44   10.64       0.02      52.1     NaN
+124    CBL    52.49  -1.84  10.75       1.6             Real Estate                             REIT - Retail       13.07  70.5  Bull       0.31   10.07       0.05      52.0     NaN
+125   CACC   616.27  -1.19   6.30       6.4      Financial Services                           Credit Services       12.67  68.5  Bull       4.76    9.97       0.05      51.7     NaN
+126    TRN    36.22  -0.52   5.08       2.9             Industrials                                 Railroads        7.20  65.0  Bull       0.25   12.66       0.04      51.6     NaN
+127    GIC    34.08  -0.74   3.57       1.3             Industrials                   Industrial Distribution        8.18  73.0  Bull       0.29   12.12       0.03      51.5     NaN
+128   UHAL    66.29  -1.06   6.52      12.6             Industrials                 Rental & Leasing Services       16.83  76.8  Bull       0.29   12.26       0.04      51.4    3.00
+129     EE    37.20  -2.44   7.64       4.2                  Energy                       Oil & Gas Midstream        7.60  66.8  Bull       0.46   12.12       0.01      51.0    4.25
+130    BMI   140.06  -1.36   3.37       4.1              Technology        Scientific & Technical Instruments        6.37  62.9  Bull       0.86   12.28       0.07      51.0    3.77
+131   AZTA    24.84   0.85   6.56       1.1              Healthcare            Medical Instruments & Supplies        9.44  64.9  Bull       0.18   10.45       0.03      50.4     NaN
+132    TEM    55.72   1.73   9.61      10.0              Healthcare               Health Information Services       10.94  60.6  Bull       0.65    8.65       0.14      50.3     NaN
+133   MSGE    79.32   0.41   8.02       3.8  Communication Services                             Entertainment       13.33  76.3  Bull       0.33   13.88       0.02      50.1    4.33
+134    FSS   124.74  -1.76   5.24       7.6             Industrials       Farm & Heavy Construction Machinery        9.30  67.2  Bull       1.88   10.06       0.04      50.0     NaN
+135   LION    15.83   1.15   2.19       4.6                     N/A                                       N/A       18.03  66.1  Bull       0.07   11.01       0.01      49.9    4.10
+136    WMS   153.82   1.03   4.55      11.8             Industrials             Building Products & Equipment        8.53  62.9  Bull       2.35    9.99       0.02      49.5    4.80
+137   ACHC    26.29   0.24   5.72       2.4              Healthcare                   Medical Care Facilities        6.34  57.2  Bull       0.21   10.66       0.04      49.1    4.00
+138    SYF    78.11   0.14   3.79      26.3      Financial Services                           Credit Services        6.76  65.0  Bull       0.64    9.29       0.03      48.0    4.12
+139     TT   491.67  -3.02   1.71     108.7             Industrials             Building Products & Equipment        5.65  58.3  Bull       3.43    8.96       0.10      47.6    3.85
+140   FELE   107.90  -0.90   3.55       4.8             Industrials            Specialty Industrial Machinery        7.02  66.3  Bull       0.60    8.89       0.01      47.5    3.80
+141   PACS    40.47   0.64  10.62       6.4              Healthcare                   Medical Care Facilities       10.87  64.3  Bull       0.48    6.51       0.04      47.3    4.67
+142   ATAI     4.63   1.76  14.04       1.7              Healthcare                             Biotechnology       11.77  63.6  Bull       0.06    4.99       0.13      46.9     NaN
+143    ABT    94.75   1.40   7.17     165.0              Healthcare                           Medical Devices        3.41  64.6  Bull       0.67    9.79       0.04      46.8    4.33
+144   WING   169.99   4.86   5.07       4.6       Consumer Cyclical                               Restaurants        6.61  60.6  Bull       1.79    7.85       0.07      46.7    4.50
+145   RDNT    60.03   0.03  11.70       4.7              Healthcare                    Diagnostics & Research        5.60  62.0  Bull       0.57    8.53       0.03      46.6    4.75
+146    MRK   126.72   0.93  11.28     313.0              Healthcare              Drug Manufacturers - General        8.59  68.6  Bull       0.87    6.46       0.08      46.5    4.20
+147    AIT   339.50  -3.00   0.46      12.5             Industrials                   Industrial Distribution        9.01  65.1  Bull       1.54   10.04       0.03      46.4    4.50
+148    MBC     9.60  -1.74   5.96       1.2       Consumer Cyclical        Furnishings, Fixtures & Appliances       10.28  61.1  Bull       0.07    5.73       0.01      46.0     NaN
+149   PNTG    36.34   1.37   8.68       1.3              Healthcare                   Medical Care Facilities        9.84  65.9  Bull       0.37    5.77       0.03      46.0     NaN
+150    KGS    73.25  -1.45   5.88       7.4                  Energy            Oil & Gas Equipment & Services        8.57  60.2  Bull       0.59    6.39       0.02      45.8    4.71
+151   ATMU    52.67  -2.28   1.70       4.3       Consumer Cyclical                                Auto Parts        0.59  55.4  Bull       0.77   10.23       0.02      45.7    4.40
+152    MTD  1250.60   0.31   9.24      25.3              Healthcare                    Diagnostics & Research        5.39  64.8  Bull      13.81    7.49       0.04      45.5    3.92
+153    DOV   228.02   0.43   1.99      30.7             Industrials            Specialty Industrial Machinery        4.56  59.6  Bull       1.20    7.56       0.02      45.0     NaN
+154   GRND    13.62   2.52   2.06       2.4              Technology                    Software - Application        7.09  62.3  Bull       0.22    5.62       0.04      44.5     NaN
+155    NRG   145.93  -0.59   8.05      30.8               Utilities   Utilities - Independent Power Producers        4.37  61.6  Bull       2.62    6.13       0.05      43.8    4.41
+156    DCI    88.75  -0.58   3.78      10.3             Industrials            Specialty Industrial Machinery        3.27  60.9  Bull       0.46    6.87       0.02      43.7    3.50
+157     BC    87.32  -2.24   4.49       5.7       Consumer Cyclical                     Recreational Vehicles        8.02  62.1  Bull       0.49    4.41       0.02      43.6    3.90
+158   MYRG   482.58  -1.59   4.66       7.5             Industrials                Engineering & Construction       14.24  61.6  Bull       2.45    0.76       0.08      43.5     NaN
+159    XYL   116.45  -2.03   4.51      27.7             Industrials            Specialty Industrial Machinery        2.39  61.9  Bull       0.95    6.59       0.08      43.4     NaN
+160   ALSN   121.19  -2.67   1.75      10.1       Consumer Cyclical                                Auto Parts        1.92  53.9  Bull       0.79    6.76       0.03      43.0    3.50
+161   GNRC   285.59  -3.57   2.31      16.8             Industrials            Specialty Industrial Machinery       10.71  56.2  Bull       1.47    2.20       0.05      43.0    4.15
+162    VST   166.22  -0.73   1.65      56.0               Utilities   Utilities - Independent Power Producers        6.70  60.2  Bull       1.75    3.85       0.10      43.0    4.60
+163     MU  1144.10  -3.72   0.89    1292.3              Technology                            Semiconductors       34.77  59.7  Bull       1.23   23.88       0.16      42.8    4.51
+164    MWA    26.86  -1.41   2.81       4.2             Industrials            Specialty Industrial Machinery        2.11  59.2  Bull       0.19    5.93       0.02      42.2     NaN
+165    DCO   169.72  -0.46   3.41       2.6             Industrials                       Aerospace & Defense       12.75  68.2  Bull       0.57   11.48       0.08      42.1     NaN
+166   AEBI    13.17  -0.23   6.81       1.0             Industrials       Farm & Heavy Construction Machinery        8.25  61.7  Bull       0.09    2.22       0.06      41.9     NaN
+167   IRTC   119.92   3.38  14.59       3.9              Healthcare                           Medical Devices        3.86  60.2  Bull       1.33    3.72       0.06      41.1    4.73
+168   XPEL    48.21   6.53   6.06       1.3       Consumer Cyclical                                Auto Parts        6.13  63.6  Bull       0.26    2.72       0.01      40.9     NaN
+169   SION    43.09   0.75  15.52       1.9              Healthcare                             Biotechnology       10.12  63.3  Bull       0.95    0.68       0.02      40.9    4.45
+170   TNGX    30.80  -0.84  10.12       5.0              Healthcare                             Biotechnology       22.88  60.3  Bear      -0.01   54.00       0.09      40.7    4.67
+171   VSXY    82.83  -0.74   1.04       6.6       Consumer Cyclical                            Apparel Retail       26.57  69.5  Bear      -0.22   38.98       0.07      40.6    3.80
+172   CHYM    18.86   3.28   7.16       7.2              Technology                    Software - Application        1.30  56.1  Bull       0.25    4.20       0.07      40.4    4.44
+173   MDLN    38.62   2.43   7.44      68.8              Healthcare            Medical Instruments & Supplies        0.31  57.1  Bull       0.49    4.93       0.02      40.3    4.46
+174   PRAX   332.04   1.31  17.62       9.3              Healthcare                             Biotechnology        8.86  62.1  Bull       9.46   -5.84       0.11      40.3    4.50
+175   HLIO    91.33  -1.66   0.93       3.0             Industrials            Specialty Industrial Machinery       14.07  64.2  Bull       0.30    9.99       0.02      40.2     NaN
+176   LIFE    18.91   2.00  17.67       1.8      Financial Services                         Insurance Brokers        7.41  55.4  Bull       0.31   -3.42       0.14      39.9     NaN
+177    MWH    37.19   1.61   8.71       7.8               Utilities                     Utilities - Renewable        4.95  55.9  Bull       0.55    1.31       0.11      39.7    4.73
+178   NDSN   301.67  -2.06   1.94      16.8             Industrials            Specialty Industrial Machinery        5.78  61.6  Bull       1.36    5.00       0.02      39.7    4.00
+179   AGCO   117.59  -0.35   3.46       8.5             Industrials       Farm & Heavy Construction Machinery        1.87  55.6  Bull       0.62    3.27       0.02      39.4    3.33
+180   GRAL    66.69   1.80   4.63       2.9              Healthcare                    Diagnostics & Research        8.13  58.2  Bull       0.43   -9.78       0.03      39.3    3.89
+181   RXRX     3.46   3.41   7.28       1.8              Healthcare                             Biotechnology        4.61  56.4  Bull       0.02    0.73       0.15      39.2     NaN
+182   GMED    84.54   0.65   6.71      11.5              Healthcare                           Medical Devices        1.99  58.4  Bull       0.88    2.54       0.06      39.0    4.15
+183   NEOG     9.58  10.85   2.90       2.1              Healthcare                           Medical Devices        4.66  58.2  Bull       0.04    3.01       0.02      38.2    3.75
+184    KAI   321.61  -0.14   5.62       3.8             Industrials            Specialty Industrial Machinery        4.08  59.0  Bull       3.54   -0.37       0.09      37.8     NaN
+185    PBF    41.86  -1.62  12.26       5.0                  Energy            Oil & Gas Refining & Marketing        2.38  53.5  Bull       0.18    5.12       0.03      37.1    2.58
+186   ICUI   149.65   0.77   6.61       3.7              Healthcare            Medical Instruments & Supplies       10.97  66.6  Bull       0.50    7.76       0.02      37.0    4.50
+187   AERO    17.96   0.07   1.83       2.6             Industrials                                  Airlines        8.32  61.2  Bull       0.07    2.17       0.16      36.9    4.33
+188     GH   146.20   1.21  10.94      19.4              Healthcare                    Diagnostics & Research       24.73  74.5  Bull       0.32    9.74       0.07      35.7    4.67
+189    AIN    73.67  -3.07   3.64       2.1       Consumer Cyclical                     Textile Manufacturing       13.64  67.2  Bull       0.15   14.40       0.02      35.5    3.00
+190   CORT    84.92  -5.34   6.27       9.1              Healthcare                             Biotechnology       27.94  78.1  Bear      -0.44   24.19       0.03      34.4     NaN
+191    BHE    94.09  -4.96   2.08       3.4              Technology                     Electronic Components       13.91  60.1  Bull       0.21   11.28       0.05      34.3     NaN
+192    KDP    33.29   2.72   8.22      45.3      Consumer Defensive                 Beverages - Non-Alcoholic       11.19  73.3  Bull       0.08   10.82       0.13      34.1    3.94
+193    HUM   378.45   0.65   4.94      45.4              Healthcare                          Healthcare Plans       22.23  74.8  Bear      -2.65   22.60       0.03      32.9    3.42
+194    ARE    55.99   4.66   9.73       9.8             Real Estate                             REIT - Office       12.78  65.5  Bull       0.11   11.86       0.07      32.1    3.06
+195     BB    10.53   1.64  25.66       6.2              Technology                 Software - Infrastructure       37.92  70.2  Bear      -0.03   19.93       0.20      31.6    3.12
+196   AVTR    10.22   1.54   6.63       7.0              Healthcare            Medical Instruments & Supplies       13.64  67.4  Bull       0.02   11.64       0.04      31.6    3.06
+197    CNH    10.95   0.18   4.68      13.6             Industrials       Farm & Heavy Construction Machinery        3.76  57.0  Bull       0.04    4.68       0.13      31.5    3.84
+198  BELFB   298.31  -4.08   0.65       4.2              Technology                     Electronic Components        9.04  55.7  Bull       0.64    7.71       0.05      27.6    4.71
+199    URI  1131.83  -0.79   5.11      70.9             Industrials                 Rental & Leasing Services       14.07  66.7  Bull       0.78   14.51       0.04      26.7    4.23
+200   PCAR   120.17  -1.25   1.02      63.2             Industrials       Farm & Heavy Construction Machinery        2.65  55.5  Bull       0.31    7.08       0.03      26.6    3.58
+201   FTNT   150.73   0.15   4.15     110.4              Technology                 Software - Infrastructure       19.49  67.1  Bear      -1.18   16.21       0.06      26.5    3.30
+202    HAE    78.74   1.44   6.16       3.6              Healthcare                           Medical Devices       16.04  68.0  Bear      -0.26   17.45       0.09      26.2    4.09
+203    THO    78.11   0.21   7.92       4.1       Consumer Cyclical                     Recreational Vehicles        0.31  55.3  Bull       0.28   -2.75       0.01      25.7    3.44
+204   FTRE    17.33   0.23  13.19       1.6              Healthcare                             Biotechnology       18.63  63.0  Bear      -0.00   15.53       0.09      25.6    3.67
+205   PLPC   392.31  -3.96   2.09       1.9             Industrials              Electrical Equipment & Parts       10.48  56.8  Bull       0.88    4.07       0.03      25.3     NaN
+206    MAN    34.72   2.69   3.49       1.6             Industrials            Staffing & Employment Services       12.42  62.9  Bear      -0.04   17.14       0.04      23.7     NaN
+207   STVN    18.43   0.37   5.06       5.0              Healthcare            Medical Instruments & Supplies        6.73  60.1  Bull       0.05   -0.89       0.04      22.8    4.45
+208   BRKR    60.65  -1.84   6.06       9.2              Healthcare                           Medical Devices       20.73  65.2  Bear      -0.12   11.60       0.02      21.8    3.92
+209   LNTH   108.75  -1.14   4.71       7.1              Healthcare  Drug Manufacturers - Specialty & Generic       13.02  68.8  Bull       0.09    9.16       0.01      21.7    4.54
+210   WTTR    19.35   0.00   9.32       2.7                  Energy            Oil & Gas Equipment & Services        9.14  60.4  Bull       0.02    6.67       0.08      18.8    4.83
+211    CNC    65.23  -0.11   6.90      32.2              Healthcare                          Healthcare Plans       14.65  63.2  Bear      -0.33   10.73       0.03      18.3    3.52
+212   PENN    21.40   1.90   0.47       2.9       Consumer Cyclical                         Resorts & Casinos       14.61  64.1  Bear      -0.13   10.08       0.08      18.1    3.89
+213    PDM     9.40   1.73   5.15       1.2             Real Estate                             REIT - Office       10.83  64.8  Bull       0.00   10.85       0.04      17.5    3.67
+214   ARCB   148.89  -0.75   3.02       3.3             Industrials                                  Trucking        9.47  53.2  Bear      -2.72   11.29       0.08      16.7    3.92
+215   STAA    30.42  -2.64   4.48       1.5              Healthcare            Medical Instruments & Supplies        8.32  56.8  Bull       0.03    4.63       0.04      16.4     NaN
+216   BLFS    27.62   2.49   6.07       1.3              Healthcare            Medical Instruments & Supplies       13.27  62.5  Bear      -0.09    9.39       0.02      16.2     NaN
+217    RXO    27.30   4.55   7.52       4.5             Industrials                                  Trucking       16.41  59.5  Bear      -0.38    5.41       0.02      13.8    3.33
+218    GTX    34.61   0.09   0.84       6.5       Consumer Cyclical                                Auto Parts       16.20  62.3  Bear      -0.19    4.19       0.03      12.5     NaN
+219    ROK   475.98  -1.86   0.46      53.0             Industrials            Specialty Industrial Machinery        7.43  58.6  Bull       0.21    4.66       0.11      12.4    3.73
+220   ARGX   898.50   1.11   2.37      56.2              Healthcare                             Biotechnology        7.38  58.8  Bear      -1.56    7.16       0.13      12.0    4.48
+221    MXL    91.26  -2.40   2.82       8.2              Technology                            Semiconductors       20.45  54.7  Bear      -0.07   -6.65       0.09      10.8    4.18
+222     DK    46.81  -0.62  12.88       2.9                  Energy            Oil & Gas Refining & Marketing        5.82  56.1  Bull       0.01    5.45       0.05      10.2    3.67
+223   HTLD    15.46   1.38   7.21       1.2             Industrials                                  Trucking       10.12  58.6  Bear      -0.15    2.80       0.05       8.2    3.00
+224    KNX    77.04  -0.04   3.90      12.5             Industrials                                  Trucking        7.92  56.1  Bear      -0.77    2.95       0.04       7.3    4.22
+225   WERN    42.58   0.90   4.64       2.6             Industrials                                  Trucking        8.88  59.2  Bear      -0.37    2.55       0.03       7.2    2.93
+226   SNDR    36.40   0.57   2.03       6.4             Industrials                                  Trucking        7.97  56.4  Bear      -0.39    2.96       0.01       7.0    3.69
+227    OII    38.87  -1.98   7.79       3.9                  Energy            Oil & Gas Equipment & Services        3.86  54.9  Bull       0.02    1.51       0.07       6.8    2.75
+228    CSX    47.46  -0.62   4.00      88.2             Industrials                                 Railroads        4.74  59.8  Bear      -0.04    3.91       0.05       6.7    4.00
+229      A   136.92   1.42   7.76      38.7              Healthcare                    Diagnostics & Research        9.37  64.7  Bear      -0.01    1.14       0.05       6.3    4.42
+230   COLD    15.50   3.82  10.16       4.4             Real Estate                         REIT - Industrial       10.47  63.1  Bull       0.00   -1.96       0.07       6.1    3.35
+231   MSGS   379.65   0.36   2.58       9.1  Communication Services                             Entertainment        5.73  57.9  Bear      -2.00    2.62       0.01       5.6    3.88
+232    VLO   253.43  -0.44   7.25      75.3                  Energy            Oil & Gas Refining & Marketing        3.61  54.3  Bear      -0.27    3.50       0.03       5.5    3.58
+233    UPS   109.17  -0.10   4.11      92.8             Industrials            Integrated Freight & Logistics        4.43  57.5  Bear      -0.13    2.34       0.11       5.4    3.81
+234   SOLV    78.05   0.21   3.47      13.5              Healthcare            Medical Instruments & Supplies        4.20  55.3  Bear      -0.37    2.78       0.02       5.0     NaN
+235   LINE    43.94   4.62   6.19      11.0             Real Estate                         REIT - Industrial        8.30  59.9  Bear      -0.24    0.05       0.07       4.8    3.25
+236    CNI   120.07  -0.27   5.85      72.8             Industrials                                 Railroads        5.07  61.6  Bear      -0.12    1.62       0.04       4.5    3.79
+237    BST    48.49  -0.83   1.01       1.7      Financial Services                          Asset Management        6.79  57.6  Bear      -0.06   -1.04       0.07       4.0     NaN
+238   NOVT   158.91  -1.23   2.33       5.7              Technology        Scientific & Technical Instruments        6.08  54.1  Bear      -0.97   -0.26       0.03       3.3    4.67
+239    UNP   269.43   0.65   4.89     160.0             Industrials                                 Railroads        2.72  55.4  Bear      -0.17    1.43       0.06       3.3    4.17
+240    BIO   299.80  -2.24   6.15       8.0              Healthcare                           Medical Devices        4.98  57.7  Bear      -0.40   -5.79       0.04       2.8     NaN
+241    NUE   244.79  -2.08   0.39      55.7         Basic Materials                                     Steel        4.79  50.0  Bear      -2.91   -1.81       0.04       2.7    4.35
+242    MPC   253.31  -0.66   4.28      74.0                  Energy            Oil & Gas Refining & Marketing        2.63  51.3  Bear      -1.20    0.79       0.03       2.3    3.67
+243   CLMT    34.15  -0.47   4.63       3.0         Basic Materials                       Specialty Chemicals        2.85  52.1  Bear      -0.13   -3.80       0.01       1.5    3.67
+244    ULS    96.26   0.45   5.39      19.4             Industrials               Specialty Business Services        2.02  51.8  Bear      -0.30   -3.18       0.04       1.3     NaN
+245   AESI    16.74   3.94   3.30       2.1                  Energy            Oil & Gas Equipment & Services        1.56  48.9  Bear      -0.06   -1.67       0.03       1.0     NaN
+246   DINO    67.52  -1.29   4.68      12.2                  Energy            Oil & Gas Refining & Marketing        1.22  48.4  Bear      -0.40   -1.08       0.03       0.8    3.60
+
+CSV saved to /home/ec2-user/output.csv
