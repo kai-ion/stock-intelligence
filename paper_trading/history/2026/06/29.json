@@ -1,0 +1,127 @@
+[
+  {
+    "action": "SELL",
+    "ticker": "MEDP",
+    "shares": 4.0716,
+    "price": 532.14,
+    "date": "2026-06-29",
+    "reason": "TARGET HIT",
+    "pnl": 148.63,
+    "pnl_pct": 7.36,
+    "entry_price": 495.64,
+    "hold_days": 5
+  },
+  {
+    "action": "BUY",
+    "ticker": "AXON",
+    "shares": 4.226,
+    "price": 499.35,
+    "date": "2026-06-29",
+    "target": 560.0,
+    "stop": 463.0,
+    "reasoning": {
+      "upside": "RSI of 13.87 is a screaming oversold signal on a stock with $700 analyst targets and multiple catalysts (ICE contract, Dedrone, AI dispatch) still ahead.",
+      "risk": "The Trump stock-purchase headline could trigger political scrutiny or an ethics investigation that creates overhang."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "WING",
+    "shares": 11.2965,
+    "price": 160.96,
+    "date": "2026-06-29",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -102.02,
+    "pnl_pct": -5.31,
+    "entry_price": 169.99,
+    "hold_days": 3
+  },
+  {
+    "action": "BUY",
+    "ticker": "MDB",
+    "shares": 5.6963,
+    "price": 329.11,
+    "date": "2026-06-29",
+    "target": 365.0,
+    "stop": 313.0,
+    "reasoning": {
+      "upside": "RSI at 3.29 with re-accelerating fundamentals \u2014 billionaire selling created a technical dislocation that's correcting; Atlas growth at 29% proves AI workload tailwind is real.",
+      "risk": "Billionaires were selling for a reason; if macro deteriorates, discretionary IT spending (including database modernization) gets cut first."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "AXON",
+    "shares": 4.226,
+    "price": 506.69,
+    "date": "2026-06-29",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 31.02,
+    "pnl_pct": 1.47,
+    "entry_price": 499.35,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "APP",
+    "shares": 4.2227,
+    "price": 499.74,
+    "date": "2026-06-29",
+    "target": 570.0,
+    "stop": 446.0,
+    "reasoning": {
+      "upside": "Software rotation has legs as market broadens beyond chips; Citi's $710 target implies 42% upside, and RSI at 1.0 means the selling was capitulatory.",
+      "risk": "Citi flagged slower e-commerce client ramp post-Axon GA; if Q2 growth disappoints on that front, the premium multiple compresses quickly."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "APP",
+    "shares": 4.2227,
+    "price": 505.88,
+    "date": "2026-06-29",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 25.93,
+    "pnl_pct": 1.23,
+    "entry_price": 499.74,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "RNG",
+    "shares": 53.5459,
+    "price": 39.41,
+    "date": "2026-06-29",
+    "target": 44.0,
+    "stop": 36.9,
+    "reasoning": {
+      "upside": "AI capabilities (1,700+ RingCX customers) provide re-rating catalyst; RSI of 0.22 is as mathematically oversold as possible, suggesting forced selling is exhausted.",
+      "risk": "UCaaS market is mature; if AI monetization doesn't accelerate by next earnings, the value-trap narrative reasserts."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "RNG",
+    "shares": 53.5459,
+    "price": 39.6,
+    "date": "2026-06-29",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 9.9,
+    "pnl_pct": 0.47,
+    "entry_price": 39.41,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "FCEL",
+    "shares": 69.0525,
+    "price": 30.56,
+    "date": "2026-06-29",
+    "target": 35.0,
+    "stop": 24.5,
+    "reasoning": {
+      "upside": "Data center power demand is a multi-year secular theme, and FCEL now has a funded project pipeline plus Jefferies upgrade providing institutional cover.",
+      "risk": "One project doesn't make a company; if no follow-on orders materialize in 60 days, the stock gives back most of this move."
+    }
+  }
+]

@@ -1,13 +1,13 @@
 {
   "date": "2026-06-26",
-  "total_value": 10276.21,
+  "total_value": 10582.84,
   "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "VKTX": 2139.6,
-    "MEDP": 2121.06,
-    "RVTY": 1855.39,
-    "TEM": 2128.64,
-    "LMRI": 2031.52
+    "VKTX": 2196.55,
+    "MEDP": 2146.63,
+    "LMRI": 2180.12,
+    "AGYS": 2164.33,
+    "WING": 1895.21
   }
 }

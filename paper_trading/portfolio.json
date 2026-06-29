@@ -1,5 +1,5 @@
 {
-  "cash": 0.0,
+  "cash": 66.86582820632884,
   "positions": {
     "VKTX": {
       "shares": 57.8192,
@@ -9,30 +9,6 @@
       "entry_date": "2026-06-23",
       "cost": 1921.33
     },
-    "MEDP": {
-      "shares": 4.0716,
-      "entry_price": 495.64,
-      "exit_target": 530.0,
-      "stop_loss": 461.0,
-      "entry_date": "2026-06-24",
-      "cost": 2018.03
-    },
-    "RVTY": {
-      "shares": 16.1275,
-      "entry_price": 112.46,
-      "exit_target": 125.0,
-      "stop_loss": 101.214,
-      "entry_date": "2026-06-25",
-      "cost": 1813.7
-    },
-    "TEM": {
-      "shares": 38.1991,
-      "entry_price": 54.65,
-      "exit_target": 62.0,
-      "stop_loss": 49.185,
-      "entry_date": "2026-06-25",
-      "cost": 2087.58
-    },
     "LMRI": {
       "shares": 184.5994,
       "entry_price": 11.09,
@@ -40,6 +16,30 @@
       "stop_loss": 9.981,
       "entry_date": "2026-06-26",
       "cost": 2047.21
+    },
+    "AGYS": {
+      "shares": 20.9033,
+      "entry_price": 100.17,
+      "exit_target": 115.0,
+      "stop_loss": 96.0,
+      "entry_date": "2026-06-26",
+      "cost": 2093.89
+    },
+    "MDB": {
+      "shares": 5.6963,
+      "entry_price": 329.11,
+      "exit_target": 365.0,
+      "stop_loss": 313.0,
+      "entry_date": "2026-06-29",
+      "cost": 1874.7
+    },
+    "FCEL": {
+      "shares": 69.0525,
+      "entry_price": 30.56,
+      "exit_target": 35.0,
+      "stop_loss": 24.5,
+      "entry_date": "2026-06-29",
+      "cost": 2110.25
     }
   },
   "start_date": "2026-06-02",

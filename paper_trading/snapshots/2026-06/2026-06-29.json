@@ -1,0 +1,13 @@
+{
+  "date": "2026-06-29",
+  "total_value": 10562.87,
+  "cash": 66.87,
+  "positions_count": 5,
+  "positions": {
+    "VKTX": 2216.21,
+    "LMRI": 2175.5,
+    "AGYS": 2174.57,
+    "MDB": 1907.86,
+    "FCEL": 2021.86
+  }
+}
