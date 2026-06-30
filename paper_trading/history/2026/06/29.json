@@ -123,5 +123,80 @@
       "upside": "Data center power demand is a multi-year secular theme, and FCEL now has a funded project pipeline plus Jefferies upgrade providing institutional cover.",
       "risk": "One project doesn't make a company; if no follow-on orders materialize in 60 days, the stock gives back most of this move."
     }
+  },
+  {
+    "action": "SELL",
+    "ticker": "FCEL",
+    "shares": 69.0525,
+    "price": 30.19,
+    "date": "2026-06-29",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -25.55,
+    "pnl_pct": -1.21,
+    "entry_price": 30.56,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "AXON",
+    "shares": 4.2631,
+    "price": 499.35,
+    "date": "2026-06-29",
+    "target": 560.0,
+    "stop": 463.0,
+    "reasoning": {
+      "upside": "RSI of 13.87 is a screaming oversold signal on a stock with $700 analyst targets and multiple catalysts (ICE contract, Dedrone, AI dispatch) still ahead.",
+      "risk": "The Trump stock-purchase headline could trigger political scrutiny or an ethics investigation that creates overhang."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "AGYS",
+    "shares": 20.9033,
+    "price": 102.47,
+    "date": "2026-06-29",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 48.07,
+    "pnl_pct": 2.3,
+    "entry_price": 100.17,
+    "hold_days": 3
+  },
+  {
+    "action": "BUY",
+    "ticker": "APP",
+    "shares": 4.2598,
+    "price": 499.74,
+    "date": "2026-06-29",
+    "target": 570.0,
+    "stop": 446.0,
+    "reasoning": {
+      "upside": "Software rotation has legs as market broadens beyond chips; Citi's $710 target implies 42% upside, and RSI at 1.0 means the selling was capitulatory.",
+      "risk": "Citi flagged slower e-commerce client ramp post-Axon GA; if Q2 growth disappoints on that front, the premium multiple compresses quickly."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "APP",
+    "shares": 4.2598,
+    "price": 498.84,
+    "date": "2026-06-29",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -3.82,
+    "pnl_pct": -0.18,
+    "entry_price": 499.74,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "RNG",
+    "shares": 54.0163,
+    "price": 39.41,
+    "date": "2026-06-29",
+    "target": 44.0,
+    "stop": 36.9,
+    "reasoning": {
+      "upside": "AI capabilities (1,700+ RingCX customers) provide re-rating catalyst; RSI of 0.22 is as mathematically oversold as possible, suggesting forced selling is exhausted.",
+      "risk": "UCaaS market is mature; if AI monetization doesn't accelerate by next earnings, the value-trap narrative reasserts."
+    }
   }
 ]

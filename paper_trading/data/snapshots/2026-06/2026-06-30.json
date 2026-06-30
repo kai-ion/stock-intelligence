@@ -1,0 +1,13 @@
+{
+  "date": "2026-06-30",
+  "total_value": 10849.14,
+  "cash": 15.08,
+  "positions_count": 5,
+  "positions": {
+    "VKTX": 2278.65,
+    "MDB": 1924.44,
+    "AXON": 2335.45,
+    "VSAT": 2143.47,
+    "TENB": 2152.05
+  }
+}

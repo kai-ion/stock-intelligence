@@ -1,0 +1,102 @@
+[
+  {
+    "action": "SELL",
+    "ticker": "RNG",
+    "shares": 54.0163,
+    "price": 38.42,
+    "date": "2026-06-30",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": -53.47,
+    "pnl_pct": -2.51,
+    "entry_price": 39.41,
+    "hold_days": 1
+  },
+  {
+    "action": "BUY",
+    "ticker": "ALAB",
+    "shares": 4.4115,
+    "price": 477.71,
+    "date": "2026-06-30",
+    "target": 520.0,
+    "stop": 454.0,
+    "reasoning": {
+      "upside": "NASDAQ-100 inclusion forces ~$2B+ in passive fund buying over coming weeks; mechanical bid hasn't fully played out.",
+      "risk": "At all-time highs with no overhead resistance to anchor targets; any broad semi rotation hits this hardest given elevated multiple."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "LMRI",
+    "shares": 184.5994,
+    "price": 11.16,
+    "date": "2026-06-30",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 12.92,
+    "pnl_pct": 0.63,
+    "entry_price": 11.09,
+    "hold_days": 4
+  },
+  {
+    "action": "BUY",
+    "ticker": "LRCX",
+    "shares": 4.8005,
+    "price": 429.15,
+    "date": "2026-06-30",
+    "target": 480.0,
+    "stop": 412.0,
+    "reasoning": {
+      "upside": "$250B WFE market narrative is early innings; Russell Top 50 inclusion adds passive demand; still $50 below new Street target.",
+      "risk": "Semiconductor equipment is deeply cyclical \u2014 any China export restriction escalation or fab spending pause would crush this."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "LRCX",
+    "shares": 4.8005,
+    "price": 431.54,
+    "date": "2026-06-30",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 11.48,
+    "pnl_pct": 0.56,
+    "entry_price": 429.15,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "VSAT",
+    "shares": 25.9437,
+    "price": 79.85,
+    "date": "2026-06-30",
+    "target": 100.0,
+    "stop": 76.0,
+    "reasoning": {
+      "upside": "Satellite sector M&A repricing after Rocket Lab/Iridium deal makes VSAT a scarce asset; \"last major spectrum play\" thesis gives strategic premium.",
+      "risk": "Debt-heavy balance sheet; if the M&A bid doesn't materialize, fundamentals alone don't justify the run."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "ALAB",
+    "shares": 4.4115,
+    "price": 488.79,
+    "date": "2026-06-30",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 48.87,
+    "pnl_pct": 2.32,
+    "entry_price": 477.71,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "TENB",
+    "shares": 60.1805,
+    "price": 35.58,
+    "date": "2026-06-30",
+    "target": 40.0,
+    "stop": 32.022,
+    "reasoning": {
+      "upside": "New FedRAMP certification catalyst plus geopolitical tensions driving cybersecurity spending; massive discount to peer group.",
+      "risk": "Included in \"3 Small-Cap Stocks We Keep Off Our Radar\" article suggests fundamental concerns about competitive moat."
+    }
+  }
+]
