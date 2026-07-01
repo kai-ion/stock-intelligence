@@ -98,5 +98,55 @@
       "upside": "New FedRAMP certification catalyst plus geopolitical tensions driving cybersecurity spending; massive discount to peer group.",
       "risk": "Included in \"3 Small-Cap Stocks We Keep Off Our Radar\" article suggests fundamental concerns about competitive moat."
     }
+  },
+  {
+    "action": "SELL",
+    "ticker": "MDB",
+    "shares": 5.6963,
+    "price": 335.07,
+    "date": "2026-06-30",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 33.96,
+    "pnl_pct": 1.81,
+    "entry_price": 329.11,
+    "hold_days": 1
+  },
+  {
+    "action": "BUY",
+    "ticker": "ALAB",
+    "shares": 4.027,
+    "price": 477.71,
+    "date": "2026-06-30",
+    "target": 520.0,
+    "stop": 454.0,
+    "reasoning": {
+      "upside": "NASDAQ-100 inclusion forces ~$2B+ in passive fund buying over coming weeks; mechanical bid hasn't fully played out.",
+      "risk": "At all-time highs with no overhead resistance to anchor targets; any broad semi rotation hits this hardest given elevated multiple."
+    }
+  },
+  {
+    "action": "SELL",
+    "ticker": "ALAB",
+    "shares": 4.027,
+    "price": 484.41,
+    "date": "2026-06-30",
+    "reason": "REPLACED (weakest position sold for new pick)",
+    "pnl": 26.99,
+    "pnl_pct": 1.4,
+    "entry_price": 477.71,
+    "hold_days": 0
+  },
+  {
+    "action": "BUY",
+    "ticker": "LRCX",
+    "shares": 4.5455,
+    "price": 429.15,
+    "date": "2026-06-30",
+    "target": 480.0,
+    "stop": 412.0,
+    "reasoning": {
+      "upside": "$250B WFE market narrative is early innings; Russell Top 50 inclusion adds passive demand; still $50 below new Street target.",
+      "risk": "Semiconductor equipment is deeply cyclical \u2014 any China export restriction escalation or fab spending pause would crush this."
+    }
   }
 ]
