@@ -1,13 +1,13 @@
 {
   "date": "2026-07-01",
-  "total_value": 11446.56,
-  "cash": 15.91,
+  "total_value": 11022.76,
+  "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "VKTX": 2256.68,
-    "VSAT": 2383.65,
-    "TENB": 2299.2,
-    "SAIL": 2142.14,
-    "EVLV": 2348.98
+    "VKTX": 2154.92,
+    "VSAT": 2149.69,
+    "TENB": 2303.71,
+    "EVLV": 2314.52,
+    "DDOG": 2099.92
   }
 }

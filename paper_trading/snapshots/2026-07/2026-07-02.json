@@ -1,0 +1,13 @@
+{
+  "date": "2026-07-02",
+  "total_value": 11285.53,
+  "cash": 0.0,
+  "positions_count": 5,
+  "positions": {
+    "VKTX": 2227.48,
+    "VSAT": 2271.11,
+    "TENB": 2294.98,
+    "AVAV": 2156.94,
+    "UMAC": 2335.01
+  }
+}
