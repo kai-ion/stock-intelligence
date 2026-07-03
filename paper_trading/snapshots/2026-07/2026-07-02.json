@@ -1,13 +1,13 @@
 {
   "date": "2026-07-02",
-  "total_value": 11285.53,
+  "total_value": 10586.17,
   "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "VKTX": 2227.48,
-    "VSAT": 2271.11,
-    "TENB": 2294.98,
-    "AVAV": 2156.94,
-    "UMAC": 2335.01
+    "VKTX": 2138.15,
+    "VSAT": 2130.5,
+    "TENB": 2314.54,
+    "VERX": 2041.37,
+    "LMND": 1961.6
   }
 }

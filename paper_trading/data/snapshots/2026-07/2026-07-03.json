@@ -1,0 +1,13 @@
+{
+  "date": "2026-07-03",
+  "total_value": 10647.08,
+  "cash": 0.0,
+  "positions_count": 5,
+  "positions": {
+    "VKTX": 2164.75,
+    "VSAT": 2154.88,
+    "TENB": 2322.97,
+    "GPC": 1966.28,
+    "SLS": 2038.2
+  }
+}
