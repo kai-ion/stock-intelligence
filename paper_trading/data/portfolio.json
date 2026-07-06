@@ -1,5 +1,5 @@
 {
-  "cash": 2.2737367544323206e-13,
+  "cash": 0.0,
   "positions": {
     "VKTX": {
       "shares": 57.8192,
@@ -17,29 +17,29 @@
       "entry_date": "2026-06-30",
       "cost": 2071.61
     },
-    "TENB": {
-      "shares": 60.1805,
-      "entry_price": 35.58,
-      "exit_target": 40.0,
-      "stop_loss": 32.022,
-      "entry_date": "2026-06-30",
-      "cost": 2141.22
+    "RIVN": {
+      "shares": 113.3003,
+      "entry_price": 19.11,
+      "exit_target": 23.0,
+      "stop_loss": 15.5,
+      "entry_date": "2026-07-06",
+      "cost": 2165.17
     },
-    "GPC": {
-      "shares": 14.832,
-      "entry_price": 132.57,
-      "exit_target": 145.0,
-      "stop_loss": 125.0,
-      "entry_date": "2026-07-03",
-      "cost": 1966.28
-    },
-    "SLS": {
-      "shares": 136.0615,
-      "entry_price": 14.98,
+    "CMBT": {
+      "shares": 142.331,
+      "entry_price": 15.17,
       "exit_target": 18.0,
-      "stop_loss": 13.482000000000001,
-      "entry_date": "2026-07-03",
-      "cost": 2038.2
+      "stop_loss": 14.0,
+      "entry_date": "2026-07-06",
+      "cost": 2159.16
+    },
+    "BETA": {
+      "shares": 109.0533,
+      "entry_price": 18.53,
+      "exit_target": 22.0,
+      "stop_loss": 16.0,
+      "entry_date": "2026-07-06",
+      "cost": 2020.76
     }
   },
   "start_date": "2026-06-02",
