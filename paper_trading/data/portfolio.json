@@ -1,14 +1,6 @@
 {
   "cash": 0.0,
   "positions": {
-    "VKTX": {
-      "shares": 57.8192,
-      "entry_price": 33.23,
-      "exit_target": 40.0,
-      "stop_loss": 30.0,
-      "entry_date": "2026-06-23",
-      "cost": 1921.33
-    },
     "VSAT": {
       "shares": 25.9437,
       "entry_price": 79.85,
@@ -17,29 +9,37 @@
       "entry_date": "2026-06-30",
       "cost": 2071.61
     },
-    "RIVN": {
-      "shares": 113.3003,
-      "entry_price": 19.11,
-      "exit_target": 23.0,
-      "stop_loss": 15.5,
+    "KB": {
+      "shares": 19.1884,
+      "entry_price": 113.59,
+      "exit_target": 125.0,
+      "stop_loss": 98.0,
       "entry_date": "2026-07-06",
-      "cost": 2165.17
+      "cost": 2179.61
     },
-    "CMBT": {
-      "shares": 142.331,
-      "entry_price": 15.17,
-      "exit_target": 18.0,
-      "stop_loss": 14.0,
-      "entry_date": "2026-07-06",
-      "cost": 2159.16
+    "DUOL": {
+      "shares": 15.9627,
+      "entry_price": 132.72,
+      "exit_target": 160.0,
+      "stop_loss": 120.0,
+      "entry_date": "2026-07-07",
+      "cost": 2118.57
     },
-    "BETA": {
-      "shares": 109.0533,
-      "entry_price": 18.53,
-      "exit_target": 22.0,
-      "stop_loss": 16.0,
-      "entry_date": "2026-07-06",
-      "cost": 2020.76
+    "RDDT": {
+      "shares": 10.0855,
+      "entry_price": 204.85,
+      "exit_target": 240.0,
+      "stop_loss": 185.0,
+      "entry_date": "2026-07-07",
+      "cost": 2066.01
+    },
+    "TEO": {
+      "shares": 147.9142,
+      "entry_price": 13.46,
+      "exit_target": 16.0,
+      "stop_loss": 12.5,
+      "entry_date": "2026-07-07",
+      "cost": 1990.93
     }
   },
   "start_date": "2026-06-02",

@@ -1,13 +1,13 @@
 {
   "date": "2026-07-06",
-  "total_value": 10896.72,
-  "cash": 0.0,
+  "total_value": 10925.41,
+  "cash": 23.62,
   "positions_count": 5,
   "positions": {
-    "VKTX": 2170.82,
-    "VSAT": 2300.36,
-    "RIVN": 2179.9,
-    "CMBT": 2179.09,
-    "BETA": 2066.55
+    "VKTX": 2221.41,
+    "VSAT": 2163.96,
+    "RIVN": 2271.1,
+    "BETA": 2068.2,
+    "KB": 2177.12
   }
 }
