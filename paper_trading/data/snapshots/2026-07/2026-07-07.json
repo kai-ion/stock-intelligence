@@ -1,13 +1,13 @@
 {
   "date": "2026-07-07",
-  "total_value": 10486.91,
-  "cash": 0.0,
+  "total_value": 10110.87,
+  "cash": -0.0,
   "positions_count": 5,
   "positions": {
-    "VSAT": 2099.75,
-    "KB": 2223.17,
-    "DUOL": 2123.84,
-    "RDDT": 2053.66,
-    "TEO": 1986.49
+    "KB": 2211.66,
+    "DUOL": 2100.37,
+    "RDDT": 2018.81,
+    "AXON": 1971.02,
+    "KLRA": 1809.01
   }
 }

@@ -1,14 +1,6 @@
 {
-  "cash": 0.0,
+  "cash": 2.2737367544323206e-13,
   "positions": {
-    "VSAT": {
-      "shares": 25.9437,
-      "entry_price": 79.85,
-      "exit_target": 100.0,
-      "stop_loss": 76.0,
-      "entry_date": "2026-06-30",
-      "cost": 2071.61
-    },
     "KB": {
       "shares": 19.1884,
       "entry_price": 113.59,
@@ -25,21 +17,29 @@
       "entry_date": "2026-07-07",
       "cost": 2118.57
     },
-    "RDDT": {
-      "shares": 10.0855,
-      "entry_price": 204.85,
-      "exit_target": 240.0,
-      "stop_loss": 185.0,
-      "entry_date": "2026-07-07",
-      "cost": 2066.01
+    "FRHC": {
+      "shares": 10.7998,
+      "entry_price": 157.27,
+      "exit_target": 175.0,
+      "stop_loss": 140.0,
+      "entry_date": "2026-07-08",
+      "cost": 1698.49
     },
-    "TEO": {
-      "shares": 147.9142,
-      "entry_price": 13.46,
-      "exit_target": 16.0,
-      "stop_loss": 12.5,
-      "entry_date": "2026-07-07",
-      "cost": 1990.93
+    "OVV": {
+      "shares": 33.8407,
+      "entry_price": 55.81,
+      "exit_target": 65.0,
+      "stop_loss": 52.0,
+      "entry_date": "2026-07-08",
+      "cost": 1888.65
+    },
+    "PBT": {
+      "shares": 68.1099,
+      "entry_price": 26.91,
+      "exit_target": 31.0,
+      "stop_loss": 24.219,
+      "entry_date": "2026-07-08",
+      "cost": 1832.84
     }
   },
   "start_date": "2026-06-02",
