@@ -1,5 +1,5 @@
 {
-  "cash": 2.2737367544323206e-13,
+  "cash": 45.38117846245859,
   "positions": {
     "KB": {
       "shares": 19.1884,
@@ -9,30 +9,6 @@
       "entry_date": "2026-07-06",
       "cost": 2179.61
     },
-    "DUOL": {
-      "shares": 15.9627,
-      "entry_price": 132.72,
-      "exit_target": 160.0,
-      "stop_loss": 120.0,
-      "entry_date": "2026-07-07",
-      "cost": 2118.57
-    },
-    "FRHC": {
-      "shares": 10.7998,
-      "entry_price": 157.27,
-      "exit_target": 175.0,
-      "stop_loss": 140.0,
-      "entry_date": "2026-07-08",
-      "cost": 1698.49
-    },
-    "OVV": {
-      "shares": 33.8407,
-      "entry_price": 55.81,
-      "exit_target": 65.0,
-      "stop_loss": 52.0,
-      "entry_date": "2026-07-08",
-      "cost": 1888.65
-    },
     "PBT": {
       "shares": 68.1099,
       "entry_price": 26.91,
@@ -40,6 +16,30 @@
       "stop_loss": 24.219,
       "entry_date": "2026-07-08",
       "cost": 1832.84
+    },
+    "PENG": {
+      "shares": 16.2151,
+      "entry_price": 85.04,
+      "exit_target": 95.0,
+      "stop_loss": 72.0,
+      "entry_date": "2026-07-09",
+      "cost": 1378.93
+    },
+    "HPE": {
+      "shares": 36.093,
+      "entry_price": 46.49,
+      "exit_target": 52.0,
+      "stop_loss": 44.0,
+      "entry_date": "2026-07-09",
+      "cost": 1677.96
+    },
+    "MCHP": {
+      "shares": 19.9715,
+      "entry_price": 89.82,
+      "exit_target": 113.0,
+      "stop_loss": 86.0,
+      "entry_date": "2026-07-09",
+      "cost": 1793.84
     }
   },
   "start_date": "2026-06-02",

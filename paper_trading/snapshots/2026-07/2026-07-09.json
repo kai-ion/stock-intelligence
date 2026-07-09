@@ -1,0 +1,13 @@
+{
+  "date": "2026-07-09",
+  "total_value": 8976.44,
+  "cash": 45.38,
+  "positions_count": 5,
+  "positions": {
+    "KB": 2214.53,
+    "PBT": 1830.11,
+    "PENG": 1396.44,
+    "HPE": 1696.73,
+    "MCHP": 1793.24
+  }
+}
