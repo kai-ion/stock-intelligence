@@ -1,0 +1,230 @@
+HTTP Error 500: {"quoteSummary":{"result":null,"error":{"code":"internal-error","description":"internal-error"}}}
+=== Stock Screener — 2026-07-10 13:45 ===
+Criteria: Above 50d EMA | Positive weekly gain | Market cap > $1B
+Fetching universe...
+
+  NASDAQ screener: 2803 stocks with market cap > $1B
+  Top 5 by daily gain: TRAX(+56.0%), LASR(+27.3%), FRVO(+16.0%), BBIO(+15.1%), TXG(+15.0%)
+  S&P 500 loaded: 503 tickers
+Screening 2803 stocks...
+  Priority tier: 939 (top 500 movers + 439 S&P 500)
+  Remaining: 1864
+
+  === Priority Tier ===
+  Priority: 300/939 (134 passed, 0 errors)
+  Priority: 600/939 (189 passed, 165 errors)
+  Priority: 900/939 (189 passed, 465 errors)
+  Priority: 939/939 (189 passed, 504 errors)
+
+  Retrying 504 priority tickers...
+  After priority retry: 189 passed
+
+  === Remaining Tier ===
+  Remaining: 300/1864 (189 total passed)
+  Remaining: 600/1864 (189 total passed)
+  Remaining: 900/1864 (189 total passed)
+  Remaining: 1200/1864 (189 total passed)
+  Remaining: 1500/1864 (189 total passed)
+  Remaining: 1800/1864 (189 total passed)
+  Remaining: 1864/1864 (189 total passed)
+
+  Final: 189 stocks passed all filters
+
+================================================================================
+  189 stocks passed all filters
+  Sorted by composite momentum (MACD 35 | ROC 30 | Volume 25 | EMA 10)
+  Rating: 5=Strong Buy → 1=Strong Sell | Vol Ratio: >1 = above avg volume
+================================================================================
+
+    Ticker    Price  Day%  Week%  MCap($B)                  Sector                                 Industry  Above EMA%   RSI  MACD  MACD Hist  ROC20%  Vol Ratio  Momentum  Rating
+1     TRAX    33.50  4.69  73.58       1.2              Healthcare                            Biotechnology       72.86  80.9  Bull       1.63  104.02       0.26      77.2    4.62
+2       SE   112.88  3.44   9.27      69.1       Consumer Cyclical                          Internet Retail       20.30  75.4  Bull       1.95   36.92       0.19      76.6    4.66
+3     PENG    75.68 -7.10  23.12       3.9              Technology          Information Technology Services       31.84  58.2  Bull       0.45   29.32       0.20      76.0    4.43
+4     BBIO    88.50 -1.95  14.65      17.4              Healthcare                            Biotechnology       22.84  81.6  Bull       1.94   31.30       0.10      75.9    4.57
+5     IMOS    76.41  1.10  19.52       2.7              Technology                           Semiconductors       29.57  64.2  Bull       1.04   40.44       0.10      75.9     NaN
+6     BLZE    17.74 -0.28  13.57       1.1              Technology                Software - Infrastructure       71.92  83.6  Bull       0.38  139.73       0.08      75.7     NaN
+7     PSNL    14.19 -4.73   4.15       1.5              Healthcare                   Diagnostics & Research       34.01  68.6  Bull       0.11   47.61       0.08      75.7    4.57
+8     DAVE   402.81  3.37   3.99       5.1              Technology                   Software - Application       32.44  74.1  Bull       3.41   48.69       0.07      75.6    4.58
+9      TXG    42.84 -0.37   9.82       5.4              Healthcare              Health Information Services       36.78  72.5  Bull       0.36   47.17       0.07      75.6    3.69
+10     MBX    61.49 -6.40   6.39       2.9              Healthcare                            Biotechnology       42.13  75.4  Bull       1.07   98.43       0.06      75.5     NaN
+11    URGN    38.88 -2.80   2.26       1.9              Healthcare                            Biotechnology       24.13  71.2  Bull       0.20   38.86       0.06      75.5    4.57
+12    AMPL     9.51  1.06   7.58       1.3              Technology                   Software - Application       26.06  74.1  Bull       0.23   37.83       0.06      75.5    4.25
+13    MPLT    39.48 -2.73   6.44       1.8              Healthcare                            Biotechnology       27.84  69.6  Bull       0.73   42.01       0.07      75.5    4.83
+14    MGNI    21.18 -0.66   3.93       3.0  Communication Services                     Advertising Agencies       26.70  73.2  Bull       0.13   35.16       0.04      75.4    4.53
+15    GRPN    26.56 -0.15   3.83       1.0  Communication Services           Internet Content & Information       35.19  71.9  Bull       0.51   65.07       0.03      75.3     NaN
+16    DFTX    45.92 -5.05   3.91       6.1              Healthcare                            Biotechnology       44.72  71.8  Bull       0.31   97.59       0.03      75.3    4.73
+17    TENB    41.24 -1.81   6.84       4.5              Technology                Software - Infrastructure       40.83  78.5  Bull       0.90   53.88       0.03      75.2    3.83
+18    PTRN    29.19  0.26  10.46       5.8              Technology                   Software - Application       39.38  79.9  Bull       0.47   41.65       0.02      75.2    4.78
+19    RLAY    19.75 -5.53   5.87       4.3              Healthcare                            Biotechnology       24.32  64.4  Bull       0.15   46.37       0.02      75.2    4.77
+20    QLYS   158.63 -0.86   7.10       5.6              Technology                Software - Infrastructure       33.92  81.6  Bull       3.08   43.95       0.03      75.2    3.33
+21    EWTX    45.87 -4.23  15.95       4.9              Healthcare                            Biotechnology       22.89  66.4  Bull       0.71   39.34       0.02      75.2    4.45
+22    KYMR   116.32 -3.07   2.48       9.6              Healthcare                            Biotechnology       22.52  66.5  Bull       0.83   48.69       0.02      75.1    4.70
+23    NTSK    12.44  0.69   6.19       5.0              Technology                Software - Infrastructure       16.23  67.9  Bull       0.30   46.81       0.04      73.5    4.72
+24    BAND    75.66 -5.15  22.82       2.4              Technology                Software - Infrastructure       37.99  67.6  Bull       1.81   27.57       0.06      73.1    4.20
+25    BLLN   126.09 -1.78   4.77       5.8              Healthcare                   Diagnostics & Research       22.48  66.2  Bull       0.72   27.03       0.06      72.6    4.25
+26     PGY    18.45  3.56   3.71       1.5              Technology                Software - Infrastructure       18.26  62.0  Bull       0.12   27.24       0.06      71.9    4.80
+27     CRL   234.82 -0.53   1.79      11.3              Healthcare                   Diagnostics & Research       20.07  74.5  Bull       1.60   26.05       0.04      71.4    4.29
+28    RBRK    88.88 -0.14   6.26      18.3              Technology                Software - Infrastructure       23.40  71.1  Bull       1.11   24.62       0.10      70.5    4.89
+29    CGON    71.53 -2.48   1.66       6.3              Healthcare                            Biotechnology        8.97  60.7  Bull       0.39   30.24       0.03      69.8    4.62
+30       U    32.71  6.46  11.55      14.3              Technology                   Software - Application       16.85  68.9  Bull       0.37   22.67       0.43      69.7    4.15
+31       S    18.62 -0.21   6.34       6.4              Technology                Software - Infrastructure       14.75  67.4  Bull       0.33   25.90       0.10      69.1    4.17
+32    SRRK    56.33 -1.39   2.65       6.8              Healthcare                            Biotechnology       12.33  64.5  Bull       0.48   27.77       0.01      69.0    4.83
+33    BILL    41.37  2.10   2.20       4.1              Technology                   Software - Application       11.08  66.9  Bull       0.83   27.72       0.03      68.5    4.04
+34    PNTG    40.19 -2.83   4.34       1.4              Healthcare                  Medical Care Facilities       15.41  73.2  Bull       0.47   24.43       0.13      68.2    4.86
+35    ZBRA   275.57  1.07   3.14      13.1              Technology                  Communication Equipment       11.84  66.3  Bull       2.40   27.11       0.03      68.2    4.33
+36    GRAL    72.84 -3.42   5.40       3.1              Healthcare                   Diagnostics & Research       13.21  63.2  Bull       0.83   24.32       0.04      66.2    3.89
+37    VIRT    67.35  0.52   9.03      14.5      Financial Services                          Capital Markets       19.21  74.2  Bull       0.36   21.24       0.03      66.1    3.43
+38     TEM    60.65 -1.07   0.62      10.9              Healthcare              Health Information Services       14.00  61.2  Bull       0.53   22.56       0.05      65.0    3.89
+39    GTLB    34.11  0.62   6.36       5.8              Technology                Software - Infrastructure       19.70  68.4  Bull       0.43   19.64       0.07      65.0    3.48
+40    SOFI    19.38  4.00   6.22      24.9      Financial Services                          Credit Services       10.65  63.9  Bull       0.11   22.09       0.21      64.2    3.29
+41    PICS    11.81  0.35   6.74       1.5              Technology                Software - Infrastructure        5.47  61.0  Bull       0.17   25.59       0.04      63.7    4.78
+42    OPEN     5.43  2.35  10.92       5.2             Real Estate                     Real Estate Services       13.46  65.6  Bull       0.11   21.32       0.08      63.7     NaN
+43    TBBK    66.95  0.62   4.79       2.8      Financial Services                         Banks - Regional       13.07  70.2  Bull       0.56   21.84       0.02      63.5    4.33
+44    EMBJ    66.05  0.11   3.03      11.8             Industrials                      Aerospace & Defense        7.25  61.0  Bull       0.39   23.15       0.14      62.9    4.53
+45    ILMN   192.58 -1.24   2.07      29.1              Healthcare                   Diagnostics & Research       17.79  67.6  Bull       1.04   18.53       0.01      62.5    3.65
+46    GLBE    38.79  2.48   5.26       6.5       Consumer Cyclical                          Internet Retail       15.61  67.7  Bull       0.33   18.52       0.09      62.0    4.62
+47       P    81.26  0.24  11.76      27.0              Technology                        Computer Hardware        8.37  57.8  Bull       0.94   22.14       0.05      61.7    4.10
+48    META   665.38  3.99  14.15    1687.8  Communication Services           Internet Content & Information       10.64  65.8  Bull      10.92   16.64       0.51      61.2    4.68
+49    BRZE    25.60  3.56   7.52       2.9              Technology                   Software - Application       14.08  66.7  Bull       0.55   18.19       0.06      60.7    4.71
+50     SAH    96.83  1.88  15.65       3.1       Consumer Cyclical                 Auto & Truck Dealerships       19.36  77.5  Bull       1.13   15.63       0.05      60.7    3.83
+51    INSP    51.12  1.25   8.88       1.5              Healthcare                          Medical Devices        8.96  69.0  Bull       0.99   20.91       0.01      60.5    3.31
+52    CELC   109.74 -4.49   1.66       5.4              Healthcare                            Biotechnology        1.51  55.0  Bull       2.78   24.37       0.02      60.3    4.83
+53    KVYO    17.51  1.98   3.61       5.2              Technology                   Software - Application        8.71  64.7  Bull       0.40   20.68       0.04      60.3    4.73
+54      WT    20.00  0.00  10.86       3.1      Financial Services                         Asset Management       11.13  67.2  Bull       0.26   19.26       0.06      60.3    4.29
+55    LYFT    15.95  1.21   3.77       6.1              Technology                   Software - Application       10.53  65.3  Bull       0.14   19.12       0.09      60.1    3.53
+56     EAT   183.25  1.45   3.12       7.9       Consumer Cyclical                              Restaurants       16.01  72.1  Bull       0.71   24.31       0.06      59.8    4.33
+57    ADUS   109.00 -0.91   3.64       2.0              Healthcare                  Medical Care Facilities       11.12  79.8  Bull       1.23   16.99       0.15      58.8    4.43
+58    SHOP   127.30  2.46   6.57     165.2              Technology                   Software - Application       10.18  64.3  Bull       1.31   17.66       0.13      58.8    4.25
+59    ANDG    42.38 -3.03  16.54       4.8       Consumer Cyclical                        Personal Services       15.98  62.3  Bull       0.56   14.93       0.09      58.7    4.43
+60    CRWD   196.75 -0.62   1.43     200.3              Technology                Software - Infrastructure       19.12  66.6  Bull       0.76   21.50       0.05      58.5    4.33
+61     MRX    70.11 -1.10  12.14       5.0      Financial Services                          Capital Markets       18.61  66.3  Bull       0.38   13.25       0.01      57.6    4.38
+62    DRVN    15.55  0.30   7.43       2.6       Consumer Cyclical                 Auto & Truck Dealerships       13.57  68.6  Bull       0.21   14.81       0.05      57.0     NaN
+63    QGEN    42.17  0.15   6.12       8.7              Healthcare                   Diagnostics & Research       11.21  69.6  Bull       0.32   14.95       0.09      56.3    4.00
+64    RDWR    32.38  0.89   9.08       1.4              Technology                Software - Infrastructure       12.53  68.6  Bull       0.31   13.63       0.09      55.6     NaN
+65      DV    11.83  1.02   3.41       1.8  Communication Services                     Advertising Agencies       11.77  65.7  Bull       0.11   14.63       0.01      55.6    3.67
+66     CMG    35.40  2.59   0.03      45.4       Consumer Cyclical                              Restaurants        7.48  61.7  Bull       0.26   16.37       0.04      55.4    4.31
+67    LASR    72.63 -4.06  14.83       4.1              Technology                           Semiconductors        7.15  55.8  Bull       0.96   15.84       0.12      55.4    4.67
+68    ATEC     9.54  0.42   6.95       1.5              Healthcare                          Medical Devices        5.05  61.2  Bull       0.09   17.34       0.02      55.0    4.75
+69    USPH    72.74 -0.97   0.54       1.1              Healthcare                  Medical Care Facilities        6.82  63.0  Bull       0.65   15.77       0.05      54.6    4.14
+70    ENOV    25.23  2.06  12.13       1.5              Healthcare                          Medical Devices        8.71  58.1  Bull       0.50   14.84       0.01      54.3    4.67
+71    SYRE    95.14 -4.96   9.82       8.3              Healthcare                            Biotechnology       19.02  61.1  Bull       0.23   26.72       0.03      53.2    5.00
+72    APPN    26.08  3.89   6.89       1.9              Technology                Software - Infrastructure       12.58  66.1  Bull       0.40   11.26       0.06      53.1     NaN
+73     SHC    18.27 -2.35   1.90       5.2              Healthcare                   Diagnostics & Research       10.84  67.7  Bull       0.11   12.29       0.04      53.0    4.30
+74     WEX   156.05  1.44   6.53       5.4              Technology                Software - Infrastructure        7.70  65.9  Bull       2.64   13.61       0.01      52.6    3.64
+75    PATH    12.09  2.24   3.25       6.3              Technology                Software - Infrastructure        9.32  64.0  Bull       0.16   12.47       0.03      52.4    3.20
+76    NEXA    13.93  4.29   6.79       1.8         Basic Materials         Other Industrial Metals & Mining        3.25  54.4  Bull       0.12   14.99       0.08      52.3    2.88
+77    NTCT    44.75 -1.75   9.34       3.2              Technology                Software - Infrastructure       12.17  65.3  Bull       0.24   11.05       0.02      52.3     NaN
+78      XP    16.99  3.53   5.14       8.8      Financial Services                          Capital Markets        1.76  58.1  Bull       0.15   13.72       0.04      49.9    4.31
+79      IQ     1.15  1.32  14.36       1.1  Communication Services                            Entertainment        3.35  60.1  Bull       0.02   12.14       0.12      49.8     NaN
+80    AAMI    81.40  1.27  11.37       2.9      Financial Services                         Asset Management       12.35  63.9  Bull       0.62    7.13       0.01      48.4    3.00
+81    EYPT    14.13 -5.10   1.07       1.2              Healthcare                            Biotechnology        4.32  54.0  Bull       0.06   14.60       0.11      48.0    4.77
+82      RH   170.24  1.05   0.69       3.2       Consumer Cyclical                         Specialty Retail       12.32  63.5  Bull       0.66   14.49       0.02      47.9    3.40
+83    LPLA   315.52  1.13   6.89      25.2      Financial Services                          Capital Markets        6.29  62.7  Bull       3.53    9.11       0.04      47.6    4.31
+84    ALMR    26.02 -3.16   0.31       1.8              Healthcare                          Medical Devices       11.31  60.1  Bull       0.08   20.97       0.03      47.3     NaN
+85    INBX    99.07 -4.50   1.53       1.5              Healthcare                            Biotechnology        1.79  52.2  Bull       1.17   10.73       0.04      47.0     NaN
+86     IVZ    29.45  4.27   9.05      13.1                     N/A                                      N/A        8.52  63.2  Bull       0.18    7.27       0.04      46.9     NaN
+87    DOCU    49.18  0.76   7.45       9.4              Technology                   Software - Application        4.99  60.7  Bull       0.67    8.97       0.02      46.7     NaN
+88    HUBS   211.18  2.71   9.92      10.8              Technology                   Software - Application        3.65  59.0  Bull       4.32    9.54       0.04      46.7    4.21
+89      PS    35.18  1.09   8.51      14.1      Financial Services                         Asset Management        5.46  53.9  Bull       0.36    8.11       0.04      46.1    3.67
+90    NUVB     5.95 -4.19   4.39       2.1              Healthcare                            Biotechnology       12.99  59.3  Bull       0.01   29.91       0.05      45.6    4.60
+91     PAG   193.87  1.24   8.05      12.7       Consumer Cyclical                 Auto & Truck Dealerships       11.38  69.8  Bull       0.85    8.81       0.03      45.5     NaN
+92      DT    45.33  0.31   1.25      13.2              Technology                   Software - Application        9.32  62.1  Bull       0.18   11.71       0.03      45.2    4.30
+93     ABG   213.33  0.76   3.86       4.0       Consumer Cyclical                 Auto & Truck Dealerships        6.53  63.4  Bull       1.03    7.67       0.04      44.9    3.45
+94     RNG    41.51  1.23   3.74       3.5              Technology                   Software - Application        4.83  56.4  Bull       0.59    7.16       0.03      44.8    3.62
+95      SF    76.00  0.69   3.86      11.7      Financial Services                          Capital Markets        3.44  60.3  Bull       0.56    7.86       0.03      44.8    3.62
+96    AVGO   400.80 -0.01  11.19    1907.5              Technology                           Semiconductors        2.48  54.1  Bull       3.56    7.88       0.06      44.6    4.69
+97    ESTC    63.30  2.28   9.06       6.6              Technology                   Software - Application        9.91  63.5  Bull       0.34    4.15       0.03      44.3    4.06
+98     AYA    19.73 -1.35   0.56       2.8         Basic Materials                                   Silver        5.34  53.4  Bull       0.05   22.70       0.05      44.2     NaN
+99    NEOG     9.75 -1.58   4.39       2.1              Healthcare                          Medical Devices        5.49  59.0  Bull       0.05    6.32       0.02      44.2     NaN
+100   MNDY    84.73  2.07   6.22       3.6              Technology                   Software - Application        9.08  60.7  Bull       1.28    3.71       0.04      43.5    4.32
+101   TEAM    94.18  3.84  12.34      23.9              Technology                   Software - Application        9.26  59.6  Bull       1.29    2.89       0.09      43.3    4.47
+102   NTAP   173.97  1.00  12.84      34.1              Technology                Software - Infrastructure       17.80  69.6  Bull       0.61    8.28       0.14      42.8    3.60
+103   MBLY     9.57  0.79   0.05       8.1       Consumer Cyclical                               Auto Parts        4.41  54.2  Bull       0.11    4.76       0.07      42.5    3.68
+104   WYFI    37.01 -7.09  17.73       1.4              Technology          Information Technology Services       23.15  54.9  Bear      -0.39   62.20       0.14      41.2     NaN
+105   ASAN     7.69  4.77   4.77       1.8              Technology                   Software - Application        7.83  58.5  Bull       0.05    1.45       0.05      40.8    3.33
+106   RVLV    23.57  1.88   4.18       1.7       Consumer Cyclical                          Internet Retail        7.22  61.7  Bull       0.07   15.80       0.01      40.4     NaN
+107   BFLY     7.73 -4.16   0.65       2.0              Healthcare                          Medical Devices       24.51  56.4  Bear      -0.11   43.41       0.03      40.3     NaN
+108   ENVA   239.85  1.41   1.98       6.0      Financial Services                          Credit Services       22.79  72.0  Bear      -0.06   33.31       0.02      40.2    4.71
+109   MAAS    15.60  2.63   3.79       6.9      Financial Services                         Asset Management       20.39  53.4  Bear      -0.25   30.00       0.02      40.1     NaN
+110   NDAQ    89.04  2.00   5.18      50.4      Financial Services         Financial Data & Stock Exchanges        3.46  58.8  Bull       1.01    3.05       0.03      40.0    4.29
+111   CNMD    37.00  0.84   9.37       1.1              Healthcare                          Medical Devices        4.54  57.9  Bull       0.37    1.93       0.06      39.7    2.86
+112    KKR    97.94  1.70   4.37      91.3      Financial Services                         Asset Management        2.36  57.3  Bull       0.55    3.07       0.06      39.7    4.43
+113   ADPT    21.62 -1.14   2.03       3.5              Healthcare                   Diagnostics & Research       22.19  64.3  Bull       0.01   26.65       0.03      39.5    4.50
+114    NWS    31.09 -0.13   3.05      16.9  Communication Services                            Entertainment        4.80  61.0  Bull       0.29    0.61       0.10      38.8     NaN
+115   TGTX    58.07 -1.48   8.93       8.9              Healthcare                            Biotechnology       23.45  71.7  Bull       0.02   24.56       0.06      37.3    4.33
+116    TGB     7.07  1.00   2.02       2.6         Basic Materials                                   Copper        0.98  52.3  Bull       0.03    9.95       0.04      36.3    4.71
+117   ALAB   412.05 -1.33   1.39      70.6              Technology                           Semiconductors       22.31  54.9  Bear      -6.96   24.54       0.05      34.9    4.12
+118   SIMO   317.88 -2.49   5.71      10.8              Technology                           Semiconductors       16.62  55.3  Bear      -2.68   26.30       0.04      34.9    4.55
+119   WRBY    29.27 -0.17   0.03       3.6              Healthcare           Medical Instruments & Supplies       10.70  59.1  Bull       0.04   16.99       0.02      33.1    4.29
+120   KLAR    19.82 -0.88   0.48       7.5      Financial Services                          Credit Services       12.10  60.1  Bear      -0.05   25.57       0.11      32.5    4.09
+121    WGS    68.37 -1.48   1.27       2.0              Healthcare                   Diagnostics & Research       11.28  59.0  Bear      -0.03   25.87       0.02      31.6     NaN
+122   ARES   123.29  1.34   5.47      40.7      Financial Services                         Asset Management        1.94  53.6  Bull       0.53   -2.94       0.02      31.3    4.06
+123   CRSR     9.67  1.79   8.65       1.0              Technology                        Computer Hardware       14.00  58.2  Bull       0.02   12.05       0.03      31.1     NaN
+124   VCYT    58.51 -1.99   2.51       4.7              Healthcare                   Diagnostics & Research       18.61  63.4  Bear      -0.35   21.47       0.03      31.0    4.36
+125   ACMR    98.35 -8.06   0.59       6.8              Technology      Semiconductor Equipment & Materials       13.11  51.0  Bear      -2.19   22.99       0.13      30.6    4.50
+126   DELL   443.49 -1.45  12.47     286.6              Technology                        Computer Hardware       24.96  62.1  Bear      -2.39   19.92       0.07      30.5    4.22
+127    AMD   549.42  0.43   6.10     895.9              Technology                           Semiconductors       16.47  56.2  Bear      -3.56   21.45       0.09      30.5    4.52
+128    ASX    41.76 -4.32   0.75      91.6              Technology                           Semiconductors       13.47  54.7  Bear      -0.17   22.99       0.08      30.4     NaN
+129   TSLA   408.63  0.87   3.86    1534.7       Consumer Cyclical                       Auto Manufacturers        1.18  51.5  Bull       1.25    7.08       0.10      29.8    3.62
+130   INGM    29.07  0.10  13.33       6.7              Technology          Information Technology Services        5.19  58.0  Bull       0.10    2.18       0.00      28.5    3.80
+131   EXPD   171.34 -2.44   2.25      22.4             Industrials           Integrated Freight & Logistics        6.89  66.7  Bull       0.50    4.03       0.08      28.4    2.81
+132   SEPN    36.57 -7.44   7.56       1.6              Healthcare                            Biotechnology       14.63  58.4  Bear      -0.09   20.02       0.03      27.6    4.90
+133   FTNT   162.02 -0.89   3.69     118.7              Technology                Software - Infrastructure       19.09  65.7  Bear      -0.12   16.66       0.04      26.5    3.25
+134   SHAZ    75.29 -7.36  10.86       2.4              Technology          Information Technology Services       11.81  50.4  Bear      -1.53   19.71       0.08      26.3    5.00
+135   ECPG    91.78 -1.18   1.29       2.0      Financial Services                          Credit Services        9.48  63.0  Bull       0.09   14.44       0.01      26.2    4.25
+136   HAPN    20.40  2.77   3.61       2.4      Financial Services                         Banks - Regional       12.08  61.4  Bear      -0.06   18.47       0.02      24.7    4.50
+137   STNE    11.24  4.07   0.63       2.7              Technology                Software - Infrastructure        1.78  56.2  Bull       0.03    6.04       0.04      24.5    4.00
+138    WWW    17.54  0.98   6.11       1.4       Consumer Cyclical                   Footwear & Accessories        3.98  55.8  Bull       0.05    2.78       0.03      23.9     NaN
+139   EXTR    32.75 -0.66   9.90       4.3              Technology                  Communication Equipment       18.19  61.8  Bear      -0.18   14.59       0.02      23.9     NaN
+140    LTM    56.51 -0.94   0.13      16.5             Industrials                                 Airlines        5.31  55.3  Bear      -0.25   19.16       0.07      22.4    4.60
+141   AVTR    10.56  0.62   2.37       7.2              Healthcare           Medical Instruments & Supplies       12.85  63.4  Bull       0.01    9.48       0.06      21.8    3.06
+142    TFC    51.85  0.95   1.71      64.6      Financial Services                         Banks - Regional        4.78  59.7  Bull       0.11    4.20       0.04      21.6    3.38
+143   CHRN    19.84 -5.20  20.32       2.9              Technology          Information Technology Services       10.99  51.4  Bear      -0.47   15.09       0.04      20.9     NaN
+144   RGEN   144.74  1.29   1.64       8.2              Healthcare           Medical Instruments & Supplies       10.95  62.4  Bull       0.09   10.69       0.02      20.5    4.55
+145    HPE    49.78  0.77  20.74      65.9              Technology                  Communication Equipment       20.27  62.2  Bear      -0.18    9.75       0.05      20.2     NaN
+146   SKYW    98.86 -3.08   2.04       3.9             Industrials                                 Airlines        7.11  62.4  Bear      -0.01   16.03       0.03      19.8    4.33
+147   ATLC    99.96  1.75   3.69       1.5      Financial Services                          Credit Services       12.15  56.3  Bear      -1.27   12.83       0.05      19.4    4.80
+148   CEVA    45.90 -4.77  13.56       1.3              Technology                           Semiconductors       13.23  53.7  Bear      -0.30   11.73       0.05      18.8     NaN
+149   AMBQ    83.25 -2.74   0.48       2.0              Technology                           Semiconductors       15.03  53.0  Bear      -1.05   10.82       0.05      18.8    4.00
+150   XMTR    92.82  0.52   1.10       5.1             Industrials                  Industrial Distribution       11.93  56.2  Bear      -0.69   12.69       0.02      18.8    4.12
+151    WDC   567.76 -3.42   5.34     195.7              Technology                        Computer Hardware        5.10  48.4  Bear     -15.44   15.85       0.04      18.7    4.50
+152   ONTO   311.20 -5.70   1.18      15.5              Technology      Semiconductor Equipment & Materials        5.42  50.5  Bear      -5.31   15.55       0.03      18.5    4.80
+153   FTRE    17.87  1.13   3.41       1.7              Healthcare                            Biotechnology       15.24  62.0  Bear      -0.05    9.36       0.03      17.3    3.67
+154   IART    18.65 -0.87   3.32       1.5              Healthcare                          Medical Devices       16.00  62.9  Bear      -0.12    9.13       0.01      17.2    3.27
+155   NSIT   119.40  1.64   5.35       3.6              Technology      Electronics & Computer Distribution       14.68  63.3  Bear      -0.60    9.46       0.01      16.9    3.50
+156   SCSC    53.15 -0.50   4.49       1.1              Technology      Electronics & Computer Distribution       12.08  69.4  Bull       0.01    8.79       0.04      16.7     NaN
+157   MLTX    19.75  0.74   4.25       1.7              Healthcare                            Biotechnology        5.41  55.1  Bear      -0.07   12.95       0.05      16.1    4.13
+158   SNDK  1811.05 -4.08   3.78     268.2              Technology                        Computer Hardware        8.81  49.3  Bear     -57.06   10.21       0.13      15.7    4.45
+159    TLN   383.00  0.68   5.03      18.3               Utilities  Utilities - Independent Power Producers        1.89  50.4  Bear      -3.22   13.79       0.01      14.8    4.41
+160    BIO   300.45 -0.65   1.21       8.0              Healthcare                          Medical Devices        4.15  56.5  Bull       0.34    3.24       0.01      13.3     NaN
+161   CROX   129.77  2.67   3.58       6.4       Consumer Cyclical                   Footwear & Accessories       11.53  61.6  Bear      -0.24    6.42       0.03      12.4    3.67
+162   WERN    44.26 -1.16   2.79       2.7             Industrials                                 Trucking        9.55  62.9  Bull       0.02    3.87       0.02      12.4    3.19
+163    STX   887.46 -1.17   8.21     200.8              Technology                        Computer Hardware        5.53  48.7  Bear     -19.73    8.84       0.05      12.0    4.48
+164   TFIN    78.00  0.57   1.29       1.9      Financial Services                         Banks - Regional        8.61  59.2  Bear      -0.13    6.75       0.01      11.2    3.20
+165   BLFS    28.14 -2.02   0.11       1.4              Healthcare           Medical Instruments & Supplies       10.31  59.4  Bear      -0.05    5.55       0.01      10.8    4.89
+166   CIFR    22.93 -1.87  14.42       9.4              Technology          Information Technology Services        1.80  48.3  Bear      -0.47    9.09       0.06      10.5    4.69
+167    ARM   323.92 -3.26   2.74     346.0              Technology                           Semiconductors        5.58  47.9  Bear      -9.26    5.36       0.05       8.5    4.08
+168   CFFN     8.48 -0.82   0.36       1.1      Financial Services                         Banks - Regional        5.62  59.9  Bear      -0.02    5.08       0.04       8.2    3.67
+169    HRI   147.33  1.17   9.21       4.9             Industrials                Rental & Leasing Services        6.81  55.4  Bear      -0.80    4.21       0.06       8.1    4.09
+170   ALNT    89.00 -4.55   2.42       1.5              Technology                    Electronic Components        5.63  49.8  Bear      -1.99    3.77       0.05       7.0     NaN
+171   MARA    13.16 -0.68   6.13       5.0      Financial Services                          Capital Markets        1.50  48.7  Bear      -0.17    4.28       0.12       6.0    3.79
+172      A   134.35  1.02   2.80      37.9              Healthcare                   Diagnostics & Research        5.68  58.8  Bear      -0.23    2.27       0.03       5.4    4.38
+173    PRM    34.56 -3.34   1.90       5.6         Basic Materials                      Specialty Chemicals        5.34  52.0  Bear      -0.26    2.20       0.02       5.1    4.33
+174   THRM    35.71  0.07   5.40       1.1       Consumer Cyclical                               Auto Parts        5.10  56.8  Bear      -0.09    1.85       0.01       4.5     NaN
+175   DXPE   164.09 -0.53   3.87       2.5             Industrials                  Industrial Distribution        3.25  52.3  Bear      -0.80    2.30       0.06       4.4     NaN
+176   ARCB   147.49 -0.74   5.60       3.3             Industrials                                 Trucking        6.39  52.7  Bear      -0.86  -10.70       0.10       4.0    4.00
+177    STM    70.43 -2.64   3.04      62.9              Technology                           Semiconductors        6.20  49.4  Bear      -1.01   -0.33       0.09       3.9    4.00
+178   CSCO   118.36  0.09   5.42     466.5              Technology                  Communication Equipment        6.25  54.2  Bear      -0.56    0.00       0.08       3.8     NaN
+179   SEDG    55.60  0.93   6.15       3.4              Technology                                    Solar        1.38  49.3  Bear      -0.10    1.94       0.06       3.2    2.81
+180    AVT    86.66  0.44   5.45       7.1              Technology      Electronics & Computer Distribution        3.14  50.7  Bear      -0.58    1.49       0.01       3.2     NaN
+181   CDNS   386.16 -0.75   3.49     106.5              Technology                   Software - Application        5.16  56.0  Bear      -0.51    0.27       0.03       3.1     NaN
+182   AVAL     5.09 -0.59   0.59       6.0      Financial Services                         Banks - Regional        4.19  52.3  Bear      -0.05   -1.09       0.01       2.2     NaN
+183   SNEX   122.08 -1.45   1.27       9.7      Financial Services                          Capital Markets        3.56  48.7  Bear      -1.73   -2.10       0.01       1.9     NaN
+184   SYNA   125.88 -1.66   5.32       4.9              Technology                           Semiconductors        3.17  49.1  Bear      -0.79   -2.28       0.01       1.7    3.31
+185   ODFL   223.60 -0.73   2.73      46.5             Industrials                                 Trucking        2.28  52.2  Bear      -0.27   -5.23       0.05       1.6    3.46
+186   CTOS    10.18 -2.40   1.39       2.3             Industrials                Rental & Leasing Services        1.94  46.3  Bear      -0.22   -0.88       0.02       1.1     NaN
+187     KN    37.10 -1.50   0.88       3.2              Technology                    Electronic Components        1.29  46.6  Bear      -0.67   -0.55       0.02       0.8     NaN
+188    LEA   135.98  0.90   3.92       6.8       Consumer Cyclical                               Auto Parts        0.39  49.7  Bear      -0.33   -3.18       0.03       0.5    3.62
+189   CECO    83.83 -1.06   2.05       4.9             Industrials           Pollution & Treatment Controls        0.44  46.2  Bear      -1.65   -9.16       0.03       0.4    4.67
+
+CSV saved to /home/ec2-user/output.csv
