@@ -1,5 +1,5 @@
 {
-  "cash": -2.2737367544323206e-13,
+  "cash": 53.51410924491893,
   "positions": {
     "KB": {
       "shares": 19.1884,
@@ -17,29 +17,29 @@
       "entry_date": "2026-07-09",
       "cost": 1677.96
     },
-    "TEAM": {
-      "shares": 13.9629,
-      "entry_price": 94.18,
-      "exit_target": 110.0,
-      "stop_loss": 84.0,
-      "entry_date": "2026-07-10",
-      "cost": 1315.02
+    "CNMD": {
+      "shares": 27.9218,
+      "entry_price": 42.0,
+      "exit_target": 48.0,
+      "stop_loss": 38.0,
+      "entry_date": "2026-07-13",
+      "cost": 1172.72
     },
-    "SE": {
-      "shares": 15.3398,
-      "entry_price": 112.88,
-      "exit_target": 130.0,
-      "stop_loss": 101.592,
-      "entry_date": "2026-07-10",
-      "cost": 1731.55
+    "DG": {
+      "shares": 13.806,
+      "entry_price": 123.84,
+      "exit_target": 135.0,
+      "stop_loss": 114.0,
+      "entry_date": "2026-07-13",
+      "cost": 1709.74
     },
-    "HUBS": {
-      "shares": 8.5347,
-      "entry_price": 211.18,
-      "exit_target": 250.0,
-      "stop_loss": 190.062,
-      "entry_date": "2026-07-10",
-      "cost": 1802.36
+    "CBZ": {
+      "shares": 44.6484,
+      "entry_price": 39.39,
+      "exit_target": 44.0,
+      "stop_loss": 36.0,
+      "entry_date": "2026-07-13",
+      "cost": 1758.7
     }
   },
   "start_date": "2026-06-02",
