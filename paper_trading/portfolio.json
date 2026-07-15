@@ -25,21 +25,21 @@
       "entry_date": "2026-07-13",
       "cost": 1758.7
     },
-    "VOD": {
-      "shares": 111.502,
-      "entry_price": 15.32,
-      "exit_target": 17.0,
-      "stop_loss": 14.5,
-      "entry_date": "2026-07-13",
-      "cost": 1708.21
-    },
-    "FTNT": {
-      "shares": 7.0318,
-      "entry_price": 165.64,
-      "exit_target": 185.0,
-      "stop_loss": 149.076,
+    "S": {
+      "shares": 90.5808,
+      "entry_price": 19.16,
+      "exit_target": 22.5,
+      "stop_loss": 17.5,
       "entry_date": "2026-07-14",
-      "cost": 1164.74
+      "cost": 1735.53
+    },
+    "GHM": {
+      "shares": 10.2666,
+      "entry_price": 111.76,
+      "exit_target": 125.0,
+      "stop_loss": 100.584,
+      "entry_date": "2026-07-15",
+      "cost": 1147.39
     }
   },
   "start_date": "2026-06-02",
