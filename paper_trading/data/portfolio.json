@@ -33,13 +33,13 @@
       "entry_date": "2026-07-16",
       "cost": 963.62
     },
-    "KNSL": {
-      "shares": 4.58,
-      "entry_price": 349.06,
-      "exit_target": 375.0,
-      "stop_loss": 320.0,
-      "entry_date": "2026-07-17",
-      "cost": 1598.69
+    "VSXY": {
+      "shares": 16.9878,
+      "entry_price": 86.11,
+      "exit_target": 100.0,
+      "stop_loss": 77.499,
+      "entry_date": "2026-07-20",
+      "cost": 1462.82
     }
   },
   "start_date": "2026-06-02",
