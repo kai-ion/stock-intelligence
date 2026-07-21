@@ -15,18 +15,42 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"}
 
+def get_sp500():
+    """Fetch S&P 500 constituents from GitHub (reliable, no auth needed)."""
+    try:
+        from io import StringIO
+        resp = requests.get(
+            "https://raw.githubusercontent.com/datasets/s-and-p-500-companies/main/data/constituents.csv",
+            timeout=10
+        )
+        if resp.status_code == 200:
+            import pandas as pd
+            df = pd.read_csv(StringIO(resp.text))
+            tickers = set(df["Symbol"].str.replace(".", "-", regex=False).tolist())
+            print(f"  S&P 500 loaded: {len(tickers)} tickers")
+            return tickers
+    except Exception:
+        pass
+    return set()
+
+
 def get_universe():
-    """Fetch all US-traded stocks with market cap > $1B from NASDAQ screener, sorted by daily gain."""
+    """Fetch all US-traded stocks with market cap > $1B from NASDAQ screener, sorted by daily gain.
+
+    Returns (tickers_sorted_by_daily_gain, {ticker: marketCap}). The marketCap
+    comes straight from NASDAQ so we can filter without a yfinance .info call.
+    """
     url = "https://api.nasdaq.com/api/screener/stocks?tableType=traded&limit=10000&offset=0"
     try:
         resp = requests.get(url, headers=HEADERS, timeout=30)
         data = resp.json()
         rows = data["data"]["table"]["rows"]
         candidates = []
+        mcap_map = {}
         for r in rows:
             mcap_str = r.get("marketCap", "0").replace(",", "").replace(" ", "")
             try:
-                mcap = int(mcap_str)
+                mcap = int(float(mcap_str))
             except ValueError:
                 continue
             if mcap >= 1_000_000_000:
@@ -38,15 +62,16 @@ def get_universe():
                     except ValueError:
                         pct = 0.0
                     candidates.append((symbol, pct))
+                    mcap_map[symbol] = mcap
         # Sort by daily gain descending — top movers get processed first
         candidates.sort(key=lambda x: x[1], reverse=True)
         tickers = [c[0] for c in candidates]
         print(f"  NASDAQ screener: {len(tickers)} stocks with market cap > $1B")
         print(f"  Top 5 by daily gain: {', '.join(f'{c[0]}({c[1]:+.1f}%)' for c in candidates[:5])}")
-        return tickers
+        return tickers, mcap_map
     except Exception as e:
         print(f"  ERROR fetching universe: {e}")
-        return []
+        return [], {}
 
 def compute_ema(prices, span=50):
     return prices.ewm(span=span, adjust=False).mean()
@@ -70,81 +95,61 @@ def compute_macd(prices):
 
 FILTERED = "FILTERED"
 
-def screen_stock(ticker):
-    """Screen a single stock. Returns dict if passes, FILTERED if legitimately filtered, None if error."""
+
+def screen_from_history(ticker, hist, market_cap):
+    """Screen a single ticker from already-downloaded price history + known market cap.
+
+    Returns a result dict if it passes all filters, FILTERED if it legitimately
+    fails a filter, or None if the history is missing/insufficient (retry candidate).
+    """
     try:
-        stock = yf.Ticker(ticker)
-        info = stock.info
+        if hist is None or hist.empty or len(hist) < 50:
+            return None  # no/short data — retry candidate
 
-        if not info or info.get("regularMarketPrice") is None:
-            return None  # API error — should retry
+        close = hist["Close"].dropna()
+        if len(close) < 50:
+            return None
 
-        market_cap = info.get("marketCap", 0)
+        current_price = float(close.iloc[-1])
+        prev_close = float(close.iloc[-2]) if len(close) >= 2 else current_price
+        daily_move = (current_price - prev_close) / prev_close * 100 if prev_close else 0
+
+        # Market cap filter (from NASDAQ data)
         if not market_cap or market_cap < 1_000_000_000:
             return FILTERED
 
-        hist = stock.history(period="6mo")
-        if hist.empty or len(hist) < 50:
-            return FILTERED
-
-        close = hist["Close"]
-
-        # Use real-time price and previous close for accurate daily move
-        try:
-            fi = stock.fast_info
-            current_price = fi.last_price
-            prev_close = fi.previous_close
-            if current_price and prev_close:
-                daily_move = (current_price - prev_close) / prev_close * 100
-            else:
-                current_price = close.iloc[-1]
-                prev_close = close.iloc[-2] if len(close) >= 2 else close.iloc[0]
-                daily_move = (current_price - prev_close) / prev_close * 100
-        except Exception:
-            current_price = close.iloc[-1]
-            prev_close = close.iloc[-2] if len(close) >= 2 else close.iloc[0]
-            daily_move = (current_price - prev_close) / prev_close * 100
-
-        # 50-day EMA filter
+        # 50-day EMA filter — must be above
         ema_50 = compute_ema(close, span=50)
-        current_ema = ema_50.iloc[-1]
+        current_ema = float(ema_50.iloc[-1])
         if current_price <= current_ema:
             return FILTERED
 
-        # Positive weekly gain (use real-time price vs 5 days ago close)
-        five_days_ago = close.iloc[-6] if len(close) >= 6 else close.iloc[0]
-        weekly_gain = (current_price - five_days_ago) / five_days_ago * 100
+        # Positive weekly gain
+        five_days_ago = float(close.iloc[-6]) if len(close) >= 6 else float(close.iloc[0])
+        weekly_gain = (current_price - five_days_ago) / five_days_ago * 100 if five_days_ago else 0
         if weekly_gain <= 0:
             return FILTERED
 
         # Momentum signals
-        rsi = compute_rsi(close).iloc[-1]
+        rsi = float(compute_rsi(close).iloc[-1])
         macd_line, signal_line, macd_hist = compute_macd(close)
-        macd_val = macd_line.iloc[-1]
-        macd_signal = signal_line.iloc[-1]
-        macd_histogram = macd_hist.iloc[-1]
+        macd_val = float(macd_line.iloc[-1])
+        macd_signal = float(signal_line.iloc[-1])
+        macd_histogram = float(macd_hist.iloc[-1])
 
-        # Rate of change: 20-day
-        roc_20 = (current_price - close.iloc[-21]) / close.iloc[-21] * 100 if len(close) >= 21 else 0
+        roc_20 = (current_price - float(close.iloc[-21])) / float(close.iloc[-21]) * 100 if len(close) >= 21 else 0
 
-        # Volume surge: current vs 20-day average
-        vol = hist["Volume"]
-        vol_avg_20 = vol.iloc[-20:].mean() if len(vol) >= 20 else vol.mean()
-        vol_ratio = vol.iloc[-1] / vol_avg_20 if vol_avg_20 > 0 else 1.0
+        vol = hist["Volume"].dropna()
+        vol_avg_20 = float(vol.iloc[-20:].mean()) if len(vol) >= 20 else float(vol.mean())
+        vol_ratio = float(vol.iloc[-1]) / vol_avg_20 if vol_avg_20 > 0 else 1.0
 
-        # Composite momentum score (higher = stronger momentum)
         ema_spread = (current_price - current_ema) / current_ema * 100
         momentum_score = (
-            (min(max(macd_histogram / current_price * 1000, 0), 5) / 5) * 35 +  # MACD histogram (0-35)
-            (min(max(roc_20, 0), 30) / 30) * 30 +                               # ROC-20 (0-30)
-            (min(max(vol_ratio, 0), 3) / 3) * 25 +                              # Vol ratio (0-25)
-            (min(max(ema_spread, 0), 20) / 20) * 10                             # EMA spread (0-10)
+            (min(max(macd_histogram / current_price * 1000, 0), 5) / 5) * 35 +
+            (min(max(roc_20, 0), 30) / 30) * 30 +
+            (min(max(vol_ratio, 0), 3) / 3) * 25 +
+            (min(max(ema_spread, 0), 20) / 20) * 10
         )
-
-        # Invert rating: Yahoo gives 1=Strong Buy, 5=Strong Sell
-        # We flip to 5=Strong Buy, 1=Strong Sell
-        raw_rating = info.get("recommendationMean", None)
-        rating = round(6 - raw_rating, 2) if raw_rating else None
 
         return {
             "Ticker": ticker,
@@ -152,8 +157,8 @@ def screen_stock(ticker):
             "Day%": round(daily_move, 2),
             "Week%": round(weekly_gain, 2),
             "MCap($B)": round(market_cap / 1e9, 1),
-            "Sector": info.get("sector", "N/A"),
-            "Industry": info.get("industry", "N/A"),
+            "Sector": "N/A",     # enriched later for passers only
+            "Industry": "N/A",
             "Above EMA%": round(ema_spread, 2),
             "RSI": round(rsi, 1),
             "MACD": "Bull" if macd_val > macd_signal else "Bear",
@@ -161,90 +166,145 @@ def screen_stock(ticker):
             "ROC20%": round(roc_20, 2),
             "Vol Ratio": round(vol_ratio, 2),
             "Momentum": round(momentum_score, 1),
-            "Rating": rating,
+            "Rating": None,      # enriched later for passers only
         }
     except Exception:
         return None
+
+
+def download_batch(tickers, retries=2):
+    """Batch-download 6mo daily history for a list of tickers in one HTTP call.
+
+    Returns {ticker: DataFrame}. yf.download with group_by='ticker' returns a
+    multi-index frame; we split it back per ticker. Retries the whole batch on
+    transient failures.
+    """
+    import pandas as pd
+    out = {}
+    if not tickers:
+        return out
+    for attempt in range(retries + 1):
+        try:
+            data = yf.download(
+                tickers=" ".join(tickers),
+                period="6mo",
+                interval="1d",
+                group_by="ticker",
+                auto_adjust=True,
+                threads=True,
+                progress=False,
+            )
+            if data is None or data.empty:
+                continue
+            # Single ticker -> flat columns; multi -> top-level ticker columns
+            if len(tickers) == 1:
+                out[tickers[0]] = data.dropna(how="all")
+            else:
+                for t in tickers:
+                    if t in data.columns.get_level_values(0):
+                        df = data[t].dropna(how="all")
+                        if not df.empty:
+                            out[t] = df
+            if out:
+                return out
+        except Exception:
+            pass
+    return out
+
+def enrich_one(result):
+    """Fetch sector/industry/rating for a single passing ticker."""
+    try:
+        info = yf.Ticker(result["Ticker"]).info
+        result["Sector"] = info.get("sector", "N/A")
+        result["Industry"] = info.get("industry", "N/A")
+        raw = info.get("recommendationMean", None)
+        result["Rating"] = round(6 - raw, 2) if raw else None
+    except Exception:
+        pass
+    return result
+
+
+def enrich_passers(results):
+    """Enrich all passing results with sector/rating info, in parallel."""
+    import time
+    batch = 20
+    for i in range(0, len(results), batch):
+        chunk = results[i:i + batch]
+        with ThreadPoolExecutor(max_workers=8) as ex:
+            list(ex.map(enrich_one, chunk))
+        time.sleep(0.5)
+
 
 def main():
     print(f"=== Stock Screener — {datetime.now().strftime('%Y-%m-%d %H:%M')} ===")
     print("Criteria: Above 50d EMA | Positive weekly gain | Market cap > $1B")
     print("Fetching universe...\n")
 
-    tickers = get_universe()
+    tickers, mcap_map = get_universe()
     if not tickers:
         print("ERROR: Could not fetch ticker lists. Check network.")
         sys.exit(1)
 
     import time
 
-    # Split into priority tiers:
-    # Tier 1: Top 300 by daily gain (guaranteed to be processed — includes top movers)
-    # Tier 2: Remaining tickers (best effort, rate-limiting may drop some)
-    priority_tickers = tickers[:300]
-    remaining_tickers = tickers[300:]
+    # Merge S&P 500 into the universe so large-caps are always screened, even if
+    # they haven't moved yet (NASDAQ sorts by daily gain). All tickers are now
+    # processed via cheap batched downloads, so there's no priority/remaining split.
+    sp500 = get_sp500()
+    universe_set = set(tickers)
+    # S&P 500 members might not be in the NASDAQ list; add them (mcap unknown -> use large default)
+    for t in sp500:
+        if t not in universe_set:
+            tickers.append(t)
+            mcap_map.setdefault(t, 5_000_000_000)  # S&P 500 members are all > $1B
+            universe_set.add(t)
 
-    print(f"Screening {len(tickers)} stocks...")
-    print(f"  Priority tier (top 300 movers): {len(priority_tickers)}")
-    print(f"  Remaining: {len(remaining_tickers)}\n")
+    print(f"Screening {len(tickers)} stocks via batched downloads...\n")
 
     results = []
-    failed_tickers = []
+    failed = []
 
-    # Tier 1: Process priority tickers with more patience
-    print("  === Priority Tier ===")
-    batch_size = 30
-    for i in range(0, len(priority_tickers), batch_size):
-        batch = priority_tickers[i:i + batch_size]
-        with ThreadPoolExecutor(max_workers=4) as executor:
-            futures = {executor.submit(screen_stock, t): t for t in batch}
-            for future in as_completed(futures):
-                result = future.result()
-                if result and result != FILTERED:
-                    results.append(result)
-                elif result is None:
-                    failed_tickers.append(futures[future])
-        done = min(i + batch_size, len(priority_tickers))
-        if done % 100 == 0 or done == len(priority_tickers):
-            print(f"  Priority: {done}/{len(priority_tickers)} ({len(results)} passed, {len(failed_tickers)} errors)")
-        time.sleep(2)
+    # Batch-download price history — 50 tickers per HTTP request.
+    BATCH = 50
+    total = len(tickers)
+    for i in range(0, total, BATCH):
+        batch = tickers[i:i + BATCH]
+        hist_map = download_batch(batch)
+        for t in batch:
+            res = screen_from_history(t, hist_map.get(t), mcap_map.get(t, 0))
+            if res and res != FILTERED:
+                results.append(res)
+            elif res is None:
+                failed.append(t)
+        done = min(i + BATCH, total)
+        if done % 200 == 0 or done == total:
+            print(f"  Screened {done}/{total} ({len(results)} passed, {len(failed)} no-data)")
+        time.sleep(0.5)
 
-    # Retry priority failures (these are important)
-    priority_failed = failed_tickers[:]
-    if priority_failed:
-        print(f"\n  Retrying {len(priority_failed)} priority tickers...")
-        failed_tickers = []
-        for i in range(0, len(priority_failed), 10):
-            batch = priority_failed[i:i + 10]
-            with ThreadPoolExecutor(max_workers=2) as executor:
-                futures = {executor.submit(screen_stock, t): t for t in batch}
-                for future in as_completed(futures):
-                    result = future.result()
-                    if result and result != FILTERED:
-                        results.append(result)
-            time.sleep(3)
-        print(f"  After priority retry: {len(results)} passed")
-
-    # Tier 2: Process remaining (best effort)
-    print(f"\n  === Remaining Tier ===")
-    for i in range(0, len(remaining_tickers), batch_size):
-        batch = remaining_tickers[i:i + batch_size]
-        with ThreadPoolExecutor(max_workers=4) as executor:
-            futures = {executor.submit(screen_stock, t): t for t in batch}
-            for future in as_completed(futures):
-                result = future.result()
-                if result and result != FILTERED:
-                    results.append(result)
-        done = min(i + batch_size, len(remaining_tickers))
-        if done % 300 == 0 or done == len(remaining_tickers):
-            print(f"  Remaining: {done}/{len(remaining_tickers)} ({len(results)} total passed)")
-        time.sleep(1)
+    # Retry tickers with no data (smaller batches)
+    if failed:
+        print(f"\n  Retrying {len(failed)} tickers with no data...")
+        retry = failed[:]
+        for i in range(0, len(retry), 25):
+            batch = retry[i:i + 25]
+            hist_map = download_batch(batch)
+            for t in batch:
+                res = screen_from_history(t, hist_map.get(t), mcap_map.get(t, 0))
+                if res and res != FILTERED:
+                    results.append(res)
+            time.sleep(0.5)
+        print(f"  After retry: {len(results)} passed")
 
     print(f"\n  Final: {len(results)} stocks passed all filters")
 
     if not results:
         print("\nNo stocks matched all criteria today.")
         return
+
+    # Enrich passers with sector/industry/rating (per-ticker info, but only for the
+    # small set that passed — typically <300, and only these need the extra data).
+    print(f"\n  Enriching {len(results)} passers with sector/rating...")
+    enrich_passers(results)
 
     df = pd.DataFrame(results)
     df = df.sort_values("Momentum", ascending=False)
