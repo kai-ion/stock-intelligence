@@ -39,7 +39,9 @@ export EMAIL_RECIPIENT=your_email@gmail.com
 export EMAIL_SENDER=your_email@gmail.com
 export S3_BUCKET=your-bucket-name
 export AWS_REGION=us-east-1
-export MODEL_ID=us.anthropic.claude-opus-4-6-v1
+# Sonnet 4.6 — ~5x cheaper than Opus for these summarization/analysis tasks
+# with negligible quality loss. Swap to an Opus profile only if you need it.
+export MODEL_ID=us.anthropic.claude-sonnet-4-6
 EOF
 ```
 
@@ -191,7 +193,7 @@ The repo has a `blog/` directory with Jekyll config. GitHub Actions auto-deploys
 - **Paper trading** sells weakest position to fund new picks when capital is low
 - **Trump monitor** classifies posts as IMMEDIATE/DIGEST/IGNORE via Claude
 - **TradingAgents** uses custom `bedrock_client.py` adapter (langchain-aws) to connect the framework to Bedrock
-- **Bedrock model**: us.anthropic.claude-opus-4-6-v1 (inference profile)
+- **Bedrock model**: us.anthropic.claude-sonnet-4-6 (inference profile; ~5x cheaper than Opus, set via MODEL_ID in .env)
 
 ## TradingAgents Setup
 
