@@ -1,13 +1,13 @@
 {
   "date": "2026-07-21",
-  "total_value": 8307.94,
+  "total_value": 8384.75,
   "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "KB": 2268.11,
+    "KB": 2303.57,
     "CBZ": 1820.32,
-    "S": 1725.56,
-    "CDNA": 1010.32,
-    "VSXY": 1483.63
+    "CDNA": 1025.1,
+    "CIFR": 1735.78,
+    "BRBR": 1499.99
   }
 }
