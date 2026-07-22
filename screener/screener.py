@@ -225,14 +225,20 @@ def enrich_one(result):
 
 
 def enrich_passers(results):
-    """Enrich all passing results with sector/rating info, in parallel."""
+    """Enrich passing results with sector/rating info, in parallel.
+
+    Each enrich_one() is a slow per-ticker yfinance .info scrape. On a heavy day
+    1000+ stocks pass, and enriching all of them adds ~5 min to the run (pushing
+    the email past 10 AM) for data the brief/email never surface beyond the top
+    movers. Callers pass only the top-N slice they actually display.
+    """
     import time
     batch = 20
     for i in range(0, len(results), batch):
         chunk = results[i:i + batch]
-        with ThreadPoolExecutor(max_workers=8) as ex:
+        with ThreadPoolExecutor(max_workers=16) as ex:
             list(ex.map(enrich_one, chunk))
-        time.sleep(0.5)
+        time.sleep(0.3)
 
 
 def main():
@@ -301,10 +307,24 @@ def main():
         print("\nNo stocks matched all criteria today.")
         return
 
-    # Enrich passers with sector/industry/rating (per-ticker info, but only for the
-    # small set that passed — typically <300, and only these need the extra data).
-    print(f"\n  Enriching {len(results)} passers with sector/rating...")
-    enrich_passers(results)
+    # Enrich only the rows the brief/email/blog actually surface, using the slow
+    # per-ticker .info scrape. Enriching all 1000+ passers added ~5 min and pushed
+    # the email past 10 AM. We enrich the union of (top by momentum) and (top by
+    # daily gain) — the latter because the news brief pulls top daily movers, which
+    # aren't always high-momentum. Remaining rows keep Sector="N/A"/Rating=None.
+    ENRICH_TOP_MOMENTUM = 150
+    ENRICH_TOP_MOVERS = 30
+    by_momentum = sorted(results, key=lambda r: r["Momentum"], reverse=True)[:ENRICH_TOP_MOMENTUM]
+    by_move = sorted(results, key=lambda r: r["Day%"], reverse=True)[:ENRICH_TOP_MOVERS]
+    seen = set()
+    top = []
+    for r in by_momentum + by_move:
+        if r["Ticker"] not in seen:
+            seen.add(r["Ticker"])
+            top.append(r)
+    print(f"\n  Enriching {len(top)} of {len(results)} passers with sector/rating "
+          f"(top {ENRICH_TOP_MOMENTUM} momentum + top {ENRICH_TOP_MOVERS} movers)...")
+    enrich_passers(top)
 
     df = pd.DataFrame(results)
     df = df.sort_values("Momentum", ascending=False)

@@ -285,15 +285,33 @@ Rules:
 - For earnings, mention if the stock has run up into the print (priced for perfection) or is oversold (low expectations = easy beat)
 - For IPOs, be honest about whether retail should participate on day 1 or wait for the lock-up expiry fade"""
 
-    body = json.dumps({
-        "anthropic_version": "bedrock-2023-05-31",
-        "max_tokens": 12000,
-        "messages": [{"role": "user", "content": prompt}]
-    })
+    # Heavy earnings weeks (60-77 tickers in Q2 season) produce a long report that
+    # can exceed a single response's token budget. Previously max_tokens=12000 was
+    # hit mid-Wednesday, so Thursday/Friday analysis was silently truncated. We now
+    # detect stop_reason == "max_tokens" and continue generating (feeding the partial
+    # output back as an assistant turn) until the model finishes on its own.
+    messages = [{"role": "user", "content": prompt}]
+    full_text = ""
+    for _ in range(6):  # safety cap on continuations
+        body = json.dumps({
+            "anthropic_version": "bedrock-2023-05-31",
+            "max_tokens": 16000,
+            "messages": messages,
+        })
+        response = bedrock.invoke_model(modelId=MODEL_ID, body=body)
+        result = json.loads(response["body"].read())
+        chunk = result["content"][0]["text"]
+        full_text += chunk
 
-    response = bedrock.invoke_model(modelId=MODEL_ID, body=body)
-    result = json.loads(response["body"].read())
-    return result["content"][0]["text"]
+        if result.get("stop_reason") != "max_tokens":
+            break  # model finished the report
+
+        print("  (report hit token limit — continuing generation...)")
+        # Continue: append what we have, ask the model to pick up exactly where it left off.
+        messages.append({"role": "assistant", "content": chunk})
+        messages.append({"role": "user", "content": "Continue exactly where you left off. Do not repeat any content already written."})
+
+    return full_text
 
 
 def main():
