@@ -27,10 +27,42 @@ def generate_totp(secret):
     return totp.now()
 
 
+def send_failure_email(error_msg):
+    """Send alert email when portfolio fetch fails."""
+    try:
+        import boto3
+        region = os.environ.get("AWS_REGION", "us-east-1")
+        sender = os.environ.get("EMAIL_SENDER", "")
+        recipient = os.environ.get("EMAIL_RECIPIENT", "")
+        if not sender or not recipient:
+            return
+        ses = boto3.client("ses", region_name=region)
+        date_str = datetime.now().strftime("%Y-%m-%d %H:%M")
+        html = f"""<html><body style="font-family:-apple-system,Arial,sans-serif;padding:20px;">
+<h2 style="color:#dc2626;">Portfolio Fetch Failed — {date_str}</h2>
+<pre style="background:#f5f5f5;padding:12px;border-radius:6px;font-size:12px;">{error_msg}</pre>
+<p style="color:#666;font-size:12px;margin-top:16px;">To fix: SSH into EC2 and run:<br>
+<code>cd /home/ec2-user/portfolio && python3.11 fetch_portfolio.py</code><br>
+Then approve the device in the Robinhood app if prompted.</p>
+</body></html>"""
+        ses.send_email(
+            Source=sender,
+            Destination={"ToAddresses": [recipient]},
+            Message={
+                "Subject": {"Data": f"Portfolio Alert — Login Failed ({datetime.now().strftime('%Y-%m-%d')})", "Charset": "UTF-8"},
+                "Body": {"Html": {"Data": html, "Charset": "UTF-8"}},
+            },
+        )
+        print("Failure alert email sent")
+    except Exception as e:
+        print(f"Could not send failure email: {e}")
+
+
 def login():
     """Log into Robinhood."""
     if not RH_EMAIL or not RH_PASSWORD:
         print("ERROR: RH_EMAIL and RH_PASSWORD must be set in .env")
+        send_failure_email("RH_EMAIL and RH_PASSWORD not set in .env")
         sys.exit(1)
 
     login_kwargs = {
@@ -44,12 +76,42 @@ def login():
     if RH_TOTP_SECRET:
         login_kwargs["mfa_code"] = generate_totp(RH_TOTP_SECRET)
 
+    import time
+
+    # First attempt — robin_stocks will automatically poll for app approval
+    # for up to 2 minutes if device verification is triggered
     result = r.login(**login_kwargs)
     if result:
         print("Logged in successfully")
-    else:
-        print("ERROR: Login failed")
-        sys.exit(1)
+        return
+
+    # First attempt failed (likely 429 rate limit on approval poll).
+    # Wait 3 minutes to give time to approve in app, then retry.
+    print("  Login attempt 1 failed. Waiting 3 min for app approval...")
+    send_failure_email(
+        "Robinhood login needs device approval.\n\n"
+        "Open the Robinhood app and approve the login.\n"
+        "The script will retry automatically in 3 minutes."
+    )
+    time.sleep(180)
+
+    # Refresh TOTP and retry
+    if RH_TOTP_SECRET:
+        login_kwargs["mfa_code"] = generate_totp(RH_TOTP_SECRET)
+
+    result = r.login(**login_kwargs)
+    if result:
+        print("Logged in successfully (after retry)")
+        return
+
+    print("ERROR: Login failed after retry")
+    send_failure_email(
+        "Robinhood login failed after retry.\n"
+        "Device approval was not completed in time.\n\n"
+        "SSH in and run manually:\n"
+        "cd /home/ec2-user/portfolio && python3.11 fetch_portfolio.py"
+    )
+    sys.exit(1)
 
 
 def fetch_holdings():
@@ -117,7 +179,9 @@ def main():
 
     print(f"\nSaved to {output_path}")
 
-    r.logout()
+    # NOTE: do NOT call r.logout() — it revokes the token server-side and forces
+    # a fresh device-approval login (phone ping) next run. Keep the session alive
+    # so store_session can reuse the pickled token.
 
 
 if __name__ == "__main__":
