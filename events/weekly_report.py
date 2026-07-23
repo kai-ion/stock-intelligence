@@ -215,10 +215,24 @@ def generate_report_with_claude(earnings, econ_events, ipos_priced, ipos_filed):
 
     monday, friday = get_week_range()
 
+    # Heavy weeks (Q2 season) can have 180+ earnings. Asking for detailed analysis
+    # of EVERY ticker made the report exceed the token budget (truncating Thu/Fri)
+    # and, with the continuation loop, take 20+ min over many calls. Instead: send
+    # ALL earnings for the calendar grid (cheap — just names/tickers), but only the
+    # top N by market cap for the expensive per-ticker analysis. A swing trader cares
+    # about the big names; the long tail still appears in the grid.
+    DETAIL_TOP_N = 40
+    earnings_for_detail = sorted(
+        earnings, key=lambda e: e.get("market_cap_b", 0), reverse=True
+    )[:DETAIL_TOP_N]
+
     prompt = f"""You are a financial analyst preparing a WEEKLY EVENTS PREVIEW for a swing trader. Week of {monday.strftime('%B %d')} - {friday.strftime('%B %d, %Y')}.
 
-ALL EARNINGS THIS WEEK (write detailed BUY/SHORT/AVOID analysis for EVERY ticker listed here):
+ALL EARNINGS THIS WEEK (use this COMPLETE list for the Calendar At-a-Glance grid — every day Mon-Fri):
 {json.dumps(earnings, indent=2)}
+
+TOP EARNINGS FOR DETAILED ANALYSIS (write detailed BUY/SHORT/AVOID analysis for ONLY these {len(earnings_for_detail)} largest-cap names in the "Earnings to Watch" section):
+{json.dumps(earnings_for_detail, indent=2)}
 
 ECONOMIC EVENTS (US, High/Medium impact):
 {json.dumps(econ_events, indent=2)}
@@ -235,7 +249,7 @@ Generate a weekly events report in this exact format:
 
 ## Calendar At-a-Glance
 
-Create a compact calendar grid showing the week. For each day, list the top 5-8 companies reporting (biggest market caps) with full name and ticker, economic events with time, and any IPOs. Format:
+Using the COMPLETE earnings list above, create a compact calendar grid showing the week. For each day Mon-Fri, list the top 5-8 companies reporting (biggest market caps) with full name and ticker, economic events with time, and any IPOs. Format:
 
 ### Monday
 Before Open: Company Name (TICKER), Company Name (TICKER), ...
@@ -251,7 +265,7 @@ Then provide the detailed analysis below:
 
 ## Earnings to Watch
 
-Group by day (Monday, Tuesday, etc.). For each company reporting, use this format:
+Cover ONLY the "TOP EARNINGS FOR DETAILED ANALYSIS" list above (the largest-cap names). Group by day (Monday, Tuesday, etc.) — make sure every day that has a top name gets covered, including Thursday and Friday. For each company, use this format:
 
 **TICKER** — {"{"}Company Name{"}"} | Reports: {"{"}Day, Date{"}"} (Before Open / After Close)
 Consensus: EPS ${"{"}est{"}"}, Revenue ${"{"}est{"}"}B
