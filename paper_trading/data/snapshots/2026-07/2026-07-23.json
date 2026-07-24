@@ -1,13 +1,13 @@
 {
   "date": "2026-07-23",
-  "total_value": 8666.63,
-  "cash": 225.28,
+  "total_value": 8418.62,
+  "cash": -0.0,
   "positions_count": 5,
   "positions": {
-    "KB": 2299.44,
-    "CBZ": 1799.78,
-    "CDNA": 1006.1,
-    "DELL": 1537.22,
-    "SMCI": 1798.8
+    "KB": 2324.1,
+    "CBZ": 1786.83,
+    "CDNA": 989.48,
+    "SMCI": 1751.06,
+    "ARWR": 1567.15
   }
 }

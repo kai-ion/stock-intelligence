@@ -1,5 +1,5 @@
 {
-  "cash": 225.28347466163405,
+  "cash": 0.0,
   "positions": {
     "KB": {
       "shares": 19.1884,
@@ -25,21 +25,21 @@
       "entry_date": "2026-07-16",
       "cost": 963.62
     },
-    "DELL": {
-      "shares": 3.4658,
-      "entry_price": 434.27,
-      "exit_target": 465.19,
-      "stop_loss": 381.91,
-      "entry_date": "2026-07-22",
-      "cost": 1505.11
+    "DLR": {
+      "shares": 8.3082,
+      "entry_price": 191.02,
+      "exit_target": 214.29,
+      "stop_loss": 192.38,
+      "entry_date": "2026-07-24",
+      "cost": 1587.04
     },
-    "SMCI": {
-      "shares": 56.5039,
-      "entry_price": 30.56,
-      "exit_target": 35.35,
-      "stop_loss": 23.83,
-      "entry_date": "2026-07-23",
-      "cost": 1726.76
+    "WKC": {
+      "shares": 41.0986,
+      "entry_price": 38.52,
+      "exit_target": 45.29,
+      "stop_loss": 36.08,
+      "entry_date": "2026-07-24",
+      "cost": 1583.12
     }
   },
   "start_date": "2026-06-02",
