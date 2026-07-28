@@ -37,7 +37,7 @@ def get_week_range(next_week=True):
     return monday, friday
 
 
-TOP_ANTICIPATED_N = 25  # how many "most anticipated" names to cover
+TOP_ANTICIPATED_N = 40  # how many "most anticipated" names to cover
 
 
 def fetch_anticipated_earnings(monday):
