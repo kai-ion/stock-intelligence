@@ -13,7 +13,6 @@ import boto3
 import json
 import os
 import requests
-import yfinance as yf
 from datetime import datetime, timedelta
 from pathlib import Path
 from botocore.config import Config
@@ -25,8 +24,6 @@ EMAIL_RECIPIENT = os.environ.get("EMAIL_RECIPIENT", "")
 EMAIL_SENDER = os.environ.get("EMAIL_SENDER", "")
 HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"}
 DATA_DIR = Path(__file__).parent / "data"
-
-MIN_MARKET_CAP_B = 5  # Only include companies with market cap > $5B in the report
 
 
 def get_week_range(next_week=True):
@@ -40,67 +37,42 @@ def get_week_range(next_week=True):
     return monday, friday
 
 
-def fetch_earnings_this_week():
-    """Fetch all notable earnings for the target week from NASDAQ API."""
-    monday, friday = get_week_range()
-    earnings = []
+TOP_ANTICIPATED_N = 25  # how many "most anticipated" names to cover
 
-    for d in range(5):
-        date = monday + timedelta(days=d)
-        date_str = date.strftime("%Y-%m-%d")
-        day_name = date.strftime("%A")
+
+def fetch_anticipated_earnings(monday):
+    """Get the week's top-N most-anticipated earnings from EarningsWhispers.
+
+    Replaces the old NASDAQ + per-ticker yfinance-marketcap approach, which
+    returned ~400 large-caps (too many, slow) with no popularity signal. EW's
+    anticipation score curates down to the names retail swing traders watch.
+
+    Follows the wsb_sentiment pattern: scrape directly (works from a residential
+    IP), and if that yields nothing (EC2 may be blocked), fall back to the S3
+    cache written by the local sync.
+    """
+    from earnings_whispers import get_anticipated_earnings
+    try:
+        earnings = get_anticipated_earnings(monday, top_n=TOP_ANTICIPATED_N)
+        if earnings:
+            return earnings
+    except Exception as e:
+        print(f"  EarningsWhispers scrape failed: {str(e)[:80]}")
+
+    # Fallback: S3 cache (key includes the week's Monday so it's week-specific)
+    if S3_BUCKET:
         try:
-            resp = requests.get(
-                f"https://api.nasdaq.com/api/calendar/earnings?date={date_str}",
-                headers=HEADERS, timeout=15
-            )
-            if resp.status_code != 200:
-                continue
-            rows = resp.json().get("data", {}).get("rows", [])
-            for r in rows:
-                symbol = r.get("symbol", "").strip()
-                name = r.get("name", "")
-                eps = r.get("epsForecast", "")
-                time = r.get("time", "")
-
-                # Determine before/after
-                if "pre-market" in time:
-                    timing = "Before Open"
-                elif "after-hours" in time:
-                    timing = "After Close"
-                else:
-                    timing = "TBD"
-
-                # Get market cap to filter
-                mcap_b = 0
-                try:
-                    stock = yf.Ticker(symbol)
-                    mcap = stock.info.get("marketCap", 0)
-                    mcap_b = round(mcap / 1e9, 1) if mcap else 0
-                except Exception:
-                    pass
-
-                if mcap_b >= MIN_MARKET_CAP_B:
-                    industry = ""
-                    try:
-                        industry = stock.info.get("industry", "")
-                    except Exception:
-                        pass
-                    earnings.append({
-                        "ticker": symbol,
-                        "name": name,
-                        "date": date_str,
-                        "day": day_name,
-                        "timing": timing,
-                        "eps_estimate": eps,
-                        "market_cap_b": mcap_b,
-                        "industry": industry,
-                    })
+            s3 = boto3.client("s3", region_name=REGION)
+            key = f"earnings/anticipated_{monday.strftime('%Y-%m-%d')}.json"
+            resp = s3.get_object(Bucket=S3_BUCKET, Key=key)
+            earnings = json.loads(resp["Body"].read())
+            print(f"  Loaded {len(earnings)} anticipated earnings from S3 cache")
+            return earnings
         except Exception:
-            continue
+            pass
 
-    earnings.sort(key=lambda x: (x["date"], -x["market_cap_b"]))
-    return earnings
+    print("  WARNING: no anticipated-earnings data available")
+    return []
 
 
 def fetch_economic_events():
@@ -215,24 +187,14 @@ def generate_report_with_claude(earnings, econ_events, ipos_priced, ipos_filed):
 
     monday, friday = get_week_range()
 
-    # Heavy weeks (Q2 season) can have 180+ earnings. Asking for detailed analysis
-    # of EVERY ticker made the report exceed the token budget (truncating Thu/Fri)
-    # and, with the continuation loop, take 20+ min over many calls. Instead: send
-    # ALL earnings for the calendar grid (cheap — just names/tickers), but only the
-    # top N by market cap for the expensive per-ticker analysis. A swing trader cares
-    # about the big names; the long tail still appears in the grid.
-    DETAIL_TOP_N = 40
-    earnings_for_detail = sorted(
-        earnings, key=lambda e: e.get("market_cap_b", 0), reverse=True
-    )[:DETAIL_TOP_N]
-
+    # Earnings are pre-filtered to EarningsWhispers' top ~25 MOST ANTICIPATED names
+    # (by anticipation_score) — the ones retail swing traders actually watch. This
+    # is a small, curated set, so both the grid and the detailed analysis use the
+    # full list; no separate detail cap is needed.
     prompt = f"""You are a financial analyst preparing a WEEKLY EVENTS PREVIEW for a swing trader. Week of {monday.strftime('%B %d')} - {friday.strftime('%B %d, %Y')}.
 
-ALL EARNINGS THIS WEEK (use this COMPLETE list for the Calendar At-a-Glance grid — every day Mon-Fri):
+MOST ANTICIPATED EARNINGS THIS WEEK (curated from EarningsWhispers by anticipation score — the names retail traders are watching most; higher anticipation_score = more anticipated). Write detailed analysis for EVERY ticker here and use them for the calendar grid:
 {json.dumps(earnings, indent=2)}
-
-TOP EARNINGS FOR DETAILED ANALYSIS (write detailed BUY/SHORT/AVOID analysis for ONLY these {len(earnings_for_detail)} largest-cap names in the "Earnings to Watch" section):
-{json.dumps(earnings_for_detail, indent=2)}
 
 ECONOMIC EVENTS (US, High/Medium impact):
 {json.dumps(econ_events, indent=2)}
@@ -249,7 +211,7 @@ Generate a weekly events report in this exact format:
 
 ## Calendar At-a-Glance
 
-Using the COMPLETE earnings list above, create a compact calendar grid showing the week. For each day Mon-Fri, list the top 5-8 companies reporting (biggest market caps) with full name and ticker, economic events with time, and any IPOs. Format:
+Using the anticipated-earnings list above, create a compact calendar grid showing the week. For each day Mon-Fri, list the companies reporting that day (full name and ticker, most anticipated first), economic events with time, and any IPOs. Format:
 
 ### Monday
 Before Open: Company Name (TICKER), Company Name (TICKER), ...
@@ -265,7 +227,7 @@ Then provide the detailed analysis below:
 
 ## Earnings to Watch
 
-Cover ONLY the "TOP EARNINGS FOR DETAILED ANALYSIS" list above (the largest-cap names). Group by day (Monday, Tuesday, etc.) — make sure every day that has a top name gets covered, including Thursday and Friday. For each company, use this format:
+Cover EVERY name in the most-anticipated earnings list above. Group by day (Monday, Tuesday, etc.) — make sure every day that has a name gets covered, including Thursday and Friday. For each company, use this format:
 
 **TICKER** — {"{"}Company Name{"}"} | Reports: {"{"}Day, Date{"}"} (Before Open / After Close)
 Consensus: EPS ${"{"}est{"}"}, Revenue ${"{"}est{"}"}B
@@ -341,9 +303,9 @@ def main():
     monday, friday = _original(next_week=next_week)
     print(f"=== Weekly Events Report — {monday.strftime('%Y-%m-%d')} to {friday.strftime('%Y-%m-%d')} ===\n")
 
-    print("Fetching earnings calendar...")
-    earnings = fetch_earnings_this_week()
-    print(f"  {len(earnings)} major earnings this week")
+    print("Fetching most-anticipated earnings (EarningsWhispers)...")
+    earnings = fetch_anticipated_earnings(monday)
+    print(f"  {len(earnings)} most-anticipated earnings this week")
 
     print("Fetching economic events...")
     econ_events = fetch_economic_events()
