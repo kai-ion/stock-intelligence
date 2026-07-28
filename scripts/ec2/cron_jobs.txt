@@ -1,0 +1,20 @@
+SHELL=/bin/bash
+45 13 * * 1-5 ec2-user . /home/ec2-user/.env && cd /home/ec2-user && python3.11 screener.py > /home/ec2-user/output.log 2>&1 && python3.11 news_agent.py >> /home/ec2-user/news_run.log 2>&1 && python3.11 send_email.py >> /home/ec2-user/email.log 2>&1
+SHELL=/bin/bash
+50 13 * * 1-5 ec2-user . /home/ec2-user/.env && cd /home/ec2-user/portfolio && python3.11 fetch_portfolio.py > /home/ec2-user/portfolio/fetch.log 2>&1 && python3.11 analyze_portfolio.py >> /home/ec2-user/portfolio/analyze.log 2>&1
+0 21 * * 1-5 ec2-user . /home/ec2-user/.env && cd /home/ec2-user/portfolio && python3.11 fetch_portfolio.py > /home/ec2-user/portfolio/fetch_eod.log 2>&1
+0 14 * * 0,6 ec2-user . /home/ec2-user/.env && cd /home/ec2-user/portfolio && python3.11 fetch_portfolio.py > /home/ec2-user/portfolio/fetch.log 2>&1
+SHELL=/bin/bash
+2 14 * * 1-5 ec2-user . /home/ec2-user/.env && cd /home/ec2-user/paper_trading && python3.11 simulator.py >> /home/ec2-user/paper_trading/simulator.log 2>&1
+55 19 * * 1-5 ec2-user . /home/ec2-user/.env && cd /home/ec2-user/paper_trading && python3.11 simulator.py >> /home/ec2-user/paper_trading/simulator.log 2>&1
+SHELL=/bin/bash
+5 14 * * 1-5 ec2-user . /home/ec2-user/.env && /home/ec2-user/push_results.sh >> /home/ec2-user/push.log 2>&1
+SHELL=/bin/bash
+*/10 13-20 * * 1-5 ec2-user . /home/ec2-user/.env && cd /home/ec2-user/trump_alert && python3.11 monitor.py >> /home/ec2-user/trump_alert/monitor.log 2>&1
+SHELL=/bin/bash
+0 12 * * 1 ec2-user . /home/ec2-user/.env && cd /home/ec2-user/events && python3.11 weekly_report.py >> /home/ec2-user/events/report.log 2>&1
+SHELL=/bin/bash
+10 14 * * 1-5 ec2-user . /home/ec2-user/.env && cd /home/ec2-user/trading_agents && python3.11 run.py >> /home/ec2-user/trading_agents/run.log 2>&1
+SHELL=/bin/bash
+0 13 * * * ec2-user cd /home/ec2-user/sports && ./run_daily.sh stats >> /home/ec2-user/sports/logs/stats.log 2>&1
+0 15 * * * ec2-user . /home/ec2-user/.env && cd /home/ec2-user/sports && ./run_daily.sh picks >> /home/ec2-user/sports/logs/picks.log 2>&1 && python3.11 send_report.py >> /home/ec2-user/sports/logs/email.log 2>&1

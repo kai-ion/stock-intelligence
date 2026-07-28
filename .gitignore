@@ -9,3 +9,5 @@ output.csv
 __pycache__/
 brief/wsb_latest.json
 ec2_backup/
+github_deploy_key
+scripts/ec2/github_deploy_key

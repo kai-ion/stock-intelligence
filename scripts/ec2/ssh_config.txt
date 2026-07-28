@@ -1,0 +1,12 @@
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile /home/ec2-user/.ssh/github_deploy
+    StrictHostKeyChecking no
+---
+authorized_keys
+config
+github_deploy
+github_deploy.pub
+known_hosts
+known_hosts.old
