@@ -1,35 +1,11 @@
 {
-  "cash": 0.0,
+  "cash": 597.8228127517702,
   "positions": {
-    "KB": {
-      "shares": 19.1884,
-      "entry_price": 113.59,
-      "exit_target": 125.0,
-      "stop_loss": 98.0,
-      "entry_date": "2026-07-06",
-      "cost": 2179.61
-    },
-    "DLR": {
-      "shares": 8.3082,
-      "entry_price": 191.02,
-      "exit_target": 214.29,
-      "stop_loss": 192.38,
-      "entry_date": "2026-07-24",
-      "cost": 1587.04
-    },
     "UVE": {
       "shares": 39.6923,
       "entry_price": 41.61,
       "exit_target": 46.82,
       "stop_loss": 39.7,
-      "entry_date": "2026-07-27",
-      "cost": 1651.6
-    },
-    "ENVA": {
-      "shares": 6.9608,
-      "entry_price": 237.27,
-      "exit_target": 275.13,
-      "stop_loss": 217.05,
       "entry_date": "2026-07-27",
       "cost": 1651.6
     },
@@ -40,6 +16,30 @@
       "stop_loss": 31.536,
       "entry_date": "2026-07-27",
       "cost": 1109.62
+    },
+    "FAF": {
+      "shares": 21.3899,
+      "entry_price": 75.13,
+      "exit_target": 81.8,
+      "stop_loss": 71.65,
+      "entry_date": "2026-07-27",
+      "cost": 1607.03
+    },
+    "RGEN": {
+      "shares": 11.8869,
+      "entry_price": 143.66,
+      "exit_target": 160.05,
+      "stop_loss": 138.21,
+      "entry_date": "2026-07-28",
+      "cost": 1707.67
+    },
+    "TRI": {
+      "shares": 17.4679,
+      "entry_price": 97.76,
+      "exit_target": 113.06,
+      "stop_loss": 87.98400000000001,
+      "entry_date": "2026-07-28",
+      "cost": 1707.67
     }
   },
   "start_date": "2026-06-02",
