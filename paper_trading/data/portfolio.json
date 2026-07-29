@@ -1,5 +1,5 @@
 {
-  "cash": 597.8228127517702,
+  "cash": 524.8145625396721,
   "positions": {
     "UVE": {
       "shares": 39.6923,
@@ -17,22 +17,6 @@
       "entry_date": "2026-07-27",
       "cost": 1109.62
     },
-    "FAF": {
-      "shares": 21.3899,
-      "entry_price": 75.13,
-      "exit_target": 81.8,
-      "stop_loss": 71.65,
-      "entry_date": "2026-07-27",
-      "cost": 1607.03
-    },
-    "RGEN": {
-      "shares": 11.8869,
-      "entry_price": 143.66,
-      "exit_target": 160.05,
-      "stop_loss": 138.21,
-      "entry_date": "2026-07-28",
-      "cost": 1707.67
-    },
     "TRI": {
       "shares": 17.4679,
       "entry_price": 97.76,
@@ -40,6 +24,22 @@
       "stop_loss": 87.98400000000001,
       "entry_date": "2026-07-28",
       "cost": 1707.67
+    },
+    "MANH": {
+      "shares": 9.2751,
+      "entry_price": 193.33,
+      "exit_target": 226.51,
+      "stop_loss": 184.32,
+      "entry_date": "2026-07-29",
+      "cost": 1793.15
+    },
+    "HURN": {
+      "shares": 13.1002,
+      "entry_price": 136.88,
+      "exit_target": 194.73,
+      "stop_loss": 121.56,
+      "entry_date": "2026-07-29",
+      "cost": 1793.15
     }
   },
   "start_date": "2026-06-02",
