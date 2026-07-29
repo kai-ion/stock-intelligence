@@ -18,34 +18,35 @@ OUTPUT_DIR = Path(__file__).parent.parent / "screener_output"
 
 
 def get_claude_short_analysis(shorts_data):
-    """Send top shorts to Claude for analysis."""
+    """Send top shorts to Claude; return a list of per-ticker recommendation dicts."""
     config = Config(read_timeout=120)
     bedrock = boto3.client("bedrock-runtime", region_name=REGION)
 
     prompt = f"""You are a bearish stock analyst. Below are today's top short candidates — stocks in confirmed downtrends (below 50-day EMA, negative weekly momentum).
 
-For the top 10-15 stocks, write a brief with:
-1. Why each is a strong short (catalyst, broken support, sector weakness, bad earnings)
-2. Entry zone for shorting (where to initiate)
-3. Cover target (where to take profit)
-4. Stop loss (where to cut if it bounces)
+For EACH stock in the list, decide whether it is a clean SHORT or whether it should be AVOIDED (value trap / squeeze risk / bottoming). Then give the trade levels.
 
 STOCKS (sorted by bearish score):
 {shorts_data}
 
-Format your response as:
+Respond with ONLY a JSON array (no markdown, no prose), one object per ticker you have a view on:
+[
+  {{
+    "ticker": "COIN",
+    "rec": "SHORT",            // "SHORT" or "AVOID"
+    "entry": "152-156",        // entry zone for shorting, or "" if AVOID
+    "cover": "125.00",         // downside cover target, or "" if AVOID
+    "stop": "168.00",          // stop loss above resistance, or "" if AVOID
+    "thesis": "One sentence on why this is a short, or why to avoid it.",
+    "top_pick": true           // true ONLY for your top 3 highest-conviction shorts
+  }}
+]
 
-## Short Candidates — [date]
+Cover the strongest 12-15 names as SHORT candidates with trade levels. Use AVOID for 2-3 that look cheap but could bounce (bullish MACD, snapback risk, oversold RSI divergence). Keep each thesis to one sentence.
 
-### [Ticker] (Day% | Week% | Below EMA%)
-**Thesis:** [1-2 sentences on why this is a short]
-- Short entry: $X.XX (current level or breakdown below support)
-- Cover at: $X.XX (downside target)
-- Stop: $X.XX (above recent high or EMA)
+Then pick your TOP 3 highest-conviction shorts — the ones you would put on TODAY if you could only pick 3. For these, set "top_pick": true in the JSON.
 
-Only include stocks where you see a clear SHORT thesis. Skip any that look like they could bounce.
-End with a section called "## Avoid Shorting" listing 2-3 from the list that look like value traps (cheap but could bounce).
-"""
+Output valid JSON only."""
 
     body = json.dumps({
         "anthropic_version": "bedrock-2023-05-31",
@@ -55,7 +56,59 @@ End with a section called "## Avoid Shorting" listing 2-3 from the list that loo
 
     response = bedrock.invoke_model(modelId=MODEL_ID, body=body)
     result = json.loads(response["body"].read())
-    return result["content"][0]["text"]
+    text = result["content"][0]["text"]
+
+    # Extract the JSON array (Claude may wrap it in a code fence)
+    match = re.search(r"\[.*\]", text, re.DOTALL)
+    raw = match.group(0) if match else text
+    try:
+        recs = json.loads(raw)
+    except json.JSONDecodeError:
+        print("WARNING: could not parse Claude JSON; got:\n" + text[:500])
+        return []
+    return recs
+
+
+def recs_to_markdown(recs, date_str):
+    """Render the recommendation list as the markdown brief / email body."""
+    top_picks = [r for r in recs if r.get("top_pick") and str(r.get("rec", "")).upper() == "SHORT"]
+    shorts = [r for r in recs if str(r.get("rec", "")).upper() == "SHORT"]
+    avoids = [r for r in recs if str(r.get("rec", "")).upper() == "AVOID"]
+
+    lines = []
+
+    # Claude's top picks first
+    if top_picks:
+        lines.append(f"## Claude's Top Shorts — {date_str}")
+        lines.append("")
+        for r in top_picks:
+            lines.append(f"**{r.get('ticker', '?')}** — {r.get('thesis', '')}")
+            lines.append(f"- Entry: {r.get('entry', '')} | Cover: {r.get('cover', '')} | Stop: {r.get('stop', '')}")
+            lines.append("")
+        lines.append("---")
+        lines.append("")
+
+    lines.append("## All Short Candidates")
+    lines.append("")
+    for r in shorts:
+        lines.append(f"### {r.get('ticker', '?')}")
+        lines.append(f"**Thesis:** {r.get('thesis', '')}")
+        lines.append(f"- Short entry: {r.get('entry', '')}")
+        lines.append(f"- Cover at: {r.get('cover', '')}")
+        lines.append(f"- Stop: {r.get('stop', '')}")
+        lines.append("")
+
+    if avoids:
+        lines.append("---")
+        lines.append("")
+        lines.append("## Avoid Shorting")
+        lines.append("")
+        for r in avoids:
+            lines.append(f"### {r.get('ticker', '?')}")
+            lines.append(r.get("thesis", ""))
+            lines.append("")
+
+    return "\n".join(lines)
 
 
 def main():
@@ -72,10 +125,29 @@ def main():
 
     import pandas as pd
     df = pd.read_csv(csv_path)
-    top_30 = df.head(30).to_string(index=False)
+    top_candidates = df.head(30).to_string(index=False)
 
-    print(f"Analyzing {len(df)} short candidates...")
-    analysis = get_claude_short_analysis(top_30)
+    print(f"Analyzing top {min(30, len(df))} of {len(df)} short candidates...")
+    recs = get_claude_short_analysis(top_candidates)
+    analysis = recs_to_markdown(recs, date_str)
+
+    # Merge Claude's recommendation back into the candidates CSV
+    if recs:
+        rec_df = pd.DataFrame(recs).rename(columns={
+            "ticker": "Ticker",
+            "rec": "Claude Rec",
+            "entry": "Entry",
+            "cover": "Cover",
+            "stop": "Stop",
+            "thesis": "Thesis",
+        })
+        rec_cols = ["Ticker", "Claude Rec", "Entry", "Cover", "Stop", "Thesis"]
+        rec_df = rec_df[[c for c in rec_cols if c in rec_df.columns]]
+        # Drop any stale rec columns before re-merging (idempotent re-runs)
+        df = df[[c for c in df.columns if c not in rec_cols[1:]]]
+        df = df.merge(rec_df, on="Ticker", how="left")
+        df.to_csv(csv_path, index=False)
+        print(f"Merged {len(rec_df)} recommendations into {csv_path}")
 
     # Save brief
     brief_path = OUTPUT_DIR / month_str / f"{date_str}_short_brief.md"
