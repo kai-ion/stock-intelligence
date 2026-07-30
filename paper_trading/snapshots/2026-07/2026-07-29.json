@@ -1,13 +1,13 @@
 {
   "date": "2026-07-29",
-  "total_value": 9308.97,
-  "cash": 524.81,
+  "total_value": 9497.13,
+  "cash": 440.09,
   "positions_count": 5,
   "positions": {
-    "UVE": 1758.37,
-    "ATRC": 1228.21,
-    "TRI": 1849.68,
-    "MANH": 1928.9,
-    "HURN": 2019.0
+    "UVE": 1782.58,
+    "ATRC": 1298.04,
+    "TRI": 1857.71,
+    "HURN": 2257.03,
+    "RGEN": 1861.68
   }
 }

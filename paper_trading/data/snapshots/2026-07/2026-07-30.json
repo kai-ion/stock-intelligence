@@ -1,0 +1,13 @@
+{
+  "date": "2026-07-30",
+  "total_value": 9355.97,
+  "cash": 298.4,
+  "positions_count": 5,
+  "positions": {
+    "UVE": 1762.74,
+    "ATRC": 1273.02,
+    "HURN": 2210.53,
+    "CORT": 1954.83,
+    "NEO": 1856.46
+  }
+}
