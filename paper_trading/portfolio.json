@@ -1,5 +1,5 @@
 {
-  "cash": 328.02356085031147,
+  "cash": 189.14840112495426,
   "positions": {
     "UVE": {
       "shares": 39.6923,
@@ -25,21 +25,21 @@
       "entry_date": "2026-07-29",
       "cost": 1793.15
     },
-    "MSFT": {
-      "shares": 4.0532,
-      "entry_price": 451.1,
-      "exit_target": 489.81,
-      "stop_loss": 435.11,
-      "entry_date": "2026-07-31",
-      "cost": 1828.41
+    "CDNA": {
+      "shares": 39.3225,
+      "entry_price": 43.71,
+      "exit_target": 53.79,
+      "stop_loss": 38.72,
+      "entry_date": "2026-08-03",
+      "cost": 1718.79
     },
-    "NWL": {
-      "shares": 270.4742,
-      "entry_price": 6.76,
-      "exit_target": 7.8,
-      "stop_loss": 5.97,
-      "entry_date": "2026-07-31",
-      "cost": 1828.41
+    "ARXS": {
+      "shares": 31.6536,
+      "entry_price": 54.3,
+      "exit_target": 62.07,
+      "stop_loss": 48.87,
+      "entry_date": "2026-08-03",
+      "cost": 1718.79
     }
   },
   "start_date": "2026-06-02",

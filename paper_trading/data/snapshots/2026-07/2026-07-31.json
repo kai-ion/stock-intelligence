@@ -1,13 +1,13 @@
 {
   "date": "2026-07-31",
-  "total_value": 8969.99,
-  "cash": 328.02,
+  "total_value": 8177.68,
+  "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "UVE": 1733.76,
-    "ATRC": 1227.9,
-    "HURN": 2082.01,
-    "MSFT": 1865.91,
-    "NWL": 1732.39
+    "UVE": 1731.78,
+    "ATRC": 1193.06,
+    "HURN": 1982.58,
+    "MSFT": 1888.87,
+    "NWL": 1381.39
   }
 }
