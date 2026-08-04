@@ -1,13 +1,13 @@
 {
   "date": "2026-08-03",
-  "total_value": 8938.5,
-  "cash": 189.15,
+  "total_value": 8803.72,
+  "cash": 168.3,
   "positions_count": 5,
   "positions": {
-    "UVE": 1753.21,
-    "ATRC": 1242.46,
-    "HURN": 2045.6,
-    "CDNA": 1873.13,
-    "ARXS": 1834.96
+    "UVE": 1748.84,
+    "ATRC": 1222.67,
+    "HURN": 1956.65,
+    "CDNA": 1885.12,
+    "AMZN": 1822.14
   }
 }

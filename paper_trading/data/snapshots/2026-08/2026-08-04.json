@@ -1,0 +1,13 @@
+{
+  "date": "2026-08-04",
+  "total_value": 8752.96,
+  "cash": 36.3,
+  "positions_count": 5,
+  "positions": {
+    "ATRC": 1230.9,
+    "HURN": 1950.88,
+    "CDNA": 1850.71,
+    "PAY": 1940.14,
+    "AEIS": 1744.02
+  }
+}
