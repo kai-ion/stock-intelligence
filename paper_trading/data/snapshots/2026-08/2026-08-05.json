@@ -1,0 +1,13 @@
+{
+  "date": "2026-08-05",
+  "total_value": 8508.05,
+  "cash": 0.0,
+  "positions_count": 5,
+  "positions": {
+    "ATRC": 1204.94,
+    "HURN": 1948.79,
+    "PLTR": 1935.4,
+    "AXTI": 1862.86,
+    "ZBRA": 1556.07
+  }
+}
