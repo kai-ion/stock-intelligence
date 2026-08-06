@@ -25,21 +25,21 @@
       "entry_date": "2026-08-04",
       "cost": 1778.13
     },
-    "AXTI": {
-      "shares": 24.9145,
-      "entry_price": 68.67,
-      "exit_target": 94.2,
-      "stop_loss": 65.38,
-      "entry_date": "2026-08-04",
-      "cost": 1710.88
-    },
-    "ZBRA": {
-      "shares": 4.2097,
-      "entry_price": 368.83,
-      "exit_target": 414.94,
-      "stop_loss": 328.82,
+    "APPS": {
+      "shares": 127.5305,
+      "entry_price": 12.67,
+      "exit_target": 16.5,
+      "stop_loss": 11.04,
       "entry_date": "2026-08-05",
-      "cost": 1552.68
+      "cost": 1615.81
+    },
+    "SOUN": {
+      "shares": 150.7633,
+      "entry_price": 7.62,
+      "exit_target": 10.7,
+      "stop_loss": 6.8580000000000005,
+      "entry_date": "2026-08-06",
+      "cost": 1148.82
     }
   },
   "start_date": "2026-06-02",
