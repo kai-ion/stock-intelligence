@@ -1,13 +1,13 @@
 {
   "date": "2026-08-06",
-  "total_value": 7802.75,
+  "total_value": 7885.06,
   "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "ATRC": 1245.0,
-    "HURN": 1950.69,
-    "PLTR": 1848.05,
-    "APPS": 1661.47,
-    "SOUN": 1097.56
+    "ATRC": 1252.44,
+    "HURN": 1972.63,
+    "PLTR": 1859.56,
+    "APPS": 1805.83,
+    "BLMN": 994.6
   }
 }
