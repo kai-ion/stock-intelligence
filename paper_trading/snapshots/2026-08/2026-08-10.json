@@ -1,0 +1,13 @@
+{
+  "date": "2026-08-10",
+  "total_value": 8499.92,
+  "cash": 0.0,
+  "positions_count": 5,
+  "positions": {
+    "HURN": 2010.49,
+    "PLTR": 2089.03,
+    "APPS": 1863.22,
+    "ABCL": 1518.12,
+    "FLR": 1019.06
+  }
+}
