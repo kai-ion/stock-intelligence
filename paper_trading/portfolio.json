@@ -1,5 +1,5 @@
 {
-  "cash": 0.0,
+  "cash": 2.2737367544323206e-13,
   "positions": {
     "HURN": {
       "shares": 13.1002,
@@ -9,14 +9,6 @@
       "entry_date": "2026-07-29",
       "cost": 1793.15
     },
-    "APPS": {
-      "shares": 127.5305,
-      "entry_price": 12.67,
-      "exit_target": 16.5,
-      "stop_loss": 11.04,
-      "entry_date": "2026-08-05",
-      "cost": 1615.81
-    },
     "ABCL": {
       "shares": 160.2238,
       "entry_price": 8.55,
@@ -25,21 +17,29 @@
       "entry_date": "2026-08-10",
       "cost": 1369.91
     },
-    "SE": {
-      "shares": 12.4319,
-      "entry_price": 125.39,
-      "exit_target": 139.6,
-      "stop_loss": 115.07,
-      "entry_date": "2026-08-11",
-      "cost": 1558.84
+    "SMCI": {
+      "shares": 38.7497,
+      "entry_price": 35.0,
+      "exit_target": 38.85,
+      "stop_loss": 35.35,
+      "entry_date": "2026-08-12",
+      "cost": 1356.24
     },
-    "HPK": {
-      "shares": 172.2528,
-      "entry_price": 7.92,
-      "exit_target": 9.87,
-      "stop_loss": 7.128,
-      "entry_date": "2026-08-11",
-      "cost": 1364.24
+    "ATRO": {
+      "shares": 17.8798,
+      "entry_price": 87.61,
+      "exit_target": 97.33,
+      "stop_loss": 78.32,
+      "entry_date": "2026-08-12",
+      "cost": 1566.45
+    },
+    "KTB": {
+      "shares": 17.8195,
+      "entry_price": 84.35,
+      "exit_target": 95.48,
+      "stop_loss": 81.83,
+      "entry_date": "2026-08-12",
+      "cost": 1503.08
     }
   },
   "start_date": "2026-06-02",
