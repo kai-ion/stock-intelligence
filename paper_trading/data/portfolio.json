@@ -1,5 +1,5 @@
 {
-  "cash": 2.2737367544323206e-13,
+  "cash": 0.0,
   "positions": {
     "HURN": {
       "shares": 13.1002,
@@ -17,29 +17,29 @@
       "entry_date": "2026-08-10",
       "cost": 1369.91
     },
-    "SMCI": {
-      "shares": 38.7497,
-      "entry_price": 35.0,
-      "exit_target": 38.85,
-      "stop_loss": 35.35,
-      "entry_date": "2026-08-12",
-      "cost": 1356.24
+    "NBIS": {
+      "shares": 5.9283,
+      "entry_price": 259.2,
+      "exit_target": 341.06,
+      "stop_loss": 239.52,
+      "entry_date": "2026-08-13",
+      "cost": 1536.62
     },
-    "ATRO": {
-      "shares": 17.8798,
-      "entry_price": 87.61,
-      "exit_target": 97.33,
-      "stop_loss": 78.32,
-      "entry_date": "2026-08-12",
-      "cost": 1566.45
+    "HLIT": {
+      "shares": 98.233,
+      "entry_price": 14.26,
+      "exit_target": 19.36,
+      "stop_loss": 13.95,
+      "entry_date": "2026-08-13",
+      "cost": 1400.8
     },
-    "KTB": {
-      "shares": 17.8195,
-      "entry_price": 84.35,
-      "exit_target": 95.48,
-      "stop_loss": 81.83,
-      "entry_date": "2026-08-12",
-      "cost": 1503.08
+    "MRX": {
+      "shares": 21.3363,
+      "entry_price": 71.13,
+      "exit_target": 84.37,
+      "stop_loss": 64.51,
+      "entry_date": "2026-08-13",
+      "cost": 1517.65
     }
   },
   "start_date": "2026-06-02",

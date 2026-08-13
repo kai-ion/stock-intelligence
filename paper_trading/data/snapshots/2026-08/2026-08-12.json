@@ -1,13 +1,13 @@
 {
   "date": "2026-08-12",
-  "total_value": 7939.02,
+  "total_value": 8041.09,
   "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "HURN": 1948.26,
-    "ABCL": 1526.13,
-    "SMCI": 1391.89,
-    "ATRO": 1619.73,
-    "KTB": 1453.0
+    "HURN": 1979.31,
+    "ABCL": 1655.11,
+    "SMCI": 1466.87,
+    "ATRO": 1584.6,
+    "DFTX": 1355.21
   }
 }
