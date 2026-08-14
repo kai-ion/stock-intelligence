@@ -1,13 +1,13 @@
 {
   "date": "2026-08-13",
-  "total_value": 8245.06,
+  "total_value": 7962.6,
   "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "HURN": 1992.67,
-    "ABCL": 1663.12,
-    "NBIS": 1595.78,
-    "HLIT": 1411.61,
-    "MRX": 1581.87
+    "HURN": 2022.41,
+    "NBIS": 1501.05,
+    "MRX": 1543.25,
+    "LITE": 1332.74,
+    "ATRO": 1563.16
   }
 }
