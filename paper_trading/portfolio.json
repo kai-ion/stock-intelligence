@@ -17,29 +17,29 @@
       "entry_date": "2026-08-13",
       "cost": 1536.62
     },
-    "LITE": {
-      "shares": 1.5137,
-      "entry_price": 932.47,
-      "exit_target": 1187.63,
-      "stop_loss": 864.13,
-      "entry_date": "2026-08-13",
-      "cost": 1411.52
+    "AMLX": {
+      "shares": 52.3567,
+      "entry_price": 29.36,
+      "exit_target": 35.04,
+      "stop_loss": 26.13,
+      "entry_date": "2026-08-18",
+      "cost": 1537.19
     },
-    "ATRO": {
-      "shares": 16.899,
-      "entry_price": 87.89,
-      "exit_target": 99.04,
-      "stop_loss": 79.35,
-      "entry_date": "2026-08-13",
-      "cost": 1485.26
+    "LUNR": {
+      "shares": 72.6436,
+      "entry_price": 19.01,
+      "exit_target": 24.5,
+      "stop_loss": 51.23,
+      "entry_date": "2026-08-18",
+      "cost": 1380.95
     },
-    "JCAP": {
-      "shares": 62.2291,
-      "entry_price": 24.0,
-      "exit_target": 26.71,
-      "stop_loss": 21.6,
-      "entry_date": "2026-08-17",
-      "cost": 1493.5
+    "CRGY": {
+      "shares": 117.6178,
+      "entry_price": 12.89,
+      "exit_target": 14.91,
+      "stop_loss": 11.601,
+      "entry_date": "2026-08-18",
+      "cost": 1516.09
     }
   },
   "start_date": "2026-06-02",
