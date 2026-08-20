@@ -1,0 +1,13 @@
+{
+  "date": "2026-08-20",
+  "total_value": 8699.36,
+  "cash": 0.0,
+  "positions_count": 5,
+  "positions": {
+    "HURN": 2125.51,
+    "TRGP": 1619.19,
+    "HAE": 1522.45,
+    "TEM": 1716.85,
+    "CRSP": 1715.36
+  }
+}

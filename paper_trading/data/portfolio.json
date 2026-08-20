@@ -9,14 +9,6 @@
       "entry_date": "2026-07-29",
       "cost": 1793.15
     },
-    "AMLX": {
-      "shares": 56.1125,
-      "entry_price": 29.36,
-      "exit_target": 35.04,
-      "stop_loss": 26.13,
-      "entry_date": "2026-08-18",
-      "cost": 1647.46
-    },
     "TRGP": {
       "shares": 5.3669,
       "entry_price": 297.49,
@@ -33,13 +25,21 @@
       "entry_date": "2026-08-18",
       "cost": 1472.06
     },
-    "LUNR": {
-      "shares": 79.8755,
-      "entry_price": 19.01,
-      "exit_target": 24.5,
-      "stop_loss": 51.23,
-      "entry_date": "2026-08-18",
-      "cost": 1518.43
+    "TEM": {
+      "shares": 25.5598,
+      "entry_price": 61.25,
+      "exit_target": 72.0,
+      "stop_loss": 59.84,
+      "entry_date": "2026-08-20",
+      "cost": 1565.54
+    },
+    "CRSP": {
+      "shares": 29.3474,
+      "entry_price": 59.81,
+      "exit_target": 66.66,
+      "stop_loss": 53.829,
+      "entry_date": "2026-08-20",
+      "cost": 1755.27
     }
   },
   "start_date": "2026-06-02",
