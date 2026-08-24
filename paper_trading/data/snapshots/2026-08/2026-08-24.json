@@ -1,0 +1,13 @@
+{
+  "date": "2026-08-24",
+  "total_value": 8313.97,
+  "cash": 27.59,
+  "positions_count": 5,
+  "positions": {
+    "HURN": 2135.23,
+    "HAE": 1526.39,
+    "COIN": 1214.1,
+    "DE": 1759.3,
+    "HMY": 1651.36
+  }
+}
