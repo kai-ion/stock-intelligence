@@ -1,0 +1,13 @@
+{
+  "date": "2026-08-25",
+  "total_value": 8177.4,
+  "cash": 55.57,
+  "positions_count": 5,
+  "positions": {
+    "HURN": 2098.52,
+    "HAE": 1511.15,
+    "FCFS": 1641.45,
+    "ALVO": 1236.82,
+    "CDLR": 1633.89
+  }
+}

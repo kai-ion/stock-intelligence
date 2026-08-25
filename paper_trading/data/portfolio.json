@@ -1,5 +1,5 @@
 {
-  "cash": 27.59070888977203,
+  "cash": 55.56682248885181,
   "positions": {
     "HURN": {
       "shares": 13.1002,
@@ -17,29 +17,29 @@
       "entry_date": "2026-08-18",
       "cost": 1472.06
     },
-    "COIN": {
-      "shares": 6.4967,
-      "entry_price": 181.55,
-      "exit_target": 199.12,
-      "stop_loss": 170.82,
-      "entry_date": "2026-08-21",
-      "cost": 1179.48
-    },
-    "DE": {
-      "shares": 2.692,
-      "entry_price": 620.94,
-      "exit_target": 674.71,
-      "stop_loss": 604.0,
-      "entry_date": "2026-08-21",
-      "cost": 1671.54
-    },
-    "HMY": {
-      "shares": 71.3949,
-      "entry_price": 23.54,
-      "exit_target": 26.49,
-      "stop_loss": 21.13,
+    "FCFS": {
+      "shares": 7.074,
+      "entry_price": 225.28,
+      "exit_target": 245.03,
+      "stop_loss": 220.89,
       "entry_date": "2026-08-24",
-      "cost": 1680.64
+      "cost": 1593.62
+    },
+    "ALVO": {
+      "shares": 234.4679,
+      "entry_price": 4.83,
+      "exit_target": 5.29,
+      "stop_loss": 4.38,
+      "entry_date": "2026-08-24",
+      "cost": 1132.48
+    },
+    "CDLR": {
+      "shares": 62.7212,
+      "entry_price": 26.12,
+      "exit_target": 31.87,
+      "stop_loss": 26.34,
+      "entry_date": "2026-08-25",
+      "cost": 1638.28
     }
   },
   "start_date": "2026-06-02",
