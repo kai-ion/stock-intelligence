@@ -1,5 +1,5 @@
 {
-  "cash": 55.56682248885181,
+  "cash": 0.0,
   "positions": {
     "HURN": {
       "shares": 13.1002,
@@ -25,21 +25,21 @@
       "entry_date": "2026-08-24",
       "cost": 1593.62
     },
-    "ALVO": {
-      "shares": 234.4679,
-      "entry_price": 4.83,
-      "exit_target": 5.29,
-      "stop_loss": 4.38,
-      "entry_date": "2026-08-24",
-      "cost": 1132.48
+    "ANF": {
+      "shares": 11.5814,
+      "entry_price": 138.4,
+      "exit_target": 158.14,
+      "stop_loss": 123.17,
+      "entry_date": "2026-08-26",
+      "cost": 1602.87
     },
-    "CDLR": {
-      "shares": 62.7212,
-      "entry_price": 26.12,
-      "exit_target": 31.87,
-      "stop_loss": 26.34,
-      "entry_date": "2026-08-25",
-      "cost": 1638.28
+    "SMCI": {
+      "shares": 27.1843,
+      "entry_price": 38.46,
+      "exit_target": 43.17,
+      "stop_loss": 31.85,
+      "entry_date": "2026-08-26",
+      "cost": 1045.51
     }
   },
   "start_date": "2026-06-02",
