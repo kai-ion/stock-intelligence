@@ -1,13 +1,13 @@
 {
   "date": "2026-08-26",
-  "total_value": 7935.41,
+  "total_value": 7577.42,
   "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "HURN": 2069.5,
-    "HAE": 1512.98,
-    "FCFS": 1646.83,
-    "ANF": 1672.01,
-    "SMCI": 1034.09
+    "HURN": 2058.04,
+    "HAE": 1504.06,
+    "ANF": 1727.42,
+    "CDLR": 1306.8,
+    "SMMT": 981.1
   }
 }

@@ -1,5 +1,5 @@
 {
-  "cash": 0.0,
+  "cash": 2.2737367544323206e-13,
   "positions": {
     "HURN": {
       "shares": 13.1002,
@@ -9,22 +9,6 @@
       "entry_date": "2026-07-29",
       "cost": 1793.15
     },
-    "HAE": {
-      "shares": 14.0396,
-      "entry_price": 104.85,
-      "exit_target": 118.75,
-      "stop_loss": 92.19,
-      "entry_date": "2026-08-18",
-      "cost": 1472.06
-    },
-    "FCFS": {
-      "shares": 7.074,
-      "entry_price": 225.28,
-      "exit_target": 245.03,
-      "stop_loss": 220.89,
-      "entry_date": "2026-08-24",
-      "cost": 1593.62
-    },
     "ANF": {
       "shares": 11.5814,
       "entry_price": 138.4,
@@ -33,13 +17,29 @@
       "entry_date": "2026-08-26",
       "cost": 1602.87
     },
-    "SMCI": {
-      "shares": 27.1843,
-      "entry_price": 38.46,
-      "exit_target": 43.17,
-      "stop_loss": 31.85,
-      "entry_date": "2026-08-26",
-      "cost": 1045.51
+    "CRWD": {
+      "shares": 4.6847,
+      "entry_price": 206.5,
+      "exit_target": 261.74,
+      "stop_loss": 194.11,
+      "entry_date": "2026-08-27",
+      "cost": 967.4
+    },
+    "TH": {
+      "shares": 71.1941,
+      "entry_price": 17.9,
+      "exit_target": 24.03,
+      "stop_loss": 17.48,
+      "entry_date": "2026-08-27",
+      "cost": 1274.37
+    },
+    "TENB": {
+      "shares": 40.5369,
+      "entry_price": 36.35,
+      "exit_target": 40.03,
+      "stop_loss": 35.09,
+      "entry_date": "2026-08-27",
+      "cost": 1473.52
     }
   },
   "start_date": "2026-06-02",
