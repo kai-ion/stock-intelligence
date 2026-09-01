@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-01",
+  "total_value": 6998.16,
+  "cash": 0.0,
+  "positions_count": 5,
+  "positions": {
+    "HURN": 2093.02,
+    "ANF": 1640.91,
+    "CRWD": 1031.2,
+    "TH": 1306.06,
+    "NVS": 926.98
+  }
+}
