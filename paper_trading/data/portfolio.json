@@ -1,5 +1,5 @@
 {
-  "cash": 0.0,
+  "cash": 256.15486785430926,
   "positions": {
     "HURN": {
       "shares": 13.1002,
@@ -8,14 +8,6 @@
       "stop_loss": 121.56,
       "entry_date": "2026-07-29",
       "cost": 1793.15
-    },
-    "ANF": {
-      "shares": 11.5814,
-      "entry_price": 138.4,
-      "exit_target": 158.14,
-      "stop_loss": 123.17,
-      "entry_date": "2026-08-26",
-      "cost": 1602.87
     },
     "AGCO": {
       "shares": 10.3584,
@@ -33,13 +25,21 @@
       "entry_date": "2026-09-02",
       "cost": 910.45
     },
-    "CRK": {
-      "shares": 57.9081,
-      "entry_price": 16.02,
-      "exit_target": 16.6,
-      "stop_loss": 13.77,
+    "DUOL": {
+      "shares": 5.4891,
+      "entry_price": 158.77,
+      "exit_target": 177.47,
+      "stop_loss": 142.55,
       "entry_date": "2026-09-02",
-      "cost": 927.69
+      "cost": 871.5
+    },
+    "CHTR": {
+      "shares": 8.7261,
+      "entry_price": 158.97,
+      "exit_target": 169.68,
+      "stop_loss": 142.54,
+      "entry_date": "2026-09-03",
+      "cost": 1387.19
     }
   },
   "start_date": "2026-06-02",
