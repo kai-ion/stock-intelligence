@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-04",
+  "total_value": 6651.68,
+  "cash": 0.0,
+  "positions_count": 5,
+  "positions": {
+    "HURN": 2006.23,
+    "MMED": 947.81,
+    "HCM": 1390.75,
+    "BE": 1112.17,
+    "MSTR": 1194.72
+  }
+}

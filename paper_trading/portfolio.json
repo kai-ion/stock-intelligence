@@ -1,5 +1,5 @@
 {
-  "cash": 256.15486785430926,
+  "cash": 0.0,
   "positions": {
     "HURN": {
       "shares": 13.1002,
@@ -9,14 +9,6 @@
       "entry_date": "2026-07-29",
       "cost": 1793.15
     },
-    "AGCO": {
-      "shares": 10.3584,
-      "entry_price": 118.31,
-      "exit_target": 127.35,
-      "stop_loss": 112.9,
-      "entry_date": "2026-09-01",
-      "cost": 1225.5
-    },
     "MMED": {
       "shares": 40.6089,
       "entry_price": 22.42,
@@ -25,21 +17,29 @@
       "entry_date": "2026-09-02",
       "cost": 910.45
     },
-    "DUOL": {
-      "shares": 5.4891,
-      "entry_price": 158.77,
-      "exit_target": 177.47,
-      "stop_loss": 142.55,
-      "entry_date": "2026-09-02",
-      "cost": 871.5
-    },
-    "CHTR": {
-      "shares": 8.7261,
-      "entry_price": 158.97,
-      "exit_target": 169.68,
-      "stop_loss": 142.54,
+    "HCM": {
+      "shares": 98.4948,
+      "entry_price": 13.8,
+      "exit_target": 17.3,
+      "stop_loss": 13.54,
       "entry_date": "2026-09-03",
-      "cost": 1387.19
+      "cost": 1359.23
+    },
+    "BE": {
+      "shares": 4.5354,
+      "entry_price": 235.55,
+      "exit_target": 259.39,
+      "stop_loss": 232.68,
+      "entry_date": "2026-09-04",
+      "cost": 1068.31
+    },
+    "MSTR": {
+      "shares": 8.4819,
+      "entry_price": 144.82,
+      "exit_target": 152.53,
+      "stop_loss": 139.12,
+      "entry_date": "2026-09-04",
+      "cost": 1228.35
     }
   },
   "start_date": "2026-06-02",

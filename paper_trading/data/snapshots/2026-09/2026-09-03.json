@@ -1,13 +1,13 @@
 {
   "date": "2026-09-03",
-  "total_value": 6842.15,
-  "cash": 256.15,
+  "total_value": 6815.35,
+  "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "HURN": 2085.75,
-    "AGCO": 1301.17,
-    "MMED": 959.99,
-    "DUOL": 893.3,
-    "CHTR": 1345.78
+    "HURN": 2083.32,
+    "AGCO": 1294.44,
+    "MMED": 967.71,
+    "HCM": 1389.76,
+    "TARS": 1080.12
   }
 }
