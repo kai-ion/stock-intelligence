@@ -1,5 +1,5 @@
 {
-  "cash": 0.0,
+  "cash": 11.59054411636339,
   "positions": {
     "HURN": {
       "shares": 13.1002,
@@ -17,29 +17,29 @@
       "entry_date": "2026-09-02",
       "cost": 910.45
     },
-    "HCM": {
-      "shares": 98.4948,
-      "entry_price": 13.8,
-      "exit_target": 17.3,
-      "stop_loss": 13.54,
-      "entry_date": "2026-09-03",
-      "cost": 1359.23
+    "SIG": {
+      "shares": 13.4729,
+      "entry_price": 97.08,
+      "exit_target": 105.72,
+      "stop_loss": 92.91,
+      "entry_date": "2026-09-09",
+      "cost": 1307.95
     },
-    "BE": {
-      "shares": 4.5354,
-      "entry_price": 235.55,
-      "exit_target": 259.39,
-      "stop_loss": 232.68,
-      "entry_date": "2026-09-04",
-      "cost": 1068.31
+    "AXTI": {
+      "shares": 15.8978,
+      "entry_price": 69.56,
+      "exit_target": 88.9,
+      "stop_loss": 62.93,
+      "entry_date": "2026-09-09",
+      "cost": 1105.85
     },
-    "SMMT": {
-      "shares": 63.4789,
-      "entry_price": 17.13,
-      "exit_target": 19.4,
-      "stop_loss": 38.09,
-      "entry_date": "2026-09-04",
-      "cost": 1087.39
+    "SEI": {
+      "shares": 20.4495,
+      "entry_price": 63.96,
+      "exit_target": 93.61,
+      "stop_loss": 10.77,
+      "entry_date": "2026-09-09",
+      "cost": 1307.95
     }
   },
   "start_date": "2026-06-02",
