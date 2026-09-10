@@ -1,5 +1,5 @@
 {
-  "cash": 11.59054411636339,
+  "cash": 0.0,
   "positions": {
     "HURN": {
       "shares": 13.1002,
@@ -17,22 +17,6 @@
       "entry_date": "2026-09-02",
       "cost": 910.45
     },
-    "SIG": {
-      "shares": 13.4729,
-      "entry_price": 97.08,
-      "exit_target": 105.72,
-      "stop_loss": 92.91,
-      "entry_date": "2026-09-09",
-      "cost": 1307.95
-    },
-    "AXTI": {
-      "shares": 15.8978,
-      "entry_price": 69.56,
-      "exit_target": 88.9,
-      "stop_loss": 62.93,
-      "entry_date": "2026-09-09",
-      "cost": 1105.85
-    },
     "SEI": {
       "shares": 20.4495,
       "entry_price": 63.96,
@@ -40,6 +24,22 @@
       "stop_loss": 10.77,
       "entry_date": "2026-09-09",
       "cost": 1307.95
+    },
+    "ASO": {
+      "shares": 21.2953,
+      "entry_price": 49.1,
+      "exit_target": 58.4,
+      "stop_loss": 46.8,
+      "entry_date": "2026-09-09",
+      "cost": 1045.6
+    },
+    "AVO": {
+      "shares": 89.6377,
+      "entry_price": 13.42,
+      "exit_target": 16.76,
+      "stop_loss": 12.078,
+      "entry_date": "2026-09-10",
+      "cost": 1202.94
     }
   },
   "start_date": "2026-06-02",

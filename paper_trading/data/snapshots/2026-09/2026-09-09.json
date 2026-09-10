@@ -1,13 +1,13 @@
 {
   "date": "2026-09-09",
-  "total_value": 6661.12,
-  "cash": 11.59,
+  "total_value": 6715.81,
+  "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "HURN": 1890.03,
-    "MMED": 928.73,
-    "SIG": 1331.12,
-    "AXTI": 1142.42,
-    "SEI": 1357.23
+    "HURN": 1959.79,
+    "MMED": 920.4,
+    "SIG": 1368.17,
+    "SEI": 1386.07,
+    "ASO": 1081.38
   }
 }

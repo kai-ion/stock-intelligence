@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-10",
+  "total_value": 6513.6,
+  "cash": 0.0,
+  "positions_count": 5,
+  "positions": {
+    "HURN": 1975.25,
+    "MMED": 926.7,
+    "SEI": 1328.71,
+    "ASO": 1098.84,
+    "AVO": 1184.11
+  }
+}
