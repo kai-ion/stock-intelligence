@@ -9,14 +9,6 @@
       "entry_date": "2026-07-29",
       "cost": 1793.15
     },
-    "MMED": {
-      "shares": 40.6089,
-      "entry_price": 22.42,
-      "exit_target": 26.44,
-      "stop_loss": 20.19,
-      "entry_date": "2026-09-02",
-      "cost": 910.45
-    },
     "SEI": {
       "shares": 20.4495,
       "entry_price": 63.96,
@@ -33,13 +25,21 @@
       "entry_date": "2026-09-09",
       "cost": 1045.6
     },
-    "AVO": {
-      "shares": 89.6377,
-      "entry_price": 13.42,
-      "exit_target": 16.76,
-      "stop_loss": 12.078,
-      "entry_date": "2026-09-10",
-      "cost": 1202.94
+    "DELL": {
+      "shares": 1.966,
+      "entry_price": 535.98,
+      "exit_target": 643.96,
+      "stop_loss": 445.36,
+      "entry_date": "2026-09-11",
+      "cost": 1053.73
+    },
+    "HPE": {
+      "shares": 16.1042,
+      "entry_price": 58.08,
+      "exit_target": 70.32,
+      "stop_loss": 50.71,
+      "entry_date": "2026-09-11",
+      "cost": 935.33
     }
   },
   "start_date": "2026-06-02",
