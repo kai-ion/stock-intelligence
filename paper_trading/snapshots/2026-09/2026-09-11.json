@@ -1,13 +1,13 @@
 {
   "date": "2026-09-11",
-  "total_value": 6619.99,
+  "total_value": 6594.6,
   "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "HURN": 1951.6,
-    "SEI": 1388.11,
-    "ASO": 1196.48,
-    "DELL": 1095.89,
-    "HPE": 987.91
+    "HURN": 1962.02,
+    "SEI": 1379.32,
+    "ASO": 1180.4,
+    "HPE": 997.17,
+    "AEHR": 1075.69
   }
 }

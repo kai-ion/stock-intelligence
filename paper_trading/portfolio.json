@@ -9,14 +9,6 @@
       "entry_date": "2026-07-29",
       "cost": 1793.15
     },
-    "SEI": {
-      "shares": 20.4495,
-      "entry_price": 63.96,
-      "exit_target": 93.61,
-      "stop_loss": 10.77,
-      "entry_date": "2026-09-09",
-      "cost": 1307.95
-    },
     "ASO": {
       "shares": 21.2953,
       "entry_price": 49.1,
@@ -25,21 +17,29 @@
       "entry_date": "2026-09-09",
       "cost": 1045.6
     },
-    "DELL": {
-      "shares": 1.966,
-      "entry_price": 535.98,
-      "exit_target": 643.96,
-      "stop_loss": 445.36,
-      "entry_date": "2026-09-11",
-      "cost": 1053.73
+    "BWIN": {
+      "shares": 30.5578,
+      "entry_price": 31.78,
+      "exit_target": 35.86,
+      "stop_loss": 28.94,
+      "entry_date": "2026-09-14",
+      "cost": 971.13
     },
-    "HPE": {
-      "shares": 16.1042,
-      "entry_price": 58.08,
-      "exit_target": 70.32,
-      "stop_loss": 50.71,
-      "entry_date": "2026-09-11",
-      "cost": 935.33
+    "TEN": {
+      "shares": 18.8611,
+      "entry_price": 47.9,
+      "exit_target": 52.2,
+      "stop_loss": 44.92,
+      "entry_date": "2026-09-14",
+      "cost": 903.45
+    },
+    "NTAP": {
+      "shares": 6.064,
+      "entry_price": 199.28,
+      "exit_target": 237.46,
+      "stop_loss": 179.352,
+      "entry_date": "2026-09-14",
+      "cost": 1208.43
     }
   },
   "start_date": "2026-06-02",
