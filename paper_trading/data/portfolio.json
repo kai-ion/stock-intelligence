@@ -1,5 +1,5 @@
 {
-  "cash": 0.0,
+  "cash": 1.1368683772161603e-13,
   "positions": {
     "HURN": {
       "shares": 13.1002,
@@ -25,21 +25,21 @@
       "entry_date": "2026-09-14",
       "cost": 903.45
     },
-    "ODD": {
-      "shares": 58.0615,
-      "entry_price": 18.28,
-      "exit_target": 20.58,
-      "stop_loss": 16.28,
-      "entry_date": "2026-09-14",
-      "cost": 1061.36
-    },
-    "SAIL": {
-      "shares": 49.0984,
-      "entry_price": 19.88,
-      "exit_target": 23.3,
-      "stop_loss": 17.892,
+    "QLYS": {
+      "shares": 6.0756,
+      "entry_price": 172.91,
+      "exit_target": 228.43,
+      "stop_loss": 167.64,
       "entry_date": "2026-09-15",
-      "cost": 976.08
+      "cost": 1050.54
+    },
+    "APA": {
+      "shares": 21.3764,
+      "entry_price": 47.41,
+      "exit_target": 51.7,
+      "stop_loss": 42.669,
+      "entry_date": "2026-09-16",
+      "cost": 1013.45
     }
   },
   "start_date": "2026-06-02",
