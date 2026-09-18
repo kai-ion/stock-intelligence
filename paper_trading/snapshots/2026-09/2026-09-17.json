@@ -1,13 +1,13 @@
 {
   "date": "2026-09-17",
-  "total_value": 6117.82,
+  "total_value": 6181.63,
   "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "HURN": 1998.44,
-    "QLYS": 1098.53,
-    "ILMN": 1038.63,
-    "TEM": 1095.85,
-    "NBIS": 886.37
+    "HURN": 2047.5,
+    "QLYS": 1088.14,
+    "ILMN": 1054.24,
+    "TEM": 1132.99,
+    "DOCN": 858.77
   }
 }

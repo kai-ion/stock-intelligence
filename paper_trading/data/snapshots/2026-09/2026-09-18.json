@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-18",
+  "total_value": 6036.34,
+  "cash": 0.0,
+  "positions_count": 5,
+  "positions": {
+    "HURN": 2033.15,
+    "ILMN": 1042.42,
+    "TEM": 1095.92,
+    "TWST": 850.17,
+    "VICR": 1014.68
+  }
+}
