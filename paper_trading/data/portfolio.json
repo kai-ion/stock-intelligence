@@ -25,21 +25,21 @@
       "entry_date": "2026-09-16",
       "cost": 972.28
     },
-    "TWST": {
-      "shares": 5.3441,
-      "entry_price": 155.56,
-      "exit_target": 190.21,
-      "stop_loss": 131.05,
-      "entry_date": "2026-09-18",
-      "cost": 831.33
+    "MSTR": {
+      "shares": 7.6994,
+      "entry_price": 153.92,
+      "exit_target": 167.64,
+      "stop_loss": 152.53,
+      "entry_date": "2026-09-21",
+      "cost": 1185.09
     },
-    "VICR": {
-      "shares": 4.7386,
-      "entry_price": 216.39,
-      "exit_target": 261.0,
-      "stop_loss": 211.42,
-      "entry_date": "2026-09-18",
-      "cost": 1025.39
+    "PS": {
+      "shares": 17.7847,
+      "entry_price": 49.83,
+      "exit_target": 59.47,
+      "stop_loss": 45.35,
+      "entry_date": "2026-09-21",
+      "cost": 886.21
     }
   },
   "start_date": "2026-06-02",
