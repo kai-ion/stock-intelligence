@@ -1,13 +1,13 @@
 {
   "date": "2026-09-21",
-  "total_value": 6388.94,
+  "total_value": 6700.95,
   "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "HURN": 2068.72,
-    "ILMN": 1061.05,
-    "TEM": 1119.15,
-    "MSTR": 1287.96,
-    "PS": 852.06
+    "HURN": 2088.04,
+    "ILMN": 1034.71,
+    "TEM": 1099.24,
+    "GRAL": 1454.3,
+    "MSTR": 1024.66
   }
 }

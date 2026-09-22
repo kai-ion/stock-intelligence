@@ -1,5 +1,5 @@
 {
-  "cash": 0.0,
+  "cash": 119.920726778259,
   "positions": {
     "HURN": {
       "shares": 13.1002,
@@ -25,21 +25,21 @@
       "entry_date": "2026-09-16",
       "cost": 972.28
     },
-    "MSTR": {
-      "shares": 7.6994,
-      "entry_price": 153.92,
-      "exit_target": 167.64,
-      "stop_loss": 152.53,
-      "entry_date": "2026-09-21",
-      "cost": 1185.09
+    "VKTX": {
+      "shares": 30.8855,
+      "entry_price": 37.21,
+      "exit_target": 46.04,
+      "stop_loss": 36.64,
+      "entry_date": "2026-09-22",
+      "cost": 1149.25
     },
-    "PS": {
-      "shares": 17.7847,
-      "entry_price": 49.83,
-      "exit_target": 59.47,
-      "stop_loss": 45.35,
-      "entry_date": "2026-09-21",
-      "cost": 886.21
+    "INTC": {
+      "shares": 10.9519,
+      "entry_price": 121.78,
+      "exit_target": 140.94,
+      "stop_loss": 117.4,
+      "entry_date": "2026-09-22",
+      "cost": 1333.72
     }
   },
   "start_date": "2026-06-02",
