@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-25",
+  "total_value": 6841.21,
+  "cash": 0.0,
+  "positions_count": 5,
+  "positions": {
+    "HURN": 2080.05,
+    "SHOP": 1400.54,
+    "BAND": 1133.23,
+    "CDNA": 954.77,
+    "TEM": 1272.61
+  }
+}
