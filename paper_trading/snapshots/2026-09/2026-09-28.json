@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-28",
+  "total_value": 6492.42,
+  "cash": 0.0,
+  "positions_count": 5,
+  "positions": {
+    "HURN": 2045.6,
+    "BAND": 1095.82,
+    "CDNA": 1005.12,
+    "TEM": 1323.8,
+    "MXL": 1022.08
+  }
+}
