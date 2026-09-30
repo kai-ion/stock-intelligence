@@ -25,21 +25,21 @@
       "entry_date": "2026-09-25",
       "cost": 955.31
     },
-    "TEM": {
-      "shares": 15.7016,
-      "entry_price": 82.24,
-      "exit_target": 93.31,
-      "stop_loss": 74.01599999999999,
-      "entry_date": "2026-09-25",
-      "cost": 1291.3
-    },
-    "NTES": {
-      "shares": 7.0516,
-      "entry_price": 121.04,
-      "exit_target": 140.52,
-      "stop_loss": 108.936,
+    "BE": {
+      "shares": 3.0282,
+      "entry_price": 283.19,
+      "exit_target": 407.41,
+      "stop_loss": 50.9,
       "entry_date": "2026-09-29",
-      "cost": 853.53
+      "cost": 857.55
+    },
+    "IOVA": {
+      "shares": 82.6637,
+      "entry_price": 14.45,
+      "exit_target": 17.67,
+      "stop_loss": 11.93,
+      "entry_date": "2026-09-30",
+      "cost": 1194.49
     }
   },
   "start_date": "2026-06-02",
