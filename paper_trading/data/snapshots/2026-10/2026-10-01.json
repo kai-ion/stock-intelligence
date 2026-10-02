@@ -1,13 +1,13 @@
 {
   "date": "2026-10-01",
-  "total_value": 6346.73,
+  "total_value": 6357.32,
   "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "HURN": 2140.25,
-    "CDNA": 1033.61,
-    "AMAT": 822.81,
-    "UTHR": 1157.4,
-    "EPAM": 1192.67
+    "HURN": 2203.45,
+    "CDNA": 1027.38,
+    "AMAT": 826.67,
+    "UTHR": 1152.97,
+    "FORM": 1146.84
   }
 }
