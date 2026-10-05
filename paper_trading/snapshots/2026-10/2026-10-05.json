@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-05",
+  "total_value": 6575.4,
+  "cash": 0.0,
+  "positions_count": 5,
+  "positions": {
+    "HURN": 2135.99,
+    "CDNA": 1072.45,
+    "AMAT": 835.57,
+    "STNE": 1282.71,
+    "MXL": 1248.68
+  }
+}
