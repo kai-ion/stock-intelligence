@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-06",
+  "total_value": 6702.3,
+  "cash": 52.47,
+  "positions_count": 5,
+  "positions": {
+    "HURN": 2093.15,
+    "CDNA": 1083.11,
+    "AMAT": 831.22,
+    "CEG": 1336.11,
+    "MELI": 1306.25
+  }
+}
