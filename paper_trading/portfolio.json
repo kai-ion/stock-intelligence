@@ -33,13 +33,13 @@
       "entry_date": "2026-10-08",
       "cost": 1252.66
     },
-    "PSIX": {
-      "shares": 12.7888,
-      "entry_price": 51.63,
-      "exit_target": 62.5,
-      "stop_loss": 48.34,
-      "entry_date": "2026-10-08",
-      "cost": 660.29
+    "IT": {
+      "shares": 2.9197,
+      "entry_price": 195.41,
+      "exit_target": 223.74,
+      "stop_loss": 175.869,
+      "entry_date": "2026-10-09",
+      "cost": 570.54
     }
   },
   "start_date": "2026-06-02",
