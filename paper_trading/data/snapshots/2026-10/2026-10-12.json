@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-12",
+  "total_value": 6663.7,
+  "cash": 0.0,
+  "positions_count": 5,
+  "positions": {
+    "HURN": 2216.95,
+    "XP": 1509.38,
+    "MRNA": 1426.39,
+    "MANH": 958.37,
+    "NET": 552.61
+  }
+}
