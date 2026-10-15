@@ -1,5 +1,5 @@
 {
-  "cash": 0.0,
+  "cash": 5.684341886080802e-14,
   "positions": {
     "HURN": {
       "shares": 13.1002,
@@ -33,13 +33,13 @@
       "entry_date": "2026-10-12",
       "cost": 947.64
     },
-    "HLF": {
-      "shares": 31.7768,
-      "entry_price": 14.21,
-      "exit_target": 18.66,
-      "stop_loss": 12.789000000000001,
+    "NSIT": {
+      "shares": 2.4026,
+      "entry_price": 175.87,
+      "exit_target": 204.94,
+      "stop_loss": 150.65,
       "entry_date": "2026-10-14",
-      "cost": 451.55
+      "cost": 422.55
     }
   },
   "start_date": "2026-06-02",
