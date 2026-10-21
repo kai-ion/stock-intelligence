@@ -1,5 +1,5 @@
 {
-  "cash": 0.0,
+  "cash": -5.684341886080802e-14,
   "positions": {
     "HURN": {
       "shares": 13.1002,
@@ -33,13 +33,13 @@
       "entry_date": "2026-10-12",
       "cost": 947.64
     },
-    "AIN": {
-      "shares": 5.5179,
-      "entry_price": 64.56,
-      "exit_target": 81.77,
-      "stop_loss": 58.104000000000006,
-      "entry_date": "2026-10-20",
-      "cost": 356.23
+    "VSTM": {
+      "shares": 42.2455,
+      "entry_price": 9.34,
+      "exit_target": 10.94,
+      "stop_loss": 8.406,
+      "entry_date": "2026-10-21",
+      "cost": 394.57
     }
   },
   "start_date": "2026-06-02",
