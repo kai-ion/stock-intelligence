@@ -1,13 +1,13 @@
 {
   "date": "2026-10-21",
-  "total_value": 6769.48,
-  "cash": -0.0,
+  "total_value": 6839.68,
+  "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "HURN": 2368.91,
-    "XP": 1428.24,
-    "MRNA": 1555.62,
-    "MANH": 1015.8,
-    "VSTM": 400.91
+    "HURN": 2403.04,
+    "XP": 1420.09,
+    "MANH": 1029.91,
+    "TRAX": 585.58,
+    "HAS": 1401.06
   }
 }
