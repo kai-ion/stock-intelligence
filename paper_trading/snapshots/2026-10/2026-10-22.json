@@ -1,13 +1,13 @@
 {
   "date": "2026-10-22",
-  "total_value": 6776.11,
+  "total_value": 6986.04,
   "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "HURN": 2421.18,
-    "MANH": 1043.05,
-    "TRAX": 596.69,
-    "HAS": 1420.18,
-    "ALLE": 1295.01
+    "HURN": 2528.34,
+    "MANH": 1054.68,
+    "HAS": 1444.87,
+    "APPN": 1402.7,
+    "SPOT": 555.45
   }
 }
