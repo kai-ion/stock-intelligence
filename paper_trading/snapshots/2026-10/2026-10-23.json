@@ -1,14 +1,14 @@
 {
   "date": "2026-10-23",
-  "total_value": 7009.81,
+  "total_value": 7008.83,
   "cash": 0.0,
   "positions_count": 6,
   "positions": {
-    "MANH": 1053.49,
-    "HAS": 1442.4,
-    "APPN": 1462.93,
-    "RHI": 1168.03,
-    "ROP": 1353.85,
-    "CNXC": 529.11
+    "MANH": 1038.83,
+    "HAS": 1452.3,
+    "APPN": 1440.6,
+    "RHI": 1262.75,
+    "ROP": 1344.27,
+    "CCI": 470.07
   }
 }

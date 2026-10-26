@@ -41,13 +41,13 @@
       "entry_date": "2026-10-23",
       "cost": 1339.05
     },
-    "CNXC": {
-      "shares": 16.0652,
-      "entry_price": 34.25,
-      "exit_target": 37.96,
-      "stop_loss": 31.03,
-      "entry_date": "2026-10-23",
-      "cost": 550.23
+    "FIVN": {
+      "shares": 13.0959,
+      "entry_price": 37.61,
+      "exit_target": 44.66,
+      "stop_loss": 33.849000000000004,
+      "entry_date": "2026-10-26",
+      "cost": 492.54
     }
   },
   "start_date": "2026-06-02",
