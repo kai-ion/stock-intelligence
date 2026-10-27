@@ -33,21 +33,21 @@
       "entry_date": "2026-10-23",
       "cost": 1156.47
     },
-    "ROP": {
-      "shares": 3.0696,
-      "entry_price": 436.23,
-      "exit_target": 474.53,
-      "stop_loss": 410.69,
-      "entry_date": "2026-10-23",
-      "cost": 1339.05
-    },
-    "FIVN": {
-      "shares": 13.0959,
-      "entry_price": 37.61,
-      "exit_target": 44.66,
-      "stop_loss": 33.849000000000004,
+    "WFRD": {
+      "shares": 5.6862,
+      "entry_price": 86.85,
+      "exit_target": 120.88,
+      "stop_loss": 85.3,
       "entry_date": "2026-10-26",
-      "cost": 492.54
+      "cost": 493.85
+    },
+    "HWKN": {
+      "shares": 8.1543,
+      "entry_price": 154.41,
+      "exit_target": 171.21,
+      "stop_loss": 150.76,
+      "entry_date": "2026-10-27",
+      "cost": 1259.1
     }
   },
   "start_date": "2026-06-02",
