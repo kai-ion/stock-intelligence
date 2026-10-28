@@ -25,29 +25,29 @@
       "entry_date": "2026-10-22",
       "cost": 1343.3
     },
-    "RHI": {
-      "shares": 27.2174,
-      "entry_price": 42.49,
-      "exit_target": 51.19,
-      "stop_loss": 40.26,
-      "entry_date": "2026-10-23",
-      "cost": 1156.47
-    },
-    "WFRD": {
-      "shares": 5.6862,
-      "entry_price": 86.85,
-      "exit_target": 120.88,
-      "stop_loss": 85.3,
-      "entry_date": "2026-10-26",
-      "cost": 493.85
-    },
-    "HWKN": {
-      "shares": 8.1543,
-      "entry_price": 154.41,
-      "exit_target": 171.21,
-      "stop_loss": 150.76,
+    "TENB": {
+      "shares": 22.9459,
+      "entry_price": 48.21,
+      "exit_target": 56.18,
+      "stop_loss": 41.91,
       "entry_date": "2026-10-27",
-      "cost": 1259.1
+      "cost": 1106.22
+    },
+    "ICLR": {
+      "shares": 6.2427,
+      "entry_price": 197.89,
+      "exit_target": 225.27,
+      "stop_loss": 176.24,
+      "entry_date": "2026-10-28",
+      "cost": 1235.37
+    },
+    "LECO": {
+      "shares": 1.7549,
+      "entry_price": 282.37,
+      "exit_target": 301.39,
+      "stop_loss": 254.133,
+      "entry_date": "2026-10-28",
+      "cost": 495.52
     }
   },
   "start_date": "2026-06-02",

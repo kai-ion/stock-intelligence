@@ -1,0 +1,1019 @@
+=== Stock Screener — 2026-10-28 13:30 ===
+Criteria: Above 50d EMA | Positive weekly gain | Market cap > $1B
+Fetching universe...
+
+  NASDAQ screener: 2692 stocks with market cap > $1B
+  Top 5 by daily gain: CRML(+27.4%), HRI(+22.8%), KNSA(+22.2%), CHRN(+19.5%), JBLU(+19.0%)
+  S&P 500 loaded: 503 tickers
+Screening 2694 stocks via batched downloads...
+
+  Screened 200/2694 (51 passed, 1 no-data)
+  Screened 400/2694 (111 passed, 3 no-data)
+  Screened 600/2694 (175 passed, 5 no-data)
+  Screened 800/2694 (241 passed, 7 no-data)
+  Screened 1000/2694 (312 passed, 7 no-data)
+  Screened 1200/2694 (398 passed, 7 no-data)
+  Screened 1400/2694 (486 passed, 9 no-data)
+  Screened 1600/2694 (584 passed, 11 no-data)
+  Screened 1800/2694 (671 passed, 11 no-data)
+  Screened 2000/2694 (748 passed, 11 no-data)
+  Screened 2200/2694 (819 passed, 11 no-data)
+  Screened 2400/2694 (906 passed, 12 no-data)
+  Screened 2600/2694 (961 passed, 13 no-data)
+  Screened 2694/2694 (979 passed, 15 no-data)
+
+  Retrying 15 tickers with no data...
+  After retry: 979 passed
+
+  Final: 979 stocks passed all filters
+
+  Enriching 167 of 979 passers with sector/rating (top 150 momentum + top 30 movers)...
+
+================================================================================
+  979 stocks passed all filters
+  Sorted by composite momentum (MACD 35 | ROC 30 | Volume 25 | EMA 10)
+  Rating: 5=Strong Buy → 1=Strong Sell | Vol Ratio: >1 = above avg volume
+================================================================================
+
+    Ticker    Price   Day%  Week%  MCap($B)                  Sector                                  Industry  Above EMA%   RSI  MACD  MACD Hist  ROC20%  Vol Ratio  Momentum  Rating
+1      RRC    56.38   5.27  29.22      13.2                  Energy                             Oil & Gas E&P       34.89  87.2  Bull       1.45   52.87       3.53     100.0    3.48
+2     RDWR    35.50   9.91  21.04       1.5              Technology                 Software - Infrastructure       19.81  72.2  Bull       0.51   21.37       3.11      91.3     NaN
+3     HWKN   153.85  13.59  17.45       3.2         Basic Materials                       Specialty Chemicals       17.25  81.8  Bull       1.51   21.96       2.77      88.7    3.67
+4       CD    10.13   3.68  19.60       1.1      Financial Services                           Capital Markets       62.91  67.3  Bull       0.11   71.11       1.01      83.4     NaN
+5      IMC    10.80   6.40  61.19       1.1         Basic Materials          Other Industrial Metals & Mining       42.77  72.3  Bull       0.40   48.76       0.48      79.0     NaN
+6     KNSA    89.20  22.23   7.25       7.0              Healthcare  Drug Manufacturers - Specialty & Generic       15.91  65.1  Bull       0.35   17.79       3.13      77.8    4.88
+7      HAS   118.11  -0.18   3.61      16.7       Consumer Cyclical                                   Leisure       20.92  87.2  Bull       2.17   34.71       0.20      76.7    4.57
+8      CXT    58.44   2.63   4.60       3.4             Industrials             Business Equipment & Supplies       13.72  71.6  Bull       0.60   24.34       1.17      75.9     NaN
+9      RPD    17.95   1.99  32.86       1.2              Technology                 Software - Infrastructure       38.83  76.5  Bull       0.54   46.89       0.06      75.5    2.76
+10    CTOS    10.51  16.65  15.49       2.4             Industrials                 Rental & Leasing Services       10.72  66.0  Bull       0.07   13.99       2.53      75.4    4.67
+11    BRZE    45.81   0.07   0.28       5.2              Technology                    Software - Application       44.18  83.8  Bull       1.58   82.51       0.03      75.3    3.00
+12      ZS   263.30   1.21  13.82      42.4              Technology                 Software - Infrastructure       27.23  74.1  Bull       3.79   32.03       0.03      75.3    4.38
+13    CART    58.83  -2.07  16.94      14.3       Consumer Cyclical                           Internet Retail       19.56  73.5  Bull       1.29   36.44       0.06      75.3    3.94
+14    ASAN    11.74  -0.97   6.10       2.7              Technology                    Software - Application       19.98  67.7  Bull       0.19   39.32       0.03      75.3    3.33
+15     AMN    47.33   1.11  10.04       1.8              Healthcare                   Medical Care Facilities       24.63  76.6  Bull       0.88   31.95       0.03      75.2    3.44
+16    APPN    50.01   0.14   2.63       3.6              Technology                 Software - Infrastructure       25.66  67.9  Bull       0.94   41.79       0.02      75.2     NaN
+17    NTSK    26.00  -0.57  19.21      10.7              Technology                 Software - Infrastructure       39.01  77.9  Bull       0.54   49.08       0.02      75.2    4.50
+18     SLN    19.74  -0.20   0.36       1.2              Healthcare                             Biotechnology       46.48  79.4  Bull       0.94   80.60       0.02      75.2    3.40
+19    TENB    48.77   0.25  19.92       5.4              Technology                 Software - Infrastructure       26.73  73.4  Bull       0.98   34.02       0.02      75.1    3.39
+20    BUUU     6.51   0.00  54.45       1.2             Industrials               Specialty Business Services       56.77  81.2  Bull       0.24   63.77       0.01      75.1     NaN
+21    SGRY    23.29  -0.30  51.23       3.1              Healthcare                   Medical Care Facilities       50.09  86.9  Bull       1.04   67.92       0.02      75.1    3.86
+22     DXC    15.81  -0.19   2.66       2.5              Technology           Information Technology Services       25.71  76.3  Bull       0.24   45.98       0.01      75.1    2.88
+23    FIGS    20.33  -0.76   1.73       3.4       Consumer Cyclical                     Apparel Manufacturing       26.88  73.8  Bull       0.18   46.65       0.00      75.0    4.00
+24     DAO    19.00  -0.52   0.32       2.3      Consumer Defensive             Education & Training Services       14.15  63.6  Bull       0.10   29.69       0.39      75.0     NaN
+25    ETSY    93.50   6.66   7.19       8.0       Consumer Cyclical                           Internet Retail       17.25  69.2  Bull       0.99   30.79       0.13      74.7    3.58
+26    HIPO    38.30  -0.65   2.60       1.0      Financial Services           Insurance - Property & Casualty       13.91  78.4  Bull       0.42   23.59       1.07      74.5    4.00
+27     HRI   163.09   4.50  23.81       5.2             Industrials                 Rental & Leasing Services       18.28  70.4  Bull       4.25   30.68       0.03      74.4    4.18
+28    REPX    52.15  -0.49   7.89       1.2                  Energy                             Oil & Gas E&P       18.22  69.8  Bull       0.44   30.35       0.02      74.2    5.00
+29    TRAX    45.47   0.19   6.31       1.9              Healthcare                             Biotechnology       19.76  67.7  Bull       1.40   28.29       0.00      73.2    4.75
+30    BBWI    21.70  -1.14   6.27       4.4       Consumer Cyclical                          Specialty Retail       14.36  67.2  Bull       0.33   36.31       0.01      72.3    3.33
+31    UWMC     1.54  -1.28  38.74       2.5      Financial Services                          Mortgage Finance       13.88  67.1  Bull       0.07   30.51       0.01      72.1    3.20
+32     CCI    87.23  -0.73  10.91      37.4             Real Estate                          REIT - Specialty       13.61  72.2  Bull       1.10   30.88       0.02      72.0    3.86
+33     BSP    46.53  -0.94   5.44      32.6              Technology                    Software - Application       13.47  57.4  Bull       0.29   39.65       0.01      71.8    4.17
+34    RBLX    54.74   0.49   4.16      38.9  Communication Services            Electronic Gaming & Multimedia       14.44  66.4  Bull       0.47   29.18       0.03      71.7    3.69
+35     SSL    17.50   2.04   8.09      11.1         Basic Materials                       Specialty Chemicals       19.68  69.5  Bull       0.13   26.63       0.02      71.7    5.00
+36    CBRL    67.90  -0.43   3.27       1.5       Consumer Cyclical                               Restaurants       17.33  69.3  Bull       0.32   29.52       0.01      71.6     NaN
+37     ABG   194.99  12.74  13.28       3.5       Consumer Cyclical                  Auto & Truck Dealerships        5.18  64.4  Bull       3.43   12.10       2.58      71.2    3.73
+38     KSS    23.50  -1.18   6.05       2.7       Consumer Cyclical                         Department Stores       17.40  66.5  Bull       0.19   27.30       0.01      71.1    2.69
+39    KVYO    20.29   0.55   0.50       5.7              Technology                    Software - Application       13.45  63.5  Bull       0.33   28.99       0.02      70.9    4.57
+40     CXM     6.64  -0.67   3.35       1.6              Technology                    Software - Application       10.90  69.6  Bull       0.13   34.04       0.01      70.5     NaN
+41    GMAB    44.64  -0.07  12.81      27.9              Healthcare                             Biotechnology       22.67  79.3  Bull       0.69   25.13       0.01      70.3    4.75
+42      BL    34.20   0.33   8.37       2.0              Technology                    Software - Application       12.62  69.8  Bull       0.56   28.92       0.01      70.3    3.17
+43      WS    42.71   1.14   3.56       2.2         Basic Materials                                     Steel       13.88  68.3  Bull       0.33   19.84       1.00      70.1    4.00
+44     BOX    42.34  -0.40   0.88       5.8              Technology                 Software - Infrastructure       16.34  76.9  Bull       0.33   26.46       0.02      69.8    3.67
+45     VAL    99.78   1.60   8.79       6.8                  Energy                        Oil & Gas Drilling       15.28  74.2  Bull       1.63   27.08       0.01      69.8    3.11
+46    HURN   195.36  -0.22   6.57       3.1             Industrials                       Consulting Services       18.07  75.7  Bull       2.05   24.57       0.13      69.7    4.80
+47    MANH   248.76   6.32   5.48      13.6              Technology                    Software - Application       17.00  71.8  Bull       2.20   25.20       0.11      69.6    4.36
+48      WK    84.50   0.07   5.22       4.6              Technology                    Software - Application       14.76  68.1  Bull       1.09   26.94       0.01      69.4    4.82
+49    AMPL    17.17  -0.52   3.93       2.2              Technology                    Software - Application       20.26  69.3  Bull       0.12   23.97       0.01      69.0    4.25
+50     PDS   101.18   1.23  10.21       1.3                  Energy                        Oil & Gas Drilling       15.18  74.8  Bull       1.77   25.57       0.10      69.0    4.50
+51    VSTM     9.93  -1.68   7.82       1.2              Healthcare                             Biotechnology       22.63  64.8  Bull       0.14   23.35       0.01      68.4    4.90
+52    NAVN    26.89  -0.70   1.01       7.1              Technology                    Software - Application        9.63  66.4  Bull       0.38   28.11       0.06      68.4     NaN
+53     CRL   363.36   1.26   5.36      17.1              Healthcare                    Diagnostics & Research       21.77  77.9  Bull       5.51   23.17       0.02      68.3    4.35
+54    SLDE    28.13  -0.92   3.76       3.3      Financial Services           Insurance - Property & Casualty       13.11  67.3  Bull       0.20   26.08       0.07      68.2    3.80
+55    FTRE    24.59   0.65   2.20       2.3              Healthcare                             Biotechnology       18.90  74.6  Bull       0.20   23.26       0.01      67.8    3.85
+56     RIG     6.57   1.78   8.86       7.2                  Energy                        Oil & Gas Drilling       14.45  72.8  Bull       0.11   25.48       0.01      67.8    3.69
+57    CHKP   159.49  -0.22  11.20      16.3              Technology                 Software - Infrastructure       15.18  77.0  Bull       2.67   24.26       0.08      67.5    3.63
+58    AVPT    17.14   4.10   9.00       3.5              Technology                 Software - Infrastructure       19.93  72.7  Bull       0.22   21.70       0.08      67.4    4.29
+59    CDRE    30.64   0.03  13.27       1.3             Industrials                       Aerospace & Defense        9.53  74.0  Bull       0.72   20.02       0.90      67.3     NaN
+60    VERX    14.81   0.07   0.95       2.4              Technology                    Software - Application       12.26  66.0  Bull       0.19   25.72       0.02      67.0    3.73
+61     EFX   176.22   0.29   0.37      20.6             Industrials                       Consulting Services        6.82  61.7  Bull       3.28   28.40       0.01      66.9    4.25
+62      AR    41.95  -0.36   8.93      12.9                  Energy                             Oil & Gas E&P       12.27  73.4  Bull       0.60   25.64       0.01      66.9    4.23
+63    COTY     3.26  -0.91   6.89       2.9      Consumer Defensive             Household & Personal Products       13.69  67.6  Bull       0.02   24.90       0.01      66.8    2.88
+64     CDW   161.71   0.19   2.17      20.2              Technology           Information Technology Services       10.12  65.0  Bull       1.56   26.18       0.01      66.3    4.20
+65    ARHS    11.50  -1.12   5.12       1.6       Consumer Cyclical                          Specialty Retail       19.00  69.6  Bull       0.13   21.44       0.01      66.0    3.93
+66    NCNO    22.75  -0.72   3.43       2.4              Technology                    Software - Application       10.59  62.6  Bull       0.35   25.51       0.02      66.0    4.07
+67     APA    51.19   0.79   3.67      17.8                  Energy                             Oil & Gas E&P       13.54  70.0  Bull       0.32   23.85       0.03      65.9    3.43
+68    CNXC    30.85  -0.53   3.61       1.9              Technology           Information Technology Services       11.10  58.2  Bull       0.50   25.02       0.02      65.8     NaN
+69     ANF   164.62  -0.46   3.12       7.0       Consumer Cyclical                            Apparel Retail       17.10  68.9  Bull       0.93   22.22       0.01      65.8    4.13
+70    YSWY    25.13   0.20   8.04       1.6      Consumer Defensive                            Grocery Stores       12.08  73.1  Bull       0.41   24.65       0.00      65.7    4.11
+71    HCSG    24.37  -2.99  13.35       1.6              Healthcare                   Medical Care Facilities       10.56  69.3  Bull       0.50   16.60       1.06      65.7    4.14
+72    QLYS   225.08  -1.24  14.43       7.9              Technology                 Software - Infrastructure       20.00  68.4  Bull       3.24   20.24       0.02      65.4    3.18
+73     WEN     7.13  16.12  13.54       1.2       Consumer Cyclical                               Restaurants        4.01  60.3  Bull       0.08   11.76       2.00      65.4    2.92
+74     ROP   433.18  -0.30   8.96      43.0              Technology                    Software - Application       11.78  73.9  Bull       7.63   24.29       0.01      65.3    3.63
+75    DOCU    81.94  -0.12   0.56      15.3              Technology                    Software - Application       16.07  66.1  Bull       0.57   22.03       0.02      65.2    3.25
+76     NOG    28.34   0.69   3.30       3.0                  Energy                             Oil & Gas E&P       12.45  68.7  Bull       0.22   23.89       0.01      65.2    3.50
+77     RYZ    29.37   0.10   4.41       1.5             Industrials                         Metal Fabrication       10.65  73.2  Bull       0.24   24.66       0.02      65.1     NaN
+78     CNX    38.74   0.41  10.18       5.7                  Energy                             Oil & Gas E&P       10.64  74.6  Bull       0.50   24.29       0.01      64.7    2.92
+79    RBRK   136.48   0.55  13.37      28.1              Technology                 Software - Infrastructure       22.90  70.4  Bull       1.29   19.23       0.02      64.4    4.89
+80      LW    53.28  -0.92   0.33       7.4      Consumer Defensive                            Packaged Foods        6.51  59.5  Bull       0.25   27.81       0.01      64.3     NaN
+81       R   279.49   0.00  16.30      10.7             Industrials                 Rental & Leasing Services       12.55  78.0  Bull       5.40   22.66       0.01      64.0    4.18
+82    REAL    11.03   0.36   3.76       1.3       Consumer Cyclical                              Luxury Goods        8.00  63.4  Bull       0.14   24.77       0.01      63.9    4.56
+83    CERT    10.91  -0.32   7.22       1.7              Healthcare               Health Information Services       20.77  70.1  Bull       0.12   18.64       0.01      63.8    3.62
+84     OVV    71.41   0.40   2.22      20.1                  Energy                             Oil & Gas E&P       10.16  68.0  Bull       0.53   23.51       0.01      63.7    4.37
+85   DHCNI    17.25   2.50   0.58       4.2                     N/A                                       N/A        0.66  56.4  Bull       0.09    3.47       2.99      63.7     NaN
+86     VIA    35.87  -0.28   3.70       2.9              Technology                    Software - Application       20.17  67.3  Bull       0.19   18.58       0.01      63.6    4.60
+87    MGRT   121.50   1.72   9.98       1.6              Technology           Information Technology Services       12.10  66.7  Bull       1.88   21.49       0.13      63.6     NaN
+88     LMT   619.24  -0.60  12.28     143.9             Industrials                       Aerospace & Defense       13.15  74.0  Bull      12.17   21.60       0.05      63.6    3.70
+89     BMI   150.70  -0.69  14.29       4.3              Technology        Scientific & Technical Instruments       12.65  68.8  Bull       2.89   21.98       0.02      63.5    3.90
+90     DOW    33.68  -0.30  10.86      24.5         Basic Materials                                 Chemicals       11.89  75.0  Bull       0.57   22.29       0.01      63.4    3.40
+91     BSY    39.12  -0.50   1.99      11.9              Technology                    Software - Application       11.13  67.9  Bull       0.36   22.46       0.01      63.1    4.35
+92    COAG    38.54   0.36   9.05       1.8              Healthcare                             Biotechnology        5.09  61.1  Bull       1.28   24.97       0.05      62.9    4.83
+93    TRUP    28.94  -0.92   1.54       1.3      Financial Services           Insurance - Property & Casualty        7.95  61.4  Bull       0.30   23.89       0.01      62.9     NaN
+94    PLNT    52.51   0.47   1.58       3.9       Consumer Cyclical                                   Leisure        6.63  63.2  Bull       0.60   24.36       0.01      62.8    4.12
+95    QTWO    67.71  -0.62   1.96       4.2              Technology                    Software - Application       10.69  69.3  Bull       0.89   22.13       0.04      62.8    4.47
+96     BTE     5.51   1.66   2.04       3.8                  Energy                             Oil & Gas E&P       11.99  69.5  Bull       0.04   21.63       0.02      62.8    4.00
+97    XNCR    29.33  -2.18  16.59       2.2              Healthcare                             Biotechnology       19.69  67.1  Bull       0.64   17.58       0.01      62.5    4.50
+98    EXPO    76.45  -1.56   5.38       3.6             Industrials                Engineering & Construction        9.81  70.8  Bull       0.67   18.47       0.46      62.2     NaN
+99    OTEX    27.22  -0.02   1.74       6.8              Technology                    Software - Application       10.88  70.1  Bull       0.26   21.39       0.03      62.1    3.17
+100   NSIT   178.35  -0.21   8.55       5.2              Technology       Electronics & Computer Distribution       12.90  67.0  Bull       1.29   14.59       0.72      62.0     NaN
+101   EGBN    33.21   0.18  16.40       1.0      Financial Services                          Banks - Regional       14.62  75.6  Bull       0.58   19.50       0.02      61.9    4.00
+102   AGYS   118.00   1.89   1.71       3.3              Technology                    Software - Application        9.00  60.7  Bull       1.17   21.55       0.07      61.7    4.50
+103   IRON    79.03  -1.09   3.99       3.5              Healthcare                             Biotechnology       11.95  64.9  Bull       2.18   20.73       0.00      61.7    4.92
+104   GEHC    77.26   8.66  12.02      32.1              Healthcare                           Medical Devices       13.05  75.1  Bull       0.79   18.26       0.24      61.7    4.18
+105   ERIC    11.06  -0.14   6.09      37.4              Technology                   Communication Equipment        9.72  68.0  Bull       0.13   20.93       0.09      61.6    2.14
+106     RS   432.79   2.59   3.72      22.1         Basic Materials                                     Steel        7.47  71.6  Bull       2.28   11.78       1.29      61.3    3.33
+107     PR    25.54   0.31   2.82      21.3                  Energy                             Oil & Gas E&P       10.35  67.2  Bull       0.18   20.93       0.01      61.2    4.67
+108    VET    13.76   1.10   1.55       2.1                  Energy                             Oil & Gas E&P       10.60  65.2  Bull       0.14   20.81       0.01      61.2    3.73
+109    TIC    10.02   0.15   9.09       2.2             Industrials               Specialty Business Services       11.01  69.0  Bull       0.15   20.49       0.01      61.0    4.17
+110    TDC    34.52   0.00   3.20       3.2              Technology                 Software - Infrastructure       12.40  71.2  Bull       0.37   19.69       0.01      60.9     NaN
+111   HTFL    57.79  -0.05   3.53       5.0              Healthcare               Health Information Services       18.96  68.6  Bull       0.57   16.16       0.01      60.7    4.56
+112   INVX    31.13   1.53   9.38       2.2                  Energy            Oil & Gas Equipment & Services        8.73  62.8  Bull       0.38   13.57       0.92      60.6    4.17
+113   IBTA    49.23   0.78   0.51       1.1              Technology                    Software - Application       16.30  73.0  Bull       0.19   24.95       0.05      60.6    2.78
+114    SSD   191.66   5.31   6.12       7.9         Basic Materials                  Lumber & Wood Production        6.85  68.6  Bull       1.98   10.35       1.41      60.5    4.00
+115     RH   140.76   3.71  17.55       2.7       Consumer Cyclical                          Specialty Retail        5.73  63.6  Bull       3.96   15.18       0.87      60.3    3.40
+116   LCII    95.48   6.28  14.83       2.2       Consumer Cyclical                     Recreational Vehicles        7.12  68.5  Bull       1.91   14.11       0.91      60.3    3.64
+117    SAM   197.21  -1.54   8.47       2.0      Consumer Defensive                       Beverages - Brewers        9.73  70.1  Bull       2.63   20.24       0.01      60.2    2.86
+118   ICLR   197.89   8.15   6.82      14.0              Healthcare                    Diagnostics & Research       15.94  72.2  Bull       2.49   16.41       0.10      60.2    4.00
+119   MRVI     8.26   8.97  14.72       2.1              Healthcare                             Biotechnology       15.06  61.1  Bull       0.08    7.97       1.15      60.1    4.11
+120    BAH    82.76  -0.77  10.29       9.9             Industrials                       Consulting Services       10.93  70.4  Bull       1.27   19.22       0.02      59.8    3.40
+121    HOG    29.38  -0.20   7.46       3.1       Consumer Cyclical                     Recreational Vehicles        8.96  67.2  Bull       0.28   20.26       0.01      59.8    3.53
+122    PNR    62.97   1.10  19.72       9.9             Industrials            Specialty Industrial Machinery       10.17  79.0  Bull       1.37   19.42       0.02      59.7    3.94
+123    TRI   115.95  -0.40   0.60      50.4             Industrials               Specialty Business Services       10.48  62.2  Bull       1.14   19.13       0.03      59.6    4.21
+124   ALLE   180.52  -0.01  13.54      15.2             Industrials            Security & Protection Services       14.13  79.6  Bull       3.13   17.40       0.00      59.5    4.18
+125    FTV    64.89   5.31  10.66      18.6              Technology        Scientific & Technical Instruments       11.16  79.9  Bull       0.69   18.39       0.06      59.5    3.25
+126   PCOR    61.77   0.06   1.41       9.4              Technology                    Software - Application        9.99  66.5  Bull       0.58   19.43       0.01      59.5    4.33
+127   ALRM    64.17  -0.99   7.77       3.2              Technology                    Software - Application       12.84  79.8  Bull       0.85   17.80       0.01      59.3     NaN
+128   ANDG    63.72   0.15   4.59       7.2       Consumer Cyclical                         Personal Services       14.08  70.2  Bull       0.46   17.12       0.01      59.2    4.25
+129    MAS    79.79   6.14   7.01      14.8             Industrials             Building Products & Equipment       10.55  71.6  Bull       0.80   18.38       0.07      59.2    3.50
+130   POOL   193.35  -0.80  12.12       7.1             Industrials                   Industrial Distribution        9.23  67.8  Bull       4.19   19.44       0.01      59.1    3.47
+131    CRK    14.85  -0.34   7.84       4.4                  Energy                             Oil & Gas E&P        6.94  62.4  Bull       0.14   20.54       0.01      59.1    2.81
+132   HGTY    15.57  -2.38   0.71       5.6      Financial Services           Insurance - Property & Casualty       10.54  67.2  Bull       0.07   14.91       1.15      59.0     NaN
+133    OSW    26.59   6.59  11.14       2.5       Consumer Cyclical                                   Leisure       10.79  74.7  Bull       0.24   18.25       0.04      59.0    5.00
+134    URI  1183.23   1.83  10.69      71.9             Industrials                 Rental & Leasing Services       11.31  71.5  Bull      14.00   18.23       0.01      59.0    4.23
+135   HNGE   112.94  -0.84   0.84       9.2              Healthcare               Health Information Services       15.34  68.8  Bull       0.66   16.15       0.01      58.9    4.47
+136   PACS    49.19   2.81   5.21       7.6              Healthcare                   Medical Care Facilities       10.35  66.1  Bull       0.36   18.40       0.03      58.8    4.67
+137   SAIC   148.71  -0.54   8.75       6.3              Technology           Information Technology Services       13.15  74.8  Bull       1.82   16.91       0.01      58.6    3.20
+138   LECO   282.37   9.17   8.57      15.4             Industrials                       Tools & Accessories        6.53  65.1  Bull       1.21    4.57       2.48      58.6    4.00
+139   CUBI    87.14   0.70  14.19       2.9      Financial Services                          Banks - Regional       11.58  79.8  Bull       1.60   17.76       0.01      58.6    3.82
+140   WLYB    54.23  -0.42   2.24       2.8  Communication Services                                Publishing        7.25  72.1  Bull       0.42   14.76       0.61      58.5     NaN
+141    COP   148.34   0.26   1.83     177.7                  Energy                             Oil & Gas E&P        9.72  67.9  Bull       0.76   18.53       0.01      58.5    4.14
+142    PNW   106.31   0.92   3.31      12.9               Utilities            Utilities - Regulated Electric        6.63  70.0  Bull       0.65   13.82       0.75      58.4    3.56
+143   EXTR    25.36   6.33  12.51       3.2              Technology                   Communication Equipment        8.74  67.2  Bull       0.21   18.23       0.08      58.2    4.62
+144    FCN   159.86   0.67   7.02       4.4             Industrials                       Consulting Services        8.20  67.9  Bull       2.26   18.85       0.02      58.1    3.67
+145    KRP    16.87   0.42   2.62       1.9                  Energy                             Oil & Gas E&P        9.49  76.4  Bull       0.10   18.14       0.03      58.1    4.17
+146   AMTM    21.61  -0.64   7.25       5.3             Industrials               Specialty Business Services        7.25  65.4  Bull       0.37   19.26       0.01      58.0    3.67
+147   ABSI    10.57  11.85  16.54       1.8              Healthcare                             Biotechnology       13.48  57.7  Bull       0.06    4.24       1.45      58.0    4.64
+148    SGP    30.03  -2.82   8.37       1.0              Healthcare                             Biotechnology       14.30  65.2  Bull       0.70   15.50       0.04      57.9    4.83
+149   MANE   138.37  -1.67   1.25       5.9              Healthcare                             Biotechnology       17.16  63.5  Bull       1.70   14.13       0.00      57.8    4.86
+150   SITE   106.02   2.90   8.79       4.5             Industrials                   Industrial Distribution       10.43  71.7  Bull       1.66   17.40       0.02      57.8    4.00
+151   ESTC   105.11  -0.39   6.38      11.2                     N/A                                       N/A       16.03  65.8  Bull       0.86   14.62       0.01      57.7     NaN
+152   ENOV    21.84   1.39   4.95       1.2                     N/A                                       N/A        6.09  65.3  Bull       0.42   19.54       0.01      57.6     NaN
+153    NIQ    19.80  -0.05   3.72       5.8                     N/A                                       N/A       12.37  66.9  Bull       0.14   16.40       0.01      57.6     NaN
+154   SIGI    98.51  -0.02   8.16       5.8                     N/A                                       N/A        9.36  78.9  Bull       1.56   17.83       0.01      57.6     NaN
+155   HALO   127.30  -0.93   1.98      14.6                     N/A                                       N/A       14.11  72.9  Bull       0.87   15.31       0.02      57.5     NaN
+156    SMA    35.31   0.37   2.08       2.0                     N/A                                       N/A        6.20  66.2  Bull       0.24    9.60       1.16      57.4     NaN
+157    RNG    85.58  -0.02   3.83       7.2                     N/A                                       N/A       15.44  62.7  Bull       0.46   14.56       0.01      57.4     NaN
+158   TNDM    19.21  -0.05  17.49       1.3                     N/A                                       N/A        8.85  66.9  Bull       0.46   17.78       0.01      57.3     NaN
+159    TYL   376.15  -0.65   0.10      15.5                     N/A                                       N/A        7.96  61.9  Bull       3.04   18.06       0.02      57.2     NaN
+160    MUR    43.24   0.22   0.66       6.2                     N/A                                       N/A       10.54  65.0  Bull       0.28   16.82       0.01      57.2     NaN
+161     LH   356.50   7.65  10.12      26.9              Healthcare                    Diagnostics & Research       12.22  78.9  Bull       3.38   15.71       0.04      57.2    4.41
+162    VNT    34.73   0.38   2.18       4.7                     N/A                                       N/A        6.56  69.1  Bull       0.23   10.01       1.07      57.2     NaN
+163   SDRL    52.13   2.30   6.02       3.2                     N/A                                       N/A        9.99  64.8  Bull       0.58   16.70       0.04      57.1     NaN
+164    EOG   161.21   0.07   2.11      84.5                     N/A                                       N/A        8.40  69.4  Bull       0.93   17.81       0.01      57.1     NaN
+165    ACI    13.57  -1.09   2.83       6.5                     N/A                                       N/A        7.43  65.0  Bull       0.12   18.33       0.01      57.1     NaN
+166   BBUC    27.83   0.61   4.15       5.8                     N/A                                       N/A        2.32  61.2  Bull       0.22   10.17       1.26      56.9     NaN
+167   APLE    18.69   0.38   2.98       4.4                     N/A                                       N/A       12.31  81.4  Bull       0.18   15.66       0.01      56.9     NaN
+168    NWE    79.94   0.09   5.05       4.9                     N/A                                       N/A        9.92  77.9  Bull       0.55   16.91       0.00      56.9     NaN
+169     FA    21.11   0.17   7.40       3.6                     N/A                                       N/A        6.11  61.5  Bull       0.30   18.62       0.02      56.9     NaN
+170    EQT    57.16   1.58   5.71      35.2                     N/A                                       N/A        7.30  67.0  Bull       0.40   17.71       0.05      56.8     NaN
+171   CRAI   191.78  -1.30   4.59       1.2                     N/A                                       N/A        9.18  62.9  Bull       1.66   16.83       0.04      56.7     NaN
+172    LYB    67.52   0.13   6.72      21.8                     N/A                                       N/A        8.03  71.0  Bull       0.78   17.49       0.01      56.6     NaN
+173    RES     6.62   0.30   4.75       1.5                     N/A                                       N/A        7.99  65.6  Bull       0.07   17.58       0.01      56.6     NaN
+174   CBOE   322.60  -0.64   1.19      36.3                     N/A                                       N/A        8.69  60.4  Bull       2.54   17.19       0.01      56.6     NaN
+175    PSN    48.58  -4.24   7.00       5.4                     N/A                                       N/A        5.20  61.4  Bull       0.82   18.57       0.04      56.5     NaN
+176    ADT     7.14   3.93   5.00       5.0                     N/A                                       N/A        5.03  64.9  Bull       0.07   17.43       0.18      56.4     NaN
+177    WCN   179.49  -1.36   6.66      45.5                     N/A                                       N/A        8.97  66.7  Bull       2.59   16.61       0.02      56.3     NaN
+178    BKH    81.72  -0.04   4.04       6.2                     N/A                                       N/A        9.28  77.6  Bull       0.54   16.61       0.01      56.3     NaN
+179   VRDN    23.67  -1.74   2.87       2.7                     N/A                                       N/A       12.49  65.0  Bull       0.59   14.96       0.00      56.2     NaN
+180   TSLA   410.00   0.62   6.09    1610.6                     N/A                                       N/A       10.47  66.3  Bull       3.61   15.55       0.05      56.2     NaN
+181   OLED    89.49  -0.96   6.73       4.2                     N/A                                       N/A        9.90  68.2  Bull       1.52   16.16       0.01      56.2     NaN
+182   URBN    89.86  -0.96   3.33       7.8                     N/A                                       N/A       10.51  68.5  Bull       0.42   17.64       0.01      56.0     NaN
+183   CDLR    25.26   3.27  11.33       2.4                     N/A                                       N/A        7.60  64.9  Bull       0.47   11.82       0.63      55.9     NaN
+184   CVLT   170.70  -1.07   4.37       7.2                     N/A                                       N/A       13.51  65.1  Bull       1.26   13.86       0.02      55.8     NaN
+185    RHI    42.12   0.38  21.59       4.3                     N/A                                       N/A       11.71  62.1  Bull       1.22   14.61       0.03      55.7     NaN
+186     ZG    33.01  -0.53   1.84       7.5                     N/A                                       N/A        2.90  55.6  Bull       0.44   19.15       0.01      55.7     NaN
+187    TNL    67.23   2.45   0.16       4.1                     N/A                                       N/A        1.79  59.0  Bull       0.52    5.08       1.76      55.7     NaN
+188   WING   135.09   9.37  12.62       3.4       Consumer Cyclical                               Restaurants       12.79  65.9  Bull       0.37   28.21       0.24      55.6    4.46
+189    AFG   151.36   0.51   1.42      12.6                     N/A                                       N/A        5.69  68.2  Bull       0.85   10.05       0.91      55.5     NaN
+190   QGEN    50.17   0.00   0.34      10.3                     N/A                                       N/A       10.83  72.6  Bull       0.36   14.65       0.05      55.5     NaN
+191    MMS    62.24  -0.37   0.27       3.3                     N/A                                       N/A        6.41  63.4  Bull       0.37   17.01       0.02      55.4     NaN
+192    SMG    58.91  -0.76   5.33       3.5                     N/A                                       N/A        5.53  66.8  Bull       1.06   17.56       0.01      55.4     NaN
+193   VNOM    46.69   0.54   2.21      16.7                     N/A                                       N/A        6.56  65.6  Bull       0.35   17.05       0.01      55.4     NaN
+194  FCNCA  2366.47   0.47  10.38      26.6                     N/A                                       N/A        9.93  74.4  Bull      34.84   14.87       0.01      54.9     NaN
+195     EL   107.06  -1.19   3.28      39.3                     N/A                                       N/A        8.62  62.0  Bull       0.60   15.40       0.01      54.8     NaN
+196    DRH    14.15   0.21   1.51       2.9                     N/A                                       N/A       10.24  75.6  Bull       0.09   14.48       0.01      54.7     NaN
+197   ORKA    95.26  -0.57  19.19       6.3                     N/A                                       N/A       10.27  65.2  Bull       2.62   14.37       0.03      54.7     NaN
+198   TREX    50.15   0.59   2.69       5.1                     N/A                                       N/A        8.85  66.7  Bull       0.50   15.12       0.01      54.6     NaN
+199    XZO    16.58   0.73   0.06       1.5                     N/A                                       N/A        3.27  55.8  Bull       0.09   13.95       0.48      54.6     NaN
+200    CAI    33.70   0.09   4.17       9.5                     N/A                                       N/A       18.88  66.4  Bull       0.20   10.02       0.01      54.5     NaN
+201   AXGN    45.63  21.82  25.10       2.2              Healthcare                           Medical Devices       11.87  69.3  Bull       1.06    8.86       0.55      54.4    4.82
+202   EQNR    47.56   1.06   3.12     117.7                     N/A                                       N/A        8.95  62.0  Bull       0.26   14.33       0.06      54.3     NaN
+203    PPG   119.50   5.34   8.47      25.2                     N/A                                       N/A        9.38  73.5  Bull       1.31   14.54       0.00      54.3     NaN
+204   NDAQ   104.92   0.54   9.16      57.9                     N/A                                       N/A       10.16  73.7  Bull       1.36   14.03       0.02      54.3     NaN
+205   OCTV    21.61  -0.55   2.13       5.8                     N/A                                       N/A        9.48  65.4  Bull       0.11   14.40       0.01      54.3     NaN
+206    KEN    68.50   3.33   8.45       3.6                     N/A                                       N/A        5.74  62.4  Bull       0.77    5.11       1.36      54.3     NaN
+207    SHO    12.79   0.16   1.43       2.4                     N/A                                       N/A       10.41  80.5  Bull       0.10   14.09       0.00      54.3     NaN
+208   FLOC    19.91   1.12   4.24       1.8                     N/A                                       N/A        0.46  56.0  Bull       0.19   10.37       1.03      54.2     NaN
+209   CENT    44.99  -0.19   4.83       2.8                     N/A                                       N/A        7.00  73.3  Bull       0.47   15.70       0.00      54.2     NaN
+210  FORTY   127.99  -1.47   9.32       2.0                     N/A                                       N/A        9.23  68.1  Bull       1.48   11.31       0.39      54.2     NaN
+211   MTDR    59.63   0.62   3.26       7.3                     N/A                                       N/A        6.84  62.4  Bull       0.55   15.62       0.01      54.1     NaN
+212    SAP   236.94   0.48   1.81     289.7                     N/A                                       N/A       10.08  71.1  Bull       1.44   13.65       0.04      54.1     NaN
+213    PEB    21.31  -0.02   0.97       2.4                     N/A                                       N/A       11.04  70.8  Bull       0.15   13.57       0.01      54.1     NaN
+214   ULTA   621.47  -0.86   2.39      26.8                     N/A                                       N/A        9.88  66.6  Bull       3.20   13.79       0.03      53.9     NaN
+215    TPB    67.34   3.16   4.52       1.4                     N/A                                       N/A        0.39  58.8  Bull       1.58   12.08       0.79      53.9     NaN
+216    UTL    54.97  -0.54   2.36       1.0                     N/A                                       N/A        3.78  64.4  Bull       0.31    7.81       1.10      53.9     NaN
+217   LDOS   139.01  -0.45   7.57      17.5                     N/A                                       N/A        9.03  70.1  Bull       2.28   14.10       0.02      53.8     NaN
+218    RLJ    12.55   0.72   2.03       1.9                     N/A                                       N/A       10.00  74.8  Bull       0.09   13.57       0.02      53.8     NaN
+219   CHRD   154.50   0.78   2.42       8.4                     N/A                                       N/A        6.78  60.8  Bull       0.84   15.24       0.00      53.7     NaN
+220   VSTS    15.24   0.53   2.76       2.0                     N/A                                       N/A        8.81  66.5  Bull       0.09   14.07       0.03      53.7     NaN
+221    HQY   101.93   1.04   4.13       8.3                     N/A                                       N/A        6.74  65.2  Bull       1.32   15.22       0.01      53.7     NaN
+222      Z    31.91  -0.45   1.90       7.2                     N/A                                       N/A        1.97  54.8  Bull       0.43   17.60       0.02      53.7     NaN
+223    IOT    43.72   0.47   1.10      25.5                     N/A                                       N/A        7.87  58.4  Bull       0.23   14.65       0.01      53.7     NaN
+224    RLI    63.92  -0.02   0.04       5.9                     N/A                                       N/A        5.98  62.9  Bull       0.73   15.58       0.01      53.6     NaN
+225    NUE   269.23  -0.58   1.77      61.4                     N/A                                       N/A        6.15  64.0  Bull       1.65   15.18       0.02      53.4     NaN
+226   BILL    49.12  -0.60   0.21       4.2                     N/A                                       N/A        5.79  59.2  Bull       0.53   15.46       0.00      53.4     NaN
+227   BHVN    14.95  -2.19  27.28       2.3                     N/A                                       N/A       12.76  61.7  Bull       0.48   12.02       0.00      53.4     NaN
+228   TNET    71.36  -0.36   0.46       3.3                     N/A                                       N/A        6.29  56.5  Bull       0.50   14.63       0.07      53.3     NaN
+229    GTM     4.30  -1.03   2.26       1.3                     N/A                                       N/A        9.22  61.0  Bull       0.05   13.59       0.01      53.3     NaN
+230   VTMX    36.72  -1.58   1.44       3.3                     N/A                                       N/A        6.68  65.3  Bull       0.27   14.78       0.02      53.3     NaN
+231  CENTA    38.56  -0.62   4.70       2.4                     N/A                                       N/A        6.11  69.5  Bull       0.40   15.04       0.01      53.2     NaN
+232   LMRI    11.73   0.54   8.53       1.1                     N/A                                       N/A        6.93  66.4  Bull       0.16   14.46       0.03      53.2     NaN
+233   ICFI    94.49  -0.94   5.05       1.7                     N/A                                       N/A        8.47  69.3  Bull       0.86   13.67       0.03      53.1     NaN
+234   GBCI    48.96  -0.20   9.55       6.4                     N/A                                       N/A        7.38  76.7  Bull       0.77   14.25       0.01      53.0     NaN
+235   ESLT   779.37  -1.35   4.93      36.7                     N/A                                       N/A        6.05  63.7  Bull       9.76   14.45       0.06      53.0     NaN
+236   RYAN    42.56   0.42   0.71      10.8                     N/A                                       N/A        5.51  57.9  Bull       0.48   15.03       0.02      52.9     NaN
+237   ARLO    13.05   5.41   4.23       1.4                     N/A                                       N/A        1.41  54.5  Bull       0.11    4.99       1.44      52.7     NaN
+238   FTDR    83.87  -0.77   3.74       5.8                     N/A                                       N/A        5.80  61.0  Bull       0.71   14.70       0.01      52.7     NaN
+239   MGRC   119.56   0.89   6.72       2.9                     N/A                                       N/A        4.60  65.9  Bull       0.68    5.13       1.24      52.7     NaN
+240    KBR    39.79  -1.09   6.65       5.1                     N/A                                       N/A        8.66  70.5  Bull       0.53   13.17       0.03      52.7     NaN
+241   FRSH    14.88  -0.13   0.37       3.9                     N/A                                       N/A       11.46  62.2  Bull       0.06   16.34       0.01      52.6     NaN
+242   SEPN    43.51  -1.43   6.75       2.1                     N/A                                       N/A       12.68  66.0  Bull       0.75   11.19       0.01      52.6     NaN
+243    OUT    31.73   1.37   2.35       5.5                     N/A                                       N/A        6.05  67.5  Bull       0.17   14.34       0.03      52.6     NaN
+244    SWX    93.18   0.37   5.38       6.7                     N/A                                       N/A        6.60  73.4  Bull       0.96   14.28       0.01      52.6     NaN
+245   AGIO    37.38  -1.71   0.54       2.3                     N/A                                       N/A       10.09  65.0  Bull       0.61   12.42       0.01      52.5     NaN
+246   HAYW    13.90   6.65  15.22       2.8             Industrials              Electrical Equipment & Parts        7.37  72.9  Bull       0.28   13.53       0.03      52.5    3.60
+247    HST    25.30   0.32   0.84      17.3                     N/A                                       N/A        8.84  75.8  Bull       0.17   13.00       0.01      52.5     NaN
+248   ZYME    28.85   1.69   7.21       2.0                     N/A                                       N/A        8.59  62.5  Bull       0.40    6.07       0.84      52.4     NaN
+249    XHR    20.39   0.59   3.87       1.9                     N/A                                       N/A        8.64  79.8  Bull       0.19   12.90       0.01      52.3     NaN
+250   SPGI   448.40  -0.12   1.18     130.1                     N/A                                       N/A        6.58  69.6  Bull       4.02   13.67       0.02      52.2     NaN
+251    CSL   348.57   0.75   2.58      13.8                     N/A                                       N/A        3.33  60.2  Bull       3.03    7.03       1.01      52.2     NaN
+252    CNQ    54.46   0.72   0.41     111.9                     N/A                                       N/A        8.23  67.3  Bull       0.25   15.70       0.04      52.2     NaN
+253    SWK   100.31   1.00   5.10      15.0                     N/A                                       N/A        7.89  71.2  Bull       1.13   13.23       0.01      52.2     NaN
+254    SCL    69.00   5.81   7.98       1.5                     N/A                                       N/A       10.41  77.0  Bull       0.59   10.61       0.16      52.1     NaN
+255    EXR   148.88   3.00   6.44      30.5                     N/A                                       N/A        7.11  73.7  Bull       1.41   13.21       0.04      52.1     NaN
+256    FET    90.11   0.18   3.90       1.0                     N/A                                       N/A       11.45  60.7  Bull       0.62   11.32       0.01      52.1     NaN
+257    AIZ   286.30  -0.30   0.95      14.1                     N/A                                       N/A        3.37  60.3  Bull       1.73    8.59       0.81      52.1     NaN
+258   BLCO    18.77   6.53   9.25       6.3                     N/A                                       N/A       10.06  71.7  Bull       0.20   10.41       0.20      52.1     NaN
+259    CNP    41.97   0.00   4.09      27.6                     N/A                                       N/A        5.65  72.3  Bull       0.31   14.05       0.02      52.0     NaN
+260   SUNB    82.50   0.81   5.10      33.5                     N/A                                       N/A        8.47  69.0  Bull       0.56   12.69       0.01      52.0     NaN
+261    GFF   100.26   2.65   5.55       4.5                     N/A                                       N/A        5.41  66.9  Bull       0.90    6.31       0.96      52.0     NaN
+262   OTIS    73.54  -0.87   1.65      28.2                     N/A                                       N/A        4.80  63.1  Bull       0.67   14.34       0.03      52.0     NaN
+263   CINF   180.86  -0.30   4.16      27.8                     N/A                                       N/A        6.41  71.8  Bull       1.69   13.48       0.02      51.9     NaN
+264   PRGS    44.90  -0.77   2.70       1.8                     N/A                                       N/A        8.80  63.2  Bull       0.68   12.33       0.01      51.9     NaN
+265    NOC   550.96  -0.05   2.16      78.3                     N/A                                       N/A        5.42  63.3  Bull       7.55   13.96       0.02      51.8     NaN
+266    RTO    22.80  -0.39   8.37      11.5                     N/A                                       N/A        2.12  66.6  Bull       0.37   15.44       0.02      51.7     NaN
+267   WFRD    89.41  -0.26   4.59       6.5                     N/A                                       N/A        6.06  62.6  Bull       1.80   13.64       0.01      51.7     NaN
+268   VEON    88.50   0.76   7.68       6.0                     N/A                                       N/A       20.81  74.1  Bull       0.28   19.71       0.01      51.7     NaN
+269   CWST    92.20  -1.61   2.19       6.0                     N/A                                       N/A        3.82  55.6  Bull       1.08   14.75       0.01      51.7     NaN
+270    PGY    19.79   0.10   3.83       1.6                     N/A                                       N/A        4.41  57.8  Bull       0.33   14.26       0.02      51.6     NaN
+271    AAP    44.96  -1.90   0.99       2.8                     N/A                                       N/A        0.33  55.6  Bull       0.49   16.23       0.02      51.5     NaN
+272   SAIL    22.30  -0.42  13.29      12.8                     N/A                                       N/A       13.68  65.3  Bull       0.29    9.50       0.02      51.5     NaN
+273   PLGO    25.70  -1.12   1.02       2.2                     N/A                                       N/A        4.29  60.6  Bull       0.13    7.67       0.79      51.4     NaN
+274    BBY    98.41  -0.09   4.56      20.7                     N/A                                       N/A        9.61  64.6  Bull       0.86   11.53       0.01      51.4     NaN
+275    ESQ   130.52   0.64   9.94       1.6                     N/A                                       N/A        8.33  70.1  Bull       1.31   12.16       0.01      51.4     NaN
+276   NSSC    39.92   0.48   7.20       1.4                     N/A                                       N/A        8.30  72.1  Bull       0.47   12.07       0.02      51.4     NaN
+277    NIC   173.19   0.28   5.21       3.6                     N/A                                       N/A        3.85  66.2  Bull       1.34    5.88       1.01      51.3     NaN
+278    AJG   258.95  -0.02   0.22      66.4                     N/A                                       N/A        5.10  59.3  Bull       2.39   13.52       0.03      51.3     NaN
+279   PODD   148.77  -0.71   4.84      10.4                     N/A                                       N/A        4.25  64.2  Bull       1.56   14.03       0.01      51.2     NaN
+280   BOBS    15.85  -0.75   5.11       2.1                     N/A                                       N/A        3.57  57.8  Bull       0.23   14.36       0.01      51.2     NaN
+281   SBAC   183.95  -0.16   6.08      19.5                     N/A                                       N/A        2.55  56.3  Bull       0.92   14.88       0.01      51.2     NaN
+282    AEO    19.44   0.10  11.85       3.3                     N/A                                       N/A       11.96  69.4  Bull       0.12   10.10       0.01      51.2     NaN
+283     SR    85.97  -0.09   4.19       5.1                     N/A                                       N/A        6.13  72.4  Bull       0.72   12.98       0.01      51.1     NaN
+284   KMPR    29.34  -0.07   1.49       1.7                     N/A                                       N/A        5.78  59.8  Bull       0.13   17.36       0.00      51.1     NaN
+285   KNTK    56.24   0.87   2.50       9.1                     N/A                                       N/A        6.32  62.3  Bull       0.27   13.71       0.01      51.0     NaN
+286    LNG   300.94   0.40   5.88      61.9                     N/A                                       N/A        7.87  68.1  Bull       2.08   11.86       0.02      51.0     NaN
+287    RMD   248.03  -1.11   0.74      35.3                     N/A                                       N/A        7.29  66.3  Bull       1.29   12.18       0.02      51.0     NaN
+288    KRC    35.97  -2.02   3.30       4.2                     N/A                                       N/A        2.69  56.8  Bull       0.32    8.02       0.80      51.0     NaN
+289   UNFI    48.32   0.15   3.96       2.9                     N/A                                       N/A        4.09  60.7  Bull       0.27    6.27       0.92      51.0     NaN
+290    RDN    35.31  -1.09   3.91       4.7                     N/A                                       N/A        1.31  56.7  Bull       0.30   15.35       0.00      51.0     NaN
+291   PTEN    12.29   0.66   5.22       4.7                     N/A                                       N/A        6.37  59.7  Bull       0.10   12.55       0.01      50.8     NaN
+292   ERIE   247.54   0.27   1.40      11.4                     N/A                                       N/A        3.81  57.9  Bull       2.25   13.71       0.02      50.8     NaN
+293    OZK    50.98   0.41   6.01       5.7                     N/A                                       N/A        7.00  69.5  Bull       0.77   12.13       0.00      50.7     NaN
+294   TRGP   304.67   0.68   3.07      64.9                     N/A                                       N/A        5.91  62.2  Bull       1.65   12.71       0.01      50.7     NaN
+295   MORN   213.96  -0.84   0.08       8.1                     N/A                                       N/A        5.31  56.6  Bull       1.31   12.88       0.01      50.6     NaN
+296    SNN    30.05  -0.17   2.81      12.6                     N/A                                       N/A        5.20  65.6  Bull       0.25   12.79       0.03      50.6     NaN
+297   ATRC    61.08  -0.70   5.91       3.1                     N/A                                       N/A       13.47  64.7  Bull       0.33    8.68       0.01      50.5     NaN
+298    IDA   140.78   0.41   1.98       8.1                     N/A                                       N/A        2.88  63.5  Bull       0.69    7.37       0.86      50.5     NaN
+299    UPS   105.04  -0.99   5.49      90.3                     N/A                                       N/A        5.72  68.5  Bull       1.25   12.41       0.03      50.5     NaN
+300     MD    28.81  -0.12   2.51       2.3                     N/A                                       N/A        6.95  64.7  Bull       0.19   11.95       0.01      50.5     NaN
+301    CSX    52.12  -0.29   7.69      96.4                     N/A                                       N/A        6.72  70.0  Bull       0.54   12.06       0.01      50.5     NaN
+302     BY    38.68   0.73   2.82       1.7                     N/A                                       N/A        3.03  63.9  Bull       0.23    4.82       1.09      50.5     NaN
+303    VLY    14.18   0.04   8.87       7.8                     N/A                                       N/A        5.81  70.0  Bull       0.22   12.32       0.01      50.3     NaN
+304   NMIH    42.62   0.11   4.55       3.2                     N/A                                       N/A        2.14  58.9  Bull       0.43   14.21       0.01      50.3     NaN
+305     ED   114.68  -0.30   2.56      42.5                     N/A                                       N/A        5.61  67.5  Bull       0.70   12.21       0.02      50.2     NaN
+306   SYRE    98.39  -0.66   5.85      10.3                     N/A                                       N/A        9.30  63.1  Bull       1.97   10.51       0.01      50.2     NaN
+307   VCYT    50.49   0.41   9.23       4.0                     N/A                                       N/A       10.89  65.9  Bull       0.68    9.65       0.01      50.2     NaN
+308   CALX    38.59   0.76   5.44       2.4                     N/A                                       N/A        5.68  64.2  Bull       0.30   12.31       0.00      50.2     NaN
+309   GPOR   170.55   0.61   7.94       3.0                     N/A                                       N/A        3.56  59.9  Bull       1.10   13.34       0.01      50.2     NaN
+310    PAC   224.01  -0.29   3.04      13.3                     N/A                                       N/A        6.00  64.4  Bull       2.69    6.46       0.69      50.2     NaN
+311   MRSH   190.96   0.15   0.21      90.7                     N/A                                       N/A        5.00  61.3  Bull       1.21   12.50       0.01      50.1     NaN
+312    BTI    59.96   0.21   1.79     129.3                     N/A                                       N/A        5.52  64.8  Bull       0.33   11.97       0.04      50.1     NaN
+313   EFSC    62.43   0.24   3.10       2.3                     N/A                                       N/A        1.74  61.8  Bull       0.50    5.24       1.08      50.1     NaN
+314     DD   137.67   1.04   3.54      18.6                     N/A                                       N/A        3.47  64.3  Bull       0.91    5.80       0.91      50.1     NaN
+315   GKOS   181.95   0.43   2.88      10.7                     N/A                                       N/A        7.91  65.2  Bull       1.87   10.82       0.02      50.0     NaN
+316    NWN    49.93   0.02   2.13       2.1                     N/A                                       N/A        2.37  62.5  Bull       0.26    6.19       0.91      50.0     NaN
+317   SPOT   547.69  -1.40   4.25     117.1                     N/A                                       N/A        4.45  55.0  Bull       4.03   12.37       0.05      50.0     NaN
+318   BIIB   248.49  -1.68   3.11      37.3                     N/A                                       N/A        9.26  65.4  Bull       1.68   10.01       0.05      50.0     NaN
+319    LTH    44.39   0.70   8.91       9.9                     N/A                                       N/A        7.33  70.9  Bull       0.52   11.31       0.00      50.0     NaN
+320    MDB   392.42   0.66   0.43      31.4                     N/A                                       N/A        4.52  55.1  Bull       4.26   12.57       0.01      49.9     NaN
+321    OGE    49.96   2.15   4.19      10.1                     N/A                                       N/A        6.89  72.6  Bull       0.28   11.05       0.03      49.8     NaN
+322   HBNC    20.82  -0.14   6.22       1.1                     N/A                                       N/A        6.28  70.9  Bull       0.19   11.50       0.01      49.7     NaN
+323    MCB    96.96   0.25   5.96       1.2                     N/A                                       N/A        6.70  71.7  Bull       1.25   11.29       0.01      49.7     NaN
+324    PSA   315.92   1.10   5.90      58.4                     N/A                                       N/A        5.43  68.6  Bull       3.08   11.70       0.02      49.6     NaN
+325    HAL    35.61  -0.03   4.77      29.5                     N/A                                       N/A        4.92  64.9  Bull       0.40   11.98       0.02      49.6     NaN
+326    CBC    34.74   0.09   4.32       8.3                     N/A                                       N/A        6.60  67.4  Bull       0.22   11.17       0.01      49.6     NaN
+327      S    25.70   0.21  12.89       8.9                     N/A                                       N/A       12.50  61.3  Bull       0.15    8.19       0.02      49.6     NaN
+328   FBIN    42.97  -0.29   4.92       5.1                     N/A                                       N/A        3.11  62.7  Bull       0.56   12.92       0.01      49.6     NaN
+329    PAA    26.41   0.00   2.01      18.6                     N/A                                       N/A        5.91  68.7  Bull       0.20   11.34       0.02      49.5     NaN
+330   DFIN    53.02  -0.82   0.44       1.3                     N/A                                       N/A        6.29  58.3  Bull       0.26   12.35       0.00      49.5     NaN
+331    TXN   307.19  -0.56   7.92     282.3                     N/A                                       N/A        9.29  68.2  Bull       2.24    9.68       0.02      49.5     NaN
+332    RHP   132.83   0.42   1.95       9.1                     N/A                                       N/A        6.57  73.2  Bull       0.94   11.13       0.01      49.5     NaN
+333    RSG   233.64  -0.86   1.44      72.2                     N/A                                       N/A        5.10  60.1  Bull       1.21   11.69       0.03      49.5     NaN
+334   TALO    18.29   0.55   1.22       3.0                     N/A                                       N/A        7.45  60.5  Bull       0.09   12.00       0.01      49.5     NaN
+335   RPRX    64.26  -1.55   3.40      37.5                     N/A                                       N/A        7.51  67.3  Bull       0.70   10.12       0.06      49.4     NaN
+336   HEPS     2.81   1.08   2.18       1.2                     N/A                                       N/A        4.67  63.4  Bull       0.01   14.23       0.09      49.4     NaN
+337    EXE    94.53  -0.10   1.83      21.9                     N/A                                       N/A        3.26  63.6  Bull       0.60   12.41       0.04      49.4     NaN
+338    GXO    49.76  -0.55   2.76       5.7                     N/A                                       N/A        4.84  66.4  Bull       0.37   11.96       0.01      49.4     NaN
+339   ACIW    54.72   0.10   1.59       5.5                     N/A                                       N/A        4.64  61.3  Bull       0.37   11.94       0.01      49.4     NaN
+340    MGY    26.40   0.08   3.81       7.1                     N/A                                       N/A        3.42  62.1  Bull       0.26   12.39       0.01      49.2     NaN
+341     NI    43.62   0.05   1.47      20.9                     N/A                                       N/A        4.06  68.0  Bull       0.26   11.85       0.03      49.2     NaN
+342    TFX   138.81  -0.14   6.45       5.9                     N/A                                       N/A        6.18  69.4  Bull       1.61   11.01       0.02      49.2     NaN
+343   KARO    64.46  -0.42   2.89       2.0                     N/A                                       N/A        3.48  57.2  Bull       0.49    5.97       0.78      49.2     NaN
+344    DOV   207.81   0.79   3.99      27.4                     N/A                                       N/A        5.71  71.5  Bull       1.71   11.10       0.02      49.2     NaN
+345   TTEK    36.69  -0.49   4.68       9.4                     N/A                                       N/A        5.63  65.7  Bull       0.38   11.35       0.01      49.2     NaN
+346    KMB   108.56  -0.50   1.80      36.3                     N/A                                       N/A        5.15  62.4  Bull       0.97   11.42       0.01      49.1     NaN
+347   MEDP   679.20   0.80   2.52      18.8                     N/A                                       N/A       10.44  69.4  Bull       6.02    8.81       0.01      49.1     NaN
+348     AI    12.32   0.22   4.47       2.0                     N/A                                       N/A       10.88  60.8  Bull       0.05   12.07       0.08      49.0     NaN
+349   FANG   205.29   0.40   2.17      57.3                     N/A                                       N/A        4.36  60.5  Bull       1.26   11.69       0.01      48.9     NaN
+350   UPWK     9.09   0.22   3.89       1.1                     N/A                                       N/A        4.27  57.6  Bull       0.08   11.40       0.02      48.7     NaN
+351    CON    40.13   0.33   2.66       5.1                     N/A                                       N/A       10.78  69.8  Bull       0.15   16.59       0.02      48.7     NaN
+352    GPI   266.99   5.03  18.74       3.0                     N/A                                       N/A        4.50  61.1  Bull       4.13   11.04       0.03      48.6     NaN
+353   CWEN    32.55  -0.52   2.97       5.4                     N/A                                       N/A        4.53  64.2  Bull       0.33   11.21       0.02      48.6     NaN
+354    APD   307.27   0.05   1.52      68.4                     N/A                                       N/A        4.76  69.5  Bull       2.08   11.16       0.01      48.6     NaN
+355     HD   318.83   0.10   1.49     317.8                     N/A                                       N/A        2.85  61.4  Bull       2.98   12.07       0.01      48.6     NaN
+356   CUBE    41.05   1.08   5.36       9.1                     N/A                                       N/A        5.24  69.6  Bull       0.35   10.80       0.02      48.6     NaN
+357    PHG    26.90   1.86   2.55      26.0                     N/A                                       N/A        4.94  67.2  Bull       0.23   10.11       0.11      48.5     NaN
+358    CNI   125.53   1.83   3.53      75.8                     N/A                                       N/A        3.41  63.1  Bull       0.77    4.13       0.91      48.4     NaN
+359   NRIX    26.08  -2.32   0.23       2.9                     N/A                                       N/A        6.53  60.1  Bull       0.34   10.00       0.01      48.3     NaN
+360    SLB    53.92  -0.31   5.51      80.3                     N/A                                       N/A        4.92  62.6  Bull       0.73   10.66       0.03      48.3     NaN
+361   LEVI    21.70  -0.37   3.68       8.4                     N/A                                       N/A        4.64  64.8  Bull       0.26   11.00       0.00      48.3     NaN
+362    WTW   321.00   0.42   1.06      29.7                     N/A                                       N/A        3.45  58.9  Bull       2.68   11.37       0.02      48.3     NaN
+363   FIVN    36.90  -0.62   4.56       2.8                     N/A                                       N/A        9.52  56.8  Bull       0.24    8.50       0.01      48.3     NaN
+364    AOS    62.29   0.37   4.43       8.4                     N/A                                       N/A        5.14  66.8  Bull       0.55   10.50       0.02      48.2     NaN
+365   CRML     7.83  -3.69  17.92       1.2                     N/A                                       N/A        9.59  58.4  Bull       0.12    7.85       0.05      48.1     NaN
+366     CE    48.90   0.57   3.52       5.3                     N/A                                       N/A        5.26  64.8  Bull       0.31   10.29       0.01      48.0     NaN
+367   VISN     6.60   0.61   8.02       1.5                     N/A                                       N/A        5.11  65.6  Bull       0.08   10.37       0.01      48.0     NaN
+368     SO    92.14  -0.55   1.94     106.6                     N/A                                       N/A        3.61  63.4  Bull       0.53   11.17       0.01      48.0     NaN
+369   ARLP    26.77   0.36   4.06       3.4                     N/A                                       N/A        5.01  71.7  Bull       0.21   10.23       0.03      48.0     NaN
+370   MIDD   115.43   0.37   3.93       5.2                     N/A                                       N/A        2.94  68.4  Bull       1.25   11.44       0.01      48.0     NaN
+371    WEX   187.68   0.70   0.08       6.4                     N/A                                       N/A        2.96  54.6  Bull       1.65   11.25       0.02      47.9     NaN
+372    CHE   549.00   7.84   7.36       6.7              Healthcare                   Medical Care Facilities        7.41  69.6  Bull       3.09    8.70       0.06      47.9    3.80
+373    NRP   117.66   0.89   3.26       1.6                     N/A                                       N/A        6.71  75.8  Bull       0.53    6.74       0.74      47.9     NaN
+374    BBT    30.83   0.41  10.12       2.6                     N/A                                       N/A        5.25  69.8  Bull       0.51   10.16       0.01      47.9     NaN
+375   LFST    13.11   0.08   6.33       5.0                     N/A                                       N/A        7.63  64.2  Bull       0.11    8.98       0.01      47.9     NaN
+376    EVR   284.40   9.44  12.85      10.0      Financial Services                           Capital Markets        3.86  65.3  Bull       2.75   10.45       0.06      47.9    4.09
+377    AVA    37.43   0.54   1.57       3.1                     N/A                                       N/A        1.39  60.7  Bull       0.24    6.61       0.66      47.8     NaN
+378    UCB    36.71  -0.11   2.40       4.4                     N/A                                       N/A        5.37  65.8  Bull       0.37   10.07       0.01      47.8     NaN
+379    AON   308.34   1.93   4.75      64.2                     N/A                                       N/A        2.05  62.5  Bull       4.44   11.41       0.04      47.8     NaN
+380     CX    10.61   0.57   2.12      16.0                     N/A                                       N/A        2.49  61.7  Bull       0.11   11.57       0.00      47.8     NaN
+381    SPH    18.15   0.78   4.91       1.2                     N/A                                       N/A        4.58  68.5  Bull       0.12   10.40       0.01      47.8     NaN
+382    RDY    13.70  -0.36   3.87      11.5                     N/A                                       N/A        7.81  72.0  Bull       0.09    8.56       0.03      47.7     NaN
+383   PAGP    28.49   0.16   2.02       5.6                     N/A                                       N/A        5.30  68.4  Bull       0.19    9.98       0.01      47.7     NaN
+384   VIST    72.39   1.20   1.33       8.0                     N/A                                       N/A        3.30  55.6  Bull       0.48   10.77       0.02      47.6     NaN
+385    OKE    94.67  -1.40   1.66      60.5                     N/A                                       N/A        2.74  56.9  Bull       0.56   11.02       0.03      47.6     NaN
+386    EXC    44.62  -0.18   3.65      46.1                     N/A                                       N/A        3.50  65.3  Bull       0.33   10.45       0.05      47.6     NaN
+387    XEL    77.97  -0.22   1.55      48.8                     N/A                                       N/A        3.65  64.6  Bull       0.44   10.63       0.01      47.5     NaN
+388    PKG   251.07  -0.77   5.05      22.5                     N/A                                       N/A        5.62  67.2  Bull       2.46    9.51       0.02      47.5     NaN
+389   CATY    65.04   0.55   7.28       4.3                     N/A                                       N/A        5.81  71.9  Bull       0.67    9.32       0.02      47.4     NaN
+390    CQP    65.76  -0.77   1.72      31.8                     N/A                                       N/A        1.67  56.3  Bull       0.46    7.98       0.43      47.4     NaN
+391    MUA     9.79   0.93   2.30       1.5                     N/A                                       N/A        1.65  62.5  Bull       0.07    4.78       0.82      47.4     NaN
+392   ULCC     6.32  14.29  25.40       1.3             Industrials                                  Airlines       10.58  61.7  Bull       0.09    5.86       0.15      47.4    2.75
+393   DGII    78.85   3.38   5.51       3.0                     N/A                                       N/A        6.93  61.1  Bull       0.40    3.07       0.70      47.4     NaN
+394   CNOB    32.99   0.02   6.85       1.8                     N/A                                       N/A        5.11  69.1  Bull       0.37    9.80       0.01      47.4     NaN
+395    THG   235.58  -0.11   1.57       8.2                     N/A                                       N/A        4.58  61.9  Bull       1.18   10.02       0.01      47.3     NaN
+396   XPRO    17.37  -0.63   3.58       2.0                     N/A                                       N/A        4.34  57.8  Bull       0.19   10.15       0.00      47.3     NaN
+397   MMSI    93.75   0.24   2.57       5.6                     N/A                                       N/A        6.90  65.8  Bull       0.56    8.72       0.01      47.3     NaN
+398    UNP   299.13  -0.25   3.91     178.2                     N/A                                       N/A        4.50  67.0  Bull       2.06    9.92       0.01      47.3     NaN
+399    ACT    48.05  -0.04   5.26       6.6                     N/A                                       N/A        2.28  57.7  Bull       0.38   11.07       0.01      47.3     NaN
+400    WEC   111.12  -0.27   2.42      36.3                     N/A                                       N/A        3.98  65.8  Bull       0.66   10.26       0.01      47.3     NaN
+401    WAT   470.94   0.51   2.94      46.0                     N/A                                       N/A        9.88  70.5  Bull       2.52    7.18       0.01      47.2     NaN
+402      J   148.35   0.00   4.11      17.4                     N/A                                       N/A        4.90  63.9  Bull       1.08    9.67       0.01      47.2     NaN
+403   KVUE    19.35  -0.42   1.62      37.3                     N/A                                       N/A        5.07  63.4  Bull       0.13    9.56       0.01      47.2     NaN
+404   IRTC   123.14  -0.49   8.45       4.1                     N/A                                       N/A        7.44  68.0  Bull       2.05    8.34       0.01      47.2     NaN
+405   FSLY    27.31  -0.22  17.21       4.4                     N/A                                       N/A       11.21  57.4  Bull       0.22    6.39       0.01      47.1     NaN
+406    LNT    69.90  -0.19   2.22      18.2                     N/A                                       N/A        3.19  63.9  Bull       0.43   10.43       0.01      47.1     NaN
+407   CACI   659.26  -1.05   5.75      14.8                     N/A                                       N/A        7.63  63.6  Bull       6.27    8.23       0.01      47.1     NaN
+408    NGL    16.20   1.89   4.65       2.0                     N/A                                       N/A        1.74  58.2  Bull       0.18    9.46       0.21      47.1     NaN
+409   AMAL    51.54   0.21   7.78       1.5                     N/A                                       N/A        7.16  72.4  Bull       0.54    8.35       0.01      47.0     NaN
+410   ATEX    86.33   0.83  12.45       1.7                     N/A                                       N/A        3.96  56.9  Bull       0.63    9.97       0.01      47.0     NaN
+411     NE    45.78   1.23   4.01       7.2                     N/A                                       N/A        4.24  56.7  Bull       0.43    9.67       0.02      47.0     NaN
+412    ABM    53.10  -0.83   1.56       3.1                     N/A                                       N/A        6.82  66.9  Bull       0.25   11.05       0.01      47.0     NaN
+413   DCOM    42.58   0.13   4.56       1.9                     N/A                                       N/A        6.26  68.5  Bull       0.49    8.70       0.01      46.9     NaN
+414   WDAY   205.02  -0.21   1.01      49.5                     N/A                                       N/A        8.00  60.2  Bull       1.44    7.64       0.03      46.9     NaN
+415     VG    13.92   0.80   8.33      34.5                     N/A                                       N/A        3.50  56.4  Bull       0.15   10.13       0.01      46.9     NaN
+416   JKHY   157.96  -0.18   2.97      11.1                     N/A                                       N/A        2.55  56.0  Bull       1.13   10.28       0.04      46.9     NaN
+417    FSV   140.63  -0.40   2.96       6.2                     N/A                                       N/A        3.41  57.7  Bull       1.28    9.97       0.01      46.8     NaN
+418   UTHR   582.38  -1.49   3.35      25.4                     N/A                                       N/A        8.39  64.5  Bull       3.78    7.47       0.01      46.7     NaN
+419    KOS     2.80   0.90   3.52       1.6                     N/A                                       N/A        3.04  53.9  Bull       0.01   10.04       0.02      46.7     NaN
+420   TDOC     6.42  -0.47   1.90       1.2                     N/A                                       N/A        1.93  58.5  Bull       0.09   10.69       0.01      46.7     NaN
+421   NBTX    33.53  -2.90  29.81       1.8                     N/A                                       N/A        7.63  62.5  Bull       1.76    7.61       0.03      46.7     NaN
+422   SBUX   102.88  -0.16   3.84     117.5                     N/A                                       N/A        3.97  65.2  Bull       1.15    9.49       0.01      46.6     NaN
+423    AWR    85.48   0.31   2.81       3.4                     N/A                                       N/A        1.49  57.8  Bull       0.55    4.32       0.78      46.6     NaN
+424    NSC   338.52  -0.36   3.18      76.3                     N/A                                       N/A        4.00  64.3  Bull       2.26    9.56       0.00      46.6     NaN
+425    AEE   108.89   0.14   2.26      30.1                     N/A                                       N/A        3.64  66.7  Bull       0.67    9.57       0.01      46.4     NaN
+426    DOO    59.90   2.50   6.91       4.3                     N/A                                       N/A        3.57  60.6  Bull       0.84    4.43       0.63      46.4     NaN
+427    NBN   134.00   0.77   5.25       1.2                     N/A                                       N/A        4.12  66.8  Bull       1.07    8.36       0.12      46.4     NaN
+428   PLSE    53.17  -0.07   3.62       3.8                     N/A                                       N/A        9.64  57.6  Bull       0.47    6.50       0.01      46.4     NaN
+429   FSBC    46.21   1.64   7.23       1.1                     N/A                                       N/A        4.29  69.2  Bull       0.44    9.05       0.01      46.3     NaN
+430    ETR   108.70   0.25   2.47      50.6                     N/A                                       N/A        3.38  66.2  Bull       0.62    9.51       0.01      46.3     NaN
+431   ESNT    66.31  -0.58   0.71       6.0                     N/A                                       N/A        2.19  57.3  Bull       0.60    4.85       0.63      46.2     NaN
+432   SYBT    78.40  -1.00   1.12       2.4                     N/A                                       N/A        0.45  53.7  Bull       0.42    1.49       1.14      46.2     NaN
+433    FTS    57.54  -0.38   2.81      29.5                     N/A                                       N/A        4.37  69.1  Bull       0.41    8.94       0.01      46.2     NaN
+434   STNG    91.19   6.87   9.84       4.4                  Energy                       Oil & Gas Midstream        9.50  63.7  Bull       0.40    8.95       0.17      46.1    4.40
+435    VVX    76.88  -0.38   8.24       2.4                     N/A                                       N/A        3.91  63.2  Bull       1.12    8.63       0.06      46.1     NaN
+436   COLB    31.08   0.13   6.44       8.8                     N/A                                       N/A        4.70  69.0  Bull       0.37    8.67       0.01      46.1     NaN
+437   AMCR    45.53  -0.89   0.57      21.2                     N/A                                       N/A        4.21  64.1  Bull       0.39    8.77       0.02      46.1     NaN
+438    MTG    28.66   0.01   4.96       5.9                     N/A                                       N/A        0.35  54.5  Bull       0.25   10.93       0.00      46.1     NaN
+439    MIY    11.91   0.85   2.23       1.8                     N/A                                       N/A        1.02  58.8  Bull       0.07    5.90       0.56      46.1     NaN
+440    NSP    51.06  -1.40   1.76       2.0                     N/A                                       N/A        2.90  52.3  Bull       0.32    9.61       0.01      46.1     NaN
+441    TDY   657.51   0.38   4.35      30.2                     N/A                                       N/A        5.28  70.0  Bull       4.77    8.35       0.01      46.1     NaN
+442    NBR    85.45   5.08   5.47       1.4                     N/A                                       N/A        2.58  58.0  Bull       0.84    9.38       0.04      46.0     NaN
+443   LEGN    21.33  -1.07  14.49       4.2                     N/A                                       N/A        7.13  63.2  Bull       0.36    7.24       0.01      45.9     NaN
+444    NYT    69.53  -0.40   0.97      11.2                     N/A                                       N/A        2.61  58.0  Bull       0.37    9.55       0.01      45.9     NaN
+445   EXEL    65.03  -0.50   0.69      16.2                     N/A                                       N/A        9.34  70.5  Bull       0.28   11.33       0.01      45.9     NaN
+446   ADUS   120.16  -0.89   1.87       2.3                     N/A                                       N/A        3.71  60.1  Bull       0.67    8.70       0.04      45.9     NaN
+447    PII    57.47  -1.01   5.87       3.3                     N/A                                       N/A        0.99  58.9  Bull       0.92   10.21       0.02      45.9     NaN
+448    ATO   170.78  -0.34   2.29      29.0                     N/A                                       N/A        3.11  64.3  Bull       1.02    9.17       0.01      45.8     NaN
+449   KMTS    29.74  -0.85   8.88       1.8                     N/A                                       N/A       10.83  59.2  Bull       0.20    5.11       0.02      45.7     NaN
+450    DBX    36.83  -0.27   0.66       8.3                     N/A                                       N/A        5.75  58.0  Bull       0.18    8.80       0.02      45.7     NaN
+451    DUK   124.14  -0.53   2.88      97.3                     N/A                                       N/A        3.46  63.9  Bull       0.79    8.89       0.01      45.7     NaN
+452     SM    39.38   0.81   2.01       9.3                     N/A                                       N/A        7.95  59.7  Bull       0.14   16.59       0.01      45.6     NaN
+453   PATH    14.03  -0.21   2.33       7.3                     N/A                                       N/A        2.27  54.7  Bull       0.16    9.27       0.01      45.5     NaN
+454    AWK   140.24  -0.61   4.07      28.0                     N/A                                       N/A        4.17  62.3  Bull       1.25    8.32       0.01      45.5     NaN
+455    BVS    14.54   0.83   2.11       1.2                     N/A                                       N/A        7.19  58.9  Bull       0.12    6.68       0.03      45.5     NaN
+456   GRFS     7.90  -2.47   5.33       5.6                     N/A                                       N/A        4.30  60.4  Bull       0.07    8.07       0.02      45.4     NaN
+457   BLLN   113.39  -0.59   8.34       5.4                     N/A                                       N/A        7.61  60.2  Bull       1.68    6.53       0.01      45.4     NaN
+458    TTE    92.47   0.13   2.36     201.5                     N/A                                       N/A        4.43  61.6  Bull       0.50    8.15       0.01      45.4     NaN
+459    SRE    84.99  -0.02   1.78      55.6                     N/A                                       N/A        2.58  63.5  Bull       0.47    9.02       0.01      45.4     NaN
+460   WTRG    42.33  -0.72   3.92      12.1                     N/A                                       N/A        4.65  62.5  Bull       0.35    8.03       0.01      45.4     NaN
+461   AMRX    21.19  -1.14   4.93       7.5                     N/A                                       N/A       10.31  65.6  Bull       0.12    5.24       0.01      45.4     NaN
+462    IFF    92.39  -0.88   1.49      23.8                     N/A                                       N/A        6.74  68.0  Bull       0.41   10.67       0.02      45.4     NaN
+463   SOMN    48.60   0.12   1.23      55.9                     N/A                                       N/A        3.22  68.7  Bull       0.26    7.71       0.13      45.4     NaN
+464    CWT    47.82   0.13   2.91       3.0                     N/A                                       N/A        1.12  58.0  Bull       0.36    4.32       0.65      45.3     NaN
+465    NVS   154.16  -1.72   0.15     299.3                     N/A                                       N/A        3.58  59.2  Bull       1.00    8.13       0.05      45.3     NaN
+466   VSXY    94.25   2.15   5.72       7.4                     N/A                                       N/A        9.37  60.4  Bull       0.46    6.55       0.02      45.3     NaN
+467    EBC    22.60   0.11   5.09       5.2                     N/A                                       N/A        4.24  68.2  Bull       0.21    8.00       0.00      45.2     NaN
+468    NGG    81.99   0.28   1.50      85.8                     N/A                                       N/A        3.76  63.5  Bull       0.40    8.14       0.08      45.2     NaN
+469    TOP    15.98   3.50   2.24       1.9                     N/A                                       N/A       11.13  58.2  Bull       0.07    6.60       0.01      45.1     NaN
+470    AFL   122.03   0.03   1.56      61.2                     N/A                                       N/A        3.66  63.6  Bull       0.59    9.17       0.01      45.1     NaN
+471   TGLS    38.85   0.69   3.06       1.7                     N/A                                       N/A        1.34  57.0  Bull       0.23    9.36       0.00      45.1     NaN
+472     TD   125.68  -0.08   0.79     205.4                     N/A                                       N/A        4.79  67.7  Bull       0.89    7.68       0.01      45.1     NaN
+473   RITM     9.38  -0.11   9.71       5.2                     N/A                                       N/A        3.70  61.0  Bull       0.13    8.06       0.01      45.0     NaN
+474   VCEL    43.19  -0.20   5.48       2.2                     N/A                                       N/A        4.76  63.6  Bull       0.36    7.59       0.01      45.0     NaN
+475   LKFT    31.56  -0.82   3.20       2.1                     N/A                                       N/A        6.58  64.1  Bull       0.17    6.44       0.03      45.0     NaN
+476   ITRI    93.13  -1.50   9.55       4.1                     N/A                                       N/A        3.96  61.5  Bull       1.30    7.86       0.01      45.0     NaN
+477    LHX   257.84  -0.60   4.16      48.3                     N/A                                       N/A        1.87  63.0  Bull       2.92    8.89       0.01      44.9     NaN
+478   EVRG    85.29  -0.02   2.57      19.7                     N/A                                       N/A        4.10  67.1  Bull       0.41    8.73       0.01      44.9     NaN
+479    AXS   102.22  -0.02   1.64       7.5                     N/A                                       N/A        2.68  63.0  Bull       0.57    8.51       0.00      44.9     NaN
+480    AHG     1.41  11.02  14.91       1.2              Healthcare                      Medical Distribution       22.49  65.7  Bull       0.00  104.05       0.04      44.9     NaN
+481    TRP    62.87  -0.03   0.90      62.9                     N/A                                       N/A        2.18  60.3  Bull       0.32    8.81       0.00      44.9     NaN
+482   YUMC    44.60  -1.84   0.30      15.6                     N/A                                       N/A        2.33  57.7  Bull       0.23    8.50       0.03      44.9     NaN
+483    OGS    77.97  -0.57   3.20       4.9                     N/A                                       N/A        2.44  63.2  Bull       0.64    8.49       0.01      44.8     NaN
+484   NOVT   151.83   1.66   8.50       5.6                     N/A                                       N/A        5.84  60.3  Bull       1.55    6.78       0.01      44.8     NaN
+485   WDFC   216.15  -1.13  12.25       2.9                     N/A                                       N/A        4.24  62.5  Bull       2.21    7.57       0.02      44.8     NaN
+486    ZBH    96.32   0.28   1.54      18.3                     N/A                                       N/A        2.53  56.3  Bull       0.59    8.44       0.01      44.8     NaN
+487   LAMR   155.34   0.21   0.17      15.7                     N/A                                       N/A        3.77  63.6  Bull       0.91    7.79       0.02      44.8     NaN
+488   KFRC    55.95  -1.60   8.85       1.0                     N/A                                       N/A        5.13  59.6  Bull       0.75    6.65       0.07      44.8     NaN
+489    SYK   299.82  -0.53   0.74     115.6                     N/A                                       N/A        1.34  56.5  Bull       2.29    8.87       0.01      44.7     NaN
+490    STE   226.90  -0.70   2.44      22.3                     N/A                                       N/A        3.17  59.0  Bull       1.29    8.04       0.01      44.7     NaN
+491    MAC    24.11  -0.17   3.79       6.8                     N/A                                       N/A        3.59  62.3  Bull       0.20    7.83       0.01      44.7     NaN
+492    CMS    68.64  -0.52   0.75      21.6                     N/A                                       N/A        1.52  58.2  Bull       0.34    8.81       0.01      44.7     NaN
+493    KDP    34.60  -0.73   0.39      47.4                     N/A                                       N/A        6.84  63.2  Bull       0.13   14.06       0.01      44.6     NaN
+494    DTE   132.65  -0.02   2.31      27.6                     N/A                                       N/A        1.27  61.3  Bull       0.81    8.91       0.01      44.6     NaN
+495    HPQ    33.17  -1.22   5.91      30.3                     N/A                                       N/A        6.77  57.3  Bull       0.29    6.04       0.03      44.6     NaN
+496   DNOW    16.50   0.67   2.48       3.0                     N/A                                       N/A        5.92  59.1  Bull       0.10    6.45       0.02      44.6     NaN
+497    NEE    82.15  -0.33   4.94     172.9                     N/A                                       N/A        1.84  62.2  Bull       0.66    8.46       0.01      44.5     NaN
+498   CCNE    35.69   0.27   3.34       1.1                     N/A                                       N/A        4.44  68.9  Bull       0.22    7.26       0.00      44.5     NaN
+499    TAK    19.96  -1.53   0.15      64.1                     N/A                                       N/A        6.36  61.7  Bull       0.09    9.73       0.05      44.4     NaN
+500    CAE    25.69  -0.17   4.83       8.3                     N/A                                       N/A        4.50  63.9  Bull       0.26    7.02       0.01      44.4     NaN
+501   BFAM    70.18  -0.54   4.87       3.4                     N/A                                       N/A        1.33  53.1  Bull       0.34   10.14       0.01      44.4     NaN
+502    DHI   146.75  -0.18   5.59      41.1                     N/A                                       N/A        3.61  60.1  Bull       1.46    7.39       0.01      44.3     NaN
+503   NGVT    75.21   1.37   6.39       2.6                     N/A                                       N/A        5.68  67.2  Bull       0.44    6.30       0.02      44.3     NaN
+504   FROG   101.68   1.21   5.59      12.4                     N/A                                       N/A        8.88  57.9  Bull       0.62    4.78       0.01      44.3     NaN
+505     KR    65.12  -1.14   1.54      38.9                     N/A                                       N/A        6.35  59.6  Bull       0.28   11.09       0.01      44.2     NaN
+506   GMED    80.60  -0.38   2.43      10.9                     N/A                                       N/A        3.15  59.1  Bull       0.61    7.60       0.01      44.2     NaN
+507    MSI   477.64  -1.23   2.17      80.0                     N/A                                       N/A        3.97  61.9  Bull       3.38    7.10       0.02      44.2     NaN
+508    UGI    39.33   0.18   2.00       8.4                     N/A                                       N/A        5.12  67.1  Bull       0.18   10.26       0.01      44.1     NaN
+509   FIBK    38.04   0.57   6.66       3.6                     N/A                                       N/A        4.50  68.9  Bull       0.43    6.45       0.04      44.1     NaN
+510    AEP   129.68  -0.47   1.80      70.9                     N/A                                       N/A        3.81  64.0  Bull       0.60    9.31       0.02      44.0     NaN
+511   GIII    29.44  -1.11   3.52       1.3                     N/A                                       N/A        0.64  60.6  Bull       0.33    8.55       0.01      44.0     NaN
+512   STAA    24.02  -0.56  11.18       1.2                     N/A                                       N/A        5.31  61.6  Bull       0.29    6.26       0.01      44.0     NaN
+513    DTM   128.95   0.32   3.59      13.1                     N/A                                       N/A        1.79  60.0  Bull       0.88    7.94       0.01      43.9     NaN
+514   FRME    40.93  -0.39   2.04       2.6                     N/A                                       N/A        0.90  57.6  Bull       0.26    2.12       0.76      43.9     NaN
+515      D    65.24  -0.19   4.66      57.5                     N/A                                       N/A        2.05  61.8  Bull       0.47    7.79       0.01      43.9     NaN
+516   INDB    83.31   0.07   2.47       3.9                     N/A                                       N/A        3.07  63.5  Bull       0.72    7.29       0.00      43.9     NaN
+517   PRCT    19.65  -0.76   7.55       1.1                     N/A                                       N/A        1.80  55.0  Bull       0.26    7.85       0.00      43.8     NaN
+518   TRMB    62.96  -0.32   0.58      14.7                     N/A                                       N/A        5.63  61.7  Bull       0.28   10.23       0.01      43.8     NaN
+519    SCI    81.88  -0.76   0.89      11.3                     N/A                                       N/A        2.25  57.4  Bull       0.42    7.52       0.02      43.8     NaN
+520    TMP   102.15  -0.04   3.30       1.5                     N/A                                       N/A        4.23  65.3  Bull       0.61    6.13       0.06      43.8     NaN
+521   MICC    19.11  -0.70   0.87      11.8                     N/A                                       N/A        2.53  56.2  Bull       0.17    7.51       0.01      43.8     NaN
+522   FBNC    64.81   0.23   6.18       2.7                     N/A                                       N/A        3.86  62.1  Bull       0.67    6.05       0.10      43.8     NaN
+523   SOBO    35.66   0.51   2.62       7.4                     N/A                                       N/A        2.20  60.5  Bull       0.27    7.64       0.00      43.8     NaN
+524     CP    91.13  -0.00   3.44      81.3                     N/A                                       N/A        3.12  64.4  Bull       0.72    7.09       0.00      43.7     NaN
+525   CRGY    13.74   0.37   1.78       4.5                     N/A                                       N/A        4.02  54.9  Bull       0.07    6.59       0.01      43.7     NaN
+526   ALKS    43.99  -0.74   1.17       7.4                     N/A                                       N/A        0.24  55.3  Bull       0.56    8.56       0.01      43.7     NaN
+527    ZGN    13.38   0.07   3.56       3.6                     N/A                                       N/A        3.08  57.6  Bull       0.08    7.04       0.01      43.6     NaN
+528   IDXX   557.96  -0.59   0.81      44.2                     N/A                                       N/A        3.21  58.1  Bull       2.97    6.85       0.01      43.6     NaN
+529   JJSF    82.37  -0.99   0.76       1.6                     N/A                                       N/A        1.65  54.9  Bull       0.46    7.74       0.01      43.6     NaN
+530    ALC    69.22  -0.29   2.65      34.7                     N/A                                       N/A        2.71  60.2  Bull       0.67    6.90       0.03      43.5     NaN
+531    FDX   306.85  -0.08   2.89      72.7                     N/A                                       N/A        1.58  60.8  Bull       2.38    7.63       0.02      43.5     NaN
+532    DGX   246.12   1.47   3.01      26.7                     N/A                                       N/A        4.84  64.4  Bull       1.36    5.99       0.01      43.5     NaN
+533    LOW   197.72  -0.23   0.59     111.2                     N/A                                       N/A        0.72  55.9  Bull       1.46    7.97       0.01      43.4     NaN
+534   LKFN    60.89   0.30   5.87       1.5                     N/A                                       N/A        3.56  63.4  Bull       0.53    6.53       0.01      43.4     NaN
+535    MCD   249.49   0.01   1.31     176.5                     N/A                                       N/A        0.39  58.4  Bull       1.99    8.03       0.03      43.4     NaN
+536    AVY   180.84  -0.48   1.01      13.8                     N/A                                       N/A        4.26  61.7  Bull       1.03    5.96       0.03      43.3     NaN
+537   RDNT    73.33  -0.29   7.19       5.8                     N/A                                       N/A        3.65  57.5  Bull       0.50    6.37       0.01      43.3     NaN
+538   PNFP   100.11   0.38   1.93      15.1                     N/A                                       N/A        2.58  62.0  Bull       0.85    6.94       0.01      43.3     NaN
+539   MZTI   106.65  -1.07   1.26       2.9                     N/A                                       N/A        1.26  54.7  Bull       0.75    7.53       0.02      43.3     NaN
+540  NOVTU    63.30   3.41   8.76       2.4                     N/A                                       N/A        3.92  58.4  Bull       0.36    5.73       0.06      43.2     NaN
+541   LADR     9.35  -0.05   4.30       1.2                     N/A                                       N/A        2.20  60.2  Bull       0.09    7.04       0.00      43.2     NaN
+542    TDW    86.67   1.30   6.57       4.3                     N/A                                       N/A        2.41  55.4  Bull       0.69    6.86       0.01      43.1     NaN
+543     HP    39.90   0.50   4.31       4.0                     N/A                                       N/A        1.16  53.8  Bull       0.27    7.43       0.01      43.1     NaN
+544    YOU    45.15  -0.83   0.02       6.2                     N/A                                       N/A        1.48  57.4  Bull       0.22    7.63       0.01      43.0     NaN
+545     GD   353.64  -0.35   2.59      96.0                     N/A                                       N/A        1.32  60.5  Bull       3.26    7.09       0.02      42.9     NaN
+546    NFG    81.51  -0.07   2.77       7.8                     N/A                                       N/A        2.12  57.9  Bull       0.40    7.45       0.01      42.9     NaN
+547   NCLH    15.79   0.25   1.28       7.2                     N/A                                       N/A        0.12  56.0  Bull       0.09    7.71       0.01      42.9     NaN
+548   ASND   243.45  -0.98   1.90      16.2                     N/A                                       N/A        1.70  58.2  Bull       2.83    6.86       0.01      42.8     NaN
+549   WTFC   151.38   0.39   2.73      10.2                     N/A                                       N/A        1.84  62.0  Bull       1.21    6.74       0.01      42.7     NaN
+550   ARXS    52.59  -0.09   1.64      22.7                     N/A                                       N/A        3.74  55.3  Bull       0.26    6.48       0.00      42.7     NaN
+551   MCBS    36.32   0.89   5.24       1.0                     N/A                                       N/A        3.45  61.6  Bull       0.21    5.95       0.01      42.7     NaN
+552     AX    92.56   0.28   2.50       5.2                     N/A                                       N/A        1.14  59.9  Bull       0.74    6.92       0.01      42.6     NaN
+553   AVNT    42.44   0.02   4.30       3.9                     N/A                                       N/A        4.33  62.5  Bull       0.38    5.44       0.00      42.6     NaN
+554    WHD    66.05   0.75   2.93       5.3                     N/A                                       N/A        2.79  56.4  Bull       0.53    6.16       0.01      42.6     NaN
+555   HOMB    29.99  -0.05   2.12       6.0                     N/A                                       N/A        2.27  62.5  Bull       0.19    6.44       0.00      42.6     NaN
+556    NOV    19.95  -2.90   3.55       7.3                     N/A                                       N/A        1.43  54.9  Bull       0.21    6.54       0.03      42.5     NaN
+557   HOPE    14.08  -0.28   3.07       1.8                     N/A                                       N/A        2.78  61.8  Bull       0.10    5.94       0.02      42.5     NaN
+558   FITB    53.73   0.26   1.74      48.6                     N/A                                       N/A        2.26  63.9  Bull       0.46    6.23       0.01      42.4     NaN
+559    IBP   205.40   0.00   9.33       5.5                     N/A                                       N/A        0.58  58.3  Bull       3.53    7.05       0.01      42.4     NaN
+560   NBTB    52.98   0.17   2.97       2.7                     N/A                                       N/A        3.37  64.7  Bull       0.30    5.62       0.01      42.4     NaN
+561    SKT    36.62  -0.10   3.73       4.2                     N/A                                       N/A        1.06  59.9  Bull       0.29    6.75       0.01      42.4     NaN
+562   UBSI    48.51  -0.02   2.82       6.6                     N/A                                       N/A        3.33  63.7  Bull       0.31    5.59       0.01      42.3     NaN
+563   EWBC   131.40  -0.01   0.01      18.0                     N/A                                       N/A        2.39  60.5  Bull       0.70    6.03       0.01      42.3     NaN
+564   SOFI    16.62   1.34  11.54      21.2                     N/A                                       N/A        2.74  59.1  Bull       0.23    5.73       0.03      42.3     NaN
+565   HFWA    29.17   0.19   5.36       1.2                     N/A                                       N/A        3.10  64.6  Bull       0.25    5.56       0.01      42.2     NaN
+566    PAG   212.34   0.09   0.14      13.9                     N/A                                       N/A        2.31  59.3  Bull       1.38    5.99       0.01      42.2     NaN
+567    KIM    23.57  -0.57   3.72      15.9                     N/A                                       N/A        1.96  62.7  Bull       0.17    6.10       0.02      42.2     NaN
+568   HONA   165.76  -1.27   2.03      53.2                     N/A                                       N/A        0.01  55.0  Bull       1.17    6.97       0.03      42.2     NaN
+569    SBH    17.18   0.01   3.50       1.6                     N/A                                       N/A        4.91  56.1  Bull       0.09    4.63       0.01      42.2     NaN
+570    FNB    18.25   0.04   2.51       6.4                     N/A                                       N/A        2.28  61.8  Bull       0.16    6.03       0.00      42.2     NaN
+571     CM   116.54   0.04   1.33     105.8                     N/A                                       N/A        2.76  62.3  Bull       0.74    5.77       0.01      42.2     NaN
+572   MGEE    74.19   0.03   3.03       2.8                     N/A                                       N/A        0.54  59.2  Bull       0.57    6.83       0.01      42.2     NaN
+573    SSB   105.44  -0.22   2.59      10.2                     N/A                                       N/A        2.27  61.3  Bull       0.70    5.91       0.01      42.1     NaN
+574   CVBF    22.81  -0.00   2.56       4.0                     N/A                                       N/A        2.97  61.1  Bull       0.14    5.55       0.00      42.1     NaN
+575   MSEX    56.18  -0.07   4.75       1.1                     N/A                                       N/A        2.04  60.8  Bull       0.43    6.06       0.01      42.1     NaN
+576   INGM    28.41   0.39   2.82       6.5                     N/A                                       N/A        2.74  57.4  Bull       0.14    5.96       0.09      42.1     NaN
+577    ASB    30.30   0.30   3.84       5.7                     N/A                                       N/A        2.47  63.4  Bull       0.24    5.76       0.01      42.1     NaN
+578   MBWM    61.11   0.71   4.09       1.0                     N/A                                       N/A        3.08  61.7  Bull       0.37    4.78       0.10      42.1     NaN
+579   FIVE   231.93   0.29   3.49      12.7                     N/A                                       N/A        2.79  58.5  Bull       2.21    5.63       0.01      42.1     NaN
+580    MDU    19.64   0.20   2.72       4.1                     N/A                                       N/A        2.00  65.5  Bull       0.12    5.93       0.01      42.0     NaN
+581    THO    70.44   1.16   6.55       3.6                     N/A                                       N/A        0.34  55.3  Bull       0.78    1.18       0.67      42.0     NaN
+582   QCRH   102.75  -0.01   3.30       1.7                     N/A                                       N/A        2.59  60.2  Bull       0.61    4.98       0.09      42.0     NaN
+583    RCL   294.26  -0.56   2.01      79.1                     N/A                                       N/A        6.17  61.9  Bull       1.18   10.68       0.02      42.0     NaN
+584   OPRA    18.50   0.74   2.75       1.7                     N/A                                       N/A        2.25  57.6  Bull       0.12    4.97       0.11      42.0     NaN
+585    LUV    43.54   0.23   9.18      21.3                     N/A                                       N/A        4.61  61.5  Bull       0.37    4.56       0.01      41.9     NaN
+586     PD    17.72  -0.17   3.87       1.4                     N/A                                       N/A       18.07  70.6  Bull       0.04   17.35       0.03      41.8     NaN
+587    TOL   141.94  -0.01   5.10      13.1                     N/A                                       N/A        2.54  60.5  Bull       1.24    5.54       0.00      41.8     NaN
+588   BANC    18.27   0.16   5.18       2.9                     N/A                                       N/A        1.34  61.6  Bull       0.17    6.04       0.02      41.8     NaN
+589    CPK   134.55  -0.06   3.56       3.2                     N/A                                       N/A        3.03  62.1  Bull       0.70    4.74       0.04      41.6     NaN
+590   UMBF   137.00   2.39   3.08      10.2                     N/A                                       N/A        1.30  58.6  Bull       0.96    5.38       0.07      41.6     NaN
+591   SBCF    33.61  -0.36   2.59       3.3                     N/A                                       N/A        1.78  59.2  Bull       0.24    5.59       0.02      41.6     NaN
+592   FMBH    51.10   0.18   3.74       1.4                     N/A                                       N/A        2.65  60.2  Bull       0.26    4.84       0.06      41.6     NaN
+593    VVV    31.92   0.14   2.55       4.1                     N/A                                       N/A        1.26  57.0  Bull       0.17    5.89       0.00      41.5     NaN
+594   FULT    23.53  -0.02   4.46       4.5                     N/A                                       N/A        2.38  61.1  Bull       0.20    5.21       0.01      41.5     NaN
+595     RF    28.54   0.14   1.75      24.3                     N/A                                       N/A        0.56  59.1  Bull       0.25    6.18       0.01      41.5     NaN
+596    SPG   211.65  -0.30   2.97      68.7                     N/A                                       N/A        1.95  61.1  Bull       1.49    5.42       0.01      41.5     NaN
+597    BAM    47.19   0.94   2.48      74.7                     N/A                                       N/A        0.93  56.6  Bull       0.33    5.85       0.01      41.4     NaN
+598    KEY    21.21   0.28   0.86      22.6                     N/A                                       N/A        1.23  60.9  Bull       0.19    5.68       0.01      41.4     NaN
+599    AZN   169.11  -0.57   0.39     263.7                     N/A                                       N/A        2.29  57.0  Bull       0.93    4.73       0.05      41.3     NaN
+600   SIRI    27.45   0.73   1.82       9.2                     N/A                                       N/A        0.06  54.7  Bull       0.16    6.07       0.01      41.2     NaN
+601    CBU    62.66   0.46   3.16       3.3                     N/A                                       N/A        1.76  63.1  Bull       0.45    5.24       0.01      41.2     NaN
+602    AQN     5.33  -1.66   0.38       4.2                     N/A                                       N/A        0.14  54.9  Bull       0.04    5.96       0.02      41.2     NaN
+603    PHM   121.64   0.01   7.76      22.4                     N/A                                       N/A        2.31  59.5  Bull       1.45    4.81       0.01      41.1     NaN
+604    WFG    69.66  -0.49   4.93       5.5                     N/A                                       N/A        2.83  60.1  Bull       0.70   -1.60       0.56      41.1     NaN
+605    EAT   203.00   3.19   7.94       8.2                     N/A                                       N/A        0.89  53.5  Bull       0.96    4.89       0.32      41.1     NaN
+606    JLL   321.43   7.17   5.03      13.7             Real Estate                      Real Estate Services        0.02  55.8  Bull       2.84    5.21       0.11      41.1    4.17
+607   CLBT    11.90  -0.25   3.48       3.0                     N/A                                       N/A        0.51  55.4  Bull       0.12    5.68       0.02      41.1     NaN
+608    FTI    71.81   0.60   2.59      28.0                     N/A                                       N/A        0.65  54.5  Bull       0.46    5.73       0.01      41.1     NaN
+609   AROC    31.83   0.55   6.94       5.6                     N/A                                       N/A        1.97  59.7  Bull       0.29    5.10       0.01      41.1     NaN
+610   LIVN    80.15  -0.28   2.19       4.4                     N/A                                       N/A        2.29  56.9  Bull       0.45    4.78       0.01      41.0     NaN
+611   ALGN   153.45   0.99   1.37      10.8                     N/A                                       N/A        0.54  57.3  Bull       1.35    5.57       0.01      41.0     NaN
+612    CVX   228.65   0.18   0.82     450.9                     N/A                                       N/A        7.76  66.5  Bull       0.81   11.97       0.02      41.0     NaN
+613     EW    90.25  -0.63   2.09      52.3                     N/A                                       N/A        2.66  58.5  Bull       0.52    4.55       0.01      41.0     NaN
+614    CSW   302.10   0.48   3.13       4.9                     N/A                                       N/A        1.54  58.0  Bull       1.90    4.86       0.04      41.0     NaN
+615   CIGI    94.29   1.32   1.67       4.8                     N/A                                       N/A        1.26  56.7  Bull       0.89    5.01       0.03      40.9     NaN
+616    PFS    23.25   0.09   3.15       3.0                     N/A                                       N/A        1.65  62.8  Bull       0.17    4.97       0.01      40.9     NaN
+617   STBA    50.62   0.05   3.59       1.8                     N/A                                       N/A        2.35  59.0  Bull       0.30    4.64       0.00      40.9     NaN
+618   KYMR   116.16  -1.20   3.13       9.8                     N/A                                       N/A        3.76  56.8  Bull       1.12    3.91       0.01      40.9     NaN
+619    IRS    14.65   0.41   2.81       1.2                     N/A                                       N/A        0.79  54.5  Bull       0.11    5.24       0.02      40.8     NaN
+620    CUZ    28.67  -0.68   3.41       4.8                     N/A                                       N/A        1.53  56.5  Bull       0.19    4.94       0.01      40.8     NaN
+621   PEBO    38.50   0.13   3.13       1.4                     N/A                                       N/A        1.08  58.0  Bull       0.34    5.22       0.00      40.8     NaN
+622    MHD    10.74   0.09   2.19       1.6                     N/A                                       N/A        0.70  60.0  Bull       0.09    5.30       0.02      40.8     NaN
+623     PB    69.64   0.00   2.23       8.4                     N/A                                       N/A        0.79  59.1  Bull       0.46    5.18       0.01      40.6     NaN
+624   PANW   402.03   0.08  15.78     328.6                     N/A                                       N/A        8.46  58.5  Bull       2.03    1.19       0.02      40.6     NaN
+625   VSAT    72.57   3.23  15.95       9.7                     N/A                                       N/A        4.76  57.9  Bull       1.07    3.11       0.02      40.6     NaN
+626    TFC    48.67   0.26   1.96      59.3                     N/A                                       N/A        0.83  57.9  Bull       0.40    5.11       0.01      40.6     NaN
+627    LEN    83.93  -0.77   8.02      20.1                     N/A                                       N/A        3.81  58.6  Bull       1.10    3.54       0.01      40.5     NaN
+628   OMAB    99.06   0.07   4.38       4.8                     N/A                                       N/A        1.22  59.2  Bull       1.16    0.24       0.55      40.5     NaN
+629    STN    70.71   0.01   0.69       7.9                     N/A                                       N/A        0.91  55.4  Bull       0.44    4.97       0.01      40.5     NaN
+630    HLI   132.93   0.44   3.54       9.2                     N/A                                       N/A        1.66  55.8  Bull       0.65    5.22       0.01      40.5     NaN
+631     ES    67.54  -0.33   2.95      25.5                     N/A                                       N/A        0.44  55.9  Bull       0.37    5.26       0.01      40.5     NaN
+632    SYF    75.25   0.37   1.54      23.3                     N/A                                       N/A        1.06  55.5  Bull       0.36    6.03       0.01      40.4     NaN
+633   ZION    65.77   0.14   0.09       9.6                     N/A                                       N/A        0.74  57.8  Bull       0.50    4.98       0.01      40.4     NaN
+634    UDR    35.15  -1.28   0.33      11.4                     N/A                                       N/A        0.14  55.2  Bull       0.25    5.23       0.01      40.3     NaN
+635    KHC    23.86  -0.81   1.55      28.5                     N/A                                       N/A        0.18  51.8  Bull       0.21    5.04       0.02      40.3     NaN
+636   FFBC    32.64   0.31   3.13       3.4                     N/A                                       N/A        1.79  60.0  Bull       0.21    4.21       0.02      40.3     NaN
+637    MQY    10.38   0.00   1.07       1.5                     N/A                                       N/A        0.13  57.3  Bull       0.06    5.14       0.01      40.3     NaN
+638    CCL    27.82   0.27   1.89      37.3                     N/A                                       N/A        8.34  63.9  Bull       0.09   13.35       0.02      40.2     NaN
+639    HII   279.99  -0.47   2.20      11.1                     N/A                                       N/A        0.67  57.0  Bull       2.48    4.84       0.01      40.2     NaN
+640    VIR    11.38  -1.64   7.66       2.0                     N/A                                       N/A        6.64  56.5  Bull       0.06    1.79       0.02      40.2     NaN
+641    PEG    72.82   0.00   2.56      36.3                     N/A                                       N/A        1.45  60.0  Bull       0.32    8.14       0.01      40.1     NaN
+642    CCC     7.69  -0.13   0.66       4.5                     N/A                                       N/A        9.18  67.0  Bull       0.02   15.47       0.00      40.1     NaN
+643    TDS    35.48  -0.59   6.96       4.1                     N/A                                       N/A        0.87  54.1  Bull       0.22    4.60       0.01      40.1     NaN
+644    RTX   194.51  -0.05   1.52     262.6                     N/A                                       N/A        0.29  54.1  Bull       1.43    4.77       0.02      40.1     NaN
+645     RY   203.30   0.14   1.27     281.1                     N/A                                       N/A        1.80  61.5  Bull       1.42    4.06       0.01      40.0     NaN
+646   WSFS    78.73  -0.15   2.50       4.0                     N/A                                       N/A        1.46  57.5  Bull       0.45    4.18       0.01      40.0     NaN
+647   PCRX    36.40   0.00   0.19       1.5                     N/A                                       N/A       20.62  83.4  Bear      -0.08   45.31       0.00      40.0     NaN
+648   RNST    40.71  -2.10   0.98       3.8                     N/A                                       N/A        0.43  53.4  Bull       0.25    4.69       0.01      40.0     NaN
+649    BRX    28.48  -0.80   3.87       8.8                     N/A                                       N/A        0.95  58.6  Bull       0.19    4.35       0.01      39.9     NaN
+650   SFNC    23.37   0.17   2.10       3.4                     N/A                                       N/A        2.72  62.4  Bull       0.13    3.50       0.00      39.9     NaN
+651   NYAX    49.81  -4.06   1.32       1.9                     N/A                                       N/A        0.31  56.2  Bull       0.71    4.40       0.03      39.8     NaN
+652    HON   218.93   0.06   1.96      69.4                     N/A                                       N/A        1.73  61.1  Bull       1.24    3.79       0.01      39.8     NaN
+653    MYI    10.00   0.20   2.35       1.5                     N/A                                       N/A        0.32  58.6  Bull       0.07    4.46       0.01      39.7     NaN
+654   FSUN    39.91  -0.45   3.72       1.8                     N/A                                       N/A        2.27  58.2  Bull       0.24    3.37       0.02      39.7     NaN
+655   TILE    36.61   0.27   4.39       2.1                     N/A                                       N/A        3.24  59.6  Bull       0.17    6.42       0.01      39.7     NaN
+656    WMS   132.25   1.00   1.73       9.9                     N/A                                       N/A        0.37  57.6  Bull       0.77    4.37       0.01      39.6     NaN
+657    AUB    39.51   0.23   2.15       5.5                     N/A                                       N/A        0.75  56.6  Bull       0.27    4.11       0.01      39.6     NaN
+658    GEF    83.17   0.51   1.97       3.8                     N/A                                       N/A        1.99  55.7  Bull       0.36    3.37       0.55      39.6     NaN
+659   BUSE    29.95  -0.76   1.47       2.5                     N/A                                       N/A        1.25  55.3  Bull       0.15    3.70       0.02      39.5     NaN
+660   SWKS    85.83   0.42   4.40      12.7                     N/A                                       N/A        8.10  60.6  Bull       0.46    0.42       0.00      39.5     NaN
+661   BANR    69.50   0.26   2.13       2.5                     N/A                                       N/A        1.04  55.7  Bull       0.41    3.73       0.01      39.4     NaN
+662    PDM     9.27   0.38   0.27       1.1                     N/A                                       N/A        0.05  50.8  Bull       0.05    4.21       0.01      39.4     NaN
+663    KEX   144.52   5.45   5.31       7.2                     N/A                                       N/A        5.52  65.5  Bull       0.54   10.11       0.02      39.3     NaN
+664   GLBE    41.68   0.31   1.31       7.0                     N/A                                       N/A        5.37  58.1  Bull       0.19    4.91       0.00      39.3     NaN
+665   EQPT    17.81   0.56   5.70       4.5                     N/A                                       N/A        3.20  56.2  Bull       0.36    2.53       0.00      39.2     NaN
+666    SLS    12.30   1.07   1.32       2.5                     N/A                                       N/A        4.21  54.3  Bull       0.12   -0.08       0.24      39.1     NaN
+667   CFFN     8.55   0.12   5.95       1.1                     N/A                                       N/A        0.89  56.1  Bull       0.05    3.64       0.01      39.1     NaN
+668    SUZ     8.83  -0.79   4.50      11.3                     N/A                                       N/A        2.01  56.6  Bull       0.06    3.03       0.01      39.1     NaN
+669   ALMR    32.00   0.22   1.75       2.2                     N/A                                       N/A        7.81  55.8  Bull       0.62   -6.08       0.03      39.1     NaN
+670    ATR   125.76  -0.59   0.10       8.0                     N/A                                       N/A        0.44  54.4  Bull       0.68    3.80       0.01      39.1     NaN
+671    HBT    36.81   0.16   4.28       1.3                     N/A                                       N/A        3.49  58.9  Bull       0.17    4.07       0.01      39.0     NaN
+672   RLAY    18.60  -1.27   1.03       4.1                     N/A                                       N/A        1.72  53.6  Bull       0.16    3.05       0.01      39.0     NaN
+673    USB    59.78   0.07   1.24      93.1                     N/A                                       N/A        0.79  56.6  Bull       0.40    3.50       0.01      39.0     NaN
+674    WMB    74.30   0.28   2.06      90.6                     N/A                                       N/A        3.28  58.0  Bull       0.30    9.31       0.01      39.0     NaN
+675   MCHP    79.42  -0.94   2.94      43.5                     N/A                                       N/A        3.61  57.9  Bull       0.42    2.12       0.01      39.0     NaN
+676    BMO   172.50   0.21   1.20     119.6                     N/A                                       N/A        1.45  59.1  Bull       1.12    3.14       0.01      38.9     NaN
+677   ADPT    27.60  -0.22   8.96       4.4                     N/A                                       N/A        7.43  57.6  Bull       0.20   -4.50       0.01      38.8     NaN
+678    PNC   227.89   0.15   2.24      90.8                     N/A                                       N/A        0.18  58.8  Bull       1.95    3.48       0.02      38.7     NaN
+679    AYI   319.00  -1.27   0.71       9.6                     N/A                                       N/A        1.28  57.4  Bull       2.86    3.03       0.00      38.7     NaN
+680    PGR   224.54  -0.47   1.44     131.2                     N/A                                       N/A        3.39  57.3  Bull       0.91    8.37       0.01      38.7     NaN
+681    FCF    20.83  -0.90   1.51       2.1                     N/A                                       N/A        0.93  54.6  Bull       0.12    2.97       0.02      38.6     NaN
+682    MUC    10.02   0.05   2.93       1.5                     N/A                                       N/A        0.32  57.9  Bull       0.06    3.30       0.02      38.6     NaN
+683   WSBC    38.65  -0.25   2.67       3.7                     N/A                                       N/A        0.45  55.1  Bull       0.31    3.30       0.01      38.6     NaN
+684   TFSL    16.74   0.06   2.14       4.7                     N/A                                       N/A        0.44  55.8  Bull       0.09    3.33       0.01      38.6     NaN
+685    DOX    61.81   0.06   0.34       6.7                     N/A                                       N/A        3.76  58.6  Bull       0.25    8.10       0.07      38.6     NaN
+686    NJR    53.07  -0.09   1.86       5.4                     N/A                                       N/A        0.65  57.0  Bull       0.25    4.88       0.00      38.6     NaN
+687     GH   177.89  -0.10   6.74      23.9                     N/A                                       N/A        6.82  59.3  Bull       1.42   -0.26       0.01      38.5     NaN
+688    AER   150.05   1.47   3.90      23.2                     N/A                                       N/A        3.01  60.8  Bull       0.49    3.41       1.28      38.5     NaN
+689   TOWN    36.58   0.18   2.11       2.7                     N/A                                       N/A        1.26  58.3  Bull       0.21    2.59       0.01      38.3     NaN
+690    BIO   381.17   0.05   5.74      10.2                     N/A                                       N/A        4.70  60.5  Bull       2.35    0.92       0.01      38.3     NaN
+691    CNM    42.71   0.85   3.09       8.1                     N/A                                       N/A        0.39  57.0  Bull       0.23    2.97       0.01      38.3     NaN
+692    IVT    31.03   2.32   5.60       2.4                     N/A                                       N/A        0.36  59.6  Bull       0.20    2.94       0.02      38.2     NaN
+693   SRPT    18.68  -1.11   0.65       2.0                     N/A                                       N/A        0.97  52.4  Bull       0.19    2.52       0.02      38.2     NaN
+694    BKT     9.76   1.35   1.56       1.5                     N/A                                       N/A        0.43  61.2  Bull       0.04    3.04       0.68      38.1     NaN
+695   HSTM    34.18  -1.95   1.21       1.0                     N/A                                       N/A        9.74  65.9  Bull       0.06   14.93       0.73      38.1     NaN
+696    EPD    37.26   0.26   1.84      80.3                     N/A                                       N/A        0.13  54.1  Bull       0.18    4.65       0.01      37.9     NaN
+697   MCHB    15.15   0.22   3.58       3.3                     N/A                                       N/A        0.46  58.1  Bull       0.13    2.53       0.01      37.8     NaN
+698   COLD    14.31  -0.45   1.89       4.1                     N/A                                       N/A        0.66  53.3  Bull       0.08    2.32       0.00      37.7     NaN
+699   SFBS    40.81   0.32   2.56       4.4                     N/A                                       N/A        0.08  54.6  Bull       0.34    2.56       0.01      37.7     NaN
+700    WMT   118.44  -0.74   0.54     946.7                     N/A                                       N/A        5.18  63.0  Bull       0.35   13.97       0.02      37.7     NaN
+701    OPK     1.61   0.00   0.62       1.2                     N/A                                       N/A        5.23  55.0  Bull       0.01    0.00       0.01      37.7     NaN
+702    EMN    66.36   0.37   4.51       7.6                     N/A                                       N/A        0.35  57.2  Bull       0.57    2.35       0.01      37.6     NaN
+703   OPCH    31.30   0.03   0.03       4.7                     N/A                                       N/A       15.11  82.3  Bear      -0.13   39.17       0.01      37.6     NaN
+704   NICE   120.82  -0.63   5.11       7.2                     N/A                                       N/A        8.67  61.6  Bull       0.41    8.58       0.05      37.4     NaN
+705   SPTX    20.50  -3.67   3.90       1.1                     N/A                                       N/A        0.85  54.1  Bull       0.53    1.64       0.02      37.3     NaN
+706    TEN    55.72   4.34   6.38       1.6                     N/A                                       N/A       14.30  62.6  Bull       0.09   17.93       0.04      37.3     NaN
+707   UVSP    42.49   0.21   1.82       1.2                     N/A                                       N/A        1.55  60.1  Bull       0.20    3.68       0.00      37.2     NaN
+708    EMA    48.77  -0.53   2.96      15.1                     N/A                                       N/A        0.18  56.0  Bull       0.38    1.97       0.00      37.1     NaN
+709   AMGN   441.23  -1.50   0.66     242.2                     N/A                                       N/A        6.12  59.6  Bull       1.84    4.68       0.02      37.1     NaN
+710   BRKR    60.74   0.00   2.76       9.3                     N/A                                       N/A        3.80  56.0  Bull       0.36   -6.19       0.00      36.9     NaN
+711    DVN    51.39   0.31   3.05      56.4                     N/A                                       N/A        5.93  60.7  Bull       0.16   11.62       0.02      36.9     NaN
+712     FE    46.51   0.52   2.20      26.8                     N/A                                       N/A        1.94  61.4  Bull       0.19    7.34       0.03      36.8     NaN
+713    ALX   250.04   0.66   4.82       1.3                     N/A                                       N/A        0.34  57.7  Bull       2.13    1.44       0.01      36.7     NaN
+714   BANF   110.88   0.29   1.05       3.7                     N/A                                       N/A        1.27  57.2  Bull       0.47    5.32       0.12      36.7     NaN
+715   REPL    12.90  -1.11  10.11       1.2                     N/A                                       N/A        3.04  53.7  Bull       0.15   -2.53       0.02      36.7     NaN
+716   BETA    21.05   1.45  12.39       4.9                     N/A                                       N/A        3.10  55.5  Bull       0.28   -4.75       0.01      36.6     NaN
+717    MHK   125.50   0.36   6.32       8.5                     N/A                                       N/A        1.74  53.6  Bull       0.85    0.63       0.01      36.6     NaN
+718    TEL   226.20   0.38   5.66      65.2                     N/A                                       N/A        6.56  64.8  Bull       0.83    7.16       0.04      36.6     NaN
+719    ASH    72.78   0.64   1.52       3.3                     N/A                                       N/A        2.92  58.5  Bull       0.24    6.34       0.68      36.3     NaN
+720    JNJ   264.98  -1.40   2.79     646.9                     N/A                                       N/A        1.31  53.2  Bull       1.50    0.09       0.04      36.1     NaN
+721    HTO    61.04   0.00   8.65       2.9                     N/A                                       N/A        1.38  58.3  Bull       0.54   -0.96       0.02      35.9     NaN
+722    FMS    22.50   0.00   4.36      12.6                     N/A                                       N/A        0.42  54.3  Bull       0.16    0.54       0.02      35.9     NaN
+723   GRAL   150.61   7.65  20.81       6.7              Healthcare                    Diagnostics & Research       33.25  65.4  Bear      -0.81   10.28       1.87      35.9    4.00
+724    GRC    75.40   0.59   4.24       2.0                     N/A                                       N/A        0.41  54.3  Bull       0.26    0.44       1.31      35.9     NaN
+725    OXY    62.89   0.26   0.30      62.7                     N/A                                       N/A        5.00  60.0  Bull       0.18   13.68       0.02      35.9     NaN
+726   NWBI    15.27   0.00   1.39       2.2                     N/A                                       N/A        0.85  53.9  Bull       0.07    2.90       0.04      35.8     NaN
+727   BBNX    18.60 -13.04   1.09       1.1                     N/A                                       N/A        0.42  48.9  Bull       0.29   -2.00       0.05      35.7     NaN
+728    ENR    22.82   0.44   0.26       1.6                     N/A                                       N/A        5.14  58.0  Bull       0.09    6.69       0.01      35.7     NaN
+729    SHC    18.49   0.54   3.12       5.3                     N/A                                       N/A        1.38  54.9  Bull       0.07   -0.59       0.92      35.5     NaN
+730   WTTR    19.80   1.64   5.43       2.7                     N/A                                       N/A        2.00  55.2  Bull       0.10    0.05       0.01      35.5     NaN
+731   ACGL   101.00   0.66   0.72      34.2                     N/A                                       N/A        2.92  58.2  Bull       0.35    9.36       0.03      35.4     NaN
+732   CPAC    12.77   0.00   1.03       1.1                     N/A                                       N/A        3.57  66.3  Bull       0.04    4.84       0.95      35.3     NaN
+733   AMTB    29.96   0.00   2.85       1.2                     N/A                                       N/A        3.58  59.6  Bull       0.12    4.50       0.01      35.3     NaN
+734   OPLN    38.06   0.62   1.67       4.6                     N/A                                       N/A        4.72  63.4  Bull       0.11   11.53       0.00      35.0     NaN
+735   AUPH    17.10  -0.87   1.18       2.3                     N/A                                       N/A        4.04  58.4  Bull       0.07    5.59       0.00      34.9     NaN
+736    BGR    18.30  -1.56   0.33       2.5                     N/A                                       N/A        5.25  61.8  Bull       0.04    8.16       0.91      34.7     NaN
+737   DCBG    26.68   1.09   2.05       1.0                     N/A                                       N/A        1.50  59.3  Bull       0.12    1.48       0.16      34.7     NaN
+738    PFG   111.94  -0.04   3.23      24.0                     N/A                                       N/A        0.90  55.1  Bull       0.54   -0.02       0.03      34.4     NaN
+739    GFL    44.65  -0.78   2.69      19.6                     N/A                                       N/A        4.78  57.9  Bull       0.16    6.78       0.01      34.3     NaN
+740    WST   396.83  -0.37   0.85      28.0                     N/A                                       N/A        7.39  70.3  Bull       1.32    7.03       0.01      34.2     NaN
+741   VLTO   102.68  -0.49   1.36      25.2                     N/A                                       N/A        4.80  63.8  Bull       0.33    8.87       0.02      34.1     NaN
+742  BRK-B   541.24  -0.32   0.42       5.0                     N/A                                       N/A        4.56  66.5  Bull       1.75    8.69       0.06      34.1     NaN
+743     TS    60.13  -0.31   2.50      31.9                     N/A                                       N/A        5.27  60.2  Bull       0.19    8.98       0.02      34.1     NaN
+744    CNR    90.87   2.71   4.08       4.5                     N/A                                       N/A        0.28  51.5  Bull       0.28    5.05       0.83      34.0     NaN
+745   SRCE    87.95   0.00   2.49       2.1                     N/A                                       N/A        2.59  61.1  Bull       0.36    4.08       0.01      34.0     NaN
+746   FERG   232.17   1.14   1.85      44.4                     N/A                                       N/A        2.39  61.3  Bull       0.94    4.29       0.02      33.9     NaN
+747   TCBK    53.20   0.97   0.78       1.7                     N/A                                       N/A        0.44  54.4  Bull       0.22    3.93       0.00      33.7     NaN
+748    AMT   181.96  -1.02   2.43      85.7                     N/A                                       N/A        3.73  55.5  Bull       0.53   11.16       0.03      33.7     NaN
+749    ALV   116.64   0.55   0.60       8.4                     N/A                                       N/A        0.14  52.9  Bull       0.48    4.24       0.03      33.4     NaN
+750   SONY    25.12  -2.03   0.08     151.2                     N/A                                       N/A        4.13  56.1  Bull       0.09    6.76       0.03      33.4     NaN
+751    ECO    99.10   6.66   8.63       3.6             Industrials                           Marine Shipping       21.12  64.9  Bear      -0.17   22.53       0.09      33.3     NaN
+752    DAL    81.61   0.19   5.07      53.6                     N/A                                       N/A        0.95  54.4  Bull       0.38   -1.95       0.01      33.2     NaN
+753   GTLB    56.63  -0.33   2.13       9.5                     N/A                                       N/A       14.81  63.1  Bull       0.05   19.85       0.03      33.2     NaN
+754   CRWD   269.98   0.73  12.80     274.4                     N/A                                       N/A       12.64  61.2  Bull       0.94    1.98       0.03      33.0     NaN
+755   BFST    31.88   0.03   1.66       1.0                     N/A                                       N/A        2.63  61.8  Bull       0.12    5.95       0.00      32.8     NaN
+756   ITRN    52.70   2.47   3.46       1.0                     N/A                                       N/A        1.67  60.8  Bull       0.14    3.31       1.13      32.8     NaN
+757    VFS     3.13  -0.63   4.68       7.4                     N/A                                       N/A        0.89  53.4  Bull       0.01    0.32       0.03      32.6     NaN
+758    DEC    14.73   0.93   3.41       1.1                     N/A                                       N/A        3.42  57.0  Bull       0.04   10.14       0.04      32.5     NaN
+759    XOM   180.46   0.31   1.33     739.8                     N/A                                       N/A        7.49  65.3  Bull       0.45   10.88       0.04      32.4     NaN
+760    NTB    59.90  -0.41   0.73       2.4                     N/A                                       N/A        1.19  57.0  Bull       0.24    3.53       0.01      32.4     NaN
+761     RL   392.24   0.25   3.04      23.3                     N/A                                       N/A        6.24  66.5  Bull       1.05   10.47       0.01      32.4     NaN
+762   REXR    38.02  -0.68   3.32       8.2                     N/A                                       N/A        2.75  55.4  Bull       0.14    4.82       0.00      32.1     NaN
+763   BHRB    70.47   0.56   0.46       1.4                     N/A                                       N/A        0.63  52.9  Bull       0.22    2.80       0.86      32.0     NaN
+764    BDX   195.46   0.22   0.58      53.1                     N/A                                       N/A        6.08  61.5  Bull       0.55    9.20       0.01      31.9     NaN
+765   CCEP   110.59  -0.27   0.27      50.3                     N/A                                       N/A        3.97  56.9  Bull       0.33    8.73       0.02      31.8     NaN
+766   AZTA    39.08   5.14   9.38       1.7                     N/A                                       N/A       13.30  61.2  Bear      -0.01   14.00       1.32      31.7     NaN
+767    NEO    17.47   1.16   2.52       2.2                     N/A                                       N/A        2.88  52.7  Bull       0.07   -4.85       0.02      31.6     NaN
+768     BZ    16.44  -1.23   1.14       7.9                     N/A                                       N/A        5.60  60.2  Bull       0.04   11.11       0.01      31.1     NaN
+769   NEOG    12.47   0.00   5.77       2.7                     N/A                                       N/A        4.01  55.0  Bull       0.05   -2.58       0.01      31.1     NaN
+770   PTON     5.25  -0.88   0.26       2.4                     N/A                                       N/A        0.27  52.1  Bull       0.02    5.28       0.01      31.0     NaN
+771     BJ   104.01  -1.06   1.56      13.3                     N/A                                       N/A        6.51  61.6  Bull       0.22   13.05       0.01      31.0     NaN
+772    SLF    80.97   1.15   0.32      44.6                     N/A                                       N/A        2.36  59.6  Bull       0.30    3.85       0.04      30.9     NaN
+773    WLY    52.42  -0.36   0.73       2.7                     N/A                                       N/A        4.03  56.6  Bull       0.13   10.57       0.01      30.7     NaN
+774   OMCL    36.83   0.18   1.33       1.7                     N/A                                       N/A        2.71  57.9  Bull       0.11    8.15       0.03      30.7     NaN
+775   COLM    60.16  -1.65   1.09       3.1                     N/A                                       N/A        2.12  54.4  Bull       0.21    4.79       0.01      30.6     NaN
+776    KYN    14.35   0.17   1.81       1.9                     N/A                                       N/A        1.27  57.6  Bull       0.05    6.19       0.01      30.5     NaN
+777    PVH    85.27  -0.40   2.01       3.9                     N/A                                       N/A        6.47  62.0  Bull       0.15   15.15       0.01      30.5     NaN
+778   WABC    61.67   0.19   1.40       1.4                     N/A                                       N/A        3.26  59.1  Bull       0.20    5.74       0.07      30.4     NaN
+779    JXN   134.65  -0.30   3.44       9.1                     N/A                                       N/A        3.09  56.1  Bull       0.47    4.12       0.01      30.3     NaN
+780   VOYA    97.24   0.41   0.93       8.8                     N/A                                       N/A        0.14  51.8  Bull       0.37    2.92       0.00      29.8     NaN
+781    IRM   116.00   0.57   1.12      34.3                     N/A                                       N/A        0.83  55.1  Bull       0.41    4.55       0.01      29.7     NaN
+782    GCT    59.60   0.34   1.14       2.1                     N/A                                       N/A       11.11  63.0  Bull       0.02   18.23       0.48      29.6     NaN
+783   ORLY    89.57  -0.28   0.41      72.7                     N/A                                       N/A        1.94  55.6  Bull       0.30    4.87       0.04      29.4     NaN
+784    BCC    76.50   0.63   1.20       2.7                     N/A                                       N/A        0.23  52.1  Bull       0.28    3.17       0.02      28.9     NaN
+785   BF-B    28.25  -0.91   0.25       5.0                     N/A                                       N/A        3.28  54.3  Bull       0.08    7.82       0.01      28.6     NaN
+786  MCHPP    68.28   4.63   3.69      37.1                     N/A                                       N/A        4.13  59.6  Bull       0.19    1.44       0.61      28.5     NaN
+787     SG    10.50   1.84   3.35       1.2                     N/A                                       N/A       20.52  66.3  Bear      -0.07   18.38       0.02      28.5     NaN
+788    MTD  1689.16   0.23   0.67      33.8                     N/A                                       N/A       11.50  75.3  Bull       2.59   11.79       0.00      28.3     NaN
+789    AAT    21.84   2.95   6.72       1.3                     N/A                                       N/A        0.55  56.4  Bull       0.08    2.75       0.04      28.3     NaN
+790    MDT    94.42   0.50   1.49     120.2                     N/A                                       N/A        4.20  56.8  Bull       0.22    9.42       0.04      28.1     NaN
+791  RUSHB    59.98   1.18   2.42       6.9                     N/A                                       N/A        8.77  65.6  Bull       0.10   11.26       0.03      27.9     NaN
+792   LQDT    44.82   0.04   2.89       1.4                     N/A                                       N/A        4.80  60.2  Bull       0.13    4.65       0.01      27.8     NaN
+793   EVCM     9.40  -3.09   2.62       1.7                     N/A                                       N/A        2.88  54.8  Bull       0.01   17.35       0.51      27.8     NaN
+794    BOW    34.29   0.44   0.76       1.1                     N/A                                       N/A        2.40  68.3  Bear      -0.00    1.54       3.72      27.7     NaN
+795   ISRG   442.73  -0.71   3.41     154.6                     N/A                                       N/A        7.80  63.1  Bull       0.93    8.88       0.02      27.6     NaN
+796    ABT   102.34  -0.74   1.82     178.4                     N/A                                       N/A        0.01  50.0  Bull       0.34    4.19       0.02      27.6     NaN
+797   RDVT    81.17  -0.07   3.32       1.3                     N/A                                       N/A        7.42  59.8  Bull       0.24    2.73       0.02      27.5     NaN
+798   ADMA    11.05  -1.12   0.32       2.5                     N/A                                       N/A        9.57  62.2  Bull       0.02   10.12       0.02      27.4     NaN
+799   STDN    13.07   0.93   2.67       2.0                     N/A                                       N/A        4.09  53.7  Bull       0.03   10.67       0.03      27.3     NaN
+800   ECCV    24.66   0.04   1.69       1.5                     N/A                                       N/A        2.70  71.6  Bull       0.08    3.09       0.03      27.2     NaN
+801    PPL    35.14  -0.11   1.62      26.5                     N/A                                       N/A        2.40  60.5  Bull       0.10    6.84       0.01      27.1     NaN
+802   QCOM   183.15  -0.55   2.92     193.4                     N/A                                       N/A        2.83  55.0  Bull       0.65   -0.48       0.06      26.8     NaN
+803     PG   158.24  -0.62   1.56     369.1                     N/A                                       N/A        5.11  59.5  Bull       0.32    9.64       0.02      26.7     NaN
+804   FLYW    18.86   0.11   1.23       2.3                     N/A                                       N/A        3.85  55.2  Bull       0.04    7.77       0.02      26.4     NaN
+805    LIN   506.08  -0.51   1.10     234.5                     N/A                                       N/A        3.43  65.8  Bull       1.28    6.62       0.02      26.2     NaN
+806   GILD   156.95  -1.34   2.20     197.3                     N/A                                       N/A        5.48  58.1  Bull       0.40    5.30       0.01      26.0     NaN
+807    WTS   363.50   0.59   0.03      12.1                     N/A                                       N/A        1.79  55.7  Bull       1.15    2.63       0.01      25.7     NaN
+808  BRKRP   446.32   4.84   6.50      68.0                     N/A                                       N/A        3.57  56.4  Bull       1.12   -5.20       0.74      25.4     NaN
+809   TGTX    55.83  -1.08   4.94       8.6                     N/A                                       N/A        3.01  54.7  Bull       0.19    0.09       0.01      25.3     NaN
+810   CVSA   130.37   0.86   2.72       4.4                     N/A                                       N/A        2.19  55.7  Bull       0.32    6.69       0.02      25.0     NaN
+811   CRVL    82.64  -0.04   2.39       4.2                     N/A                                       N/A       10.40  69.6  Bull       0.10   10.85       0.02      24.8     NaN
+812   UFCS    57.33   0.24   0.04       1.5                     N/A                                       N/A        4.53  61.5  Bull       0.11    9.02       0.00      24.7     NaN
+813    EMR   168.24   1.18   3.15      92.7                     N/A                                       N/A        6.83  67.0  Bull       0.30    8.47       0.02      24.6     NaN
+814    HNI    47.54  -0.19   5.50       3.4                     N/A                                       N/A        2.41  53.6  Bull       0.12    4.90       0.00      24.2     NaN
+815    FRO    56.86   5.75  10.86      12.0                     N/A                                       N/A       15.98  63.2  Bear      -0.18   15.41       0.08      24.1     NaN
+816     CB   355.71  -0.15   0.22     137.4                     N/A                                       N/A        3.09  58.8  Bull       0.66    9.37       0.01      24.0     NaN
+817    CRC    54.54   0.79   1.87       4.8                     N/A                                       N/A        1.78  55.6  Bull       0.12    7.36       0.00      23.9     NaN
+818    ADI   422.33  -0.71   4.03     206.1                     N/A                                       N/A        7.22  61.6  Bull       0.77    6.46       0.02      23.0     NaN
+819   PNTG    41.96   0.68   2.23       1.5                     N/A                                       N/A        4.51  56.3  Bull       0.08    7.58       0.01      23.0     NaN
+820   RVLV    22.43  -0.84   1.91       1.6                     N/A                                       N/A        1.47  53.5  Bull       0.05    5.16       0.01      22.4     NaN
+821   DMLP    30.56   0.44   1.92       1.5                     N/A                                       N/A        4.75  62.4  Bull       0.05    8.97       0.04      22.0     NaN
+822  OXLCO    23.55   0.34   0.81       4.1                     N/A                                       N/A        0.19  53.9  Bull       0.02    0.03       1.86      21.9     NaN
+823   PFBC   106.15  -0.12   0.73       1.5                     N/A                                       N/A        1.62  54.7  Bull       0.27    2.12       0.06      21.4     NaN
+824   NTCT    40.34  -0.40   4.24       2.9                     N/A                                       N/A        2.43  56.2  Bull       0.11    0.40       0.03      21.3     NaN
+825    ROK   445.35   1.40   1.56      48.9                     N/A                                       N/A        2.48  58.8  Bull       1.12    2.30       0.01      21.2     NaN
+826   PLUS    95.81  -0.73   1.84       2.5                     N/A                                       N/A        4.18  57.4  Bull       0.10    6.67       0.65      21.1     NaN
+827    AMG   391.99   0.26   0.83      10.1                     N/A                                       N/A        5.14  59.8  Bull       0.38    5.77       0.70      21.0     NaN
+828    BDJ     9.62   0.52   0.63       1.7                     N/A                                       N/A        1.15  57.0  Bull       0.02    2.03       0.57      21.0     NaN
+829    HHH    73.86   0.83   7.54       4.4                     N/A                                       N/A        7.27  60.9  Bull       0.17    0.33       0.02      20.7     NaN
+830  UMBFO    25.90   0.39   0.24       2.0                     N/A                                       N/A        1.01  58.8  Bull       0.06    1.78       0.24      20.3     NaN
+831  REGCO    21.09   3.49   1.00       3.9                     N/A                                       N/A        0.60  56.1  Bull       0.03    6.52       0.47      20.3     NaN
+832    BAX    25.09   0.68   1.58      12.9                     N/A                                       N/A        2.41  54.2  Bull       0.05    4.54       0.04      20.2     NaN
+833   OKTA   225.54  -0.23   8.10      39.5                     N/A                                       N/A       17.12  61.5  Bull       0.11    7.86       0.02      20.1     NaN
+834   ENSG   180.59   6.54   4.17       9.9              Healthcare                   Medical Care Facilities        3.48  57.1  Bull       0.33    4.99       0.09      20.1    4.40
+835    SIG   116.15   0.81   1.51       4.4                     N/A                                       N/A       12.45  66.7  Bear      -0.06   13.85       0.01      20.1     NaN
+836   FELE   102.13   4.14   0.88       4.3                     N/A                                       N/A        2.59  61.1  Bull       0.18    6.51       0.01      20.0     NaN
+837   CRBG    35.55   0.54   0.71      15.8                     N/A                                       N/A        4.95  58.9  Bull       0.05    7.34       0.02      19.9     NaN
+838   TSAT    46.92   4.99  14.83       1.7                     N/A                                       N/A        2.67  54.0  Bull       0.06    2.42       0.79      19.8     NaN
+839    JCI   158.62   1.75   5.03      94.4                     N/A                                       N/A        6.82  60.9  Bull       0.21    6.70       0.02      19.7     NaN
+840   TRMD    42.21   4.56   7.27       4.1                     N/A                                       N/A       16.32  65.3  Bear      -0.01   10.93       0.06      19.6     NaN
+841   HAFN    11.05   4.15   4.94       5.7                     N/A                                       N/A       15.58  65.5  Bear      -0.02   11.17       0.07      19.6     NaN
+842   PEGA    35.33   0.04   0.44       5.8                     N/A                                       N/A        1.60  50.6  Bull       0.06    6.27       0.01      19.5     NaN
+843    DKL    57.15   0.40   0.67       3.3                     N/A                                       N/A        2.38  56.1  Bull       0.06    7.40       0.34      19.3     NaN
+844   SYNA   117.69  -0.35   0.16       4.7                     N/A                                       N/A        6.27  63.0  Bear      -0.62   16.07       0.01      19.3     NaN
+845   CSTL    34.71   0.58   0.99       1.1                     N/A                                       N/A        5.49  55.2  Bull       0.08   -2.31       0.01      19.2     NaN
+846    HAE   119.64  -0.28   2.16       5.5                     N/A                                       N/A       10.61  65.0  Bear      -0.26   13.61       0.00      19.0     NaN
+847   KMPB    24.96   0.24   0.52       1.5                     N/A                                       N/A        1.46  68.5  Bull       0.01    0.89       1.76      19.0     NaN
+848    EQH    55.04   0.83   1.24      14.9                     N/A                                       N/A        5.06  59.0  Bull       0.07    7.36       0.00      18.8     NaN
+849    APG    41.10   0.72   2.23      17.6                     N/A                                       N/A        2.83  59.8  Bull       0.06    6.49       0.00      18.7     NaN
+850   PPLC    46.55  -0.32   0.37      35.0                     N/A                                       N/A        0.86  56.2  Bull       0.09    4.40       0.03      18.2     NaN
+851    CHT    48.19  -0.70   1.45      37.6                     N/A                                       N/A        5.05  66.8  Bull       0.07    5.96       0.01      18.1     NaN
+852   OTTR    90.47   0.00   0.77       3.8                     N/A                                       N/A        1.04  55.8  Bull       0.19    2.76       0.01      18.1     NaN
+853    DHT    25.17   4.31   4.18       3.9                     N/A                                       N/A       12.27  61.0  Bear      -0.09   11.52       0.06      18.1     NaN
+854   ICUI   163.01  -0.11   1.35       4.1                     N/A                                       N/A        0.12  49.8  Bull       0.38    1.56       0.03      18.0     NaN
+855    CTS    59.22   9.83   7.05       1.7              Technology                     Electronic Components        2.43  58.4  Bull       0.03    0.07       1.52      17.8    4.50
+856    ECL   291.10  -0.06   1.04      81.7                     N/A                                       N/A        3.39  61.6  Bull       0.41    6.02       0.04      17.8     NaN
+857    MTN   151.50   0.03   3.05       5.4                     N/A                                       N/A        5.49  60.2  Bull       0.06   12.16       0.01      17.7     NaN
+858   IOSP    99.92   0.75   0.77       2.5                     N/A                                       N/A        4.98  63.7  Bull       0.10    3.31       0.57      17.4     NaN
+859    NPK   152.69   1.48   1.72       1.1                     N/A                                       N/A        3.78  57.6  Bull       0.25    3.06       0.08      17.1     NaN
+860      P   141.56   2.04   8.12      46.2                     N/A                                       N/A       16.75  59.0  Bear      -1.51    8.24       0.03      16.9     NaN
+861   RVTY   163.74   1.16   4.60      18.1                     N/A                                       N/A       13.71  71.3  Bull       0.06    7.14       0.01      16.8     NaN
+862   FSCO     5.06  -0.39   0.17       1.0                     N/A                                       N/A        1.07  52.4  Bull       0.01   -0.80       0.03      16.8     NaN
+863      M    23.68  -0.76   1.06       6.2                     N/A                                       N/A        2.78  55.2  Bull       0.04    3.99       0.01      16.6     NaN
+864   NUTX   208.82   0.28   5.68       1.4                     N/A                                       N/A        5.15  54.1  Bull       0.41   -1.34       0.02      16.6     NaN
+865    RZC    25.21   0.32   0.44       1.6                     N/A                                       N/A        0.58  57.0  Bull       0.02    1.33       1.12      16.2     NaN
+866  ONBPO    25.00  -0.04   0.08       9.6                     N/A                                       N/A        0.64  55.9  Bull       0.02    1.09       1.04      16.0     NaN
+867   VTRS    18.48  -1.28   0.16      21.5                     N/A                                       N/A        5.48  58.4  Bull       0.02    4.29       0.01      15.7     NaN
+868   MEOH    63.75  -0.92   0.69       4.9                     N/A                                       N/A        5.34  57.2  Bull       0.01    7.23       0.61      15.7     NaN
+869   BWLP    26.29   3.10   4.24       4.1                     N/A                                       N/A        7.66  59.7  Bull       0.02    4.95       0.05      15.6     NaN
+870    GIC    44.60  -0.09   1.09       1.7                     N/A                                       N/A        7.29  65.8  Bear      -0.06    5.26       0.79      15.5     NaN
+871   CMRE    14.89   3.73   6.32       1.7                     N/A                                       N/A        1.28  55.6  Bull       0.03    2.26       0.04      15.5     NaN
+872    KRT    54.47   0.22   0.96       1.1                     N/A                                       N/A        7.85  59.6  Bear      -0.21    3.38       0.94      15.1     NaN
+873   SBLK    29.45   2.15   2.19       3.2                     N/A                                       N/A        0.62  51.1  Bull       0.06    0.31       0.02      14.8     NaN
+874   NTAP   228.10   0.23   5.01      44.7                     N/A                                       N/A       10.48  60.0  Bear      -0.50    8.82       0.01      14.2     NaN
+875   ATEC    11.08   1.93   2.03       1.7                     N/A                                       N/A        7.97  57.0  Bull       0.00    7.36       0.03      13.7     NaN
+876   IPAR   114.85  -0.30   1.46       3.7                     N/A                                       N/A        0.64  51.3  Bull       0.15    3.51       0.04      13.6     NaN
+877   VCTR   111.97   1.21   4.06       6.8                     N/A                                       N/A        3.23  57.1  Bull       0.17    1.24       0.02      13.5     NaN
+878  ONBPP    25.20   0.02   0.76       9.6                     N/A                                       N/A        1.20  62.1  Bull       0.03    2.04       0.35      13.4     NaN
+879   RAMP    38.24   0.12   0.12       2.3                     N/A                                       N/A        1.40  66.2  Bull       0.06    1.93       0.04      13.1     NaN
+880  MBINM    25.21  -0.40   0.44       1.2                     N/A                                       N/A        0.26  51.7  Bull       0.03   -0.87       0.39      12.8     NaN
+881  HBANL    24.69   0.20   0.04      49.9                     N/A                                       N/A        0.00  49.6  Bull       0.00    0.21       1.45      12.5     NaN
+882   DDOG   283.42   0.93   3.78     100.8                     N/A                                       N/A        9.63  58.5  Bull       0.15    3.50       0.02      12.2     NaN
+883   NTNX    72.74   0.00   3.75      19.8                     N/A                                       N/A        6.33  59.4  Bull       0.06    3.31       0.01      12.0     NaN
+884   EXPD   198.31  -0.67   0.66      26.0                     N/A                                       N/A        4.20  59.9  Bull       0.07    7.40       0.01      12.0     NaN
+885     ON    78.67   6.22   4.03      30.6                     N/A                                       N/A        1.27  54.9  Bear      -0.10    3.58       0.92      11.8     NaN
+886   SNPS   472.00  -0.51   4.61      90.9                     N/A                                       N/A        6.23  56.2  Bear      -3.19    8.52       0.01      11.7     NaN
+887  IMKTA    85.49  -2.10   1.03       1.6                     N/A                                       N/A        0.02  49.6  Bull       0.05    0.82       0.79      11.4     NaN
+888   USPH    87.59   0.29   1.52       1.3                     N/A                                       N/A        5.65  59.6  Bull       0.07    2.17       0.06      11.3     NaN
+889   MFAN    25.21   0.00   0.56       2.6                     N/A                                       N/A        0.42  59.3  Bull       0.02    0.24       0.80      11.3     NaN
+890   ABCL    12.83   6.21   9.56       4.2                     N/A                                       N/A       10.36  55.0  Bear      -0.09  -13.43       0.73      11.3     NaN
+891     TK    15.18   4.19   7.13       1.3                     N/A                                       N/A        8.76  60.3  Bear      -0.00    6.53       0.03      11.1     NaN
+892   SDGR    26.72   9.06  14.19       2.0              Healthcare               Health Information Services       11.11  55.0  Bear      -0.27  -11.90       0.60      10.5    4.43
+893   MKTX   165.13   0.07   0.39       5.8                     N/A                                       N/A        2.86  77.0  Bear      -0.15    0.71       0.98      10.3     NaN
+894    TNK   102.91   4.90   7.21       3.4                     N/A                                       N/A        7.79  57.6  Bear      -0.27    6.03       0.03      10.2     NaN
+895   TRNZ    25.25   0.20   0.40       1.8                     N/A                                       N/A        0.93  69.6  Bull       0.01    0.92       0.63      10.1     NaN
+896   PENG    59.55   0.95   2.00       3.6                     N/A                                       N/A        2.15  50.4  Bear      -1.16    8.89       0.01      10.1     NaN
+897    KOD    90.44  -0.96   3.11       5.7                     N/A                                       N/A       30.46  60.8  Bear      -1.99   -4.59       0.00      10.0     NaN
+898   INSW   115.68   3.84   4.08       5.7                     N/A                                       N/A        8.49  56.1  Bear      -0.71    5.03       0.07       9.9     NaN
+899   TWST   159.85  10.05  12.02      10.6              Healthcare                             Biotechnology        9.90  54.1  Bear      -1.16  -14.12       0.58       9.8    4.08
+900  NMFCZ    25.42   0.02   0.06       2.7                     N/A                                       N/A        0.46  56.2  Bear      -0.00    0.69       1.00       9.3     NaN
+901     PM   202.32  -0.15   2.46     315.8                     N/A                                       N/A        4.40  57.8  Bear      -0.08    6.94       0.02       9.3     NaN
+902    RAL    69.61   2.56   3.97       7.7                     N/A                                       N/A        1.94  52.1  Bear      -0.40   -0.53       0.97       9.0     NaN
+903   FRHC   177.30   0.60   2.94      11.2                     N/A                                       N/A        5.08  56.8  Bear      -0.07    5.98       0.00       8.6     NaN
+904  WTFCN    25.70   0.43   0.27       1.7                     N/A                                       N/A        0.43  55.9  Bull       0.01    0.76       0.47       8.1     NaN
+905      A   178.07   0.32   0.18      50.0                     N/A                                       N/A        8.81  63.5  Bear      -0.18    3.49       0.01       8.0     NaN
+906    BST    48.51   2.93   1.59       1.1                     N/A                                       N/A        1.27  50.9  Bear      -0.26   -2.36       0.86       7.8     NaN
+907    BSM    14.85   0.34   1.78       3.1                     N/A                                       N/A        1.24  53.0  Bull       0.01    3.70       0.03       7.8     NaN
+908    GNK    26.11   1.83   3.00       1.1                     N/A                                       N/A        0.47  51.3  Bull       0.03   -0.19       0.01       7.7     NaN
+909   SAFT   104.26   0.20   0.12       1.5                     N/A                                       N/A        2.69  68.8  Bear      -0.08    0.61       0.66       7.5     NaN
+910     PS    46.80   2.74   2.30      18.7                     N/A                                       N/A        1.93  48.2  Bear      -0.89  -12.46       0.74       7.2     NaN
+911    IEX   238.90   2.44   1.47      17.2                     N/A                                       N/A        3.68  60.3  Bear      -0.15    5.12       0.03       7.2     NaN
+912    GJS    23.15   0.39   0.61       7.2                     N/A                                       N/A        0.21  52.4  Bull       0.01   -0.20       0.33       7.1     NaN
+913    TMO   696.54   0.51   0.36     256.2                     N/A                                       N/A        7.47  61.7  Bear      -0.14    3.18       0.01       7.0     NaN
+914   MSFT   533.55   0.42   0.11    3945.9                     N/A                                       N/A        5.00  57.6  Bear      -1.62    4.03       0.04       6.9     NaN
+915   FTNT   184.64  -0.19   6.08     135.7                     N/A                                       N/A        6.48  57.3  Bear      -0.34    3.29       0.04       6.9     NaN
+916   EMBJ    73.31   0.79   0.56      13.1                     N/A                                       N/A        1.09  51.9  Bull       0.07   -2.68       0.01       6.9     NaN
+917   SLAB   221.75   0.23   0.29       7.4                     N/A                                       N/A        0.51  56.7  Bear      -0.09    0.26       0.75       6.7     NaN
+918     EC    17.38   0.49   0.78      35.5                     N/A                                       N/A        1.67  51.3  Bear      -0.01    5.43       0.05       6.7     NaN
+919   AAPL   346.44  -0.19   0.71    5065.6                     N/A                                       N/A        3.94  60.0  Bull       0.02    4.03       0.03       6.6     NaN
+920   AIIR     7.58  -0.39   2.16       1.2                     N/A                                       N/A        1.80  51.4  Bull       0.00   -2.19       0.62       6.6     NaN
+921   ATEN    27.00   0.37   7.78       2.0                     N/A                                       N/A        0.16  53.7  Bull       0.02   -0.41       0.03       6.4     NaN
+922   GSAT    83.99   0.11   0.68      10.9                     N/A                                       N/A        1.60  59.5  Bull       0.05    1.33       0.00       6.2     NaN
+923    TEM    72.18   0.04   6.52      13.1                     N/A                                       N/A        6.33  53.6  Bull       0.03  -11.87       0.01       6.1     NaN
+924    NAT     8.07   3.59   6.46       1.6                     N/A                                       N/A        6.95  55.1  Bear      -0.05    2.15       0.05       6.0     NaN
+925   VRNS    49.04  -0.14   0.72       5.6                     N/A                                       N/A        4.91  56.0  Bear      -0.04    3.36       0.02       6.0     NaN
+926   BEKE    17.61  -0.23   1.50      19.9                     N/A                                       N/A        2.67  54.5  Bear      -0.01    4.51       0.02       6.0     NaN
+927   MFAO    25.20   0.20   0.56       2.6                     N/A                                       N/A        0.24  53.6  Bull       0.01   -0.12       0.41       6.0     NaN
+928   TXNM    58.65   0.03   1.00       6.5                     N/A                                       N/A        1.32  69.2  Bull       0.03    1.30       0.01       6.0     NaN
+929    DAC   159.57   1.33   0.68       2.9                     N/A                                       N/A        2.92  52.3  Bear      -0.79    4.02       0.03       5.8     NaN
+930   INSP    71.22  -0.11   0.22       2.1                     N/A                                       N/A        5.95  54.3  Bear      -0.03    2.69       0.01       5.7     NaN
+931    TXG    78.95   1.19   4.45      10.2                     N/A                                       N/A       10.82  54.9  Bear      -0.19  -12.63       0.01       5.5     NaN
+932    LPG    56.29   3.70   7.42       2.3                     N/A                                       N/A        6.17  56.4  Bear      -0.10    2.23       0.02       5.5     NaN
+933   CDNS   340.00  -0.90   4.27      94.5                     N/A                                       N/A        3.79  56.3  Bear      -0.38    2.97       0.01       5.0     NaN
+934   TRNI    25.01   0.08   0.04       1.8                     N/A                                       N/A        0.25  52.1  Bear      -0.01    0.00       0.58       4.9     NaN
+935   CSCO   111.72   0.31   4.16     439.1                     N/A                                       N/A        1.01  53.5  Bear      -0.02    4.21       0.01       4.8     NaN
+936    WKC    36.46   0.23   0.42       1.9                     N/A                                       N/A        1.70  54.2  Bear      -0.01    3.71       0.01       4.6     NaN
+937  VLYPP    25.03   0.12   0.20      13.8                     N/A                                       N/A        0.69  57.2  Bear      -0.00    0.36       0.45       4.5     NaN
+938  CNOBP    25.38   0.04   0.40       1.4                     N/A                                       N/A        0.61  57.7  Bull       0.00    0.50       0.32       4.4     NaN
+939    ROG   149.50  11.47   6.40       2.4              Technology                     Electronic Components        8.33  59.1  Bear      -0.62   -2.28       0.03       4.4    4.67
+940    IHS     8.46  -0.37   0.34       2.8                     N/A                                       N/A        0.66  56.4  Bull       0.00    1.18       0.00       4.3     NaN
+941    KWR   158.67   1.01   1.28       2.7                     N/A                                       N/A        0.59  52.7  Bull       0.06    0.91       0.01       4.0     NaN
+942   RXRX     4.01  -1.11  10.03       2.4                     N/A                                       N/A        7.33  53.5  Bear      -0.01   -3.03       0.01       3.8     NaN
+943    CBZ    54.96   0.25   0.19       3.0                     N/A                                       N/A        2.90  67.4  Bear      -0.04    0.48       0.19       3.5     NaN
+944    EPC    27.75  -1.03   2.85       1.3                     N/A                                       N/A        0.73  49.6  Bear      -0.00    2.85       0.01       3.3     NaN
+945   QQQX    30.90   0.19   0.39       1.5                     N/A                                       N/A        1.98  55.5  Bear      -0.02    1.54       0.08       3.2     NaN
+946    LXP    61.15   0.02   0.10       3.6                     N/A                                       N/A        1.02  70.8  Bear      -0.01    0.38       0.26       3.1     NaN
+947    AES    15.03   0.03   0.43      10.7                     N/A                                       N/A        1.10  75.7  Bull       0.00    0.91       0.02       2.7     NaN
+948    ARX    19.82   0.03   0.33       4.3                     N/A                                       N/A        4.27  66.1  Bear      -0.04    0.43       0.02       2.7     NaN
+949   SONO    17.64  -1.32   0.94       2.1                     N/A                                       N/A        4.97  55.5  Bear      -0.04   -1.43       0.02       2.6     NaN
+950    ZIM    29.62  -0.37   1.61       3.6                     N/A                                       N/A        2.54  52.6  Bear      -0.05    1.02       0.02       2.5     NaN
+951    HZO    52.50   0.04   0.15       1.2                     N/A                                       N/A        3.92  62.4  Bear      -0.08    0.38       0.00       2.4     NaN
+952    NET   332.05   1.30   8.08     116.7                     N/A                                       N/A        4.24  52.8  Bear      -0.27   -4.38       0.02       2.3     NaN
+953   SATA    98.49  -0.01   0.55      12.5                     N/A                                       N/A        0.77  53.6  Bull       0.03   -0.58       0.01       2.3     NaN
+954   SNOW   339.14   0.51   5.08     119.0                     N/A                                       N/A        4.25  53.6  Bear      -0.01   -0.12       0.01       2.2     NaN
+955   ENTG   153.54   2.29   3.96      22.9                     N/A                                       N/A        4.26  53.8  Bear      -0.79   -0.34       0.01       2.2     NaN
+956   STRC    99.51   0.02   0.31      42.0                     N/A                                       N/A        2.65  60.6  Bear      -0.10    0.67       0.02       2.2     NaN
+957    SFL    13.10   3.15   6.16       1.7                     N/A                                       N/A        3.46  55.4  Bear      -0.01   -0.46       0.03       2.0     NaN
+958    AMD   569.99   1.74   3.12     914.6                     N/A                                       N/A        3.41  51.9  Bear      -4.94   -6.83       0.04       2.0     NaN
+959   PRLB    90.52   1.24   0.93       2.1                     N/A                                       N/A        3.60  53.4  Bear      -0.41   -4.57       0.02       2.0     NaN
+960    HPE    61.26   0.68   5.30      80.8                     N/A                                       N/A        3.53  50.8  Bear      -0.61   -4.12       0.02       1.9     NaN
+961    APH    82.91   6.01   4.68     192.9                     N/A                                       N/A        2.31  54.1  Bear      -0.44   -1.65       0.08       1.8     NaN
+962    ASX    42.85   1.87   1.03      93.7                     N/A                                       N/A        3.19  51.8  Bear      -0.38   -3.63       0.03       1.8     NaN
+963    RNW     6.89   0.00   0.29       2.5                     N/A                                       N/A        1.66  60.6  Bear      -0.00    0.73       0.02       1.7     NaN
+964   MRVL   249.00   2.23   1.73     213.6                     N/A                                       N/A        2.45  51.2  Bear      -2.09   -5.74       0.03       1.5     NaN
+965   XMTR    98.55   1.45  10.81       5.6                     N/A                                       N/A        2.88  52.2  Bear      -0.69   -4.18       0.01       1.5     NaN
+966    EHC   122.35   0.67   1.56      12.0                     N/A                                       N/A        0.77  48.5  Bear      -0.33    0.88       0.02       1.4     NaN
+967   CMBT    18.86   3.57   2.84       5.3                     N/A                                       N/A        1.88  50.8  Bear      -0.07   -0.37       0.03       1.2     NaN
+968   CNXN    88.70   0.13   1.10       2.2                     N/A                                       N/A        2.12  49.4  Bear      -0.55   -1.70       0.00       1.1     NaN
+969     MU   969.44   4.38   6.10    1050.8                     N/A                                       N/A        0.69  51.5  Bear      -1.68   -8.97       0.09       1.1     NaN
+970   PSNL    15.97  -0.09   0.41       1.7                     N/A                                       N/A        1.95  49.6  Bear      -0.00   -1.93       0.01       1.0     NaN
+971    NMM    89.24   1.24   1.06       2.6                     N/A                                       N/A        0.86  48.0  Bear      -0.38   -0.75       0.06       0.9     NaN
+972    ARW   223.38   1.69   1.94      11.2                     N/A                                       N/A        1.73  52.4  Bear      -0.79   -1.59       0.00       0.9     NaN
+973    TSM   438.30   0.33   1.49    2265.8                     N/A                                       N/A        0.97  51.4  Bear      -1.01   -3.92       0.04       0.8     NaN
+974   UFPT   292.88  -0.67   0.95       2.3                     N/A                                       N/A        1.17  49.9  Bear      -0.24   -1.33       0.01       0.7     NaN
+975   JANX    17.25  -0.06   1.89       1.1                     N/A                                       N/A        0.99  50.9  Bear      -0.00   -0.17       0.01       0.6     NaN
+976    OGN    13.76   0.04   0.04       3.6                     N/A                                       N/A        0.34  53.8  Bear      -0.00    0.40       0.00       0.6     NaN
+977   DELL   503.48   0.30   3.62     319.2                     N/A                                       N/A        0.63  49.3  Bear      -3.09   -6.28       0.03       0.5     NaN
+978    LTC    42.15  -1.77   0.36       2.3                     N/A                                       N/A        0.46  46.9  Bear      -0.06   -1.23       0.03       0.5     NaN
+979  OXSQG    23.91   0.00   0.21       1.5                     N/A                                       N/A        0.10  49.4  Bear      -0.01   -0.59       0.00       0.1     NaN
+
+CSV saved to /home/ec2-user/output.csv
