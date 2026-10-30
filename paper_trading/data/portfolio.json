@@ -1,5 +1,5 @@
 {
-  "cash": -2.2737367544323206e-13,
+  "cash": 0.0,
   "positions": {
     "MANH": {
       "shares": 4.3696,
@@ -16,14 +16,6 @@
       "stop_loss": 176.24,
       "entry_date": "2026-10-28",
       "cost": 1235.37
-    },
-    "EVR": {
-      "shares": 1.7379,
-      "entry_price": 284.4,
-      "exit_target": 343.41,
-      "stop_loss": 271.53,
-      "entry_date": "2026-10-28",
-      "cost": 494.27
     },
     "WING": {
       "shares": 8.2012,
@@ -48,6 +40,14 @@
       "stop_loss": 132.2,
       "entry_date": "2026-10-29",
       "cost": 1374.55
+    },
+    "PI": {
+      "shares": 2.5174,
+      "entry_price": 200.37,
+      "exit_target": 217.3,
+      "stop_loss": 178.46,
+      "entry_date": "2026-10-29",
+      "cost": 504.41
     }
   },
   "start_date": "2026-06-02",
