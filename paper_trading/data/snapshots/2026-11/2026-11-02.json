@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-02",
+  "total_value": 7054.17,
+  "cash": 0.0,
+  "positions_count": 6,
+  "positions": {
+    "MANH": 1085.36,
+    "ICLR": 1319.46,
+    "WING": 1227.97,
+    "GKOS": 1516.22,
+    "CROX": 1452.92,
+    "AZN": 452.23
+  }
+}

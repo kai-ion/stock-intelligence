@@ -1,5 +1,5 @@
 {
-  "cash": 0.0,
+  "cash": 5.684341886080802e-14,
   "positions": {
     "MANH": {
       "shares": 4.3696,
@@ -41,13 +41,13 @@
       "entry_date": "2026-10-29",
       "cost": 1374.55
     },
-    "PI": {
-      "shares": 2.5174,
-      "entry_price": 200.37,
-      "exit_target": 217.3,
-      "stop_loss": 178.46,
-      "entry_date": "2026-10-29",
-      "cost": 504.41
+    "AZN": {
+      "shares": 2.4229,
+      "entry_price": 186.65,
+      "exit_target": 205.9,
+      "stop_loss": 580.48,
+      "entry_date": "2026-11-02",
+      "cost": 452.24
     }
   },
   "start_date": "2026-06-02",
