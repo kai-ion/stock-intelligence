@@ -1,13 +1,13 @@
 {
   "date": "2026-11-03",
-  "total_value": 7372.99,
+  "total_value": 7292.92,
   "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "GKOS": 1522.67,
-    "CROX": 1478.12,
-    "REGN": 1489.38,
-    "CVCO": 1539.63,
-    "UPBD": 1343.2
+    "GKOS": 1508.82,
+    "CROX": 1475.61,
+    "REGN": 1509.1,
+    "CVCO": 1503.07,
+    "TEM": 1296.32
   }
 }
