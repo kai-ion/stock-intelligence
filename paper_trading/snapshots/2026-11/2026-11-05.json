@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-05",
+  "total_value": 7707.94,
+  "cash": 145.58,
+  "positions_count": 5,
+  "positions": {
+    "GPK": 1318.95,
+    "XMTR": 1530.47,
+    "FISV": 1594.17,
+    "EVER": 1577.19,
+    "RYTM": 1541.58
+  }
+}

@@ -1,38 +1,6 @@
 {
-  "cash": 0.0,
+  "cash": 145.5794876270304,
   "positions": {
-    "GKOS": {
-      "shares": 6.3814,
-      "entry_price": 217.8,
-      "exit_target": 248.51,
-      "stop_loss": 190.45,
-      "entry_date": "2026-10-29",
-      "cost": 1389.86
-    },
-    "CROX": {
-      "shares": 9.6527,
-      "entry_price": 142.4,
-      "exit_target": 156.98,
-      "stop_loss": 132.2,
-      "entry_date": "2026-10-29",
-      "cost": 1374.55
-    },
-    "REGN": {
-      "shares": 1.5494,
-      "entry_price": 927.89,
-      "exit_target": 1017.09,
-      "stop_loss": 850.5,
-      "entry_date": "2026-11-02",
-      "cost": 1437.7
-    },
-    "CVCO": {
-      "shares": 2.3226,
-      "entry_price": 619.0,
-      "exit_target": 663.4,
-      "stop_loss": 580.48,
-      "entry_date": "2026-11-02",
-      "cost": 1437.7
-    },
     "GPK": {
       "shares": 112.2511,
       "entry_price": 11.31,
@@ -40,6 +8,38 @@
       "stop_loss": 10.179,
       "entry_date": "2026-11-04",
       "cost": 1269.56
+    },
+    "XMTR": {
+      "shares": 13.4819,
+      "entry_price": 111.29,
+      "exit_target": 127.15,
+      "stop_loss": 89.02,
+      "entry_date": "2026-11-04",
+      "cost": 1500.4
+    },
+    "FISV": {
+      "shares": 25.6917,
+      "entry_price": 58.4,
+      "exit_target": 67.83,
+      "stop_loss": 55.76,
+      "entry_date": "2026-11-04",
+      "cost": 1500.4
+    },
+    "EVER": {
+      "shares": 51.5423,
+      "entry_price": 29.11,
+      "exit_target": 33.05,
+      "stop_loss": 26.199,
+      "entry_date": "2026-11-04",
+      "cost": 1500.4
+    },
+    "RYTM": {
+      "shares": 13.9283,
+      "entry_price": 110.68,
+      "exit_target": 126.64,
+      "stop_loss": 147.76,
+      "entry_date": "2026-11-05",
+      "cost": 1541.59
     }
   },
   "start_date": "2026-06-02",
