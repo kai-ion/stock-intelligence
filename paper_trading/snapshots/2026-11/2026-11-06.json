@@ -1,13 +1,13 @@
 {
   "date": "2026-11-06",
-  "total_value": 7303.0,
-  "cash": 9.06,
+  "total_value": 7200.06,
+  "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "FISV": 1611.9,
-    "EVER": 1562.76,
-    "MOS": 1538.79,
-    "MGNI": 1119.89,
-    "ADMA": 1460.6
+    "FISV": 1639.26,
+    "EVER": 1513.28,
+    "MOS": 1554.3,
+    "MGNI": 1114.8,
+    "U": 1378.42
   }
 }
