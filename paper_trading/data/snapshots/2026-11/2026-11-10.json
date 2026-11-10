@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-10",
+  "total_value": 7197.6,
+  "cash": 25.35,
+  "positions_count": 5,
+  "positions": {
+    "FISV": 1631.94,
+    "MOS": 1569.11,
+    "MGNI": 1181.75,
+    "U": 1349.94,
+    "VSAT": 1439.51
+  }
+}
