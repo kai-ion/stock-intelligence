@@ -1,5 +1,5 @@
 {
-  "cash": 25.354568617724453,
+  "cash": 0.0,
   "positions": {
     "FISV": {
       "shares": 25.6917,
@@ -33,13 +33,13 @@
       "entry_date": "2026-11-06",
       "cost": 1280.91
     },
-    "VSAT": {
-      "shares": 19.3561,
-      "entry_price": 74.37,
-      "exit_target": 98.24,
-      "stop_loss": 69.91,
-      "entry_date": "2026-11-10",
-      "cost": 1439.51
+    "GEO": {
+      "shares": 43.0465,
+      "entry_price": 31.94,
+      "exit_target": 35.86,
+      "stop_loss": 29.99,
+      "entry_date": "2026-11-11",
+      "cost": 1374.91
     }
   },
   "start_date": "2026-06-02",
