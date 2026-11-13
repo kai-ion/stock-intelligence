@@ -1,13 +1,13 @@
 {
   "date": "2026-11-12",
-  "total_value": 7350.05,
-  "cash": 106.36,
+  "total_value": 7159.19,
+  "cash": 55.66,
   "positions_count": 5,
   "positions": {
-    "FISV": 1641.7,
-    "MGNI": 1188.66,
-    "ZETA": 1508.77,
-    "RKLB": 1434.54,
-    "ZM": 1470.01
+    "FISV": 1595.71,
+    "MGNI": 1181.95,
+    "ZETA": 1507.97,
+    "RKLB": 1406.02,
+    "LSCC": 1411.87
   }
 }

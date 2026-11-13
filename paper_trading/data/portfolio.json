@@ -1,5 +1,5 @@
 {
-  "cash": 106.36102986450214,
+  "cash": 40.98343739204506,
   "positions": {
     "FISV": {
       "shares": 25.6917,
@@ -33,13 +33,13 @@
       "entry_date": "2026-11-11",
       "cost": 1359.94
     },
-    "ZM": {
-      "shares": 14.9879,
-      "entry_price": 98.08,
-      "exit_target": 105.04,
-      "stop_loss": 93.96,
-      "entry_date": "2026-11-12",
-      "cost": 1470.02
+    "ANET": {
+      "shares": 6.8896,
+      "entry_price": 206.63,
+      "exit_target": 237.48,
+      "stop_loss": 198.75,
+      "entry_date": "2026-11-13",
+      "cost": 1423.59
     }
   },
   "start_date": "2026-06-02",
