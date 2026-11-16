@@ -1,5 +1,5 @@
 {
-  "cash": 40.98343739204506,
+  "cash": 0.0,
   "positions": {
     "FISV": {
       "shares": 25.6917,
@@ -25,21 +25,21 @@
       "entry_date": "2026-11-11",
       "cost": 1402.02
     },
-    "RKLB": {
-      "shares": 21.6862,
-      "entry_price": 62.71,
-      "exit_target": 85.81,
-      "stop_loss": 45.99,
-      "entry_date": "2026-11-11",
-      "cost": 1359.94
-    },
-    "ANET": {
-      "shares": 6.8896,
-      "entry_price": 206.63,
-      "exit_target": 237.48,
-      "stop_loss": 198.75,
+    "CHA": {
+      "shares": 96.9209,
+      "entry_price": 13.51,
+      "exit_target": 14.59,
+      "stop_loss": 12.57,
       "entry_date": "2026-11-13",
-      "cost": 1423.59
+      "cost": 1309.4
+    },
+    "VKTX": {
+      "shares": 44.6658,
+      "entry_price": 29.22,
+      "exit_target": 33.17,
+      "stop_loss": 26.298,
+      "entry_date": "2026-11-16",
+      "cost": 1305.14
     }
   },
   "start_date": "2026-06-02",
