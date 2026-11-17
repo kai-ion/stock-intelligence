@@ -33,13 +33,13 @@
       "entry_date": "2026-11-13",
       "cost": 1309.4
     },
-    "VKTX": {
-      "shares": 44.6658,
-      "entry_price": 29.22,
-      "exit_target": 33.17,
-      "stop_loss": 26.298,
-      "entry_date": "2026-11-16",
-      "cost": 1305.14
+    "BILL": {
+      "shares": 18.7588,
+      "entry_price": 57.63,
+      "exit_target": 64.61,
+      "stop_loss": 51.867000000000004,
+      "entry_date": "2026-11-17",
+      "cost": 1081.07
     }
   },
   "start_date": "2026-06-02",

@@ -1,13 +1,13 @@
 {
   "date": "2026-11-16",
-  "total_value": 6993.61,
+  "total_value": 6691.28,
   "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "FISV": 1638.62,
-    "MGNI": 1191.92,
-    "ZETA": 1465.19,
-    "CHA": 1392.75,
-    "VKTX": 1305.13
+    "FISV": 1632.96,
+    "MGNI": 1170.35,
+    "ZETA": 1455.0,
+    "CHA": 1350.11,
+    "FOUR": 1082.86
   }
 }
