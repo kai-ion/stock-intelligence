@@ -17,14 +17,6 @@
       "entry_date": "2026-11-06",
       "cost": 1119.89
     },
-    "ZETA": {
-      "shares": 39.9779,
-      "entry_price": 35.07,
-      "exit_target": 40.25,
-      "stop_loss": 30.58,
-      "entry_date": "2026-11-11",
-      "cost": 1402.02
-    },
     "CHA": {
       "shares": 96.9209,
       "entry_price": 13.51,
@@ -40,6 +32,14 @@
       "stop_loss": 51.867000000000004,
       "entry_date": "2026-11-17",
       "cost": 1081.07
+    },
+    "MGRT": {
+      "shares": 9.5023,
+      "entry_price": 130.0,
+      "exit_target": 149.19,
+      "stop_loss": 118.34,
+      "entry_date": "2026-11-17",
+      "cost": 1235.29
     }
   },
   "start_date": "2026-06-02",
