@@ -25,14 +25,6 @@
       "entry_date": "2026-11-13",
       "cost": 1309.4
     },
-    "BILL": {
-      "shares": 18.7588,
-      "entry_price": 57.63,
-      "exit_target": 64.61,
-      "stop_loss": 51.867000000000004,
-      "entry_date": "2026-11-17",
-      "cost": 1081.07
-    },
     "MGRT": {
       "shares": 9.5023,
       "entry_price": 130.0,
@@ -40,6 +32,14 @@
       "stop_loss": 118.34,
       "entry_date": "2026-11-17",
       "cost": 1235.29
+    },
+    "JJSF": {
+      "shares": 12.4788,
+      "entry_price": 99.23,
+      "exit_target": 106.9,
+      "stop_loss": 92.58,
+      "entry_date": "2026-11-19",
+      "cost": 1238.27
     }
   },
   "start_date": "2026-06-02",
