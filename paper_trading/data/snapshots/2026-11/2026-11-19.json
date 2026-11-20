@@ -1,13 +1,13 @@
 {
   "date": "2026-11-19",
-  "total_value": 6505.67,
+  "total_value": 6305.39,
   "cash": 0.0,
   "positions_count": 5,
   "positions": {
-    "FISV": 1553.83,
-    "MGNI": 1127.62,
-    "CHA": 1314.25,
-    "MGRT": 1271.69,
-    "JJSF": 1238.27
+    "CHA": 1305.52,
+    "MGRT": 1282.81,
+    "TENB": 1179.8,
+    "TJX": 1264.91,
+    "CRWD": 1272.34
   }
 }
